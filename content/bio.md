@@ -41,7 +41,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## Languages
 
-* I'm fluent in the [R](https://www.r-project.org/) statistical programming language, including package development, more info [on my Github profile](https://github.com/maelle). I've written many documents with LaTeX, including a [book](http://www.editions-ellipses.fr/product_info.php?products_id=7159) and [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/). I built this website with [Jekyll](https://jekyllrb.com/) using [this article](http://www.njtierney.com/jekyll/2015/11/11/how-i-built-my-site/). I am a master at googling and copy-pasting from [Stackoverflow](http://stackoverflow.com/) and I'm frustration-resistant. Besides, I'm fond of data surfing.
+* I'm fluent in the [R](https://www.r-project.org/) statistical programming language, including package development, more info [on my Github profile](https://github.com/maelle). I've written many documents with LaTeX, including a [book](http://www.editions-ellipses.fr/product_info.php?products_id=7159) and [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/). I built this website with [`blogdown`](https://github.com/rstudio/blogdown) using [this book](https://bookdown.org/yihui/blogdown/), using the [blackburn Hugo theme](https://github.com/yoshiharuyamashita/blackburn) by looking at [the simplystatistics blog](https://simplystatistics.org). I am a master at googling and copy-pasting from [Stackoverflow](http://stackoverflow.com/) and I'm frustration-resistant. Besides, I'm fond of data surfing.
 
 <img src="../img/surf.gif" alt="video" width="300">
 
