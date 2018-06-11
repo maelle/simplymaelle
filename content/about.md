@@ -5,27 +5,12 @@ sidemenu = "true"
 description = "About me and this site"
 +++
 
-Hugo is a static site engine written in Go.
+Hej! 
 
+<img src="{{ .Site.BaseURL }}img/barbie_office.jpg" alt="maelle" width="300">
 
-It makes use of a variety of open source projects including:
+Welcome on my website, where I'll showcase my work and some data analysis/R. My posts are syndicated on <a href="http://www.r-bloggers.com/">R-bloggers</a>.
 
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
+My last name is Salmon like the fish and the colour, and my first name, Maëlle, is derived from a Celtic word that means princess or chief. It's pronounced "Ma-El" as "ma" in "macaroni" and as the Spanish "El". The accent on the e in ë doesn't change the pronounciation, so I guess it's my crown.
 
-Learn more and contribute on [GitHub](https://github.com/spf13).
-
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-* Built in [Go](http://golang.org/)
-* Loosely inspired by [Jekyll](http://jekyllrb.com/)
-* Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-* Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
-
-Thanks for reading!
+I [currently](http://www.masalmon.eu/bio/) work as a (research) software engineer. Science took me places in Europe (UK, Sweden, Germany, Spain). Currently, I live in Nancy, France. I like open-source, open data and open science.
