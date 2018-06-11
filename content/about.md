@@ -7,7 +7,7 @@ description = "About me and this site"
 
 Hej! 
 
-<img src="{{ .Site.BaseURL }}img/barbie_office.jpg" alt="maelle" width="300">
+<img src="../img/barbie_office.jpg" alt="maelle" width="300">
 
 Welcome on my website, where I'll showcase my work and some data analysis/R. My posts are syndicated on <a href="http://www.r-bloggers.com/">R-bloggers</a>.
 
