@@ -37,10 +37,16 @@ paginate = 10
     url = "/post/"
   [[menu.main]]
     name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
+    pre = "<i class='fa fa-question-circle fa-fw'></i>"
     weight = 3
     identifier = "about"
     url = "/about/"
+  [[menu.main]]
+    name = "Bio"
+    pre = "<i class='fa fa-id-card fa-fw'></i>"
+    weight = 4
+    identifier = "bio"
+    url = "/bio/"
 
 [social]
   # Link your social networking accouns to the side menu
