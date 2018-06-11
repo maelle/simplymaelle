@@ -41,7 +41,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## Languages
 
-* I'm fluent in the [R](https://www.r-project.org/) statistical programming language, including package development, [more info on this page](http://www.masalmon.eu/packages/) and [on my Github profile](https://github.com/maelle). I've written many documents with LaTeX, including a [book](http://www.editions-ellipses.fr/product_info.php?products_id=7159) and [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/). I built this website with [Jekyll](https://jekyllrb.com/) using [this article](http://www.njtierney.com/jekyll/2015/11/11/how-i-built-my-site/). I am a master at googling and copy-pasting from [Stackoverflow](http://stackoverflow.com/) and I'm frustration-resistant. Besides, I'm fond of data surfing.
+* I'm fluent in the [R](https://www.r-project.org/) statistical programming language, including package development, more info [on my Github profile](https://github.com/maelle). I've written many documents with LaTeX, including a [book](http://www.editions-ellipses.fr/product_info.php?products_id=7159) and [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/). I built this website with [Jekyll](https://jekyllrb.com/) using [this article](http://www.njtierney.com/jekyll/2015/11/11/how-i-built-my-site/). I am a master at googling and copy-pasting from [Stackoverflow](http://stackoverflow.com/) and I'm frustration-resistant. Besides, I'm fond of data surfing.
 
 <img src="../img/surf.gif" alt="video" width="300">
 
@@ -49,7 +49,9 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## Teaching and community service
 
-* Since November 2016, co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona}{R-Ladies Barcelona). I was in charge of [two](https://github.com/rladies/barcelona_20170116_rmarkdown) [tutorials](https://github.com/rladies/bcn_20170320_introtodplyrtidyr).
+* Since 2017, [R-Ladies Global social master](https://rladies.org/about-us/team/) which means I'm the main manager of [its Twitter account](https://twitter.com/rladiesglobal).
+
+* November 2016 - August 2017, co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona}{R-Ladies Barcelona). I was in charge of [two](https://github.com/rladies/barcelona_20170116_rmarkdown) [tutorials](https://github.com/rladies/bcn_20170320_introtodplyrtidyr).
 
 * April 2016 and February 2017: organization of two short R courses at ISGlobal, one [about data wrangling with `dplyr` and `tidyr`](https://github.com/maelle/rmd_course_isglobal), one [about `RMarkdown`](https://github.com/maelle/domar_datos).
 
@@ -57,11 +59,11 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 * Jul 2010, Jul 2011: IT skill teacher for prisoners in Nanterre (2011, about 120 hours) and Fleury-Mérogis (2010, about 120 hours).
 
-* 2009: Creation and writing of a biology textbook in French containing corrections of Grandes Ecoles biology entrance oral exams. _L'oral de biologie aux concours BCPST, Adrien Henry and Maëlle Salmon, Editions Ellipses, 2010_. 2134 books sold as of September 2012.
+* 2009: Creation and writing of a biology textbook in French containing corrections of Grandes Ecoles biology entrance oral exams. [_L'oral de biologie aux concours BCPST, Adrien Henry and Maëlle Salmon, Editions Ellipses, 2010_](http://www.editions-ellipses.fr/product_info.php?products_id=7159). 2134 books sold as of September 2012.
 
 * 2009: Member of the organizing team of a week of awareness raising about blood donation at the ENS. Communication, organization of a conference and an information stand.
 
-* 2008-2012: Member of the association Tremplin (which helps young people from 17 underprivileged high schools to go to college). Organization of and participation to its weekly homework coaching ; editing of its newsletter ; participation to the renewal of its data management.
+* 2008-2012: Member of the association Tremplin (that at the time helped young people from 17 underprivileged high schools to go to college). Organization of and participation to its weekly homework coaching ; editing of its newsletter ; participation to the renewal of its data management.
 
 ## Personal
 <img src="../img/aurayvannes.png" alt="aurayvannes" style="float: left; width: 30%; margin-right: 5%; margin-bottom: 0.5em;">
