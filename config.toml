@@ -50,9 +50,9 @@ paginate = 10
 [social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
-  twitter = "*"
-  facebook = "*"
-  instagram = "*"
-  github = "yoshiharuyamashita"
-  stackoverflow = "*"
-  linkedin = "*"
+  twitter = "ma_salmon"
+  facebook = ""
+  instagram = ""
+  github = "maelle"
+  stackoverflow = ""
+  linkedin = ""
