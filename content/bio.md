@@ -5,7 +5,7 @@ sidemenu = "true"
 description = ""
 +++
 
-## Professional experience
+## <a name="pro"></a>Professional experience
 
 * February 2018 - present: part-time research software engineer [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time software engineer [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
 
@@ -25,7 +25,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 * Jun 2009 - Jul 2010: __Bachelor internship__, Institute for Medical Informatics, Statistics and Epidemiology (IMISE), University of Leipzig, Leipzig (Germany). Advisor: [Dr Markus Scholz](http://www.imise.uni-leipzig.de/Mitarbeiter/Markus.Scholz.jsp). _Analysis of genetic data (SNPs) of whole genomes._
 
-## Education
+## <a name="education"></a>Education
 
 * 2012-2016, __PhD student in Statistics__, Ludwig-Maximilian Universität, Munich, Germany. Thesis submitted in March 2016 (see illustration below) and successfully defended on the 29th of June 2016.
 
@@ -39,7 +39,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 * 2006-2008, __Classe préparatoire BCPST__, Lycée Clemenceau, Nantes, France. Mathematics, biology, geology, physics, chemistry. 
 
-## Languages
+## <a name="languages"></a>Languages
 
 * I'm fluent in the [R](https://www.r-project.org/) statistical programming language, including package development, more info [on my Github profile](https://github.com/maelle). I've written many documents with LaTeX, including a [book](http://www.editions-ellipses.fr/product_info.php?products_id=7159) and [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/). I built this website with [`blogdown`](https://github.com/rstudio/blogdown) using [this book](https://bookdown.org/yihui/blogdown/), using the [blackburn Hugo theme](https://github.com/yoshiharuyamashita/blackburn) by looking at [the simplystatistics blog](https://simplystatistics.org). I am a master at googling and copy-pasting from [Stackoverflow](http://stackoverflow.com/) and I'm frustration-resistant. Besides, I'm fond of data surfing.
 
@@ -47,7 +47,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 * My mother tongue is French. I've learnt Spanish and Catalan. I've learnt Italian too but don't practice much so I mostly only understand it. I also speak English, German, Swedish and I know a bit of Dutch.  
 
-## Teaching and community service
+## <a name="service"></a>Teaching and community service
 
 * Since 2017, [R-Ladies Global social master](https://rladies.org/about-us/team/) which means I'm the main manager of [its Twitter account](https://twitter.com/rladiesglobal).
 
