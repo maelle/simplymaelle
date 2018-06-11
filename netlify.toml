@@ -1,0 +1,8 @@
+[build]
+  command = "hugo -F"
+
+[context.production.environment]
+  HUGO_VERSION = "0.41"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.41"
