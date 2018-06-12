@@ -17,7 +17,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   subtitle = "Not a fish"
   brand = "Maëlle"
   googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "Your Disqus shortname"
+  disqus = "masalmon"
   # CSS name for highlight.js
   highlightjs = "github"
   highlightjsVersion = "9.11.0"
