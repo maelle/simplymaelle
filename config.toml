@@ -65,6 +65,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   github = "maelle"
   stackoverflow = ""
   linkedin = ""
+  email = "maelle.salmon@yahoo.se"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
