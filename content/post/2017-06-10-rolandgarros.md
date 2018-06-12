@@ -3,6 +3,7 @@ title: Who is talking about the French Open?
 date: '2017-06-10'
 slug: 2017/06/10/rolandgarros
 comments: yes
+tags: rtweet
 ---
 
 

@@ -3,6 +3,7 @@ title: Rainbowing a set of pictures
 date: '2018-01-07'
 slug: 2018/01/07/rainbowing
 comments: yes
+tags: magick
 ---
 
 
