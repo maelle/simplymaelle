@@ -1,7 +1,7 @@
 ---
 title: Automatic tools for improving R packages
 date: '2017-06-17'
-slug: 2017/06/17/automatictools
+slug: automatictools
 comments: yes
 ---
 

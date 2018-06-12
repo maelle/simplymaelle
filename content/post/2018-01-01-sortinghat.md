@@ -1,7 +1,7 @@
 ---
 title: 'Are #python users more likely to get into Slytherin?'
 date: '2018-01-01'
-slug: 2018/01/01/sortinghat
+slug: sortinghat
 comments: yes
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Hundreds of Guardian blind dates
 date: '2017-03-07'
-slug: 2017/03/07/blinddates
+slug: blinddates
 comments: yes
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: What's in our internal chaimagic package at work
 date: '2017-07-22'
-slug: 2017/07/22/chaimagic
+slug: chaimagic
 comments: yes
 ---
 

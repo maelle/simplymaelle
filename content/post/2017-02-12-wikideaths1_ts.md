@@ -1,7 +1,7 @@
 ---
 title: Were there more notable deaths than expected in 2016?
 date: '2017-02-12'
-slug: 2017/02/12/wikideaths1_ts
+slug: wikideaths1_ts
 comments: yes
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: R-Ladies global tour
 date: '2017-10-06'
-slug: 2017/10/06/globalrladiestour
-comments: yes
 tags:
   - magick
+slug: globalrladiestour
+comments: yes
 ---
 
 

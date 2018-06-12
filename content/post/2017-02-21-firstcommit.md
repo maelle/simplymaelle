@@ -1,7 +1,7 @@
 ---
 title: First commit or initial commit?
 date: '2017-02-21'
-slug: 2017/02/21/firstcommit
+slug: firstcommit
 comments: yes
 ---
 

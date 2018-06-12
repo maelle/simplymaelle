@@ -1,10 +1,10 @@
 ---
 title: 'The Guardian Experience: heavy or light topics?'
 date: '2017-10-02'
-slug: 2017/10/02/guardian-experience
-comments: yes
 tags:
   - robotstxt
+slug: guardian-experience
+comments: yes
 ---
 
 

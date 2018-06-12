@@ -1,7 +1,7 @@
 ---
 title: How not to make an evergreen review graph
 date: '2017-05-14'
-slug: 2017/05/14/evergreenreviewgraph
+slug: evergreenreviewgraph
 comments: yes
 ---
 

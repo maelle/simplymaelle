@@ -1,7 +1,7 @@
 ---
 title: Where have you been? Getting my Github activity
 date: '2017-12-21'
-slug: 2017/12/21/wherehaveyoubeen
+slug: wherehaveyoubeen
 comments: yes
 ---
 

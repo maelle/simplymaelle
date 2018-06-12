@@ -1,7 +1,7 @@
 ---
 title: 'Radio edit: an improved scraping of and look at Radio Swiss classic program'
 date: '2017-04-30'
-slug: 2017/04/30/radioedit
+slug: radioedit
 comments: yes
 ---
 

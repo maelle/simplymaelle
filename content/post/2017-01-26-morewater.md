@@ -1,7 +1,7 @@
 ---
 title: More water, a bit more about saints
 date: '2017-01-26'
-slug: 2017/01/26/morewater
+slug: morewater
 comments: yes
 ---
 

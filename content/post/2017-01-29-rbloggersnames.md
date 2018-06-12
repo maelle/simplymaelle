@@ -1,7 +1,7 @@
 ---
 title: The Rt of naming your blog
 date: '2017-01-29'
-slug: 2017/01/29/rbloggersnames
+slug: rbloggersnames
 comments: yes
 ---
 

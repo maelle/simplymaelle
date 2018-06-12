@@ -1,7 +1,7 @@
 ---
 title: Is it wine o'clock?
 date: '2017-08-12'
-slug: 2017/08/12/wineoclock
+slug: wineoclock
 comments: yes
 ---
 

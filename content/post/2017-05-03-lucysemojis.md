@@ -1,7 +1,7 @@
 ---
 title: A tribute to Lucy D'Agostino McGowan's git commit emoji game
 date: '2017-05-03'
-slug: 2017/05/03/lucysemojis
+slug: lucysemojis
 comments: yes
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Where to live in the US
 date: '2017-11-16'
-slug: 2017/11/16/wheretoliveus
+slug: wheretoliveus
 comments: yes
 ---
 

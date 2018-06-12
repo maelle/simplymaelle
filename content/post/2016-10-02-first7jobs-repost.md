@@ -1,7 +1,7 @@
 ---
 title: 'Analyzing #first7jobs tweets with Monkeylearn and R'
 date: '2016-10-02'
-slug: 2016/10/02/first7jobs-repost
+slug: first7jobs-repost
 comments: yes
 ---
 

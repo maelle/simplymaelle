@@ -1,7 +1,7 @@
 ---
 title: French places and a sort of resolution
 date: '2017-01-24'
-slug: 2017/01/24/kervillebourg
+slug: kervillebourg
 comments: yes
 ---
 

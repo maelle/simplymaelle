@@ -1,7 +1,7 @@
 ---
 title: Bar bar plots but not Babar plots
 date: '2017-02-19'
-slug: 2017/02/19/babarplot
+slug: babarplot
 comments: yes
 ---
 

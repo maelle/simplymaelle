@@ -1,7 +1,7 @@
 ---
 title: 'Storrrify #satRdayCapeTown 2018'
 date: '2018-03-24'
-slug: 2018/03/24/satrdaycapetown
+slug: satrdaycapetown
 comments: yes
 ---
 

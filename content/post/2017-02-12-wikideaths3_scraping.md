@@ -1,7 +1,7 @@
 ---
 title: Extracting notable deaths from Wikipedia
 date: '2017-02-12'
-slug: 2017/02/12/wikideaths3_scraping
+slug: wikideaths3_scraping
 comments: yes
 ---
 
