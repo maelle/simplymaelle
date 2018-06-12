@@ -13,4 +13,4 @@ Welcome on my website, where I showcase my working/goofing around with R. My pos
 
 My last name is Salmon like the fish and the colour. My first name, Maëlle, is derived from a Celtic word that means princess or chief. It's pronounced "Ma-El" as "ma" in "macaroni" and as the Spanish "El". The accent on the e in ë doesn't change the pronounciation, so I guess it's my crown.
 
-I [currently](http://www.masalmon.eu/bio/) work as a (research) software engineer. Science took me places in Europe (UK, Sweden, Germany, Spain). Currently, I live in Nancy, France. I like open-source, open data and open science.
+I [currently](/bio/) work as a (research) software engineer. Science took me places in Europe (UK, Sweden, Germany, Spain). Currently, I live in Nancy, France. I like open-source, open data and open science.
