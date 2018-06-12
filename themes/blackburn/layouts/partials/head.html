@@ -7,7 +7,7 @@
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 
   <!-- CSS -->
-  {{ $purecss := "https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/" }}
+  {{ $purecss := "https://cdn.bootcss.com/pure/0.6.2/" }}
   <link rel="stylesheet" href="{{ $purecss }}pure-min.css">
 
   {{ "<!--[if lte IE 8]>" | safeHTML }}
@@ -27,43 +27,27 @@
   <link rel="stylesheet" href="/css/blackburn.css">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script async src="https://use.fontawesome.com/32c3d13def.js"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
-  <!-- MathJax -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
- <!-- RSS -->
+  <!-- RSS -->
   {{ if .RSSLink }}
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSLink }}" />
   {{ end }}
 
   {{ with .Site.Params.highlightjs }}
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  {{ range $.Site.Params.highlightjs_extra_languages }}
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>
-  {{ end }}
-  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.11.0/styles/{{ . }}.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+  <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+  <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
   {{ end }}
 
   {{ partial "favicon.html" . }}
 
   {{ range .Site.Params.custom_css }}
-    {{ if findRE "https?://" . }}
-        <link rel="stylesheet" href="{{ . }}">
-    {{ else }}
-        <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-    {{ end }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
   {{ end }}
   {{ range .Site.Params.custom_js }}
-    {{ if findRE "https?://" . }}
-        <script src="{{ . }}"></script>
-    {{ else }}
-        <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
-    {{ end }}
+    <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
   {{ end }}
 
 </head>
