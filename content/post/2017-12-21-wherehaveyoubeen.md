@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Where have you been? Getting my Github activity"
-comments: true
+title: Where have you been? Getting my Github activity
+slug: content/post/2017-12-21-wherehaveyoubeen
+comments: yes
 ---
 
 

@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "A glance at R-bloggers Twitter feed"
-comments: true
+title: A glance at R-bloggers Twitter feed
+slug: content/post/2017-02-28-rbloggerstweets
+comments: yes
 ---
 
 

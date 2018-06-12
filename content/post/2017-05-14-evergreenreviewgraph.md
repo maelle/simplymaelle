@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "How not to make an evergreen review graph"
-comments: true
+title: How not to make an evergreen review graph
+slug: content/post/2017-05-14-evergreenreviewgraph
+comments: yes
 ---
 
 

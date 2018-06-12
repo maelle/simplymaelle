@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'Who were the notable dead of Wikipedia?'
-comments: true
+title: Who were the notable dead of Wikipedia?
+slug: content/post/2017-02-12-wikideaths2_population
+comments: yes
 ---
 
 

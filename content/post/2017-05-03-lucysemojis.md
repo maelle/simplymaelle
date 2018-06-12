@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "A tribute to Lucy D'Agostino McGowan's git commit emoji game"
-comments: true
+title: A tribute to Lucy D'Agostino McGowan's git commit emoji game
+slug: content/post/2017-05-03-lucysemojis
+comments: yes
 ---
 
 

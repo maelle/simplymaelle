@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "A classical analysis (Radio Swiss classic program)"
-comments: true
+title: A classical analysis (Radio Swiss classic program)
+slug: content/post/2017-04-23-radioswissclassic
+comments: yes
 ---
 
 

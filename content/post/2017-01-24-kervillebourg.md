@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'French places and a sort of resolution'
-comments: true
+title: French places and a sort of resolution
+slug: content/post/2017-01-24-kervillebourg
+comments: yes
 ---
 
 # Sort of introduction to this post and hopefully the next ones

@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Is it wine o'clock?"
-comments: true
+title: Is it wine o'clock?
+slug: content/post/2017-08-12-wineoclock
+comments: yes
 ---
 
 

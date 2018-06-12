@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'Who is talking about the French Open?'
-comments: true
+title: Who is talking about the French Open?
+slug: content/post/2017-06-10-rolandgarros
+comments: yes
 ---
 
 

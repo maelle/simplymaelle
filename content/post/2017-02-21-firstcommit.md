@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'First commit or initial commit?'
-comments: true
+title: First commit or initial commit?
+slug: content/post/2017-02-21-firstcommit
+comments: yes
 ---
 
 

@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'Bar bar plots but not Babar plots'
-comments: true
+title: Bar bar plots but not Babar plots
+slug: content/post/2017-02-19-babarplot
+comments: yes
 ---
 
 

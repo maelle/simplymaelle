@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'The Rt of naming your blog'
-comments: true
+title: The Rt of naming your blog
+slug: content/post/2017-01-29-rbloggersnames
+comments: yes
 ---
 
 In this post, I'm sharing a brand-new analysis! The reason for this is my blog being added to [R-bloggers](https://www.r-bloggers.com/) by Tal Galili after I filled [this form](https://www.r-bloggers.com/add-your-blog/). R-bloggers is a collection of blogs about R, whose new posts get added to the website via the magic of RSS feeds. R-bloggers even has a [Twitter account](https://twitter.com/Rbloggers). As a reader of R-bloggers you get exposed to many different analyses and ideas, as a R-blogger you reach a wider audience, so really it's an useful website. Tal does a great job maintaining R-bloggers and understandably likes seeing R-bloggers mentioning the website on their blog, which I already do in the [About section](http://www.masalmon.eu/about/), and in one article, which I've consistently failed to do in the last two posts because I got too caught up about the article at hand to think about anything else. So I've figured out the best way not to forget to thank Tal for his work was to do an analysis _about_ R-bloggers! Genius, I know. I've scraped the [full list of contributing blogs](https://www.r-bloggers.com/blogs-list/) and had a look at their names and addresses. 

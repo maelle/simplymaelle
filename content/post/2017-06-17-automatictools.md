@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Automatic tools for improving R packages"
-comments: true
+title: Automatic tools for improving R packages
+slug: content/post/2017-06-17-automatictools
+comments: yes
 ---
 
 

@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Hundreds of Guardian blind dates"
-comments: true
+title: Hundreds of Guardian blind dates
+slug: content/post/2017-03-07-blinddates
+comments: yes
 ---
 
 

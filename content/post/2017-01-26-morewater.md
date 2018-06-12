@@ -1,7 +1,7 @@
 ---
-layout: post
-title: 'More water, a bit more about saints'
-comments: true
+title: More water, a bit more about saints
+slug: content/post/2017-01-26-morewater
+comments: yes
 ---
 
 I was lucky enough to get some nice and interesting feedback on [my last post](http://www.masalmon.eu/2017/01/24/kervillebourg/). One comment was really useful and pretty embarrassing: I had written "see" instead of "sea" in the whole post... Thanks Steve Dempsey for the correction! I also got some questions which I decided to explore.

@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "How to develop good R packages (for open science)"
-comments: true
+title: How to develop good R packages (for open science)
+slug: content/post/2017-12-11-goodrpackages
+comments: yes
 ---
 
 

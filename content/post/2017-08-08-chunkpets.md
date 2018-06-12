@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Pets or livestock? Naming your RMarkdown chunks"
-comments: true
+title: Pets or livestock? Naming your RMarkdown chunks
+slug: content/post/2017-08-08-chunkpets
+comments: yes
 ---
 
 

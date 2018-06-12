@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "R-Ladies global tour"
-comments: true
+title: R-Ladies global tour
+slug: content/post/2017-10-06-globalrladiestour
+comments: yes
 ---
 
 

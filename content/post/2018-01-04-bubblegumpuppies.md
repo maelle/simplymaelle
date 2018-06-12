@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Cheer up, Black Metal Cats! Bubblegum Puppies"
-comments: true
+title: Cheer up, Black Metal Cats! Bubblegum Puppies
+slug: content/post/2018-01-04-bubblegumpuppies
+comments: yes
 ---
 
 

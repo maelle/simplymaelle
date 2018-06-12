@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Galentine's day cards"
-comments: true
+title: Galentine's day cards
+slug: content/post/2018-01-26-galentinesday
+comments: yes
 ---
 
 

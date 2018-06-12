@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 'The animals of #actuallivingscientists'
-comments: true
+slug: content/post/2017-02-05-actuallivingscientists
+comments: yes
 ---
 
 These last days a trending Twitter hashtag was "#actuallivingscientist", whose origin can be find in [this convo](https://twitter.com/darthmom7/status/827268431799922688?ref_src=twsrc%5Etfw) and whose original goal was to allow scientists to present themselves to everyone, a sort of #scicomm action. A great initiative, because we need science and we need everyone to know how it's done, by actual human beings. 

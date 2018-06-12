@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "The Guardian Experience: heavy or light topics?"
-comments: true
+title: 'The Guardian Experience: heavy or light topics?'
+slug: content/post/2017-10-02-guardian-experience
+comments: yes
 ---
 
 

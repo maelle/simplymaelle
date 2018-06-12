@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Storrrify #satRdayCapeTown 2018"
-comments: true
+title: 'Storrrify #satRdayCapeTown 2018'
+slug: content/post/2018-03-24-satrdaycapetown
+comments: yes
 ---
 
 

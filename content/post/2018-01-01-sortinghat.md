@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Are #python users more likely to get into Slytherin?"
-comments: true
+title: 'Are #python users more likely to get into Slytherin?'
+slug: content/post/2018-01-01-sortinghat
+comments: yes
 ---
 
 

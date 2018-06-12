@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Rainbowing a set of pictures"
-comments: true
+title: Rainbowing a set of pictures
+slug: content/post/2018-01-07-rainbowing
+comments: yes
 ---
 
 

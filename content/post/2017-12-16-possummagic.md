@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Possum magic: mapping an Australian children's book"
-comments: true
+title: 'Possum magic: mapping an Australian children''s book'
+slug: content/post/2017-12-16-possummagic
+comments: yes
 ---
 
 

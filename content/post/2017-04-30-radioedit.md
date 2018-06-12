@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Radio edit: an improved scraping of and look at Radio Swiss classic program"
-comments: true
+title: 'Radio edit: an improved scraping of and look at Radio Swiss classic program'
+slug: content/post/2017-04-30-radioedit
+comments: yes
 ---
 
 
