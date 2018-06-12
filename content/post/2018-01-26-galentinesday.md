@@ -80,13 +80,13 @@ Yes, I signed the cards "Leslie". I know the text could be centered more but I d
 
 In real life, you'd print and send these cards to your friends, but since my imaginary friends Ann, April, Donna and Shauna probably read my blog, I'll let the cards here for them to see!
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/galentinesAnn.png)
+<img src="/figure/galentinesAnn.png" alt="galentines Ann" width="700">
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/galentinesApril.png)
+<img src="/figure/galentinesApril.png" alt="galentines April" width="700">
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/galentinesDonna.png)
+<img src="/figure/galentinesDonna.png" alt="galentines Donna" width="700">
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/galentinesShauna.png)
+<img src="/figure/galentinesShauna.png" alt="galentines Shauna" width="700">
 
 
 Not too shabby for random text and colours!
