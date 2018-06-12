@@ -199,8 +199,7 @@ pics_info <- dplyr::mutate(pics_info, random = sample(1:nrow(pics_info), nrow(pi
 make_collage(pics_info, 19, 59, "random") %>% 
   magick::image_write("data/2018-01-07-rainbowing-banner_random.png")
 ```` 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-07-rainbowing-banner_random.png)
-
+<img src="/figure/2018-01-07-rainbowing-banner_random.png" alt="rainbow banner random" width="700">
 
 # Testing a first (bad) approach: using hue
 
@@ -237,7 +236,8 @@ make_collage(pics_info, 19, 59, "hue") %>%
   magick::image_write("banner_hue.png")
 
 ```
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-07-rainbowing-banner_hue.png)
+
+<img src="/figure/2018-01-07-rainbowing-banner_hue.png" alt="rainbow banner hue" width="700">
 
 So this is not too pretty. Blue and green pictures seem to cluster together but there are very dark pictures which we'd intuitively put aside.
 
@@ -300,7 +300,6 @@ pics_info <- dplyr::mutate(pics_info,
                                                         "light blue","sky blue","blue","purple","grey")))
 
 ```
-
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-07-rainbowing-banner_xkcd.png)
+<img src="/figure/2018-01-07-rainbowing-banner_xkcd.png" alt="rainbow banner xkcd" width="700">
 
 This looks much better, but of course the initial set (and maybe the used extraction method as well) don't provide for enough colours to make this extremely pretty. I'm not sure how useful this end product is, but hey I got to look at pretty landscapes full of colours from my grey rainy city, and learnt a lot along the way... Besides, maybe _you_ will find a cool use case of some of the colour methods featured here and will tell me about it in the comments?
