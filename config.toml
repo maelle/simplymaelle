@@ -63,7 +63,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/bio/"
   [[menu.main]]
     name = "Talks"
-    pre = "<i class='fa fa-id-microphone fa-fw'></i>"
+    pre = "<i class='fa fa-microphone fa-fw'></i>"
     weight = 6
     identifier = "talks"
     url = "/talks/"
