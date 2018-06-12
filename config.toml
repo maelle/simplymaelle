@@ -6,6 +6,7 @@ author = "Maëlle Salmon"
 copyright = "&copy; 2018. All rights reserved."
 canonifyurls = true
 paginate = 10
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [indexes]
   tag = "tags"
