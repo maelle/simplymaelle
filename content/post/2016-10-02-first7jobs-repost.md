@@ -187,6 +187,6 @@ As a conclusion, I'm quite excited by the possibilities offered by Monkeylearn f
 
 # Acknowledgements
 
-Note that my whole code is [in this Github repo](https://github.com/masalmon/first_7_jobs). All analyses were performed in [R](https://www.R-project.org/). I used those R packages: rtweet, dplyr, tidyr, ggplot2, stringr, purrr, readr, circlize and of course monkeylearn. Thanks a lot to their authors, and obviously thanks to people whose tweets I used... I might be a *little bit* more grateful to people who used separators and only posted 7 descriptions in their tweet. If you want to read another "#first7" analysis in R, I highly recommend [David Robinson's post](http://varianceexplained.org/r/seven-fav-packages/) about the "7FavPackages" hashtag.
+Note that my whole code is [in this Github repo](https://github.com/maelle/first_7_jobs). All analyses were performed in [R](https://www.R-project.org/). I used those R packages: rtweet, dplyr, tidyr, ggplot2, stringr, purrr, readr, circlize and of course monkeylearn. Thanks a lot to their authors, and obviously thanks to people whose tweets I used... I might be a *little bit* more grateful to people who used separators and only posted 7 descriptions in their tweet. If you want to read another "#first7" analysis in R, I highly recommend [David Robinson's post](http://varianceexplained.org/r/seven-fav-packages/) about the "7FavPackages" hashtag.
 
 

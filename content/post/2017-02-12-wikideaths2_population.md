@@ -6,7 +6,7 @@ comments: yes
 ---
 
 
-As described [in my last post](http://www.masalmon.eu/2017/02/12/wikideaths3_scraping/), I extracted all notable deaths from Wikipedia over the 2004-2016 period. In this post I want to explore this study population. Who were the notable dead?
+As described [in my last post](/2017/02/12/wikideaths3_scraping/), I extracted all notable deaths from Wikipedia over the 2004-2016 period. In this post I want to explore this study population. Who were the notable dead?
 
 <!--more-->
 
@@ -242,7 +242,7 @@ head(deaths_words, n = 10) %>%
 
 From these 10 most prevalent terms we could assume being a politician, some sort of athlete (player could also be a football player) or artist can make you notable. It's interesting to see there are far more actors than actresses. In case you didn't get the message, in the table there are 756 businessmen, 44 businesswomen, 4 business persons. 
 
-I also noticed that there are 147 murderers and  41 serial killers vs. 232 chemists and 46 statisticians. Since the term "data scientist" is quite young, there is none in my table, and I sure wish you'll all stay healthy, my friends! [In the next post](http://www.masalmon.eu/2017/02/12/wikideaths3_ts/) I'll present the analysis of the time series of monthly count of deaths. 
+I also noticed that there are 147 murderers and  41 serial killers vs. 232 chemists and 46 statisticians. Since the term "data scientist" is quite young, there is none in my table, and I sure wish you'll all stay healthy, my friends! [In the next post](/2017/02/12/wikideaths3_ts/) I'll present the analysis of the time series of monthly count of deaths. 
 
 If you liked learning more about notable dead, you can have a look at the analysis Hazel Kavili started doing of [celebrity deaths in 2016](https://github.com/UniversalTourist/celebrityDeaths).
 

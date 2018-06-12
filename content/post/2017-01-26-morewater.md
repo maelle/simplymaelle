@@ -5,7 +5,7 @@ slug: morewater
 comments: yes
 ---
 
-I was lucky enough to get some nice and interesting feedback on [my last post](http://www.masalmon.eu/2017/01/24/kervillebourg/). One comment was really useful and pretty embarrassing: I had written "see" instead of "sea" in the whole post... Thanks Steve Dempsey for the correction! I also got some questions which I decided to explore.
+I was lucky enough to get some nice and interesting feedback on [my last post](/2017/01/24/kervillebourg/). One comment was really useful and pretty embarrassing: I had written "see" instead of "sea" in the whole post... Thanks Steve Dempsey for the correction! I also got some questions which I decided to explore.
 
 <!--more-->
 
@@ -367,4 +367,4 @@ ggmap(map) +
 
 So there are a few Jeanne d'Arc places all over as predicted by Andrew, none very close to _Domrémy-la-Pucelle_ but then this was called _Domrémy the virgin_ after her already.
 
-If you want to play with the dataset yourself, you'll find it on Geonames, see [this gist](https://gist.github.com/hrbrmstr/0fd37cf3825fc8e3eddf042a4443d1dc) and in the data folder of [this Github repo](https://github.com/masalmon/kervillebourg). If you do, don't hesitate to share your findings!
+If you want to play with the dataset yourself, you'll find it on Geonames, see [this gist](https://gist.github.com/hrbrmstr/0fd37cf3825fc8e3eddf042a4443d1dc) and in the data folder of [this Github repo](https://github.com/maelle/kervillebourg). If you do, don't hesitate to share your findings!

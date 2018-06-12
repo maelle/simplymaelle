@@ -9,13 +9,13 @@ comments: yes
 
 These last days a trending Twitter hashtag was "#actuallivingscientist", whose origin can be find in [this convo](https://twitter.com/darthmom7/status/827268431799922688?ref_src=twsrc%5Etfw) and whose original goal was to allow scientists to present themselves to everyone, a sort of #scicomm action. A great initiative, because we need science and we need everyone to know how it's done, by actual human beings. 
 
-I didn't tweet with the hashtag, but I consider myself a scientist with more or less experience [in different fields](http://www.masalmon.eu/bio/) -- and [my last post](http://www.masalmon.eu/2017/02/03/chemist/) was about the scientist I married. In my timeline thanks to [Auriel Fournier](https://twitter.com/RallidaeRule) there were many tweets of ecologists studying animals. I'd like to say _cute_ animals but some were carcasses... But still, it made me want to quantify which animals were the most present in the tweets. Any bet?
+I didn't tweet with the hashtag, but I consider myself a scientist with more or less experience [in different fields](/bio/) -- and [my last post](/2017/02/03/chemist/) was about the scientist I married. In my timeline thanks to [Auriel Fournier](https://twitter.com/RallidaeRule) there were many tweets of ecologists studying animals. I'd like to say _cute_ animals but some were carcasses... But still, it made me want to quantify which animals were the most present in the tweets. Any bet?
 
 <!--more-->
 
 # Getting tweets
 
-I got tweets thanks to Mike Kearney's [`rtweet` package](https://github.com/mkearney/rtweet). I've done something similar in the past for [#firstsevenjobs tweets](http://www.masalmon.eu/2016/10/02/first7jobs-repost/).
+I got tweets thanks to Mike Kearney's [`rtweet` package](https://github.com/mkearney/rtweet). I've done something similar in the past for [#firstsevenjobs tweets](/2016/10/02/first7jobs-repost/).
 
 
 
@@ -67,7 +67,7 @@ Doing this I obtained 9611 tweets. Now let's look for animals in them!
 
 # Looking for animals
 
-Note: if Monkeylearn had an "animal extractor" module, I'd have tested a different approach with [my own package](https://github.com/ropensci/monkeylearn) but it would have been really close to my [#firstsevenjobs post](http://www.masalmon.eu/2016/10/02/first7jobs-repost/) a.k.a. as boring for you!
+Note: if Monkeylearn had an "animal extractor" module, I'd have tested a different approach with [my own package](https://github.com/ropensci/monkeylearn) but it would have been really close to my [#firstsevenjobs post](/2016/10/02/first7jobs-repost/) a.k.a. as boring for you!
 
 I have to confess I had never used Julia Silge's and David Robinson's [`tidytext` package](https://github.com/juliasilge/tidytext) before. I read Julia blog (you should do that too!) though so I knew about [the post](http://juliasilge.com/blog/Song-Lyrics-Across/) where she looked for the names of states in songs using `tidytext`, in particular a function calling Lincoln Mullen's [`tokenizers` package](https://github.com/ropensci/tokenizers) to split each song into words and bigrams (combinations of two words). I wanted to reproduce the approach, for this I only needed a list of animals and remembered [Gabor Csardi's `rcorpora` package](https://github.com/gaborcsardi/rcorpora), which contains all datasets from [these corpora](https://github.com/dariusk/corpora). Including a list of animals, y'all!
 

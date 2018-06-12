@@ -6,7 +6,7 @@ comments: yes
 ---
 
 
-After exploring my [study population](http://www.masalmon.eu/2017/02/12/wikideaths2_population/) of Wikipedia deaths, I want to analyse the time series of monthly counts of notable deaths. This is not a random interest of mine, [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/) was about monitoring time series of count, the application being weekly number of reported cases of various diseases.
+After exploring my [study population](/2017/02/12/wikideaths2_population/) of Wikipedia deaths, I want to analyse the time series of monthly counts of notable deaths. This is not a random interest of mine, [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/) was about monitoring time series of count, the application being weekly number of reported cases of various diseases.
 
 <!--more-->
 

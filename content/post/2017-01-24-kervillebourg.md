@@ -16,7 +16,7 @@ Let's start today with my visualizations of names of French places!
 
 <!--more-->
 
-_Note: the analysis was originally prepared [here](https://github.com/masalmon/kervillebourg) and advertised on [Twitter](https://twitter.com/ma_salmon/status/728660470798946304)_
+_Note: the analysis was originally prepared [here](https://github.com/maelle/kervillebourg) and advertised on [Twitter](https://twitter.com/ma_salmon/status/728660470798946304)_
 
 Inspired by [this work about names of places in Germany](https://github.com/hrbrmstr/zellingenach), I wanted to have a look at the names of French places. I decided against looking at prefixes and suffixes because I got a more poetical idea: looking for water and saints in my home country.
 

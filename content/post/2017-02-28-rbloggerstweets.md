@@ -8,7 +8,7 @@ comments: yes
 ---
 
 
-It's the second time I write a post about the blog aggregator R-bloggers, probably because I'm all about R blogs now that I have one. My husband says my posts are so meta. My first post was about [R blogs names](http://www.masalmon.eu/2017/01/29/rbloggersnames/), in this one I shall focus on the last 1,000 tweets from R-bloggers.
+It's the second time I write a post about the blog aggregator R-bloggers, probably because I'm all about R blogs now that I have one. My husband says my posts are so meta. My first post was about [R blogs names](/2017/01/29/rbloggersnames/), in this one I shall focus on the last 1,000 tweets from R-bloggers.
 
 <!--more-->
 
