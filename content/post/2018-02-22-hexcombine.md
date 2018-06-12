@@ -101,7 +101,7 @@ magick::image_write(my_laptop, "data/my_laptop.png")
 
 This looks fine, the only reason why it's not perfect is probably the stickers not having exactly the same dimensions. Moreover, one of them doesn't have transparent borders! That's a mean design. [Jeroen Ooms](https://github.com/jeroen) told me I could correct it by smartly using `image_fill` with color = “transparent” and some fuzz and `image_trim` before that to remove margins but I was lazy.
 
-Now, what could one do? One could order hex stickers by color using the code in my [blog post about rainbowing a set of pictures](http://www.masalmon.eu/2018/01/07/rainbowing/). Or one could just combine all hex stickers together, then make them gray and use the resulting image as a place to collect stickers. #goals
+Now, what could one do? One could order hex stickers by color using the code in my [blog post about rainbowing a set of pictures](/2018/01/07/rainbowing/). Or one could just combine all hex stickers together, then make them gray and use the resulting image as a place to collect stickers. #goals
 
 
 ```r
