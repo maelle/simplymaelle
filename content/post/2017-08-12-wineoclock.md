@@ -150,6 +150,6 @@ animation::ani.options(interval = 0.025)
 gganimate::gganimate(clock, "clock.gif")
 ```
 
-![](https://github.com/maelle/maelle.github.io/blob/master/_source/clock.gif?raw=true)
+<img src="/figure/clock.gif" alt="clock" width="700">
 
 I ended up with a very useful visualization as you can see... at least, I have no trouble finding out when wine o'clock is!

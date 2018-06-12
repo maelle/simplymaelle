@@ -325,9 +325,9 @@ c("948942337912328192",
   purrr::walk(save_one_tweet)
 ```
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-04-948942337912328192.png)
+<img src="/figure/2018-01-04-948942337912328192.png" alt="tweet">
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-04-948942293272334336.png)
+<img src="/figure/2018-01-04-948942293272334336.png" alt="tweet">
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/2018-01-04-948942240713531392.png)
+<img src="/figure/2018-01-04-948942240713531392.png" alt="tweet">
 
