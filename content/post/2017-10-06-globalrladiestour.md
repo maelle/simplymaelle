@@ -276,6 +276,6 @@ image_animate(img, fps=1) %>%
   image_write("rladiesglobal.gif")
 ```
 
-![](https://github.com/masalmon/masalmon.github.io/blob/master/_source/rladiesglobal.gif?raw=true)
+<img src="../figure/gestation.gif" alt="gestation" width="300">
 
 At least I made a twinkling star. I hope Hannah will be happy with the gif, because now I'd like to just dream of potential future trips! Or learn a bit of geography by looking at the gif.
