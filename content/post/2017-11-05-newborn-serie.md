@@ -3,6 +3,8 @@ title: You beautiful, naïve, sophisticated newborn series
 date: '2017-11-05'
 slug: 2017/11/05/newborn-serie
 comments: yes
+tags:
+  - robotstxt
 ---
 
 
