@@ -331,6 +331,6 @@ knitr::kable(head(deaths))
 |Etta_Moten_Barnett           |Etta Moten Barnett | 102|American actress.                  |2004-01-02 |United States     |          1|American         |actress              |
 |Lynn_Cartwright              |Lynn Cartwright    |  76|U.S. actress.                      |2004-01-02 |United States[20] |          1|U.S. .*          |actress              |
 
-In the table I have information about 56303 notable deaths. I know the age of 97% of them, a country or nation for 96.2% of them. Not too bad I think! It was then time to stop scraping webpages and to start digging into the data... [Who were these people?](http://www.masalmon.eu/2017/02/12/wikideaths2_population/) and [How bad was 2016?](http://www.masalmon.eu/2017/02/12/wikideaths1_ts/)
+In the table I have information about 56303 notable deaths. I know the age of 97% of them, a country or nation for 96.2% of them. Not too bad I think! It was then time to stop scraping webpages and to start digging into the data... [Who were these people?](/2017/02/12/wikideaths2_population/) and [How bad was 2016?](/2017/02/12/wikideaths1_ts/)
 
 I'd like to end this post with a note from my husband, who thinks having a blog makes me an influencer. If you too like Wikipedia, consider [donating to the Wikimedia foundation](https://wikimediafoundation.org/wiki/Ways_to_Give).

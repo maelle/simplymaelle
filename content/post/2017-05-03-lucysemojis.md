@@ -15,7 +15,7 @@ In this post, I will download many git commit messages of Lucy's from Github's A
 
 # Getting the commit messages
 
-As I said I'll use the `gh` package as in my post about [first commits](http://www.masalmon.eu/2017/02/21/firstcommit/) and as in the one about [random seeds](http://www.masalmon.eu/2017/04/12/seeds/).
+As I said I'll use the `gh` package as in my post about [first commits](/2017/02/21/firstcommit/) and as in the one about [random seeds](/2017/04/12/seeds/).
 
 The first step is to get the names of Lucy's repositories. I get all her public repositories, and also a few of the repositories of the LFOD organization [where she blogs](http://livefreeordichotomize.com/), that I selected by hand for not getting forks from the public repositories I already had. Hopefully her commit messages in these repositories, obviously excluding her private repositories, is representative of her typical emoji use.
 
@@ -159,7 +159,7 @@ head(dico) %>%
 |AMBULANCE         |<f0><U+009F><U+009A><U+0091> |\xF0\x9F\x9A\x91 |<ed><a0><bd><ed><ba><91> |
 |AMERICAN FOOTBALL |<f0><U+009F><U+008F><U+0088> |\xF0\x9F\x8F\x88 |<ed><a0><bc><ed><bf><88> |
 
-As the Github username of the person who created, today is a good day! Like in [my last post](http://www.masalmon.eu/2017/04/30/radioedit/) I'll use `fuzzyjoin` to identify emojis.
+As the Github username of the person who created, today is a good day! Like in [my last post](/2017/04/30/radioedit/) I'll use `fuzzyjoin` to identify emojis.
 
 
 ```r

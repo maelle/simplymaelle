@@ -6,7 +6,7 @@ comments: yes
 ---
 
 
-Last week I published a post about [scraping Radio Swiss Classic program](http://www.masalmon.eu/2017/04/23/radioswissclassic/). After that, Bob Rudis wrote [an extremely useful post](https://rud.is/b/2017/04/23/decomposing-composers-with-r/) improving my code a lot and teaching me cool stuff. I don't know why I forgot to add pauses between requests... Really bad behaviour! I will use his code today for re-scraping the data. 
+Last week I published a post about [scraping Radio Swiss Classic program](/2017/04/23/radioswissclassic/). After that, Bob Rudis wrote [an extremely useful post](https://rud.is/b/2017/04/23/decomposing-composers-with-r/) improving my code a lot and teaching me cool stuff. I don't know why I forgot to add pauses between requests... Really bad behaviour! I will use his code today for re-scraping the data. 
 
 Why re-scrape the data? I mentioned broken links in my post. In fact, each time I hit a broken page, Radio Swiss Classic webmaster received an email. That person received _a lot_ of emails because of me. They repaired the bug explaining these broken pages and contacted me because someone had turned me in (I feel super famous or spied on now), very kindly mentioning they had fixed all pages, and not holding any grudge against me. So let's scrape everything again!
 
