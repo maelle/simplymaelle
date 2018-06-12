@@ -1,6 +1,7 @@
 ---
 title: 'Possum magic: mapping an Australian children''s book'
-slug: content/post/2017-12-16-possummagic
+date: '2017-12-16'
+slug: 2017/12/16/possummagic
 comments: yes
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Is it wine o'clock?
-slug: content/post/2017-08-12-wineoclock
+date: '2017-08-12'
+slug: 2017/08/12/wineoclock
 comments: yes
 ---
 

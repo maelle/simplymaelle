@@ -1,6 +1,7 @@
 ---
 title: French places and a sort of resolution
-slug: content/post/2017-01-24-kervillebourg
+date: '2017-01-24'
+slug: 2017/01/24/kervillebourg
 comments: yes
 ---
 

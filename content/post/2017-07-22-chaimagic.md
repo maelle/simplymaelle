@@ -1,6 +1,7 @@
 ---
 title: What's in our internal chaimagic package at work
-slug: content/post/2017-07-22-chaimagic
+date: '2017-07-22'
+slug: 2017/07/22/chaimagic
 comments: yes
 ---
 

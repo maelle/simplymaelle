@@ -1,6 +1,7 @@
 ---
 title: A glance at R-bloggers Twitter feed
-slug: content/post/2017-02-28-rbloggerstweets
+date: '2017-02-28'
+slug: 2017/02/28/rbloggerstweets
 comments: yes
 ---
 

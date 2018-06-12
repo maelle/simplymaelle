@@ -1,6 +1,7 @@
 ---
 title: Cheer up, Black Metal Cats! Bubblegum Puppies
-slug: content/post/2018-01-04-bubblegumpuppies
+date: '2018-01-04'
+slug: 2018/01/04/bubblegumpuppies
 comments: yes
 ---
 

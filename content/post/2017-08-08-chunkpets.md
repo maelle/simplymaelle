@@ -1,6 +1,7 @@
 ---
 title: Pets or livestock? Naming your RMarkdown chunks
-slug: content/post/2017-08-08-chunkpets
+date: '2017-08-08'
+slug: 2017/08/08/chunkpets
 comments: yes
 ---
 

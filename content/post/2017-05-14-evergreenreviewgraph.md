@@ -1,6 +1,7 @@
 ---
 title: How not to make an evergreen review graph
-slug: content/post/2017-05-14-evergreenreviewgraph
+date: '2017-05-14'
+slug: 2017/05/14/evergreenreviewgraph
 comments: yes
 ---
 

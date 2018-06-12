@@ -1,6 +1,7 @@
 ---
 title: Who were the notable dead of Wikipedia?
-slug: content/post/2017-02-12-wikideaths2_population
+date: '2017-02-12'
+slug: 2017/02/12/wikideaths2_population
 comments: yes
 ---
 

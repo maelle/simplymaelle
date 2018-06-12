@@ -1,6 +1,7 @@
 ---
 title: Rainbowing a set of pictures
-slug: content/post/2018-01-07-rainbowing
+date: '2018-01-07'
+slug: 2018/01/07/rainbowing
 comments: yes
 ---
 

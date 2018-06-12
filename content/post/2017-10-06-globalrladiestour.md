@@ -1,6 +1,7 @@
 ---
 title: R-Ladies global tour
-slug: content/post/2017-10-06-globalrladiestour
+date: '2017-10-06'
+slug: 2017/10/06/globalrladiestour
 comments: yes
 ---
 

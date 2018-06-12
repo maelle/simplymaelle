@@ -1,6 +1,7 @@
 ---
 title: How to develop good R packages (for open science)
-slug: content/post/2017-12-11-goodrpackages
+date: '2017-12-11'
+slug: 2017/12/11/goodrpackages
 comments: yes
 ---
 

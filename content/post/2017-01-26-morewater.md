@@ -1,6 +1,7 @@
 ---
 title: More water, a bit more about saints
-slug: content/post/2017-01-26-morewater
+date: '2017-01-26'
+slug: 2017/01/26/morewater
 comments: yes
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Bar bar plots but not Babar plots
-slug: content/post/2017-02-19-babarplot
+date: '2017-02-19'
+slug: 2017/02/19/babarplot
 comments: yes
 ---
 

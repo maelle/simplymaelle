@@ -1,6 +1,7 @@
 ---
 title: 'The animals of #actuallivingscientists'
-slug: content/post/2017-02-05-actuallivingscientists
+date: '2017-02-05'
+slug: 2017/02/05/actuallivingscientists
 comments: yes
 ---
 

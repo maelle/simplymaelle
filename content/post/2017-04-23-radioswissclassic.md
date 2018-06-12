@@ -1,6 +1,7 @@
 ---
 title: A classical analysis (Radio Swiss classic program)
-slug: content/post/2017-04-23-radioswissclassic
+date: '2017-04-23'
+slug: 2017/04/23/radioswissclassic
 comments: yes
 ---
 

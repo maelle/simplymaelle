@@ -1,6 +1,7 @@
 ---
 title: Where to live in the US
-slug: content/post/2017-11-16-wheretoliveus
+date: '2017-11-16'
+slug: 2017/11/16/wheretoliveus
 comments: yes
 ---
 

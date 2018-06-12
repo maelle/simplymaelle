@@ -1,6 +1,7 @@
 ---
 title: You beautiful, naïve, sophisticated newborn series
-slug: content/post/2017-11-05-newborn-serie
+date: '2017-11-05'
+slug: 2017/11/05/newborn-serie
 comments: yes
 ---
 
