@@ -3,7 +3,8 @@ title: Combine your hex stickers with magic(k)
 date: '2018-02-22'
 slug: 2018/02/22/hexcombine
 comments: yes
-tags: magick
+tags:
+  - magick
 ---
 
 

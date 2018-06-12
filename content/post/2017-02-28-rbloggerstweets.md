@@ -3,7 +3,8 @@ title: A glance at R-bloggers Twitter feed
 date: '2017-02-28'
 slug: 2017/02/28/rbloggerstweets
 comments: yes
-tags: rtweet
+tags:
+  - rtweet
 ---
 
 

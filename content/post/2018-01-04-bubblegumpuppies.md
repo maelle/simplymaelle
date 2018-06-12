@@ -3,7 +3,8 @@ title: Cheer up, Black Metal Cats! Bubblegum Puppies
 date: '2018-01-04'
 slug: 2018/01/04/bubblegumpuppies
 comments: yes
-tags: magick
+tags:
+  - magick
 ---
 
 

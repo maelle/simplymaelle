@@ -3,7 +3,8 @@ title: Galentine's day cards
 date: '2018-01-26'
 slug: 2018/01/26/galentinesday
 comments: yes
-tags: magick
+tags:
+  - magick
 ---
 
 
