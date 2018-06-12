@@ -107,4 +107,5 @@ magick::image_convert(my_laptop, colorspace = "Gray") %>%
   magick::image_write("data/my_laptop_goals.png")
 ```
 
-<img src="/figure/my_laptop.pn_goalsg" alt="my top" w goalsidth="700">
+<img src="/figure/my_laptop_goals.png" alt="laptop goals" width="700">
+
