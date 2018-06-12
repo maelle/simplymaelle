@@ -276,6 +276,6 @@ image_animate(img, fps=1) %>%
   image_write("rladiesglobal.gif")
 ```
 
-<img src="/figure/rladiesglobal.gif" alt="r-ladies global tour" width="300">
+<img src="/figure/rladiesglobal.gif" alt="r-ladies global tour">
 
 At least I made a twinkling star. I hope Hannah will be happy with the gif, because now I'd like to just dream of potential future trips! Or learn a bit of geography by looking at the gif.
