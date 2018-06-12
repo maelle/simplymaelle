@@ -95,8 +95,7 @@ for(i in 1:no_row){
 
 magick::image_write(my_laptop, "data/my_laptop.png")
 ```
-
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/my_laptop.png)
+<img src="/figure/my_laptop.png" alt="my laptop" width="700">
 
 This looks fine, the only reason why it's not perfect is probably the stickers not having exactly the same dimensions. Moreover, one of them doesn't have transparent borders! That's a mean design. [Jeroen Ooms](https://github.com/jeroen) told me I could correct it by smartly using `image_fill` with color = “transparent” and some fuzz and `image_trim` before that to remove margins but I was lazy.
 
@@ -108,4 +107,4 @@ magick::image_convert(my_laptop, colorspace = "Gray") %>%
   magick::image_write("data/my_laptop_goals.png")
 ```
 
-![](https://raw.githubusercontent.com/maelle/maelle.github.io/master/_source/data/my_laptop_goals.png)
+<img src="/figure/my_laptop.pn_goalsg" alt="my top" w goalsidth="700">

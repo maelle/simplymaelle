@@ -199,6 +199,7 @@ pics_info <- dplyr::mutate(pics_info, random = sample(1:nrow(pics_info), nrow(pi
 make_collage(pics_info, 19, 59, "random") %>% 
   magick::image_write("data/2018-01-07-rainbowing-banner_random.png")
 ```` 
+
 <img src="/figure/2018-01-07-rainbowing-banner_random.png" alt="rainbow banner random" width="700">
 
 # Testing a first (bad) approach: using hue
