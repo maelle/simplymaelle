@@ -8,7 +8,7 @@ comments: yes
 ---
 
 
-I've recently been binge-reading The Guardian Experience columns. I'm a big fan of The Guardian life and style section regulars: the [blind dates](https://www.theguardian.com/lifeandstyle/series/blind-date) to which I dedicated [a blog post](http://www.masalmon.eu/2017/03/07/blinddates/), Oliver Burkeman's [This column will change your life](https://www.theguardian.com/lifeandstyle/series/thiscolumnwillchangeyourlife), etc. [Experience](https://www.theguardian.com/lifeandstyle/series/experience) is another regular that I enjoy a lot. In each of the column, someone tells something remarkable that happened to them. It can really be anything. 
+I've recently been binge-reading The Guardian Experience columns. I'm a big fan of The Guardian life and style section regulars: the [blind dates](https://www.theguardian.com/lifeandstyle/series/blind-date) to which I dedicated [a blog post](/2017/03/07/blinddates/), Oliver Burkeman's [This column will change your life](https://www.theguardian.com/lifeandstyle/series/thiscolumnwillchangeyourlife), etc. [Experience](https://www.theguardian.com/lifeandstyle/series/experience) is another regular that I enjoy a lot. In each of the column, someone tells something remarkable that happened to them. It can really be anything. 
 
 I was thinking of maybe scraping the titles and get a sense of most common topics. The final push was my husband's telling me about [this article](https://www.thecut.com/2017/09/10-best-guardian-experience-columns.html) of 
 Gabriella Paiella's about the best Guardian Experience columns. She wrote "the “Experience” column does often touch on heavier topics". Can one know what is the most prevalent "weight" of Experience columns scraping all their titles?
@@ -149,7 +149,7 @@ I'll first remove the "Experience: " part of many titles, since it's not exactly
 experience_titles <- stringr::str_replace(experience_titles, "^Experience: ", "")
 ```
 
-I then unnested words. Interestingly in order to remember how to do this I went and read [my Guardian blind dates post](http://www.masalmon.eu/2017/03/07/blinddates/) (the "So what did they talk about?" part).
+I then unnested words. Interestingly in order to remember how to do this I went and read [my Guardian blind dates post](/2017/03/07/blinddates/) (the "So what did they talk about?" part).
 
 
 ```r

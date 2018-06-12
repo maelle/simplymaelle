@@ -8,7 +8,7 @@ comments: yes
 
 I was invited to [an exciting ecology & R hackathon](https://methodsblog.wordpress.com/2017/11/16/hackathon-challenges/) in my capacity as a co-editor for [rOpenSci onboarding system of packages](https://github.com/ropensci/onboarding). It also worked well geographically since this hackathon was to take place in Ghent (Belgium) which is not too far away from my new city, Nancy (France). The idea was to have me talk about my "top tips on how to design and develop high-quality, user-friendly R software" in the context of open science, and then be a facilitator at the hackathon. 
 
-The talk topic sounded a bit daunting but as soon as I started preparing the talk I got all excited gathering resources -- and as you may imagine since I was asked to talk about *my* tips I did not need to try & be 100% exhaustive. I was not starting from scratch obviously: we at rOpenSci already have [well-formed opinions](https://github.com/ropensci/onboarding/blob/master/packaging_guide.md) about such software, and I had given a talk about [automatic tools for package improvement](http://www.masalmon.eu/2017/06/17/automatictools/) whose content was part of my top tips. 
+The talk topic sounded a bit daunting but as soon as I started preparing the talk I got all excited gathering resources -- and as you may imagine since I was asked to talk about *my* tips I did not need to try & be 100% exhaustive. I was not starting from scratch obviously: we at rOpenSci already have [well-formed opinions](https://github.com/ropensci/onboarding/blob/master/packaging_guide.md) about such software, and I had given a talk about [automatic tools for package improvement](/2017/06/17/automatictools/) whose content was part of my top tips. 
 
 As I've done in the past with my talks, I chose to increase the impact/accessibility of my work by sharing it on this blog. I'll also share this post on the day of the hackathon to provide my audience with a more structured document than my slides, in case they want to keep some trace of what I said (and it helped me build a good narrative for the talk!). Most of these tips will be useful for package development in general, and a few of them specific to scientific software.
 
@@ -108,7 +108,7 @@ Another important point is that if your package is on CRAN, and your code reposi
 
 # How to check your package automatically
 
-Here I will assume your package has [unit tests](http://r-pkgs.had.co.nz/tests.html) and is hosted on Github, although the latter isn't a condition for all tips here. If you've read [my blog post about automatic tools for improving packages](http://www.masalmon.eu/2017/06/17/automatictools/) thoroughly, this will sound quite familiar, and I'd advise you to go to this post for more details.
+Here I will assume your package has [unit tests](http://r-pkgs.had.co.nz/tests.html) and is hosted on Github, although the latter isn't a condition for all tips here. If you've read [my blog post about automatic tools for improving packages](/2017/06/17/automatictools/) thoroughly, this will sound quite familiar, and I'd advise you to go to this post for more details.
 
 These tools are all here to help you get a better package before releasing it.
 

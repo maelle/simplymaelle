@@ -229,7 +229,7 @@ Ok this is nicer, it was worth the search.
 
 And now I'll use `magick` because I want to add a small star flying around the world. By the way if this global tour were to happen I reckon that one would need to donate a lot of money to rainforest charities or the like, because it'd have a huge carbon footprint! Too bad really, I don't want my gif to promote planet destroying behaviours.
 
-To make the gif I used code similar to the one [shared in this post](http://www.masalmon.eu/2017/02/18/complot/) but in a better version thanks to Jeroen who told me to [read the vignette again](https://cran.r-project.org/web/packages/magick/vignettes/intro.html#animated_graphics). Not saving PNGs saves time!
+To make the gif I used code similar to the one [shared in this post](/2017/02/18/complot/) but in a better version thanks to Jeroen who told me to [read the vignette again](https://cran.r-project.org/web/packages/magick/vignettes/intro.html#animated_graphics). Not saving PNGs saves time!
 
 I first wanted to really show the emoji flying along the route and even created data for that, with a number of rows between chapters proportional to the distance between them. It'd have looked nice and smooth. But making a gif with hundreds of frames ended up being too long for me at the moment. So I came up with another idea, I'll have to hope you like it! 
 

@@ -38,7 +38,7 @@ _Note, had I not wanted to stay close to the original tweet, I could have just c
 
 ## Finding negative words
 
-I computed sentiment using `tidytext` copy-pasting code from [this post of mine](http://www.masalmon.eu/2017/10/02/guardian-experience/).
+I computed sentiment using `tidytext` copy-pasting code from [this post of mine](/2017/10/02/guardian-experience/).
 
 
 ```r
@@ -80,7 +80,7 @@ Ok so some of them are probably negative tweets that the [`sentimentr` package](
 
 I seriously considered using the [`wordnet` package](https://cran.r-project.org/web/packages/wordnet/index.html) because of this [Stack Overflow question "Getting antonyms using the `wordnet` package"](https://stackoverflow.com/questions/19360107/getting-antonyms-using-the-r-wordnet-package) but I was not brave enough, my strength failed me in front of the Java needs of that package. 
 
-I decided to use `praise` to get positive words, and `cleanNLP` (as in [this post](http://www.masalmon.eu/2017/12/05/badderb/)) to try and identify correctly negative words as adjective or verbs for instance in order to be able to replace them. The right annotation for that is a _token_. 
+I decided to use `praise` to get positive words, and `cleanNLP` (as in [this post](/2017/12/05/badderb/)) to try and identify correctly negative words as adjective or verbs for instance in order to be able to replace them. The right annotation for that is a _token_. 
 
 
 
@@ -310,7 +310,7 @@ So how would I use the tweets if I could do it again? Well, I'd post them with a
 
 # Ending with some cuteness
 
-And now, because I do not want you to think I'm now as depressed as a Black Metal Cat, I'll end this post by showing you a few replies thanks to the brand new `rtweet::tweet_shot` function added in the dev version of `rtweet` by [Bob Rudis](https://twitter.com/hrbrmstr?lang=en) after he saw my [#best9of2017 post](http://www.masalmon.eu/2017/12/30/best9of2017/). I resorted to saving the files and add the Markdown code to show them by hand but in a normal Rmd, not in a website, the images (`magick` objects) actually render very well. [Head to Twitter](https://twitter.com/cheerful_doggos/with_replies) to see the rest!
+And now, because I do not want you to think I'm now as depressed as a Black Metal Cat, I'll end this post by showing you a few replies thanks to the brand new `rtweet::tweet_shot` function added in the dev version of `rtweet` by [Bob Rudis](https://twitter.com/hrbrmstr?lang=en) after he saw my [#best9of2017 post](/2017/12/30/best9of2017/). I resorted to saving the files and add the Markdown code to show them by hand but in a normal Rmd, not in a website, the images (`magick` objects) actually render very well. [Head to Twitter](https://twitter.com/cheerful_doggos/with_replies) to see the rest!
 
 
 

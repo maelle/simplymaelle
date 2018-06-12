@@ -183,7 +183,7 @@ head(climates$city)
 
 # Plotting!
 
-When imitating an xkcd graph, one should use the `xkcd` package! I had already done that [in this post](http://www.masalmon.eu/2017/05/14/evergreenreviewgraph/). 
+When imitating an xkcd graph, one should use the `xkcd` package! I had already done that [in this post](/2017/05/14/evergreenreviewgraph/). 
 
 
 ```r
