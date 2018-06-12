@@ -12,8 +12,7 @@ Note that this is a repost of [my post on Monkeylearn's blog](https://blog.monke
 
 Have you tweeted about your "#firstsevenjobs"? I did!
 
-
-![My first seven jobs.](/assets/photos/2016-10-02-first7jobs-repost_myfirst7jobs.png)
+{{< tweet 762351796132118529 >}}
 
 <!--more-->
 
