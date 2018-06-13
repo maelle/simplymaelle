@@ -7,7 +7,7 @@ description = ""
 
 ## <a name="pro"></a>Professional experience
 
-* February 2018 - present: part-time research software engineer [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time software engineer [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
+* February 2018 - present: part-time *research software engineer* [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time *software engineer* [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
 
 * Oct 2017 - January 2018: Maternity leave.
 
