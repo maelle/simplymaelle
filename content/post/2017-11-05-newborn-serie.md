@@ -10,6 +10,7 @@ tags:
   - tm
   - wordcloud
   - rvest
+  - hrbrthemes
 slug: newborn-serie
 comments: yes
 ---

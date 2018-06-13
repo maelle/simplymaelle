@@ -8,6 +8,7 @@ tags:
   - cld2
   - cld3
   - language-detection
+  - hrbrthemes
 slug: rolandgarros
 comments: yes
 ---
