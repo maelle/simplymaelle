@@ -5,6 +5,7 @@ tags:
   - rcorpora
   - rtweet
   - tidytext
+  - NLP
   - Twitter
 slug: actuallivingscientists
 comments: yes

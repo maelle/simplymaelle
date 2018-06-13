@@ -6,6 +6,7 @@ comments: yes
 tags:
   - rcorpora
   - tidytext
+  - NLP
   - rvest
   - webscraping
   - The Guardian

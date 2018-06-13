@@ -6,6 +6,7 @@ tags:
   - rtweet
   - Twitter
   - tidytext
+  - NLP
   - R-bloggers
 slug: rbloggerstweets
 comments: yes

@@ -6,6 +6,7 @@ comments: yes
 tags:
   - rcorpora
   - tidytext
+  - NLP
   - Wikipedia
   - time series
   - trend
