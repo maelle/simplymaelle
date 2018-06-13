@@ -5,6 +5,7 @@ tags:
   - rcorpora
   - rtweet
   - tidytext
+  - R-bloggers
 slug: rbloggerstweets
 comments: yes
 ---

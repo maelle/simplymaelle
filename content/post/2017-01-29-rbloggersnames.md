@@ -4,6 +4,7 @@ date: '2017-01-29'
 tags:
   - rvest
   - webscraping
+  - R-bloggers
 slug: rbloggersnames
 comments: yes
 ---

@@ -1,6 +1,11 @@
 ---
 title: A classical analysis (Radio Swiss classic program)
 date: '2017-04-23'
+tags:
+  - rvest
+  - webscraping
+  - music
+  - Radio Swiss Classic
 slug: radioswissclassic
 comments: yes
 ---

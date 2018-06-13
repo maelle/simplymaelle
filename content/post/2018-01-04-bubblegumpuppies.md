@@ -8,6 +8,10 @@ tags:
   - tidytext
   - cleanNLP
   - praise
+  - rvest
+  - webscraping
+  - Selenium
+  - RSelenium
 slug: bubblegumpuppies
 comments: yes
 ---

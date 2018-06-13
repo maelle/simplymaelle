@@ -8,6 +8,7 @@ tags:
   - fuzzyjoin
   - hrbrthemes
   - music
+  - Radio Swiss Classic
 slug: radioedit
 comments: yes
 ---
