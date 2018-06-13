@@ -1,6 +1,11 @@
 ---
 title: More water, a bit more about saints
 date: '2017-01-26'
+tags:
+  - France
+  - ggrepel
+  - Geonames
+  - toponomy
 slug: morewater
 comments: yes
 ---

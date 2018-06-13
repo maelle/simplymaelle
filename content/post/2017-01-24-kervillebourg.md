@@ -1,6 +1,11 @@
 ---
 title: French places and a sort of resolution
 date: '2017-01-24'
+tags:
+  - blogging
+  - France
+  - Geonames
+  - toponomy
 slug: kervillebourg
 comments: yes
 ---
