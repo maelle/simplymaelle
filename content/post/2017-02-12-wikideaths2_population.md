@@ -3,6 +3,9 @@ title: Who were the notable dead of Wikipedia?
 date: '2017-02-12'
 slug: wikideaths2_population
 comments: yes
+tags:
+  - rcorpora
+  - tidytext
 ---
 
 

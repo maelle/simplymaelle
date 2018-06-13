@@ -3,6 +3,9 @@ title: Hundreds of Guardian blind dates
 date: '2017-03-07'
 slug: blinddates
 comments: yes
+tags:
+  - rcorpora
+  - tidytext
 ---
 
 

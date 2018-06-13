@@ -2,7 +2,9 @@
 title: 'The Guardian Experience: heavy or light topics?'
 date: '2017-10-02'
 tags:
+  - rcorpora
   - robotstxt
+  - tidytext
 slug: guardian-experience
 comments: yes
 ---

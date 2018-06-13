@@ -3,6 +3,8 @@ title: Galentine's day cards
 date: '2018-01-26'
 tags:
   - magick
+  - praise
+  - rcorpora
 slug: galentinesday
 comments: yes
 ---

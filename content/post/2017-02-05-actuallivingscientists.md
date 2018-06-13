@@ -2,7 +2,9 @@
 title: 'The animals of #actuallivingscientists'
 date: '2017-02-05'
 tags:
+  - rcorpora
   - rtweet
+  - tidytext
 slug: actuallivingscientists
 comments: yes
 ---

@@ -2,7 +2,9 @@
 title: A glance at R-bloggers Twitter feed
 date: '2017-02-28'
 tags:
+  - rcorpora
   - rtweet
+  - tidytext
 slug: rbloggerstweets
 comments: yes
 ---
