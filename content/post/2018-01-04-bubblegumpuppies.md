@@ -4,6 +4,8 @@ date: '2018-01-04'
 tags:
   - magick
   - rtweet
+  - Twitter
+  - puppies
   - NLP
   - tidytext
   - cleanNLP

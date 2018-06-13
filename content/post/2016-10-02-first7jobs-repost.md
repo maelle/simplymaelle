@@ -4,6 +4,8 @@ date: '2016-10-02'
 tags:
   - monkeylearn
   - mowgli
+  - rtweet
+  - Twitter
 slug: first7jobs-repost
 comments: yes
 ---

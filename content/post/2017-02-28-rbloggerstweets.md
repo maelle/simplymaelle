@@ -4,6 +4,7 @@ date: '2017-02-28'
 tags:
   - rcorpora
   - rtweet
+  - Twitter
   - tidytext
   - R-bloggers
 slug: rbloggerstweets
