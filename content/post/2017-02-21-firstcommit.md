@@ -1,6 +1,12 @@
 ---
 title: First commit or initial commit?
 date: '2017-02-21'
+tags:
+  - GitHub-API-V3
+  - GitHub
+  - GitHub-API
+  - gh
+  - git
 slug: firstcommit
 comments: yes
 ---
