@@ -7,6 +7,7 @@ tags:
   - riem
   - weathermetrics
   - ggrepel
+  - kitsch plot
 slug: wheretoliveus
 comments: yes
 ---

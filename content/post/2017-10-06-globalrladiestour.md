@@ -11,6 +11,7 @@ tags:
   - mixed integer linear programming
   - great circles
   - geosphere
+  - kitsch plot
 slug: globalrladiestour
 comments: yes
 ---

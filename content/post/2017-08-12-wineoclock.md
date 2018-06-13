@@ -5,6 +5,7 @@ tags:
   - emojifont
   - gganimate
   - gif
+  - kitsch plot
 slug: wineoclock
 comments: yes
 ---

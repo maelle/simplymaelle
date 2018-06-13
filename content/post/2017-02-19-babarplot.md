@@ -1,6 +1,10 @@
 ---
 title: Bar bar plots but not Babar plots
 date: '2017-02-19'
+tags:
+  - bar bar plots
+  - colourlovers
+  - kitsch plot
 slug: babarplot
 comments: yes
 ---

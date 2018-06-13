@@ -9,6 +9,7 @@ tags:
   - webscraping
   - xkcd
   - xkcdcolors
+  - collage
 slug: rainbowing
 comments: yes
 ---

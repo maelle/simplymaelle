@@ -5,6 +5,7 @@ tags:
   - xkcd
   - bibliometrics
   - europepmc
+  - kitsch plot
 slug: evergreenreviewgraph
 comments: yes
 ---
