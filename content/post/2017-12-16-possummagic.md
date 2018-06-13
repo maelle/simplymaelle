@@ -1,6 +1,11 @@
 ---
 title: 'Possum magic: mapping an Australian children''s book'
 date: '2017-12-16'
+tags:
+  - spocc
+  - scrubr
+  - ggrepel
+  - opencage
 slug: possummagic
 comments: yes
 ---
