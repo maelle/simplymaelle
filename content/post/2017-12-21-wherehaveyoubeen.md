@@ -5,6 +5,7 @@ tags:
   - Google BigQuery
   - bigrquery
   - hrbrthemes
+  - CV
 date: '2017-12-21'
 slug: wherehaveyoubeen
 comments: yes
