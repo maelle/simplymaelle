@@ -3,6 +3,10 @@ title: Who is talking about the French Open?
 date: '2017-06-10'
 tags:
   - rtweet
+  - NLP
+  - cld2
+  - cld3
+  - language-detection
 slug: rolandgarros
 comments: yes
 ---
