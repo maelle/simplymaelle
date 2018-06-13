@@ -3,6 +3,13 @@ title: You beautiful, naïve, sophisticated newborn series
 date: '2017-11-05'
 tags:
   - robotstxt
+  - parks-and-recreation
+  - webscraping
+  - subtools
+  - snowballC
+  - tm
+  - wordcloud
+  - rvest
 slug: newborn-serie
 comments: yes
 ---
