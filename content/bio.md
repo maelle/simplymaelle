@@ -49,7 +49,11 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## <a name="service"></a>Teaching and community service
 
+* Since December 2017, member of [R Weekly](https://rweekly.org/) team.
+
 * Since 2017, [R-Ladies Global social master](https://rladies.org/about-us/team/) which means I'm the main manager of [its Twitter account](https://twitter.com/rladiesglobal).
+
+* Since February 2017, associate editor for [rOpenSci's onboarding](https://github.com/ropensci/onboarding) (peer-review system of R packages).
 
 * November 2016 - August 2017, co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona}{R-Ladies Barcelona). I was in charge of [two](https://github.com/rladies/barcelona_20170116_rmarkdown) [tutorials](https://github.com/rladies/bcn_20170320_introtodplyrtidyr).
 
