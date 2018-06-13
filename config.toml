@@ -15,7 +15,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
   # Shown in the home page
   subtitle = "Not a fish"
-  brand = "Maëlle"
+  brand = "![Maëlle](/img/avatar.jpg)"
   googleAnalytics = ""
   disqus = "masalmon"
   # CSS name for highlight.js
