@@ -1,6 +1,12 @@
 ---
 title: 'Are #python users more likely to get into Slytherin?'
 date: '2018-01-01'
+tags:
+  - Harry Potter
+  - Hogwarts
+  - rtweet
+  - Twitter
+  - hrbrthemes  
 slug: sortinghat
 comments: yes
 ---
