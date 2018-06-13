@@ -1,5 +1,10 @@
 ---
 title: A tribute to Lucy D'Agostino McGowan's git commit emoji game
+tags:
+  - GitHub-API-V3
+  - GitHub
+  - GitHub-API
+  - gh
 date: '2017-05-03'
 slug: lucysemojis
 comments: yes

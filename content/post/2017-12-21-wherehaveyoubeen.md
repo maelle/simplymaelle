@@ -1,5 +1,9 @@
 ---
 title: Where have you been? Getting my Github activity
+tags:
+  - GitHub
+  - Google BigQuery
+  - bigrquery
 date: '2017-12-21'
 slug: wherehaveyoubeen
 comments: yes
