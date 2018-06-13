@@ -69,7 +69,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/talks/"
   [[menu.main]]
     name = "Scientific papers"
-    pre = "<i class='fa fa-file-alt fa-fw'></i>"
+    pre = "<i class='fa fa-file fa-fw'></i>"
     weight = 7
     identifier = "papers"
     url = "/papers/"
