@@ -1,6 +1,13 @@
 ---
 title: Automatic tools for improving R packages
 date: '2017-06-17'
+tags:
+  - package-development
+  - pkgdown
+  - lintr
+  - goodpractice
+  - devtools
+  - available
 slug: automatictools
 comments: yes
 ---

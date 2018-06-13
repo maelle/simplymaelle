@@ -1,6 +1,10 @@
 ---
 title: How to develop good R packages (for open science)
 date: '2017-12-11'
+tags:
+  - package-development
+  - conference
+  - hackathon
 slug: goodrpackages
 comments: yes
 ---
