@@ -1,6 +1,13 @@
 ---
 title: Were there more notable deaths than expected in 2016?
 date: '2017-02-12'
+tags:
+  - Wikipedia
+  - time series
+  - xts
+  - zoo
+  - glarma
+  - tscount
 slug: wikideaths1_ts
 comments: yes
 ---

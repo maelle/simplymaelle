@@ -6,6 +6,10 @@ comments: yes
 tags:
   - rcorpora
   - tidytext
+  - Wikipedia
+  - time series
+  - trend
+  - slope
 ---
 
 

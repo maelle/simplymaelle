@@ -1,6 +1,11 @@
 ---
 title: Extracting notable deaths from Wikipedia
 date: '2017-02-12'
+tags:
+  - fuzzyjoin
+  - webscraping
+  - Wikipedia
+  - rvest
 slug: wikideaths3_scraping
 comments: yes
 ---
