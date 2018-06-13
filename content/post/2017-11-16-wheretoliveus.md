@@ -1,6 +1,12 @@
 ---
 title: Where to live in the US
 date: '2017-11-16'
+tags:
+  - xkcd
+  - weather
+  - riem
+  - weathermetrics
+  - ggrepel
 slug: wheretoliveus
 comments: yes
 ---

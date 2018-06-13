@@ -1,6 +1,10 @@
 ---
 title: How not to make an evergreen review graph
 date: '2017-05-14'
+tags:
+  - xkcd
+  - bibliometrics
+  - europepmc
 slug: evergreenreviewgraph
 comments: yes
 ---
