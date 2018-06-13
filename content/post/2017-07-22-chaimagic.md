@@ -13,7 +13,7 @@ comments: yes
 
 At my day job I'm a data manager and statistician for an epidemiology project called [CHAI](http://www.chaiproject.org/) lead by [Cathryn Tonne](https://twitter.com/cathryn_tonne). CHAI means "Cardio-vascular health effects of air pollution in Telangana, India" and you can find more about it in [our recently published protocol paper ](http://www.sciencedirect.com/science/article/pii/S1438463917301876). At [my institute](http://www.isglobal.org/) you could also find the [PASTA](http://www.pastaproject.eu/home/) and [TAPAS](http://www.tapas-program.org/) projects so apparently epidemiologists are good at naming things, or obsessed with food... But back to CHAI! This week Sean Lopp from RStudio wrote an [interesting blog post](https://rviews.rstudio.com/2017/07/19/supporting-corporate-r-user-groups/) about internal packages. I liked reading it and feeling good because we do have an internal R package for CHAI! In this blog post, I'll explain what's in there, in the hope of maybe providing inspiration for your own internal package!
 
-![](/figure/source/2017-07-22-chaimagic/chaiteam_barcelona.jpg)
+<img src="/figure/source/2017-07-22-chaimagic/chaiteam_barcelona.jpg" alt="gestation" width="700">
 
 As posted [in this tweet](https://twitter.com/chaiproject/status/832330667954315264), this pic represents the Barcelona contingent of CHAI, a really nice group to work with! We have other colleagues in India obviously, but also in the US.
 
