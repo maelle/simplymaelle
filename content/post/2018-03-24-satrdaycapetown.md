@@ -1,6 +1,10 @@
 ---
 title: 'Storrrify #satRdayCapeTown 2018'
 date: '2018-03-24'
+tags:
+  - rtweet
+  - conference
+  - satRday
 slug: satrdaycapetown
 comments: yes
 ---

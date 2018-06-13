@@ -3,6 +3,11 @@ title: Cheer up, Black Metal Cats! Bubblegum Puppies
 date: '2018-01-04'
 tags:
   - magick
+  - rtweet
+  - NLP
+  - tidytext
+  - cleanNLP
+  - praise
 slug: bubblegumpuppies
 comments: yes
 ---
