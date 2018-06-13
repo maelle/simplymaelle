@@ -1,6 +1,9 @@
 ---
 title: Pets or livestock? Naming your RMarkdown chunks
 date: '2017-08-08'
+tags:
+  - rmarkdown
+  - mowgli
 slug: chunkpets
 comments: yes
 ---

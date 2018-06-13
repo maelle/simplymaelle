@@ -8,6 +8,7 @@ tags:
   - goodpractice
   - devtools
   - available
+  - meetup
 slug: automatictools
 comments: yes
 ---

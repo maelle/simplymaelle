@@ -3,13 +3,12 @@ title: Rainbowing a set of pictures
 date: '2018-01-07'
 tags:
   - magick
-  - xkcd
-  - webscraping
+  - RSelenium
   - rvest
   - Selenium
-  - RSelenium
+  - webscraping
+  - xkcd
   - xkcdcolors
-  - colors
 slug: rainbowing
 comments: yes
 ---

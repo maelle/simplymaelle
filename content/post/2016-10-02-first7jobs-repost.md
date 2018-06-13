@@ -1,6 +1,9 @@
 ---
 title: 'Analyzing #first7jobs tweets with Monkeylearn and R'
 date: '2016-10-02'
+tags:
+  - monkeylearn
+  - mowgli
 slug: first7jobs-repost
 comments: yes
 ---

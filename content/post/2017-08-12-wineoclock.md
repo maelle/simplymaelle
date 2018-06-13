@@ -1,6 +1,11 @@
 ---
 title: Is it wine o'clock?
 date: '2017-08-12'
+tags:
+  - colors
+  - emojifont
+  - gganimate
+  - gif
 slug: wineoclock
 comments: yes
 ---
