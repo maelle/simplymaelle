@@ -3,6 +3,14 @@ title: R-Ladies global tour
 date: '2017-10-06'
 tags:
   - magick
+  - gif
+  - rvest
+  - webscraping
+  - traveling salesperson problem
+  - TSP
+  - mixed integer linear programming
+  - great circles
+  - geosphere
 slug: globalrladiestour
 comments: yes
 ---

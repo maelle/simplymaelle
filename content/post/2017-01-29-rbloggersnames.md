@@ -1,6 +1,9 @@
 ---
 title: The Rt of naming your blog
 date: '2017-01-29'
+tags:
+  - rvest
+  - webscraping
 slug: rbloggersnames
 comments: yes
 ---

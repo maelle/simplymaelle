@@ -6,6 +6,9 @@ comments: yes
 tags:
   - rcorpora
   - tidytext
+  - rvest
+  - webscraping
+  - The Guardian
 ---
 
 

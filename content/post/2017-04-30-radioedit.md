@@ -1,6 +1,13 @@
 ---
 title: 'Radio edit: an improved scraping of and look at Radio Swiss classic program'
 date: '2017-04-30'
+tags:
+  - rvest
+  - webscraping
+  - quantreg
+  - fuzzyjoin
+  - hrbrthemes
+  - music
 slug: radioedit
 comments: yes
 ---

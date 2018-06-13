@@ -5,6 +5,10 @@ tags:
   - rcorpora
   - robotstxt
   - tidytext
+  - NLP
+  - rvest
+  - webscraping
+  - The Guardian
 slug: guardian-experience
 comments: yes
 ---
