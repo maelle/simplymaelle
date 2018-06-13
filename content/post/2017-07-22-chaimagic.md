@@ -1,6 +1,11 @@
 ---
 title: What's in our internal chaimagic package at work
 date: '2017-07-22'
+tags:
+  - package-development
+  - Shiny
+  - shinydashboard
+  - branding
 slug: chaimagic
 comments: yes
 ---
