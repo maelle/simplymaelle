@@ -108,6 +108,12 @@
       <a class="pure-menu-link" href="mailto:{{ . }}" target="_blank"><i class="fa fa-envelope fa-fw"></i>Email</a>
     </li>
     {{ end }}
+    
+    {{ with .Site.Social.keybase }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://keybase.io/{{ . }}" target="_blank"><i class="fa fa-keybase fa-fw"></i>Keybase</a>
+    </li>
+    {{ end }}
 
     {{ with .Site.Social.xing }}
     <li class="pure-menu-item">

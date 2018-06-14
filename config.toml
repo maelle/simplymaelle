@@ -90,6 +90,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   stackoverflow = ""
   linkedin = ""
   email = "maelle.salmon@yahoo.se"
+  keybase = "maelle_salmon"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
