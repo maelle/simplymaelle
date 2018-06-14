@@ -109,6 +109,12 @@
     </li>
     {{ end }}
     
+    {{ with .Site.Social.github }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/{{ . }}" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    {{ end }}
+    
     {{ with .Site.Social.keybase }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://keybase.io/{{ . }}" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
@@ -149,11 +155,7 @@
 
     <!-- Techie -->
 
-    {{ with .Site.Social.github }}
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/{{ . }}" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
-    {{ end }}
+    
 
     {{ with .Site.Social.gitlab }}
     <li class="pure-menu-item">
