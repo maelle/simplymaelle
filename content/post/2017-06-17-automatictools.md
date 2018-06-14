@@ -124,4 +124,5 @@ Since this was a talk, not a long workshop, and also because I don't know everyt
 A very important tip I gave was to have your code read by humans. The automatic tools will flag some things, but the feedback of an human about your code and your documentation will be crucial. And when _you_ review code, you'll learn a lot! If you want to do that, you can volunteer to become a reviewer for rOpenSci, see more info [here](https://github.com/ropensci/onboarding#why-review) and fill the short form [here.](https://ropensci.org/onboarding/)
 
 ![](/figure/source/2017-06-17-automatictools/tshirt.jpeg)
+
 After my talk I got a nice RMarkdown t-shirt that has the same colour as my face! Thanks a lot to the organizers, in particular Luca Cerone!
