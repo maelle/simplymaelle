@@ -114,6 +114,18 @@
       <a class="pure-menu-link" href="https://keybase.io/{{ . }}" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
     </li>
     {{ end }}
+    
+    {{ with .Site.Social.orcid }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://orcid.org/{{ . }}" target="_blank"><i class="fa fa-id-badge fa-fw"></i>ORCID</a>
+    </li>
+    {{ end }}
+    
+    {{ with .Site.Social.researchgate }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://www.researchgate.net/profile/{{ . }}" target="_blank"><i class="fa fa-flask fa-fw"></i>ResearchGate</a>
+    </li>
+    {{ end }}
 
     {{ with .Site.Social.xing }}
     <li class="pure-menu-item">

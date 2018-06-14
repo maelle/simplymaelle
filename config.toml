@@ -91,6 +91,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   linkedin = ""
   email = "maelle.salmon@yahoo.se"
   keybase = "maelle_salmon"
+  orcid = "0000-0002-2815-0399"
+  researchgate = "Maelle_Salmon"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
