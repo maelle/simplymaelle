@@ -15,7 +15,7 @@ Today I made a [confession on Twitter](https://twitter.com/ma_salmon/status/8948
 
 <!--more-->
 
-![](/figure/source/2017-08-08-chunkpets/running.png)
+<img src="/figure/source/2017-08-08-chunkpets/running.png" alt="gestation" width="600">
 
 _My fur sibling does come if you call him_
 
@@ -23,7 +23,7 @@ _My fur sibling does come if you call him_
 
 * Making your RMarkdown easier to understand. Even if you comment code, having an informative code chunk name will help your collaborators when they read your file. For that, the chunk names should reflect what's being done in them, not your creativity, keep that for your real pets or kids. Naming the chunks has moreover made me divide my code into chunks doing one thing, e.g. preparing the data, then fitting a model. David Robinson [suggested](https://twitter.com/drob/status/738786604731490304) naming chunks such as to make dependencies more explicit, and the thread contains some nice tips about automatic dependencies between chunks, something I need to explore more myself (thanks [Nick](https://twitter.com/nj_tierney) for providing me with this tweet link!). [Don't use spaces or dots in chunk labels](https://yihui.name/knitr/options/#chunk-options), and Nick even says not to use "_" but rather "-" because it makes names navigation easier at least on Mac.
 
-![](/figure/source/2017-08-08-chunkpets/chunkdown.png)
+<img src="/figure/source/2017-08-08-chunkpets/chunkdown.png" alt="gestation" width="600">
 
 _Chunk down! Don't worry, Mowgli was just taking a nap._
 
@@ -31,7 +31,7 @@ _Chunk down! Don't worry, Mowgli was just taking a nap._
 
 * Moving chunks around, [adding some](https://twitter.com/robjhyndman/status/894886426885578752). In particular, cache results are saved by chunk name or position, so caching is more efficient with named chunks. With unnamed chunks you might end up unwillingly re-running that long slow chunk!
 
-![](/figure/source/2017-08-08-chunkpets/cool.png)
+<img src="/figure/source/2017-08-08-chunkpets/cool.png" alt="gestation" width="600">
 
 _When you're cool and you know it_
 
