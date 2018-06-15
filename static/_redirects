@@ -1,4 +1,4 @@
-/feed.xml /index.xml
+/feed.xml /post/index.xml
 
 # Redirect default Netlify subdomain to primary domain
 https://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
