@@ -1,4 +1,8 @@
 /feed.xml /post/index.xml
+/satrday_keynote/slides https://maelle.github.io/satrday_keynote/slides
+/rladiesct/slides https://maelle.github.io/rladiesct/slides
+/rladiesseattle/slides https://maelle.github.io/rladiesseattle/slides
+/satrday_package_workshop https://maelle.github.io/satrday_package_workshop/slides
 
 # Redirect default Netlify subdomain to primary domain
 https://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
