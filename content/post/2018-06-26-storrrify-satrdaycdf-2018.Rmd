@@ -37,15 +37,17 @@ I obtained `r nrow(my_satrday_tweets)` tweets.
 
 # Embedding the tweets
 
-Romain was right, it is easier with blogdown than it was when hacking html in Jekyll... Enjoy reading, and if you can, attend one of the next satRday conferences, for instance in [Amsterdam on September the 1st](http://amsterdam2018.satrdays.org/)! 
+I thought it'd be easy but having several tweets made it hard somehow: even when playing with chunk options and `purrr::map`-ping and friends, I wasn't able to use `blogdown::shortcode` so I used its insides instead. Still, using Hugo shortcodes is easier than hacking html.
 
-_Note that the options of the chunk below are `r, result = 'asis', comment = NA`, and 35 was determined using `stringi::stri_length('{{< tweet "1009513801333526528" >}}')`._
+Enjoy reading, and if you can, attend one of the next satRday conferences, for instance in [Amsterdam on September the 1st](http://amsterdam2018.satrdays.org/)! 
 
-```{r, result = 'asis', comment = NA}
-embed_tweet <- function(tweet_id){
-  blogdown::shortcode_html("tweet", tweet_id)
-}
+
+```{r}
 library("magrittr")
-purrr::map_chr(my_satrday_tweets$status_id, embed_tweet) %>%
-  cat(fill = 35)
+# Good than one can choose glue limits!
+glue::glue("{{< tweet [my_satrday_tweets$status_id] >}}",
+             .open = "[", .close = "]") %>%
+    htmltools::HTML()
+
+
 ```
