@@ -9,3 +9,6 @@ https://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
 
 # These extra rules are required because HTTPS is not forced
 http://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
+
+# www
+http://www.masalmon.eu/* https://masalmon.eu/:splat 301!
