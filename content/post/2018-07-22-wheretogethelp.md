@@ -1,7 +1,6 @@
 ---
 title: Where to get help with your R question?
 date: '2018-07-22'
-tags:
 slug: wheretogethelp
 comments: yes
 ---
@@ -26,7 +25,7 @@ And if you're not a newbie but are reading this now, be this R friend! Mentor ne
 
 ## Find new friends
 
-Join a community, and ask your questions there. More specifically, you can try join the [R4DS community](https://www.jessemaegan.com/post/r4ds-the-next-iteration/  ); your [local](https://rladies.org/)/[remote](http://eepurl.com/dy1bm1) R-Ladies community (as a reminder, [this doesn't mean women only](https://rladies.org/about-us/) but instead "minority genders (including but not limited to cis/trans women, trans men, non-binary, genderqueer, agender)"); this [French-speaking community](bit.ly/grrr-join). Such communities most often have Slack workspaces or equivalent, with an r-help channel, as well as a code of conduct and a general friendly attitude. Build your confidence there, and soon, you'll be out asking (and answering!) R questions in the wilderness as well.
+Join a community, and ask your questions there. More specifically, you can join the [R4DS community](https://www.jessemaegan.com/post/r4ds-the-next-iteration/  ); your [local](https://rladies.org/)/[remote](http://eepurl.com/dy1bm1) R-Ladies community (as a reminder, [this doesn't mean women only](https://rladies.org/about-us/) but instead "minority genders (including but not limited to cis/trans women, trans men, non-binary, genderqueer, agender)"); this [French-speaking community](bit.ly/grrr-join). Such communities most often have Slack workspaces or equivalent, with an r-help channel, as well as a code of conduct and a general friendly attitude. Build your confidence there, and soon, you'll be out asking (and answering!) R questions in the wilderness as well.
 
 Note, if you know of any list of such friendly communities, please tell me. I only know of [this list (of lists) of R User Groups and Conferences by David Smith](http://blog.revolutionanalytics.com/local-r-groups.html).
 
