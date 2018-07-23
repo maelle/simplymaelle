@@ -75,7 +75,7 @@ Maybe Twitter, to which I'll dedicate a whole section a bit later. But a good gu
 
 Anyone can use Twitter for what they want, depending on the accounts they follow and on their way to consume their timelines and hashtags, so the following is probably even more personal to me than the rest. I think Twitter questions that have higher chances to be answered (because I like answering them!) are the trivia ones, i.e. "is there something to do `foo`", and the more controversial ones if only for having fun. That said, if you don't have a huge following yet, or post at the "wrong" time, even when using the right hashtags or so your question might be ignored, keep that in mind.
 
-What Twitter is not good not is, in my opinion:
+What Twitter is not good for is, in my opinion:
 
 * Asking a question about a package by tagging the maintainer especially when the package docs state there's another venue for that. But then, as a maintainer, one should probably handle such mistakes gracefully (like Yihui did [here](https://twitter.com/xieyihui/status/1015079496427491328)).
 
