@@ -7,7 +7,7 @@ comments: yes
 
 Last time I blogged, I offered [my <s>obnoxious</s> helpful advice for blog content and promotion](/2018/07/16/soapbox/). Today, let me again be the agony aunt you didn't even write to! Imagine you have an _R question_, i.e. a question related to how you can do something with R, and your search engine efforts haven't been too successful: where should you ask it to increase your chance of its getting answered? You could see this post as my future answer to stray suboptimal Twitter R questions, or as a more general version of Scott Chamberlain's excellent talk about how to get help related to rOpenSci software in the [2017-03-07 rOpenSci comm call](http://communitycalls.ropensci.org/).
 
-I think that the general journey to getting answers to your R questions is first trying your best to get answers locally in the documentation of R, then to use a search engine, and then to post a well-formulated question _somewhere_. My post is aimed at helping you find that _somewhere_. Note that [it's considered best practice to ask in one _somewhere_ at once](https://community.rstudio.com/t/faq-is-it-ok-if-i-cross-post/5218), and to then move on to another _somewhere_ if you haven't got any answer!
+I think that the general journey to getting answers to your R questions is first trying your best to get answers locally in the documentation of R, then to use a search engine, and then to post a well-formulated question _somewhere_. My post is aimed at helping you find that _somewhere_. Note that [it's considered best practice to ask in one _somewhere_ at once](https://community.rstudio.com/t/faq-is-it-ok-if-i-cross-post/5218), and to then move on to another _somewhere_ if you haven't got any answer... or if someone kindly redirects you to a better venue!
 
 <!--more-->
 
@@ -87,7 +87,7 @@ What Twitter is not good for is, in my opinion:
 
 # Conclusion
 
-I think it's as important to ask your questions in the right place as it is to ask them in the right way. I hope this post provided some clues as to know where to ask R questions. Feel free to comment below with questions/suggestions! 
+I think it's as important to ask your questions in the right place as it is to ask them in the right way. I hope this post provided some clues as to know where to ask R questions. I'd like to make an important remark from [Mara Averick](https://maraaverick.rbind.io/) here: "You should not take being redirected to a different forum as a criticism! It's 100% a means of helping you get the help you need!". Truth!
 
 I'll round up this post with a few links of resources to learn _how_ to ask your question:
 
@@ -97,4 +97,4 @@ I'll round up this post with a few links of resources to learn _how_ to ask your
 
 * I've seen very useful posts on RStudio Community forum when browsing the FAQ tag. In particular, I like ["Tips for Introducing Non-Programming-Problem Discussions"](https://community.rstudio.com/t/faq-tips-for-introducing-non-programming-problem-discussions/6871) and [this more general list of FAQs](https://community.rstudio.com/t/frequently-asked-questions/35).
 
-Good luck with your questions! The Disqus thingy below is good for questions about this post!
+Good luck with your questions! The Disqus thingy below is good for suggestions and questions about this post!
