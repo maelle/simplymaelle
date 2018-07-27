@@ -15,11 +15,11 @@ Page in progress, I'll keep adding (hopefully) useful links, and I also hope to 
 
 * SatRday Cape Town 2018 keynote talk. "Our package reviews in review! Introducing & analyzing rOpenSci onboarding" [Video](https://www.youtube.com/watch?v=lZ3deq52qCk), [slides](https://maelle.github.io/satrday_keynote/slides), [blog post series on rOpenSci blog](https://ropensci.org/blog/2018/05/10/onboarding-social-weather/).
 
-* "How to develop good packages (for open science)", Ecology Hackathon at the Ecology Across Borders conference in Ghent, 2017-12-11, [blog post](https://masalmon.eu/2017/12/11/goodrpackages/)
+* "How to develop good packages (for open science)", Ecology Hackathon at the Ecology Across Borders conference in Ghent, 2017-12-11, [blog post](https://masalmon.eu/2017/12/11/goodrpackages/).
 
 # Discussion panel
 
-["Storytelling With Data Science", Toptal Expert Panel, recording](https://www.crowdcast.io/e/storytelling-with-data-science)
+["Storytelling With Data Science", Toptal Expert Panel recording](https://www.crowdcast.io/e/storytelling-with-data-science).
 
 # Meetup talks/tutorials
 
