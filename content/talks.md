@@ -25,7 +25,7 @@ Page in progress, I'll keep adding (hopefully) useful links, and I also hope to 
 
 * "Get on your soapbox, R blog content and promotion", [blog post](https://masalmon.eu/2018/07/16/soapbox/).
     * R-Ladies Seattle, 2018-05-23, [Slides](https://maelle.github.io/rladiesseattle/slides#1), [GitHub repo](https://github.com/maelle/rladiesseattle).
-    * "Get on your soapbox, R blog content and promotion", R-Ladies Cape Town, 2018-03-15, [Slides](https://maelle.github.io/rladiesct/slides#1), [GitHub repo](https://github.com/maelle/rladiesct).
+    * R-Ladies Cape Town, 2018-03-15, [Slides](https://maelle.github.io/rladiesct/slides#1), [GitHub repo](https://github.com/maelle/rladiesct).
 
 * "Automatic tools for improving R packages", RUG Barcelona, 2017-06-13. [Blog post](/2017/06/17/automatictools/), [slides](http://rpubs.com/masalmon/282469).
 
