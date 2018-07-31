@@ -1,0 +1,314 @@
+---
+title: 'ALLSTATisticians in decline? A polite look at ALLSTAT email Archives'
+date: '2018-06-26'
+tags:
+  - webscraping
+  - rvest
+  - robotstxt
+  - polite
+  - memoise
+  - ratelimitr
+slug: alldatascience
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE, 
+                      cache = FALSE) 
+```
+
+I was until recently subscribed to an email list, [ALLSTAT](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=ALLSTAT), "A UK-based worldwide e-mail broadcast system for the statistical community, operated by ICSE for HEA Statistics." created in 1998. That's how I saw [the ad for my previous job](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1505&L=ALLSTAT&P=R59128&1=ALLSTAT&9=A&J=on&K=2&d=No+Match%3BMatch%3BMatches&z=4) in Barcelona! Now, I dislike emails more and more so I unsubscribed, but I'd still check out the archives any time I need a job, since many messages are related to openings. Nowadays, I probably [identify more as a research software engineer](http://masalmon.eu/bio/) or data scientist than a statistician... which made me wonder, when did ALLSTAT start featuring data scientist jobs? How do their frequency compare to those of statisticians?
+
+In this post, I'll webscrape and analyse meta-data of ALLSTAT emails. It'll also be the occasion for me to take the wonderful new [`polite` package](https://github.com/dmi3kno/polite) for a ride, that helps respectful webscraping!
+
+<!--more-->
+
+# Webscraping ALLSTAT
+
+## Life on the edge of easy responsible webscraping
+
+As underlined in [The Ethical Scraper's principles by James Densmore](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01) (that I found in the [slides of Hanjo Odendaal's useR! 2018 webscraping tutorial](https://hanjostudy.github.io/Presentations/UseR2018/Rvest/rvest.html#1)), a first step is to research whether you can get the data without webscraping (I found no API). Note that an ideal case would be to have received emails since the list's creation in 1998, and having stored them, so that one could use this local copy. Or one could email the list maintainers of course!
+
+Then, there is some good practice to keep in mind whilst webscraping, also underlined in the principles list, and most importantly all encompassed in the [awesome new package `polite` by Dmytro Perepolkin](https://github.com/dmi3kno/polite)! I knew the packages wrapped by Dmytro, but tended to only use `robotstxt` e.g. [here](https://masalmon.eu/2018/06/18/mathtree/) when webscraping, (but [using others in API packages](https://itsalocke.com/blog/some-web-api-package-development-lessons-from-hibpwned/)). Now with very little effort, with `polite` you will
+
+* Seek permissions via [`robotstxt`](https://github.com/ropensci/robotstxt),
+
+* Introduce yourself with an [user agent](https://en.wikipedia.org/wiki/User_agent), by default the package's name and URL,
+
+* _Take it slowly_ thanks to [`ratelimitr`](https://github.com/tarakc02/ratelimitr),
+
+* _Never ask twice_ thanks to [`memoise`](https://github.com/r-lib/memoise).
+
+The `polite` package is brand-new, still in development, which in general means you might want to stay away from it for a while, but I was eager to try it and pleased by its working very well! Being an early adopter also means I saw [my issues](https://github.com/dmi3kno/polite/issues?utf8=%E2%9C%93&q=is%3Aissue+author%3Amaelle+) promptly closed with some solution/new code by Dmytro!
+
+I started work by _bowing_ which in `polite`'s workflow means both creating a session (with user-agent, delay between calls) and checking that the path is allowed.
+
+
+```r
+home_url <- "https://www.jiscmail.ac.uk/cgi-bin/webadmin"
+
+session <- polite::bow(home_url,
+                       user_agent = "Maëlle Salmon https://masalmon.eu/")
+```
+
+And then it was time to scrape and parse...
+
+## Actual webscraping a.k.a solving XPath puzzles
+
+When confronted with a page I'd like to extract info from, I try to identify how I can write [XPath](https://www.w3schools.com/xml/xpath_intro.asp) to get the elements I want, which means looking at the page source. I used to transform whole pages to text before using regexp on them, which was clearly suboptimal, thanks to [Eric Persson](https://twitter.com/expersso/) for [making me switch to XPath](https://masalmon.eu/2017/04/23/radioswissclassic/). 
+
+My strategy here was to get the subject, date, sender and size of each email from archive pages. [Here](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A1=ind0703&L=ALLSTAT) is such an archive page. Nowadays there is one archive page by month, but there used to be one by year, so I got the list of archive pages from [this general page](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=ALLSTAT).
+
+```r
+library("magrittr")
+
+polite::scrape(session, params = "?A0=ALLSTAT") %>%
+  rvest::xml_nodes("li") %>%
+  rvest::xml_nodes("a") %>%
+  rvest::html_attr("href") %>%
+  purrr::keep(function(x) stringr::str_detect(x, "\\/cgi-bin\\/webadmin\\?A1\\=")) %>%
+  stringr::str_remove("\\/cgi\\-bin\\/webadmin\\?A1\\=ind") %>%
+  stringr::str_remove("\\&L\\=ALLSTAT") -> date_strings
+```
+
+This is not very elegant but this got me only the "1807" and such I needed for the rest of the scraping. `polite::scrape` is a wrapper to both `httr::GET` and `httr::content` and does the rate limiting (by default 1 call every 5 seconds, `delay` parameter of `polite::bow`) and memoising. I actually ended up only scraping emails metadata from 2007 because it took ages to parse the 2006 page. It made me, according to a search via the website, miss these data scientists job openings: [one in 2000](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind00&L=ALLSTAT&P=R80005&1=ALLSTAT&9=A&I=-3&J=on&K=8&d=No+Match%3BMatch%3BMatches&z=4) and [one in 2004](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind04&L=ALLSTAT&P=R83293&1=ALLSTAT&9=A&I=-3&J=on&K=8&d=No+Match%3BMatch%3BMatches&z=4). 
+
+
+```r
+date_strings <- date_strings[stringr::str_length(date_strings) != 2]
+# or
+date_strings <- purrr::discard(date_strings, function(x) stringr::str_length(x) == 2)
+```
+
+I created a function getting the metadata out of each archive page. The trickiest points here were:
+
+* That the rows of the archive table could have two classes, which is the way alternate coloring was obtained. I therefore used `|` in XPath `'//tr[@class="normalgroup"]|//tr[@class="emphasizedgroup"]'`.
+
+* That there was to different class/formatting for subject, date, sender, so I got all of them at once, and then used the modulo operator, `%%`, to assign them to the right vector.
+
+```r
+get_emails_meta_by_date <- function(date_string, session){
+  message(date_string)
+  params <- glue::glue("?A1=ind{date_string}&L=ALLSTAT&F=&S=&O=T&H=0&D=0&T=0")
+  
+  everything <- try(polite::scrape(session, params = params),
+                    silent = TRUE)
+  
+  # at the time of writing one couldn't pass encoding to scrape
+  # but now one can https://github.com/dmi3kno/polite/issues/6#issuecomment-409268730
+  if(is(everything, "try-error")){
+    everything <- httr::GET(paste0(home_url,
+                                   params)) %>%
+      httr::content(encoding = "latin1")
+  }
+  
+  everything <- everything %>%
+    # there are two classes that correspond
+    # to the table having two colours of rows!
+    rvest::xml_nodes(XPath = '//tr[@class="normalgroup"]|//tr[@class="emphasizedgroup"]') %>%
+    rvest::xml_nodes("span")
+  
+  everything %>%
+    rvest::xml_nodes(XPath = "//td") %>%
+    rvest::xml_nodes("span") %>%
+    rvest::xml_nodes("a") %>%
+    rvest::html_text() -> subjects
+  
+  everything %>%
+    rvest::xml_nodes(XPath = "//td[@nowrap]") %>%
+    rvest::xml_nodes(XPath = "p[@class='archive']") %>%
+    rvest::html_text() -> big_mess
+  
+  senders <- big_mess[seq_along(big_mess) %% 3 == 1]
+  senders <- stringr::str_remove(senders, " \\<\\[log in to unmask\\]\\>")
+  
+  dates <- big_mess[seq_along(big_mess) %% 3 == 2]
+  dates <- lubridate::dmy_hms(dates, tz = "UTC")
+  
+  sizes <- big_mess[seq_along(big_mess) %% 3 == 0]
+  sizes <- stringr::str_remove(sizes, " lines")
+  sizes <- as.numeric(sizes)
+  
+  tibble::tibble(subject = subjects,
+                 sender = senders,
+                 date = dates,
+                 size = sizes) %>%
+    readr::write_csv(glue::glue("data/emails_meta{date_string}.csv"))
+  
+}
+```
+
+I chose to save the metadata of each archive page in its own csv in order to make my workflow less breakable. I could have used `purrr::map_df` but then it'd be harder to re-start, and it was hard on memory apparently.
+
+```r
+fs::dir_create("data")
+purrr::walk(date_strings,
+              get_emails_meta_by_date,
+              session = session)
+```
+
+# Analyzing ALLSTAT jobs
+
+## Filtering jobs
+
+ALLSTAT encourages you to use keywords in emails' subjects, so many job openings contain some variant of "job", and that's the sample on which I shall work.
+
+
+```{r, cache = TRUE}
+library("magrittr")
+library("magrittr")
+
+fs::dir_ls("../../static/data/allstat") %>%
+  purrr::map_df(readr::read_csv) -> emails
+
+jobs <- dplyr::filter(emails, 
+                      stringr::str_detect(subject,
+                                          "[Jj][Oo][Bb]"))
+
+```
+
+Out of `r nrow(emails)` emails I got `r nrow(jobs)` job openings.
+
+
+I created two dummy variables to indicate the presence of data scientist or statistician in the description. With the definition below, the "statistician" category might contain "biostatitisticians" which is fine by me.
+
+```{r}
+jobs <- dplyr::mutate(jobs,
+                      data_scientist = stringr::str_detect(subject, 
+                                                           "[Dd]ata [Ss]cientist"),
+                      statistician = stringr::str_detect(subject, 
+                                                          "[Ss]tatistician"))
+```
+
+
+`r sum(jobs$data_scientist)` subjects contain the word "data scientist", `r sum(jobs$statistician)` the word "statistician.", `r sum(jobs$data_scientist&jobs$statistician)` both.
+
+```{r}
+dplyr::filter(jobs, data_scientist, statistician) %>%
+  dplyr::select(subject, sender, date) %>%
+  knitr::kable()
+```
+
+Are the job titles synonymous for the organizations using slashes? I am especially puzzled by "Senior Medical statistician / Real-world data scientist"! I filtered them out and created a `category` variable.
+
+```{r}
+jobs <- dplyr::filter(jobs,
+                      !(data_scientist&statistician))
+jobs <- dplyr::mutate(jobs,
+                      category = dplyr::case_when(data_scientist ~ "data scientist",
+                                                  statistician ~ "statistician",
+                                                  TRUE ~ "other"),
+                      category = factor(category,
+                                        levels = c("statistician",
+                                                   "data scientist",
+                                                   "other"),
+                                        ordered = TRUE))
+
+jobs <- dplyr::mutate(jobs,
+                      year = lubridate::year(date))
+```
+
+Here are some examples of positions for each:
+
+```{r}
+head(jobs$subject[jobs$category=="statistician"])
+head(jobs$subject[jobs$category=="data scientist"])
+head(jobs$subject[jobs$category=="other"])
+```
+
+## Are data scientists on the rise?
+
+```{r}
+library("ggplot2")
+
+ggplot(jobs) +
+  geom_bar(aes(year, fill = category)) +
+  viridis::scale_fill_viridis(discrete = TRUE) +
+  theme(legend.position = "bottom") +
+  hrbrthemes::theme_ipsum(base_size = 14) +
+  xlab("Year (2018 not complete yet)") +
+  ylab("Number of job openings") +
+  ggtitle("ALLSTAT mailing list 2007-2018")
+```
+
+I like this bar plot that shows how the total number of job openings fluctuates, but it's hard to see differences in proportions.
+
+```{r}
+
+ggplot(jobs) +
+  geom_bar(aes(year, fill = category),
+           position = "fill") +
+  viridis::scale_fill_viridis(discrete = TRUE) +
+  theme(legend.position = "bottom") +
+  hrbrthemes::theme_ipsum(base_size = 14) +
+  xlab("Year (2018 not complete yet)") +
+  ylab("Number of job openings") +
+  ggtitle("ALLSTAT mailing list 2007-2018")
+
+```
+
+According to this plot, although there seems to be more and more data scientists' jobs advertised on ALLSTAT... Statisticians don't need to get worried just yet.
+
+## Who offers data scientists' jobs?
+
+```{r}
+dplyr::count(jobs, category,
+                sender) %>%
+  dplyr::group_by(category) %>%
+  dplyr::arrange(category, - n) %>%
+  dplyr::filter(sender %in% sender[1:5])
+
+```
+
+Seeing James Phillips' name so often made me have a look at his emails: this person sends emails on the behalf of a website called StatsJobs.com! We can also assume that other super-senders actually work for job aggregators of some sort.
+
+
+## What are the openings about?
+
+To make a more thorough description of the different categories, one would need to get the email bodies, which I decided against for this post. I simply used the subjects, and compared word usage between the "data scientist" and "statistician" categories as [in this chapter of the Tidy text mining book by Julia Silge and David Robinson](https://www.tidytextmining.com/twitter.html).
+
+
+```{r}
+library("tidytext")
+data("stop_words")
+words <- dplyr::filter(jobs, category != "other") %>%
+  unnest_tokens(word, subject, token = "words") %>%
+  dplyr::filter(!word %in% stop_words$word,
+                !word %in% c("job", "statistician", 
+                             "jobs", "statisticians",
+                             "data", "scientist",
+                             "scientists",
+                             "datascientistjobs"))
+
+word_ratios <- words %>%
+  dplyr::count(word, category) %>%
+  dplyr::group_by(word) %>%
+  dplyr::filter(sum(n) >= 10) %>%
+  dplyr::ungroup() %>%
+  tidyr::spread(category, n, fill = 0) %>%
+  dplyr::mutate_if(is.numeric, dplyr::funs((. + 1) / sum(. + 1))) %>%
+  dplyr::mutate(logratio = log(`data scientist` / statistician)) %>%
+  dplyr::arrange(desc(logratio))
+
+word_ratios %>%
+  dplyr::group_by(logratio < 0) %>%
+  dplyr::top_n(15, abs(logratio)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(word = reorder(word, logratio)) %>%
+  ggplot(aes(word, logratio, fill = logratio < 0)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  ylab("log odds ratio (data scientist / statistician)") +
+  scale_fill_manual(name = "", 
+                    values = c("#21908CFF", "#440154FF"),
+                    labels = c("data scientist", "statistician")) +
+  hrbrthemes::theme_ipsum(base_size = 11)+
+  ggtitle("ALLSTAT mailing list 2007-2018")
+```
+
+What does this figure show? On the left are words more frequent in statistician job openings, on the right words more frequent in data scientist job openings. Well, there might be geographical clusters for each of the category, which I don't believe though: is the data scientist vs. statistician debate a Cambridgeshire vs. Oxford battle? I was surprised that no word related to academia made an appearance because I thought "university" or an equivalent word would be more representative of statisticians. I am less surprised, though, by words such as "trials", "medical", "clinical" being more prevalent in the "statistician" category. The word "fixed" as in "fixed-term" contract is more prevalent for data scientist job openings, which doesn't sound too cool? 
+
+# Conclusion
+
+In this post, I had the pleasure to use the brand-new `polite` package that made responsible webscraping very smooth! Armed with that tool, I extracted metadata of job openings posted on the ALLSTAT mailing lists. I made no _statistical_ analyses, but the main take-away is that statisticians aren't in danger of extinction just yet.
