@@ -85,7 +85,7 @@ I created a function getting the metadata out of each archive page. The trickies
 
 * That the rows of the archive table could have two classes, which is the way alternate coloring was obtained. I therefore used `|` in XPath `'//tr[@class="normalgroup"]|//tr[@class="emphasizedgroup"]'`.
 
-* That there was to different class/formatting for subject, date, sender, so I got all of them at once, and then used the modulo operator, `%%`, to assign them to the right vector.
+* That there was no different class/formatting for subject, date, sender, so I got all of them at once, and then used the modulo operator, `%%`, to assign them to the right vector.
 
 ```r
 get_emails_meta_by_date <- function(date_string, session){
@@ -261,7 +261,7 @@ dplyr::count(jobs, category,
 
 ```
 
-Seeing James Phillips' name so often made me have a look at his emails: this person sends emails on the behalf of a website called StatsJobs.com! We can also assume that other super-senders actually work for job aggregators of some sort.
+Seeing James Phillips' name so often made me have a look at their emails: this person sends emails on the behalf of a website called StatsJobs.com! We can also assume that other super-senders actually work for job aggregators of some sort.
 
 
 ## What are the openings about?

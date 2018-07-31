@@ -56,7 +56,7 @@ date_strings &lt;- purrr::discard(date_strings, function(x) stringr::str_length(
 <p>I created a function getting the metadata out of each archive page. The trickiest points here were:</p>
 <ul>
 <li><p>That the rows of the archive table could have two classes, which is the way alternate coloring was obtained. I therefore used <code>|</code> in XPath <code>'//tr[@class=&quot;normalgroup&quot;]|//tr[@class=&quot;emphasizedgroup&quot;]'</code>.</p></li>
-<li><p>That there was to different class/formatting for subject, date, sender, so I got all of them at once, and then used the modulo operator, <code>%%</code>, to assign them to the right vector.</p></li>
+<li><p>That there was no different class/formatting for subject, date, sender, so I got all of them at once, and then used the modulo operator, <code>%%</code>, to assign them to the right vector.</p></li>
 </ul>
 <pre class="r"><code>get_emails_meta_by_date &lt;- function(date_string, session){
   message(date_string)
@@ -340,7 +340,7 @@ ggplot(jobs) +
 ## 13 other          Helena Newman-Mitchell   103
 ## 14 other          Jason Howlin              91
 ## 15 other          James Miller              85</code></pre>
-<p>Seeing James Phillips’ name so often made me have a look at his emails: this person sends emails on the behalf of a website called StatsJobs.com! We can also assume that other super-senders actually work for job aggregators of some sort.</p>
+<p>Seeing James Phillips’ name so often made me have a look at their emails: this person sends emails on the behalf of a website called StatsJobs.com! We can also assume that other super-senders actually work for job aggregators of some sort.</p>
 </div>
 <div id="what-are-the-openings-about" class="section level2">
 <h2>What are the openings about?</h2>
