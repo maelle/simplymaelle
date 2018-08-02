@@ -1,4 +1,5 @@
 ---
+draft: yes
 title: 'ALLSTATisticians in decline? A polite look at ALLSTAT email Archives'
 date: '2018-07-31'
 tags:
@@ -264,7 +265,8 @@ jobs &lt;- dplyr::mutate(jobs,
                                         ordered = TRUE))
 
 jobs &lt;- dplyr::mutate(jobs,
-                      year = lubridate::year(date))</code></pre>
+                      year = lubridate::year(date),
+                      year = as.factor(year))</code></pre>
 <p>Here are some examples of positions for each:</p>
 <pre class="r"><code>head(jobs$subject[jobs$category==&quot;statistician&quot;])</code></pre>
 <pre><code>## [1] &quot;FW: JOB: Senior/Lead Statistician - GlaxoSmithKline&quot;                   

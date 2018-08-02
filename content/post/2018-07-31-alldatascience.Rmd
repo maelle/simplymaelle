@@ -155,7 +155,7 @@ purrr::walk(date_strings,
 ALLSTAT encourages you to use keywords in emails' subjects, so many job openings contain some variant of "job", and that's the sample on which I shall work.
 
 
-```{r, cache = TRUE}
+```{r, cache = FALSE}
 library("magrittr")
 library("magrittr")
 
@@ -206,7 +206,8 @@ jobs <- dplyr::mutate(jobs,
                                         ordered = TRUE))
 
 jobs <- dplyr::mutate(jobs,
-                      year = lubridate::year(date))
+                      year = lubridate::year(date),
+                      year = as.factor(year))
 ```
 
 Here are some examples of positions for each:
