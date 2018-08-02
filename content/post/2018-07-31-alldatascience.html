@@ -300,6 +300,7 @@ ggplot(jobs) +
   hrbrthemes::theme_ipsum(base_size = 14) +
   xlab(&quot;Year (2018 not complete yet)&quot;) +
   ylab(&quot;Number of job openings&quot;) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   ggtitle(&quot;ALLSTAT mailing list 2007-2018&quot;)</code></pre>
 <p><img src="/post/2018-07-31-alldatascience_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>I like this bar plot that shows how the total number of job openings fluctuates, but it’s hard to see differences in proportions.</p>
@@ -310,7 +311,8 @@ ggplot(jobs) +
   theme(legend.position = &quot;bottom&quot;) +
   hrbrthemes::theme_ipsum(base_size = 14) +
   xlab(&quot;Year (2018 not complete yet)&quot;) +
-  ylab(&quot;Number of job openings&quot;) +
+  ylab(&quot;Number of job openings&quot;)  +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle(&quot;ALLSTAT mailing list 2007-2018&quot;)</code></pre>
 <p><img src="/post/2018-07-31-alldatascience_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>According to this plot, although there seems to be more and more data scientists’ jobs advertised on ALLSTAT… Statisticians don’t need to get worried just yet.</p>

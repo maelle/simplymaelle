@@ -230,6 +230,7 @@ ggplot(jobs) +
   hrbrthemes::theme_ipsum(base_size = 14) +
   xlab("Year (2018 not complete yet)") +
   ylab("Number of job openings") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   ggtitle("ALLSTAT mailing list 2007-2018")
 ```
 
@@ -244,7 +245,8 @@ ggplot(jobs) +
   theme(legend.position = "bottom") +
   hrbrthemes::theme_ipsum(base_size = 14) +
   xlab("Year (2018 not complete yet)") +
-  ylab("Number of job openings") +
+  ylab("Number of job openings")  +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle("ALLSTAT mailing list 2007-2018")
 
 ```
