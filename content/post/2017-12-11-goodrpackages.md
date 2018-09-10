@@ -64,7 +64,7 @@ Using these short and long form resources will help you increase the quality of 
 
 ## Short tutorials
 
-To learn the 101 of package building, check out [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) that got many R package developers started (I've for instance seen quite a few tweets of people celebrating their first R package and thanking Hilary!); or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`; or [this pictorial by Matthew J Denny](http://www.mjdenny.com/R_Package_Pictorial.html). How someone can be patient enough to do so many screenshots is beyond me but it's really great that he did!
+To learn the 101 of package building, check out [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) that got many R package developers started (I've for instance seen quite a few tweets of people celebrating their first R package and thanking Hilary!); or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`: [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/2018/09/usethis-workflow-for-package-development/); or [this pictorial by Matthew J Denny](http://www.mjdenny.com/R_Package_Pictorial.html). How someone can be patient enough to do so many screenshots is beyond me but it's really great that he did!
 
 ## Books
 
