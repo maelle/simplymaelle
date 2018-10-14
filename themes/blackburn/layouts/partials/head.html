@@ -3,6 +3,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
   {{.Hugo.Generator}}
+  {{ if eq .URL "/" }}
+<title>{{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Site.Params.title }}">
+<meta property="og:type" content="website">
+<meta property="description" content="{{ .Site.Params.description }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://masalmon.eu/img/barbie_office.jpg" >
+{{ else }}
+<title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:type" content="article">
+
+  {{ if .Params.twitterImg }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://masalmon.eu/{{ .Params.twitterImg }}" >
+  {{ else }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://masalmon.eu/img/barbie_office.jpg" >
+  {{ end }}
+  
+{{ $defaultDescription := .Summary }}
+<meta property="description" content="{{ .Description | default $defaultDescription }}">
+<meta property="og:description" content="{{ .Description | default $defaultDescription }}">
+{{ end }}
+
+<meta name="twitter:creator" content="@ma_salmon">
+<meta name="twitter:site" content="@ma_salmon">
 
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 

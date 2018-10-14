@@ -117,3 +117,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
+    
+[params]
+    title = "Maëlle's R blog"
+    description = "Showcase of my working/goofing around with R"
