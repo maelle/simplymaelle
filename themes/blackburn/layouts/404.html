@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <h2>{{ .Site.Params.subtitle }}</h2>
+</div>
+
+<div class="content">
+  <h1>Missing page<h1>
+  <p><b>Sorry, I can't find this page on my sitemap!</b><p>
+    <p><img src="../img/map.JPG" alt="looking at a map" width="500"></p>
+
+</div>
+
+{{ partial "footer.html" . }}
