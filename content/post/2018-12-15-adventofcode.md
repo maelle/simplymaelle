@@ -18,7 +18,7 @@ with the language of your choice. I’ve noted the popularity of this
 activity in my Twitter timeline but also in my GitHub timeline where
 I’ve seen the creation of a few `advent-of-code` or so repositories.
 
-{{&lt; tweet “1072724282705203201” &gt;}}
+{{< tweet 1072724282705203201 >}}
 
 If I were to participate one year, I’d probably use R. Jenny Bryan’s
 tweet above inspired me to try and gauge the popularity of languages
