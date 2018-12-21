@@ -45,7 +45,7 @@
 
   {{ with $.Site.Params.githubsource }}  
   <div>
-    <i class="fa fa-github"></i>
+    <i class="fa fa-github fa-fw"></i>
     <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}" target="_blank">View source</a>&nbsp{{ else }}@{{ . }}
   </div>
   {{ end }}
