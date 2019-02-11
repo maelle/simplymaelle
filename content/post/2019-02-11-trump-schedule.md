@@ -77,6 +77,8 @@ functionality!
 Special tale for Ubuntu users
 -----------------------------
 
+_Edit: [Benjamin Louis](https://www.benjaminlouis-stat.fr/) posted a link to [a helpful thread about installing Poppler's latest version and `pdftools` on Ubuntu 18.04](https://askubuntu.com/questions/1112856/how-to-install-poppler-0-73-on-ubuntu-18-04/1112947#1112947) in the comments. Thank you!_
+
 Sadly, as noted in Jeroen’s tech note, the new Poppler version that is
 necessary for `pdftools` to support low level text extraction… is not
 available on Linux yet, and I’ve just switched to Ubuntu from Windows
