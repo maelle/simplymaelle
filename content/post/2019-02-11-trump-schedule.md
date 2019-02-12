@@ -42,7 +42,7 @@ pdftools::pdf_render_page(pdf_file, page = 1) %>%
 
 <img src="/figure/source/2019-02-11-trump-schedule/ex1-1.png" width="612" />
 
-Seeing the PDF format above reminded me of [the cool new `pftools`
+Seeing the PDF format above reminded me of [the cool new `pdftools`
 feature Jeroen Ooms announced back in
 December](https://ropensci.org/technotes/2018/12/14/pdftools-20/): low
 level text extraction.
