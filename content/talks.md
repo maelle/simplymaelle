@@ -7,7 +7,7 @@ description = "Talks and such I've given"
 
 # Invited talks
 
-* [ConectaR 2019](http://www.conectar2019.ucr.ac.cr/), keynote talk. "Mejores paquetes de R, mejor ciencia". [Slides](https://maelle.github.io/conectar/#1)
+* [ConectaR 2019](http://www.conectar2019.ucr.ac.cr/), keynote talk. "Mejores paquetes de R, mejor ciencia". [Slides](https://maelle.github.io/conectar/#1).
 
 * [AniMove 2018 summer school](http://animove.org/animove-2019-evening-keynotes/), evening keynote talk. "The birder’s guide to rOpenSci." [Slides](https://maelle.github.io/animove/#1), [blog post series on rOpenSci blog](https://ropensci.org/tags/birder/).
 
@@ -23,7 +23,7 @@ description = "Talks and such I've given"
 
 * "Fluctuat nec mergitur
 How to be a resilient R user". [Slides](https://maelle.github.io/fluctuat_nec_mergitur/#1), [blog post about where to R help](https://masalmon.eu/2018/07/22/wheretogethelp/), [blog post about keeping up-to-date with R news](https://masalmon.eu/2019/01/25/uptodate/). I've given the talk three times:
-    * [R-Ladies Strasbourg](https://www.meetup.com/es/rladies-strasbourg/events/255348307/), 2018-10-26, 
+    * [R-Ladies Strasbourg](https://www.meetup.com/es/rladies-strasbourg/events/255348307/), 2018-10-26;
     * [R-Ladies Paris](https://www.meetup.com/es/rladies-paris/events/257585346/), 2019-01-10;
     * [R-Ladies San Jose (remotely)](https://www.meetup.com/rladies-san-jose/events/dbnnkpydcfbcb/), 2019-01-21.
 
@@ -37,6 +37,10 @@ How to be a resilient R user". [Slides](https://maelle.github.io/fluctuat_nec_me
 
 * "Introduction to RMarkdown", R-Ladies Barcelona, 2017-01-15. [Slides](https://rladies.github.io/barcelona_20170116_rmarkdown/rmd_tutorial#/), [GitHub repo](https://github.com/rladies/barcelona_20170116_rmarkdown).
 
-# Workshops
+# Workshops/courses
 
-* R package development, 1-day tutorial at [satRday Cape Town 2018](https://capetown2018.satrdays.org/). [Material](https://github.com/maelle/satrday_package_workshop).
+* "R package development", 1-day tutorial at [satRday Cape Town 2018](https://capetown2018.satrdays.org/). [Material](https://github.com/maelle/satrday_package_workshop).
+
+* "Domar datos", short session at ISGlobal on 2016-04-14. [Material](https://github.com/maelle/domar_datos).
+
+* "R Markdown", short session at ISGlobal in 2017. [Material](https://github.com/maelle/rmd_course_isglobal).
