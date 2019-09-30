@@ -21,7 +21,7 @@ description = "Talks and such I've given"
 
 # Meetup talks/tutorials
 
-* "Fluctuat nec mergitur
+* "Fluctuat nec mergitur:
 How to be a resilient R user". [Slides](https://maelle.github.io/fluctuat_nec_mergitur/#1), [blog post about where to R help](https://masalmon.eu/2018/07/22/wheretogethelp/), [blog post about keeping up-to-date with R news](https://masalmon.eu/2019/01/25/uptodate/). I've given the talk three times:
     * [R-Ladies Strasbourg](https://www.meetup.com/es/rladies-strasbourg/events/255348307/), 2018-10-26;
     * [R-Ladies Paris](https://www.meetup.com/es/rladies-paris/events/257585346/), 2019-01-10;
