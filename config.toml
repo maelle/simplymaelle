@@ -20,7 +20,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   subtitle = "Not a fish"
   brand = "Maëlle"
   googleAnalytics = ""
-  disqus = "masalmon"
+  disqus = ""
   # CSS name for highlight.js
   highlightjs = "github"
   highlightjsVersion = "9.11.0"
@@ -104,7 +104,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #  enable GDPR settings
 [privacy]
   [privacy.disqus]
-    disable = false
+    disable = true
   [privacy.googleAnalytics]
     disable = true
   [privacy.instagram]

@@ -4,12 +4,7 @@ date = "2018-06-11"
 sidemenu = "true"
 +++
 
-This Application collects some Personal Data from its Users.
-Personal Data collected for the following purposes and using the following services:
-
-Content commenting via Disqus
-
-Personal Data: Cookies, Usage Data and various types of Data as specified in [the privacy policy of the service](https://help.disqus.com/terms-and-policies/disqus-privacy-policy).
+This website is deployed via [Netlify](https://www.netlify.com/), refer to their [GDPR page](https://www.netlify.com/gdpr/).
 
 ## Contact information
 
