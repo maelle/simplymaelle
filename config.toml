@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Maëlle's R blog"
 theme = "blackburn"
 author = "Maëlle Salmon"
-copyright = "&copy; 2018. All rights reserved."
+copyright = 'Licence: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>'
 canonifyurls = true
 paginate = 5
 rssLimit = 10
