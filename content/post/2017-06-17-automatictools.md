@@ -54,6 +54,8 @@ Refer to [the "Project Configuration" section of `lintr` README](https://github.
 
 ## How to never ever ignore `lintr` output
 
+Edit on 2019-10-02: [the `lintr`docs recommend using the package in combination with continuoua integration, not to set up an unit test](https://github.com/jimhester/lintr/#continuous-integration).
+
 You can add an unit test for `lintr`! Why would one ever want to do that? Well, you might want to force yourself, or contributors to your package, to respect some rules. The test would be:
 
 ```r
