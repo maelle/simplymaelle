@@ -47,6 +47,14 @@ article > footer {
   overflow: hidden;
 }
 
+#menu {
+  overflow-y: visible;
+}
+
+#menu a {
+  padding: 0.6em;
+}
+
 #menu .brand {
   font-family: Raleway;
   font-weight: bold;
@@ -62,6 +70,10 @@ article > footer {
   font-size: 0.9em;
 }
 
+#menu .pure-menu ul.pure-menu-children {
+  border-top: none;
+}
+
 i {
   display: inline-block;
   margin-right: 0.2em;
@@ -74,20 +86,4 @@ i {
 
 .pagination a {
   color: #265778;
-}
-
-table {
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 1px solid #e5e5e5;
-  border-collapse: collapse;
-}
-td,
-th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
-}
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
 }
