@@ -45,10 +45,12 @@ I mentioned two small tips as well.
 For that one needs to create a .lintr file at the root of the package (and add it to .Rbuildignore). Here is an example of the content of such a file:
 
 ```r
-with_defaults(camel_case_linter = NULL, # you prefer camel case 
+linters: with_defaults(camel_case_linter = NULL, # you prefer camel case 
               snake_case_linter, # so flag snake case
               line_length_linter(120)) # you love long lines
 ```
+
+Refer to [the "Project Configuration" section of `lintr` README](https://github.com/jimhester/lintr/#project-configuration).
 
 ## How to never ever ignore `lintr` output
 
