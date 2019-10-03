@@ -8,8 +8,8 @@ description = ""
 ## <a name="pro"></a>Professional experience
 
 * February 2018 - present: part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time __software engineer__ [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
-
-* Oct 2017 - January 2018: Maternity leave.
+s
+* Oct 2017 - January 2018; June 2019 - Oct 2019: Maternity leaves.
 
 * Oct 2015 - Oct 2017: __Statistician and data manager__, ISGlobal, Center for Research in Environmental Epidemiology (CREAL), Barcelona (Spain). I worked for the [CHAI project](http://www.chaiproject.org/). CHAI means _Cardiovascular Health Effects of Air Pollution in Telangana, India_.
 
