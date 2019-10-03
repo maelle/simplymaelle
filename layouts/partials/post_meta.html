@@ -33,7 +33,7 @@
 
 
   <!--this adds github edit button to all posts-->
-{{ if $.File.Path }}
+{{ with $.File.Path }}
 
 {{ $Rmd := (print $.File.BaseFileName ".Rmd") }}
 
