@@ -123,6 +123,13 @@
       <a class="pure-menu-link" href="https://news.ycombinator.com/user?id={{ . }}" rel="me" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
     </li>
     {{ end }}
+    
+    {{ with .Site.Social.email }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="mailto:{{ . }}" target="_blank"><i class="fa fa-envelope fa-fw"></i>Email</a>
+    </li>
+    {{ end }}
+    
 
     <!-- Techie -->
 
@@ -189,6 +196,25 @@
     {{ with .Site.Social.keybase }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://keybase.io/{{ . }}" rel="me" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
+    </li>
+    {{ end }}
+    
+        
+    {{ with .Site.Social.orcid }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://orcid.org/{{ . }}" target="_blank"><i class="fa fa-id-badge fa-fw"></i>ORCID</a>
+    </li>
+    {{ end }}
+    
+    {{ with .Site.Social.researchgate }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://www.researchgate.net/profile/{{ . }}" target="_blank"><i class="fa fa-flask fa-fw"></i>ResearchGate</a>
+    </li>
+    {{ end }}
+
+    {{ with .Site.Social.gitlab }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://gitlab.com/{{ . }}" target="_blank"><i class="fa fa-gitlab fa-fw"></i>GitLab</a>
     </li>
     {{ end }}
 
