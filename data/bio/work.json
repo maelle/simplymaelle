@@ -19,6 +19,36 @@
    "start": "October 2015",
    "end": "October 2017"
 },{
-   "description": "Creation and writing of a biology textbook in French containing corrections of Grandes Ecoles biology entrance oral exams. [_L'oral de biologie aux concours BCPST, Adrien Henry and Maëlle Salmon, Editions Ellipses, 2010_](http://www.editions-ellipses.fr/product_info.php?products_id=7159). 3589 books sold as of September 2019.",
+   "title": "PhD Student",
+   "workplace": "Department of Infectious diseases epidemiology, Robert Koch Institute, Berlin (Germany).",
+   "description": " Advisor: [Dr Michael Höhle](http://staff.math.su.se/hoehle/).  _Advances in Count Time Series Monitoring for Public Health Surveillance._",
+   "start": "October 2012",
+   "end": "October 2015"
+},{
+   "title": "MPH internship",
+   "workplace": "Research laboratory Risk modelling and surveillance for health safety, Cnam, Paris (France).",
+   "description": " Advisor: [Dr Laura Temime](https://www.researchgate.net/profile/Laura_Temime). _Nursing schedules and circulation of nosocomial pathogens within an intensive care unit: A modelling study._",
+   "start": "March 2012",
+   "end": "September 2012"
+},{
+   "title": "MSc internship",
+   "workplace": "Department of Plant sciences, Cambridge University, Cambridge (UK).",
+   "description": "Advisor: [Dr João Filipe](https://www.researchgate.net/profile/Joao_Filipe2). _Modelling of the impact of an invasive pathogen on forest community dynamics to assess control strategies, sudden oak death as a case study._",
+   "start": "February 2011",
+   "end": "June 2011"
+},{
+   "title": "MSc internship",
+   "workplace": "Centre for theoretical biology, Gothenburg University, Gothenburg (Sweden).",
+   "description": "Advisors: [Dr Karin Hårding](https://www.researchgate.net/profile/Karin_Harding) and Dr Tero Härkönen. _Modelling and data analysis in wildlife epidemiology with the seal plague as a case study._",
+   "start": "February 2010",
+   "end": "June 2010"
+},{
+   "title": "Bachelor internship",
+   "workplace": "Institute for Medical Informatics, Statistics and Epidemiology (IMISE), University of Leipzig, Leipzig (Germany).",
+   "description": "Advisor: [Dr Markus Scholz](http://www.imise.uni-leipzig.de/Mitarbeiter/Markus.Scholz.jsp). _Analysis of genetic data (SNPs) of whole genomes._",
+   "start": "June 2009",
+   "end": "July 2009"
+},{
+   "description": "Creation and writing of a biology textbook in French containing corrections of Grandes Ecoles biology entrance oral exams. [_L'oral de biologie aux concours BCPST, Adrien Henry and Maëlle Salmon, Editions Ellipses, 2010_](http://www.editions-ellipses.fr/product_info.php?products_id=7159). 3,589 books sold as of September 2019.",
    "end": "2009"
 }]

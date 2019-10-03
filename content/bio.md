@@ -9,19 +9,6 @@ description = "Vitae of Maëlle Salmon"
 
 {{< work >}}
 
-
-* Oct 2012 - Oct 2015: __PhD Student__, Department of Infectious diseases epidemiology, Robert Koch Institute, Berlin (Germany). Advisor: [Dr Michael Höhle](http://staff.math.su.se/hoehle/). 
-_Advances in Count Time Series Monitoring for Public Health Surveillance._
-
-* Mar 2012 - Sep 2012: __MPH internship__, Research laboratory Risk modelling and surveillance for health safety, Cnam, Paris (France). Advisor: [Dr Laura Temime](https://www.researchgate.net/profile/Laura_Temime). _Nursing schedules and circulation of nosocomial pathogens within an intensive care unit: A modelling study._
-
-* Feb 2011 - Jun 2011: __MSc internship__, Department of Plant sciences, Cambridge University, Cambridge (UK). Advisor: [Dr João Filipe](https://www.researchgate.net/profile/Joao_Filipe2). _Modelling of the impact of an invasive pathogen on forest community dynamics to assess control strategies, sudden oak death as a case study._
-
-* Feb 2010 - Jun 2010: __MSc internship__, Centre for theoretical biology, Gothenburg University, Gothenburg (Sweden). Advisors: [Dr Karin Hårding](https://www.researchgate.net/profile/Karin_Harding) and Dr Tero Härkönen. 
-_Modelling and data analysis in wildlife epidemiology with the seal plague as a case study._
-
-* Jun 2009 - Jul 2010: __Bachelor internship__, Institute for Medical Informatics, Statistics and Epidemiology (IMISE), University of Leipzig, Leipzig (Germany). Advisor: [Dr Markus Scholz](http://www.imise.uni-leipzig.de/Mitarbeiter/Markus.Scholz.jsp). _Analysis of genetic data (SNPs) of whole genomes._
-
 ## <a name="education"></a>Education
 
 {{< education >}}
