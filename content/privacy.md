@@ -11,5 +11,3 @@ This website is deployed via [Netlify](https://www.netlify.com/), refer to their
 Owner and Data Controller: Maëlle Salmon
 
 Owner contact email: maelle.salmon@yahoo.se
-
-[Private policy generated using iubenda](https://www.iubenda.com), [full policy](https://www.iubenda.com/privacy-policy/66352447)
