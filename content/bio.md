@@ -7,17 +7,8 @@ description = "Vitae of Maëlle Salmon"
 
 ## <a name="pro"></a>Professional experience
 
-### What I'm doing now
+{{< work >}}
 
-* February 2019 - present: in charge of the project ["Catalyzing R-hub adoption through R package developer advocacy"](https://docs.r-hub.io/) [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects).
-
-* February 2018 - present: part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time __software engineer__ [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
-
-### What I've done in the past
-
-* Oct 2017 - January 2018; June 2019 - Oct 2019: Maternity leaves.
-
-* Oct 2015 - Oct 2017: __Statistician and data manager__, ISGlobal, Center for Research in Environmental Epidemiology (CREAL), Barcelona (Spain). I worked for the [CHAI project](http://www.chaiproject.org/). CHAI means _Cardiovascular Health Effects of Air Pollution in Telangana, India_.
 
 * Oct 2012 - Oct 2015: __PhD Student__, Department of Infectious diseases epidemiology, Robert Koch Institute, Berlin (Germany). Advisor: [Dr Michael Höhle](http://staff.math.su.se/hoehle/). 
 _Advances in Count Time Series Monitoring for Public Health Surveillance._

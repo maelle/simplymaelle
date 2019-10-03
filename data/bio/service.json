@@ -1,31 +1,31 @@
 [{
-   "service": "associate editor for [rOpenSci's onboarding](https://github.com/ropensci/onboarding) (peer-review system of R packages).",
+   "description": "associate editor for [rOpenSci's onboarding](https://github.com/ropensci/onboarding) (peer-review system of R packages).",
    "start": "February 2017"
 },{
-   "service": "main manager of [R-Ladies Global Twitter account](https://twitter.com/rladiesglobal).",
+   "description": "main manager of [R-Ladies Global Twitter account](https://twitter.com/rladiesglobal).",
    "start": "2017"
 },{
-   "service": "member of [R Weekly](https://rweekly.org/) team.",
+   "description": "member of [R Weekly](https://rweekly.org/) team.",
    "start": "December 2017"
 },{
-   "service": "co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona).",
+   "description": "co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona).",
    "start": "November 2016",
    "end": "August 2017"
 },
 {
-   "service": "Member of the organization teams of two one-day scientific conferences for graduate students.",
+   "description": "Member of the organization teams of two one-day scientific conferences for graduate students.",
    "end": "2013"
 },
 {
-   "service": "IT skill teacher for prisoners in Nanterre (2011, about 120 hours) and Fleury-Mérogis (2010, about 120 hours).",
+   "description": "IT skill teacher for prisoners in Nanterre (2011, about 120 hours) and Fleury-Mérogis (2010, about 120 hours).",
    "end": "Jul 2010, Jul 2011"
 },
 {
-   "service": "Member of the organizing team of a week of awareness raising about blood donation at the ENS. Communication, organization of a conference and an information stand.",
+   "description": "Member of the organizing team of a week of awareness raising about blood donation at the ENS. Communication, organization of a conference and an information stand.",
    "end": "2009"
 },
 {
-   "service": "Member of the association Tremplin (that at the time helped young people from 17 underprivileged high schools to go to college). Organization of and participation to its weekly homework coaching ; editing of its newsletter ; participation to the renewal of its data management.",
+   "description": "Member of the association Tremplin (that at the time helped young people from 17 underprivileged high schools to go to college). Organization of and participation to its weekly homework coaching ; editing of its newsletter ; participation to the renewal of its data management.",
    "end": "2012",
    "start": "2008"
 }]
