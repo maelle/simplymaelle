@@ -45,29 +45,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## <a name="service"></a>Teaching and community service
 
-### What I'm doing now
-
-* Since December 2017, member of [R Weekly](https://rweekly.org/) team.
-
-* Since 2017, [R-Ladies Global social master](https://rladies.org/about-us/team/) which means I'm the main manager of [its Twitter account](https://twitter.com/rladiesglobal).
-
-* Since February 2017, associate editor for [rOpenSci's onboarding](https://github.com/ropensci/onboarding) (peer-review system of R packages).
-
-### What I've done in the past
-
-* November 2016 - August 2017, co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona}{R-Ladies Barcelona). I was in charge of [two](https://github.com/rladies/barcelona_20170116_rmarkdown) [tutorials](https://github.com/rladies/bcn_20170320_introtodplyrtidyr).
-
-* April 2016 and February 2017: organization of two short R courses at ISGlobal, one [about data wrangling with `dplyr` and `tidyr`](https://github.com/maelle/rmd_course_isglobal), one [about `RMarkdown`](https://github.com/maelle/domar_datos).
-
-* 2013: Member of the organization teams of two one-day scientific conferences for graduate students.
-
-* Jul 2010, Jul 2011: IT skill teacher for prisoners in Nanterre (2011, about 120 hours) and Fleury-Mérogis (2010, about 120 hours).
-
-* 2009: Creation and writing of a biology textbook in French containing corrections of Grandes Ecoles biology entrance oral exams. [_L'oral de biologie aux concours BCPST, Adrien Henry and Maëlle Salmon, Editions Ellipses, 2010_](http://www.editions-ellipses.fr/product_info.php?products_id=7159). 2134 books sold as of September 2012.
-
-* 2009: Member of the organizing team of a week of awareness raising about blood donation at the ENS. Communication, organization of a conference and an information stand.
-
-* 2008-2012: Member of the association Tremplin (that at the time helped young people from 17 underprivileged high schools to go to college). Organization of and participation to its weekly homework coaching ; editing of its newsletter ; participation to the renewal of its data management.
+{{< service >}}
 
 ## Personal
 <img src="../img/aurayvannes.png" alt="aurayvannes" style="float: left; width: 30%; margin-right: 5%; margin-bottom: 0.5em;">

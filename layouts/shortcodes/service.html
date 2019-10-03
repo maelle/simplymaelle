@@ -1,0 +1,18 @@
+<h3 id="current-service">Current service</h3>
+
+{{ range .Site.Data.bio.service }}
+  {{ if (not (isset . "end")) }}
+<ul>
+  <li>Since {{ .start }}, {{ .service | markdownify  }}</li>
+</ul>
+  {{ end }}
+{{ end }}
+
+<h3 id="past-service">Past service</h3>
+{{ range .Site.Data.bio.service }}
+  {{ if isset . "end" }}
+<ul>
+  <li>{{ with .start }}{{ . }}-{{ end }}{{ .end }}, {{ .service | markdownify  }}</li>
+</ul>
+  {{ end }}
+{{ end }}
