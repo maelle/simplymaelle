@@ -1,0 +1,33 @@
+[{
+   "degree": "PhD in Statistics",
+   "start": "2012",
+   "end": "2016",
+   "institution" : "Ludwig-Maximilian Universität, Munich, Germany",
+   "notes": "Thesis submitted in March 2016 (see illustration below) and successfully defended on the 29th of June 2016.",
+   "image": "<img src='../img/gestation.gif' alt='gestation' width='300'>"
+},
+{
+   "degree": "Master of Public Health",
+   "start": "2011",
+   "end": "2012",
+   "institution" : "École Pasteur-Cnam de santé publique (Institut Pasteur, Cnam), Paris, France"
+},
+{
+   "degree": "MSc in Theoretical Ecology and Modelling",
+   "start": "2009",
+   "end": "2011",
+   "institution" : "École Normale Supérieure and Université Pierre et Marie Curie, Paris, France"
+},
+{
+   "degree": "BSc in Biology",
+   "start": "2008",
+   "end": "2009",
+   "institution" : "École Normale Supérieure and Université Pierre et Marie Curie, Paris, France"
+},
+{
+   "degree": "Classe préparatoire BCPST",
+   "start": "2006",
+   "end": "2008",
+   "institution" : "Lycée Clemenceau, Nantes, France",
+   "notes": "Mathematics, biology, geology, physics, chemistry."
+}]
