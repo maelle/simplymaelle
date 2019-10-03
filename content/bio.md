@@ -2,7 +2,7 @@
 title = "Bio"
 date = "2018-06-11"
 sidemenu = "true"
-description = ""
+description = "Vitae of Maëlle Salmon"
 +++
 
 ## <a name="pro"></a>Professional experience
@@ -33,17 +33,7 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## <a name="education"></a>Education
 
-* 2012-2016, __PhD student in Statistics__, Ludwig-Maximilian Universität, Munich, Germany. Thesis submitted in March 2016 (see illustration below) and successfully defended on the 29th of June 2016.
-
-<img src="../img/gestation.gif" alt="gestation" width="300">
-
-* 2012, __Master of Public Health__, École Pasteur-Cnam de santé publique (Institut Pasteur, Cnam), Paris, France.
-
-* 2011, __MSc in Theoretical Ecology and Modelling__, École Normale Supérieure and Université Pierre et Marie Curie, Paris, France.
-
-* 2009, __BSc in Biology__, École Normale Supérieure and Université Pierre et Marie Curie, Paris, France.
-
-* 2006-2008, __Classe préparatoire BCPST__, Lycée Clemenceau, Nantes, France. Mathematics, biology, geology, physics, chemistry. 
+{{< education >}}
 
 ## <a name="languages"></a>Languages
 

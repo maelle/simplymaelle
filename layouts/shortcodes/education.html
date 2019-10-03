@@ -1,0 +1,8 @@
+{{ range .Site.Data.bio.education }}
+<ul>
+   <li>{{ .start }}-{{ .end }}, <strong>{{ .degree }}</strong>, {{ .institution }}. {{ .notes }}</li>
+   {{ with .image }}
+   {{ . | safeHTML }}
+   {{ end }}
+</ul>
+{{ end }}
