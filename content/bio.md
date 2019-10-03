@@ -7,8 +7,14 @@ description = ""
 
 ## <a name="pro"></a>Professional experience
 
+### What I'm doing now
+
+* February 2019 - present: in charge of the project ["Catalyzing R-hub adoption through R package developer advocacy"](https://docs.r-hub.io/) [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects).
+
 * February 2018 - present: part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/) and part-time __software engineer__ [for Locke Data](https://itsalocke.com/blog/year-2-of-locke-data/).
-s
+
+### What I've done in the past
+
 * Oct 2017 - January 2018; June 2019 - Oct 2019: Maternity leaves.
 
 * Oct 2015 - Oct 2017: __Statistician and data manager__, ISGlobal, Center for Research in Environmental Epidemiology (CREAL), Barcelona (Spain). I worked for the [CHAI project](http://www.chaiproject.org/). CHAI means _Cardiovascular Health Effects of Air Pollution in Telangana, India_.
@@ -49,11 +55,15 @@ _Modelling and data analysis in wildlife epidemiology with the seal plague as a 
 
 ## <a name="service"></a>Teaching and community service
 
+### What I'm doing now
+
 * Since December 2017, member of [R Weekly](https://rweekly.org/) team.
 
 * Since 2017, [R-Ladies Global social master](https://rladies.org/about-us/team/) which means I'm the main manager of [its Twitter account](https://twitter.com/rladiesglobal).
 
 * Since February 2017, associate editor for [rOpenSci's onboarding](https://github.com/ropensci/onboarding) (peer-review system of R packages).
+
+### What I've done in the past
 
 * November 2016 - August 2017, co-organizer of the [R-Ladies Barcelona meetup](https://www.meetup.com/rladies-barcelona}{R-Ladies Barcelona). I was in charge of [two](https://github.com/rladies/barcelona_20170116_rmarkdown) [tutorials](https://github.com/rladies/bcn_20170320_introtodplyrtidyr).
 
