@@ -3,7 +3,7 @@
 {{ range .Site.Data.bio.work }}
   {{ if (not (isset . "end")) }}
 <ul>
-  <li>{{ .description | markdownify  }} (since {{ .start }}) </li>
+  <li>{{ .description | markdownify  }} (since {{ .start }}). </li>
 </ul>
   {{ end }}
 {{ end }}
@@ -13,7 +13,7 @@
 {{ range .Site.Data.bio.service }}
   {{ if (not (isset . "end")) }}
 <ul>
-  <li>{{ .description | markdownify  }}</li>
+  <li>{{ .description | markdownify  }}.</li>
 </ul>
   {{ end }}
 {{ end }}
