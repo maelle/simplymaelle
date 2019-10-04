@@ -5,6 +5,8 @@ sidemenu = "true"
 description = "Vitae of Maëlle Salmon"
 +++
 
+[tl;dr version](/about/)
+
 ## <a name="pro"></a>Professional experience
 
 {{< work >}}
