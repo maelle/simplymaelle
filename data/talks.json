@@ -4,7 +4,7 @@
    "date": "January 2019",
    "title": "Mejores paquetes de R, mejor ciencia",
    "slides": "https://maelle.github.io/conectar/#1",
-   "type": "keynote talk"
+   "type": "keynote"
 },{
    "event": "AniMove summer school",
    "event_url": "http://animove.org/animove-2019-evening-keynotes/",
@@ -14,4 +14,14 @@
    "type": "evening keynote",
    "links": [{"name": "blog post series on rOpenSci blog",
               "url": "https://ropensci.org/tags/birder/"}]
+},{
+   "event": "SatRday Cape Town",
+   "event_url": "https://capetown2018.satrdays.org/",
+   "date": "March 2018",
+   "title": "Our package reviews in review! Introducing & analyzing rOpenSci onboarding",
+   "slides": "https://maelle.github.io/satrday_keynote/slides",
+   "type": "keynote",
+   "video": "https://www.youtube.com/watch?v=lZ3deq52qCk",
+   "links": [{"name": "blog post series on rOpenSci blog",
+              "url": "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/"}]
 }]
