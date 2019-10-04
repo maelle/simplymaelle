@@ -1,0 +1,5 @@
+<i class="fas fa-desktop"></i>: slides; <i class="fas fa-film"></i>: recording; <i class="fas fa-link"></i>: blog post(s).
+
+{{ range .Site.Data.talks }}
+<p>{{ with .slides }}<a href={{ . }}><i class="fas fa-desktop"></i></a>{{ end }}{{ with .video }}<a href={{ . }}><i class="fas fa-film"></i></a>{{ end }}{{ with .links }}{{ range . }}<a href={{ .url }}><i class="fas fa-link"></i></a>{{ end }}{{ end }}<strong>{{ .title }}</strong>, <a href="{{ .event_url }}">{{ .event }}</a>, {{ .type }}, {{ .date }}.</p>
+{{ end }}

@@ -5,11 +5,7 @@ sidemenu = "true"
 description = "Talks and such I've given"
 +++
 
-# Invited talks
-
-* [ConectaR 2019](http://www.conectar2019.ucr.ac.cr/), keynote talk. "Mejores paquetes de R, mejor ciencia". [Slides](https://maelle.github.io/conectar/#1).
-
-* [AniMove 2018 summer school](http://animove.org/animove-2019-evening-keynotes/), evening keynote talk. "The birder’s guide to rOpenSci." [Slides](https://maelle.github.io/animove/#1), [blog post series on rOpenSci blog](https://ropensci.org/tags/birder/).
+{{< talks >}}
 
 * SatRday Cape Town 2018 keynote talk. "Our package reviews in review! Introducing & analyzing rOpenSci onboarding" [Video](https://www.youtube.com/watch?v=lZ3deq52qCk), [slides](https://maelle.github.io/satrday_keynote/slides), [blog post series on rOpenSci blog](https://ropensci.org/blog/2018/05/10/onboarding-social-weather/).
 
