@@ -7,7 +7,7 @@ description = "Talks and such I've given"
 
 {{< talks >}}
 
-* SatRday Cape Town 2018 keynote talk. "Our package reviews in review! Introducing & analyzing rOpenSci onboarding" [Video](https://www.youtube.com/watch?v=lZ3deq52qCk), [slides](https://maelle.github.io/satrday_keynote/slides), [blog post series on rOpenSci blog](https://ropensci.org/blog/2018/05/10/onboarding-social-weather/).
+* SatRday Cape Town 2018 keynote talk. "" [Video](), [slides](), [blog post series on rOpenSci blog]().
 
 * "How to develop good packages (for open science)", Ecology Hackathon at the Ecology Across Borders conference in Ghent, 2017-12-11, [blog post](https://masalmon.eu/2017/12/11/goodrpackages/).
 

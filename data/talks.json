@@ -1,14 +1,14 @@
 [{
    "event": "ConectaR",
    "event_url": "http://www.conectar2019.ucr.ac.cr/",
-   "date": "January 2019",
+   "date": "2019-01-25",
    "title": "Mejores paquetes de R, mejor ciencia",
    "slides": "https://maelle.github.io/conectar/#1",
    "type": "keynote"
 },{
    "event": "AniMove summer school",
    "event_url": "http://animove.org/animove-2019-evening-keynotes/",
-   "date": "September 2018",
+   "date": "2018-09-12",
    "title": "The birder’s guide to rOpenSci",
    "slides": "https://maelle.github.io/animove/#1",
    "type": "evening keynote",
@@ -17,7 +17,7 @@
 },{
    "event": "SatRday Cape Town",
    "event_url": "https://capetown2018.satrdays.org/",
-   "date": "March 2018",
+   "date": "2018/03/17",
    "title": "Our package reviews in review! Introducing & analyzing rOpenSci onboarding",
    "slides": "https://maelle.github.io/satrday_keynote/slides",
    "type": "keynote",

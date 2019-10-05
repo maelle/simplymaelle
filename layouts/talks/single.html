@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+
+  {{ partial "talk_meta.html" . }}
+  {{ with .Params.slides }}
+  <p><a href={{ . }}><i class="fas fa-desktop"></i> Slides</a>
+  </p>
+  {{ end }}
+  {{ with .Params.video }}
+  <p><a href={{ . }}><i class="fas fa-film"></i> Recording</a>
+  </p>
+  {{ end }}
+  {{ with .Params.links }}{{ range . }}
+  <p><a href={{ .url }}><i class="fas fa-link"></i> {{ .name }}</a>{{ end }}
+  </p>
+  {{ end }}
+  {{ .Content }}
+
+  {{ partial "prev_next_post.html" . }}
+
+  {{ partial "disqus.html" . }}
+
+</div>
+
+{{ partial "footer.html" . }}
