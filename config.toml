@@ -18,7 +18,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   description = "Showcase of my working/goofing around with R"
   # Shown in the home page
   subtitle = "Not a fish"
-  brand = "Maëlle"
+  brand = "Maëlle Salmon"
   googleAnalytics = ""
   disqus = ""
   # CSS name for highlight.js
