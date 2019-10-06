@@ -1,5 +1,5 @@
 ---
-title: 'Our package reviews in review! Introducing & analyzing rOpenSci onboarding'
+title: 'Our package reviews in review!'
 date: '2018-03-17'
 event: "SatRday Cape Town"
 event_url: "https://capetown2018.satrdays.org/"

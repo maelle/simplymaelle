@@ -1,20 +1,3 @@
-+++
-title = "Talks"
-date = "2018-06-11"
-sidemenu = "true"
-description = "Talks and such I've given"
-+++
-
-{{< talks >}}
-
-* SatRday Cape Town 2018 keynote talk. "" [Video](), [slides](), [blog post series on rOpenSci blog]().
-
-* "How to develop good packages (for open science)", Ecology Hackathon at the Ecology Across Borders conference in Ghent, 2017-12-11, [blog post](https://masalmon.eu/2017/12/11/goodrpackages/).
-
-# Discussion panel
-
-["Storytelling With Data Science", Toptal Expert Panel recording](https://www.crowdcast.io/e/storytelling-with-data-science).
-
 # Meetup talks/tutorials
 
 * "Fluctuat nec mergitur:
