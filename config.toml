@@ -15,9 +15,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
   title = "Maëlle's R blog"
-  description = "Showcase of my working/goofing around with R"
+  description = "Showcase of my (mostly R) work/fun"
   # Shown in the home page
-  subtitle = "Not a fish"
+  subtitle = "Showcase of my (mostly R) work/fun"
   brand = "Maëlle Salmon"
   googleAnalytics = ""
   disqus = ""
