@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+</div>
+<div class="content">
+<p>
+<i class="fas fa-desktop"></i>: slides; <i class="fas fa-film"></i>: recording; <i class="fas fa-box-open"></i> materials; <i class="fas fa-link"></i>: blog post(s).
+</p>
+
+  {{ range ( .Paginate (where .Site.RegularPages "Type" "talks")).Pages }}
+    {{ .Render "summary"}}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+</div>
+
+{{ partial "footer.html" . }}
