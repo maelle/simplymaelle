@@ -6,13 +6,17 @@
 </div>
 <div class="content">
 
-  {{ partial "talk_meta.html" . }}
+  {{ partial "talk_meta_single.html" . }}
   {{ with .Params.slides }}
   <p><a href={{ . }}><i class="fas fa-desktop"></i> Slides</a>
   </p>
   {{ end }}
   {{ with .Params.video }}
   <p><a href={{ . }}><i class="fas fa-film"></i> Recording</a>
+  </p>
+  {{ end }}
+  {{ with .Params.materials }}
+  <p><a href={{ . }}><i class="fas fa-box-open"></i> Materials</a>
   </p>
   {{ end }}
   {{ with .Params.links }}{{ range . }}
