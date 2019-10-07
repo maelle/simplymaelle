@@ -45,8 +45,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Content by date"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 2
-    identifier = "post"
-    url = "/post/"
+    identifier = "all"
+    url = "/all/"
   [[menu.main]]
     name = "Posts by tag"
     pre = "<i class='fa fa-tags fa-fw'></i>"

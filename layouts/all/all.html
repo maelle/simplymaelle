@@ -3,7 +3,10 @@
 <div class="header">
   <h1>{{ .Title }}</h1>
 </div>
+
 <div class="content">
+  <p><i class="far fa-sticky-note"></i>: blog post; <i class="fas fa-microphone-alt"></i>: talk/tutorial.</p>
+  
   {{ range (where .Site.Pages "Type" "in" (slice "post" "talks")).GroupByDate "2006" }}
   <h2>{{ .Key }}</h2>
   <ul>
