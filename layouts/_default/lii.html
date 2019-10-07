@@ -1,3 +1,0 @@
-{{ if ( not ( in (slice "Posts" "Talks & tutorials" ) .Title)) }}
-<li><time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006, 15:04" }}{{ end }}</time> - {{ if (eq .Type "post") }} {{ end }} - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-{{ end }}
