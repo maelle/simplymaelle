@@ -1,0 +1,7 @@
+{{ range . }}
+<p>
+  <a href="{{ .doi }}"><i class="fab fa-orcid"></i></a> <i>{{ .title }}</i>, 
+  {{ range $i, $e := .authors }}{{ if $i }}, {{ end }}
+  {{ if eq $e "M. Salmon" }}<strong>{{ $e }}</strong>{{ else }}{{ $e }}{{ end }}{{ end }} 
+</p>
+{{ end }}
