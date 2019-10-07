@@ -9,10 +9,11 @@
     {{ end }}
 
     <!-- SNS microblogging -->
-
+<li class="pure-menu-item">
+    </li>
     {{ with .Site.Social.twitter }}
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://twitter.com/{{ . }}" rel="me" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+      <a class="pure-menu-link" href="https://twitter.com/{{ . }}" rel="me" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
     </li>
     {{ end }}
 
@@ -135,7 +136,7 @@
 
     {{ with .Site.Social.github }}
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/{{ . }}" rel="me" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+      <a class="pure-menu-link" href="https://github.com/{{ . }}" rel="me" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
     </li>
     {{ end }}
 
