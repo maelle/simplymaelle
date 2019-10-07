@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+</div>
+<div class="content">
+  {{ range (where .Site.Pages "Type" "in" (slice "post" "talks")).GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2>
+  <ul>
+  {{ range .Pages }}
+    {{ .Render "lii" }}
+  {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}
