@@ -42,7 +42,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     identifier = "home"
     url = "/"
   [[menu.main]]
-    name = "Posts by date"
+    name = "Content by date"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 2
     identifier = "post"
@@ -68,7 +68,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [[menu.main]]
     name = "Talks"
     pre = "<i class='fa fa-microphone fa-fw'></i>"
-    weight = 6
+    weight = 1
     identifier = "talks"
     url = "/talks/"
   [[menu.main]]
