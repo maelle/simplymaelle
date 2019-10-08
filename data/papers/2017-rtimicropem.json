@@ -1,0 +1,9 @@
+[{ 
+   "name": "rtimicropem2017",
+   "authors": ["M. Salmon", "V. Sreekanth", "C. Milà", "J.D. Marshall", "C. Tonne"],
+   "title": "rtimicropem: an R package supporting the analysis of RTI MicroPEM output files",
+   "journal": "The Journal of Open Source Software",
+   "year": "2017",
+   "doi" : "10.21105/joss.00333",
+   "abstract": "Supports the input and reproducible analysis of RTI MicroPEM output files."
+}]
