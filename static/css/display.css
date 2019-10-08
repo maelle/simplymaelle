@@ -1,0 +1,9 @@
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  background-color: white; 
+  border: none;
+  color: #F69289;
+  text-align: center;
+  margin-left: 0px;
+  text-decoration: none;
+  display: inline;
+}

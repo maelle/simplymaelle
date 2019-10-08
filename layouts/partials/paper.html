@@ -1,7 +1,9 @@
 {{ range . }}
 <p>
-  <a href="{{ .doi }}"><i class="fab fa-orcid"></i></a> <i>{{ .title }}</i>, 
-  {{ range $i, $e := .authors }}{{ if $i }}, {{ end }}
-  {{ if eq $e "M. Salmon" }}<strong>{{ $e }}</strong>{{ else }}{{ $e }}{{ end }}{{ end }} 
+  <b><i style="display: inline">{{ .title }}</i></b>.&nbsp;{{ range $i, $e := .authors }}{{ if $i }}, {{ end }}
+  {{ if eq $e "M. Salmon" }}<em>{{ $e }}</em>{{ else }}{{ $e }}{{ end }}{{ end }}. {{ .journal }}, {{ .year }}.&nbsp;<a href="{{ .doi }}"><i class="fab fa-orcid"></i></a> <button onclick='myDisplay("desc-{{ .name }}")'> <i class="fas fa-book-reader"></i></button>
+<div id="desc-{{ .name }}" style="display:none">
+  <em>{{ .abstract }}</em>
+</div>  
 </p>
 {{ end }}
