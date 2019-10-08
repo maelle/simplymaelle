@@ -14,7 +14,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   topic = "topics"
 
 [params]
-  custom_css = ["css/display.css"]
+  custom_css = ["css/paper-button.css", "css/salmon.css"]
   custom_js = ["js/display.js"]
   title = "Maëlle's R blog"
   description = "Showcase of my (mostly R) work/fun"
