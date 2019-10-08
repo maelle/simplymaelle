@@ -49,7 +49,7 @@ The content `<div>` is where all your content goes.
 
 .header {
      margin: 0;
-     color: #F69289;
+     color: #333;
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
@@ -87,7 +87,7 @@ appears on the left side of the page.
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #F69289;
+    background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,7 +95,7 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #fff;
+        color: #999;
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -114,14 +114,14 @@ appears on the left side of the page.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #FFF;
+        border-top: 1px solid #333;
     }
         /*
         Change color of the anchor links on hover/focus.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #F69289;
+            background: #333;
         }
 
     /*
