@@ -1,0 +1,9 @@
+[{ 
+   "name": "review2018",
+   "authors": ["K. Ram", "C. Boettiger", "S. Chamberlain", "N. Ross", "M. Salmon", "S. Butland"],
+   "title": "A Community of Practice Around Peer Review for Long-Term Research Software Sustainability",
+   "journal": "Computing in Science & Engineering",
+   "year": "2018",
+   "doi" : "10.1109/MCSE.2018.2882753",
+   "abstract": "Scientific open source projects are responsible for enabling many of the major advances in modern science including recent breakthroughs such as the Laser Interferometer Gravitational-Wave Observatory project recognized in the 2017 Nobel Prize for physics. However, much of this software ecosystem is developed ad hoc with no regard for sustainable software development practices. This problem is further compounded by the fact that researchers who develop software have little in the way of resources or academic recognition for their efforts. The rOpenSci Project, founded in 2011 with the explicit mission of developing software to support reproducible science, has in recent years undertaken an effort to improve the long tail of scientific software. In this paper, we describe our software peer-review system, which brings together the best of traditional academic review with new ideas from industry code review."
+}]
