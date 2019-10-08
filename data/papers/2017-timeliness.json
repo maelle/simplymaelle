@@ -1,0 +1,9 @@
+{ 
+   "name": "timeliness2017",
+   "authors": ["J. Schumacher", "M. Diercke", "M. Salmon", "I. Czogiel", "D. Schumacher", "H. Claus", "A. Gilsdorf"],
+   "title": "Timeliness in the German surveillance system for infectious diseases: Amendment of the infection protection act in 2013 decreased local reporting time to 1 day",
+   "journal": "PLOS ONE",
+   "year": "2017",
+   "doi" : "10.1371/journal.pone.0187037",
+   "abstract": "Time needed to report surveillance data within the public health service delays public health actions. The amendment to the infection protection act (IfSG) from 29 March 2013 requires local and state public health agencies to report surveillance data within one working day instead of one week. We analysed factors associated with reporting time and evaluated the IfSG amendment. Local reporting time is the time between date of notification and date of export to the state public health agency and state reporting time is time between date of arrival at the state public health agency and the date of export. We selected cases reported between 28 March 2012 and 28 March 2014. We calculated the median local and state reporting time, stratified by potentially influential factors, computed a negative binominal regression model and assessed quality and workload parameters. Before the IfSG amendment the median local reporting time was 4 days and 1 day afterwards. The state reporting time was 0 days before and after. Influential factors are the individual local public health agency, the notified disease, the notification software and the day of the week. Data quality and workload parameters did not change. The IfSG amendment has decreased local reporting time, no relevant loss of data quality or identifiable workload-increase could be detected. State reporting time is negligible. We recommend efforts to harmonise practices of local public health agencies including the exclusive use of software with fully compatible interfaces."
+}

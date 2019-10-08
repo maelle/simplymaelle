@@ -1,8 +1,8 @@
-[{ "name": "2018cameras",
+{ "name": "2018cameras",
    "authors": ["M. Salmon", "C. Milà", "S. Bhogadi", "S. Addanki", "P. Madhira", "N. Muddepaka", "A. Mora", "M. Sanchez", "S. Kinra", "V. Sreekanth", "A. Doherty", "J.D. Marshall", "C. Tonne"],
    "title": "Wearable camera-derived microenvironments in relation to personal exposure to PM2.5",
    "journal": "Environment International",
    "year": "2018",
    "doi" : "10.1016/j.envint.2018.05.021",
    "abstract": "Data regarding which microenvironments drive exposure to air pollution in low and middle income countries are scarce. Our objective was to identify sources of time-resolved personal PM2.5 exposure in peri-urban India using wearable camera-derived microenvironmental information. We conducted a panel study with up to 6 repeated non-consecutive 24 h measurements on 45 participants (186 participant-days). Camera images were manually annotated to derive visual concepts indicative of microenvironments and activities. Men had slightly higher daily mean PM2.5 exposure (43 μg/m3) compared to women (39 μg/m3). Cameras helped identify that men also had higher exposures when near a biomass cooking unit (mean (sd) μg/m3: 119 (383) for men vs 83 (196) for women) and presence in the kitchen (133 (311) for men vs 48 (94) for women). Visual concepts associated in regression analysis with higher 5-minute PM2.5 for both sexes included: smoking (+93% (95% confidence interval: 63%, 129%) in men, +29% (95% CI: 2%, 63%) in women), biomass cooking unit (+57% (95% CI: 28%, 93%) in men, +69% (95% CI: 48%, 93%) in women), visible flame or smoke (+90% (95% CI: 48%, 144%) in men, +39% (95% CI: 6%, 83%) in women), and presence in the kitchen (+49% (95% CI: 27%, 75%) in men, +14% (95% CI: 7%, 20%) in women). Our results indicate wearable cameras can provide objective, high time-resolution microenvironmental data useful for identifying peak exposures and providing insights not evident using standard self-reported time-activity."
-}]
+}

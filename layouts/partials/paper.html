@@ -1,4 +1,3 @@
-{{ range . }}
 <p>
   <b style="display: inline">{{ .title }}</b>.&nbsp;{{ range $i, $e := .authors }}{{ if $i }}, {{ end }}
   {{ if eq $e "M. Salmon" }}<em>{{ $e }}</em>{{ else }}{{ $e }}{{ end }}{{ end }}. {{ .journal }}, {{ .year }}.&nbsp;<a href="https://doi.org/{{ .doi }}"><i class="fab fa-orcid"></i></a> <button onclick='myDisplay("desc-{{ .name }}")'> <i class="fas fa-book-reader"></i></button>
@@ -6,4 +5,3 @@
   <em>{{ .abstract | markdownify }}</em>
 </div>  
 </p>
-{{ end }}
