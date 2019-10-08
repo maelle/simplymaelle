@@ -1,0 +1,9 @@
+{ 
+   "name": "protocol2017",
+   "authors": ["C. Tonne", "M. Salmon", "M. Sanchez", "V. Sreekanth", "S. Bhogadi", "S. Sambandam", "K. Balakrishnan", "S. Kinra", "J. D. Marshall"],
+   "title": "Integrated assessment of exposure to PM2.5 in South India and its relation with cardiovascular risk: Design of the CHAI observational cohort study",
+   "journal": "Elsevier International Journal of Hygiene and Environmental Health",
+   "year": "2017",
+   "doi" : "10.1016/j.ijheh.2017.05.005",
+   "abstract": "While there is convincing evidence that fine particulate matter causes cardiovascular mortality and morbidity, little of the evidence is based on populations outside of high income countries, leaving large uncertainties at high exposures. India is an attractive setting for investigating the cardiovascular risk of particles across a wide concentration range, including concentrations for which there is the largest uncertainty in the exposure-response relationship. CHAI is a European Research Council funded project that investigates the relationship between particulate air pollution from outdoor and household sources with markers of atherosclerosis, an important cardiovascular pathology. The project aims to (1) characterize the exposure of a cohort of adults to particulate air pollution from household and outdoor sources (2) integrate information from GPS, wearable cameras, and continuous measurements of personal exposure to particles to understand where and through which activities people are most exposed and (3) quantify the association between particles and markers of atherosclerosis. CHAI has the potential to make important methodological contributions to modeling air pollution exposure integrating outdoor and household sources as well as in the application of wearable camera data in environmental exposure assessment."
+}
