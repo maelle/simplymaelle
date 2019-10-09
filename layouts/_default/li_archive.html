@@ -1,3 +1,3 @@
-{{ if ( not ( in (slice "Posts" "Talks & tutorials" ) .Title)) }}
+{{ if ( not ( in (slice "Maëlle's R blog" "Talks & tutorials" ) .Title)) }}
 <li><time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006, 15:04" }}{{ end }}</time> - {{ if (eq .Type "talks") }}<i class="fas fa-microphone-alt"></i>{{ end }}{{ if (eq .Type "post") }}<i class="far fa-sticky-note"></i>{{ end }} - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
 {{ end }}
