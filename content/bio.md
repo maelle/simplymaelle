@@ -5,7 +5,7 @@ sidemenu = "true"
 description = "Vitae of Maëlle Salmon based in Nancy, France"
 +++
 
-[tl;dr version](/about/)
+[tl;dr version](/)
 
 ## <a name="pro"></a>Professional experience
 
