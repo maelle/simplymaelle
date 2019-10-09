@@ -1,0 +1,1 @@
+{{ range $i, $e := .Site.Data.bio.languages }}{{ if $i }}, {{ end }}{{ $e.language | markdownify }} ({{ $e.level }}){{ end }}.

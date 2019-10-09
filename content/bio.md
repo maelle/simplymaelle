@@ -27,7 +27,9 @@ description = "Vitae of Maëlle Salmon based in Nancy, France"
 
 ## <a name="languages"></a>Human languages
 
-* My mother tongue is French. I've learnt Spanish and Catalan. I've learnt Italian too but don't practice much so I mostly only understand it. I also speak English, German, Swedish and I know a bit of Dutch.  
+_Level *estimates* are given in the [Common European Framework of Reference for Languages: Learning, Teaching, Assessment (CEFR)](https://www.coe.int/en/web/portfolio/self-assessment-grid)._
+
+{{< languages >}}
 
 ## <a name="service"></a>Teaching and community service
 
