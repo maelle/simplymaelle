@@ -1,0 +1,9 @@
+{ 
+   "name": "bayes2015",
+   "authors": ["M. Salmon", "D. Schumacher", "K. Stark", "M. Höhle"],
+   "title": "Bayesian Outbreak Detection in the Presence of Reporting Delays",
+   "journal": "Biometrical Journal",
+   "year": "2015",
+   "doi" : "10.1002/bimj.201400159",
+   "abstract": "One use of infectious disease surveillance systems is the statistical aberration detection performed on time series of counts resulting from the aggregation of individual case reports. However, inherent reporting delays in such surveillance systems make the considered time series incomplete, which can be an impediment to the timely detection and thus to the containment of emerging outbreaks. In this work, we synthesize the outbreak detection algorithms of Noufaily et al. (2013) and Manitz and Höhle (2013) while additionally addressing right truncation caused by reporting delays. We do so by considering the resulting time series as an incomplete two‐way contingency table which we model using negative binomial regression. Our approach is defined in a Bayesian setting allowing a direct inclusion of all sources of uncertainty in the derivation of whether an observed case count is to be considered an aberration. The proposed algorithm is evaluated both on simulated data and on the time series of Salmonella Newport cases in Germany in 2011. Altogether, our method aims at allowing timely aberration detection in the presence of reporting delays and hence underlines the need for statistical modeling to address complications of reporting systems. An implementation of the proposed method is made available in the R package surveillance as the function 'bodaDelay'."
+}

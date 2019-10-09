@@ -1,0 +1,9 @@
+{ 
+   "name": "jss2016",
+   "authors": ["M. Salmon", "D. Schumacher", "M. Höhle"],
+   "title": "Monitoring Count Time Series in R: Aberration Detection in Public Health Surveillance",
+   "journal": "Journal of Statistical Software",
+   "year": "2016",
+   "doi" : "10.18637/jss.v070.i10",
+   "abstract": "Public health surveillance aims at lessening disease burden by, e.g., timely recognizing emerging outbreaks in case of infectious diseases. Seen from a statistical perspective, this implies the use of appropriate methods for monitoring time series of aggregated case reports. This paper presents the tools for such automatic aberration detection offered by the R package surveillance. We introduce the functionalities for the visualization, modeling and monitoring of surveillance time series. With respect to modeling we focus on univariate time series modeling based on generalized linear models (GLMs), multivariate GLMs, generalized additive models and generalized additive models for location, shape and scale. Applications of such modeling include illustrating implementational improvements and extensions of the well-known Farrington algorithm, e.g., by spline-modeling or by treating it in a Bayesian context. Furthermore, we look at categorical time series and address overdispersion using beta-binomial or Dirichlet-multinomial modeling. With respect to monitoring we consider detectors based on either a Shewhart-like single timepoint comparison between the observed count and the predictive distribution or by likelihoodratio based cumulative sum methods. Finally, we illustrate how surveillance can support aberration detection in practice by integrating it into the monitoring workflow of a public health institution. Altogether, the present article shows how well surveillance can support automatic aberration detection in a public health surveillance context. "
+}

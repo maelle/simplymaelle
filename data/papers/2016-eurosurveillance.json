@@ -1,0 +1,9 @@
+{ 
+   "name": "eurosurveillance2016",
+   "authors": ["M. Salmon", "D. Schumacher", "H. Burmann", "C. Frank", "H. Claus", "M. Höhle"],
+   "title": "A system for automated outbreak detection of communicable diseases in Germany",
+   "journal": "Eurosurveillance",
+   "year": "2016",
+   "doi" : "10.2807/1560-7917.ES.2016.21.13.30180",
+   "abstract": "We describe the design and implementation of a novel automated outbreak detection system in Germany that monitors the routinely collected surveillance data for communicable diseases. Detecting unusually high case counts as early as possible is crucial as an accumulation may indicate an ongoing outbreak. The detection in our system is based on state-of-the-art statistical procedures conducting the necessary data mining task. In addition, we have developed effective methods to improve the presentation of the results of such algorithms to epidemiologists and other system users. The objective was to effectively integrate automatic outbreak detection into the epidemiological workflow of a public health institution. Since 2013, the system has been in routine use at the German Robert Koch Institute."
+}
