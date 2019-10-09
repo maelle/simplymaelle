@@ -1,0 +1,9 @@
+{ 
+   "name": "nosolink2013",
+   "authors": ["J. Ferrer", "M. Salmon", "L. Temime"],
+   "title": "Nosolink: An Agent-based Approach to Link Patient Flows and Staff Organization with the Circulation of Nosocomial Pathogens in an Intensive Care Unit",
+   "journal": "Procedia Computer Science",
+   "year": "2013",
+   "doi" : "10.1016/j.procs.2013.05.316",
+   "abstract": "Computational models and simulations are commonly employed to aid decision making in two areas of health care management: optimization of the use of hospital resources and control of the spread of hospital-acquired infections caused by antibiotic-resistant pathogens. We propose a model that combines the operational and the epidemiologic perspectives to size up the effect of understaffing and overcrowding on nosocomial contagion in a intensive-care unit. Specifically, we develop an agent-based model simulating contact-mediated pathogen transmission which allows establishing quantitative relations between patient flow, nurse staffing conditions and pathogen colonization in patients. The results of the model, once calibrated with data from the literature, should indicate under which conditions the variation in pathogen transmission resulting from management decisions can lead to significant increases in the incidence of health care-associated infections in the intensive care unit."
+}
