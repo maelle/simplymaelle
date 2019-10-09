@@ -1,4 +1,4 @@
-<h3 id="current-work">Current work</h3>
+<h2 id="current-work">Current work</h2>
 
 {{ range .Site.Data.bio.work }}
   {{ if (not (isset . "end")) }}
@@ -8,7 +8,7 @@
   {{ end }}
 {{ end }}
 
-<h3 id="current-service">I'm also...</h3>
+<h2 id="current-service">I'm also...</h2>
 
 {{ range .Site.Data.bio.service }}
   {{ if (not (isset . "end")) }}

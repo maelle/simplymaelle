@@ -2,10 +2,10 @@
 title = "Bio"
 date = "2018-06-11"
 sidemenu = "true"
-description = "Vitae of Maëlle Salmon"
+description = "Vitae of Maëlle Salmon based in Nancy, France"
 +++
 
-[tl;dr version](/about/)
+[tl;dr version](/)
 
 ## <a name="pro"></a>Professional experience
 

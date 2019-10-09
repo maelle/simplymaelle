@@ -1,3 +1,3 @@
 ---
-title: 'All content'
+title: 'All blog posts and talks'
 ---
