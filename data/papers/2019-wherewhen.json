@@ -1,0 +1,9 @@
+{ 
+   "name": "wherewhen2019",
+   "authors": ["C. Milà", "M. Salmon", "M. Sanchez", "A. Ambrós", "S. Bhogadi", "V. Sreekanth", "M. Nieuwenhuijsen", "S. Kinar", "J.D. Marshall", "C.Tonne"],
+   "title": "When, Where, and What? Characterizing Personal PM2.5 Exposure in Periurban India by Integrating GPS, Wearable Camera, and Ambient and Personal Monitoring Data",
+   "journal": "Environmental Science & Technology",
+   "year": "2019",
+   "doi" : "10.1021/acs.est.8b03075",
+   "abstract": "Evidence identifying factors that influence personal exposure to air pollutants in low- and middle-income countries is scarce. Our objective was to identify the relative contribution of the time of the day ( when?), location ( where?), and individuals' activities ( what?) to PM2.5 personal exposure in periurban South India. We conducted a panel study in which 50 participants were monitored in up to six 24-h sessions ( n = 227). We integrated data from multiple sources: continuous personal and ambient PM2.5 concentrations; questionnaire, GPS, and wearable camera data; and modeled long-term exposure at residence. Mean 24-h personal exposure was 43.8 μg/m3 (SD 24.6) for men and 39.7 μg/m3 (SD 12.0) for women. Temporal patterns in exposure varied between women (peak exposure in the morning) and men (more exposed throughout the rest of the day). Most exposure occurred at home, 67% for men and 89% for women, which was proportional to the time spent in this location. Ambient daily PM2.5 was an important predictor of 24-h personal exposure for both genders. Among men, activities predictive of higher hourly average exposure included presence near food preparation, in the kitchen, in the vicinity of smoking, or in industry. For women, predictors of exposure were largely related to cooking."
+}
