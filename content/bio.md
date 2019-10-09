@@ -32,10 +32,3 @@ description = "Vitae of Maëlle Salmon"
 ## <a name="service"></a>Teaching and community service
 
 {{< service >}}
-
-## Personal
-<img src="../img/aurayvannes.png" alt="aurayvannes" style="float: left; width: 30%; margin-right: 5%; margin-bottom: 0.5em;">
-<img src="../img/corrida.jpg" alt="corrida" style="float: left; width: 34%; margin-right: 1%; margin-bottom: 0.5em;">
-<p style="clear: both;">
-</p>
-I like running and other sports that don't challenge my coordination too much. Running makes me red and happy.
