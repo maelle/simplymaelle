@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/maelle_salmon
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://masalmon.eu
+  * I am maelle_salmon (https://keybase.io/maelle_salmon) on keybase.
+  * I have a public key ASADxgtEOLgP4MeM_rPnufu-aOUgLXNtEo-ZuyA6UCCtOgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012003c60b4438b80fe0c78cfeb3e7b9fbbe68e5202d736d128f99bb203a5020ad3a0a",
+      "host": "keybase.io",
+      "kid": "012003c60b4438b80fe0c78cfeb3e7b9fbbe68e5202d736d128f99bb203a5020ad3a0a",
+      "uid": "09d9470564c799410fceb4d25d820619",
+      "username": "maelle_salmon"
+    },
+    "merkle_root": {
+      "ctime": 1572681529,
+      "hash": "f745226624ee237f9157124cacc10d6e3ca1900198d7b78c2806c38651bc490953becfa504449f45b30121bb0dc0cb0e41c2485c8f13c8903f87b1dfc85a4b0a",
+      "hash_meta": "0de86054ba8163e5d78fe13deb23a033b4f599185a2b4c93fd17ce96974243f8",
+      "seqno": 8618393
+    },
+    "service": {
+      "entropy": "eUHf5Eo1t/Km0HfHQiZNmqby",
+      "hostname": "masalmon.eu",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.7.1"
+  },
+  "ctime": 1572681544,
+  "expire_in": 504576000,
+  "prev": "689c5298a3c1740934aa788e7c231fe167d805cab15486a6a3837a552804bc1c",
+  "seqno": 30,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgA8YLRDi4D+DHjP6z57n7vmjlIC1zbRKPmbsgOlAgrToKp3BheWxvYWTESpcCHsQgaJxSmKPBdAk0qniOfCMf4WfYBcqxVIamo4N6VSgEvBzEIDnoF/jgaOa/CqEfsPIGUOISZlHO0zTFLsHrNuMgb33ZAgHCo3NpZ8RAeQVkPgQfs+NCneEGH9eQfOECxEuBwlPSyE6sW2qEj9QXeunVLnmT0A/zlUlNU/tc6j5gQqiO8g0hzxqRYJ0NBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGSWBoXeDXnz+t1seA1tCd9yqS2DA9VOj2SHmAt+dzlUo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/maelle_salmon
+
+==================================================================
