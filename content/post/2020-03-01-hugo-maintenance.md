@@ -36,13 +36,17 @@ When you have a website created with Hugo, there are two to four main actors:
 
 * potential fourth actor; your tweaks to the theme which might be your editing an R package source; or maintaining a script/a second package on to of that R package to add some syntactic sugar or so to the existing functions of the package.
 
-So what's going to break?
+So what's going to break and evolve?
 
 * Just like R packages need to keep up with changes to R sometimes, Hugo _themes_ need to keep up with Hugo changes. Hugo is a trustworthy frameworks, that keeps improving, which however means sometimes removing support for some things or ways of doing them.
 
 Example: [this commit to the theme I'm using](https://github.com/yoshiharuyamashita/blackburn/commit/123ebe8bb4fd3708fc51dab42613e6a3a7d37d4c) whose message is _"Using only .Data.Pages will only show a link to the Post page in the home page. Using .Site.RegularPages returns the homepage to a normal showcase of existing posts. This change happened starting at Hugo >0.57."_. 
 
 * Just like R packages need to keep up with changes to their external dependencies (web APIs, data format standard), Hugo _themes_ need to keep with changes to external dependencies (font providers, JS scripts, etc). Example: [a commit to the theme I'm using that updates the templates to use the new syntax for Font Awesome icons](https://github.com/yoshiharuyamashita/blackburn/commit/fef095af788816dbc27f040ca98eee3df6b60c1c).
+
+* Just like R packages often improve with time, Hugo themes evolve. And just as you might like updating packages to get the best new tools, you might like getting the fancy features offered by a new version of your theme.
+
+* Just like your taste or needs of R packages in your script might evolve, e.g. you might want to update old scripts to use `data.table` instead of `dplyr`, you might even want to switch themes!
 
 # How to reduce the likelihood of breakages?
 
@@ -68,15 +72,29 @@ Just a reminder to have a coffee date with your theme repo once in a while?
 Although you've adopted a theme, you'll probably want to personalize it a bit.
 As [very well explained in the `blogdown` book](https://bookdown.org/yihui/blogdown/custom-layouts.html), 
 
-* some tweaks are directly supported by the theme via the website config file (think of it as an R function parameters);
+* some tweaks are directly supported by the theme via the website config file (think of it as an R function parameters) e.g. adding your name to the homepage rather than Jane Doe's;
 
-* some tweaks require your writing layout files (think of it as writing a wrapper for an R package/re-writing your own version of some functions). In this case you should
+* some tweaks require your writing layout files (think of it as writing a wrapper for an R package/re-writing your own version of some functions) e.g. adding some fun sentence to the footer which the original theme doesn't support. In this case you should store your custom layouts, like the fancy footer partial template, in a folder called `layouts/` at the root of your website folder; _not_ in the theme folder. Hugo will give priority to `layouts/` stuff when defined, to use them on top of theme stuff; and you'll easily see what you changed. Your future self will probably find much joy in your documenting the why and how of your custom layouts in some sort of developer notes.
 
 ## Update your theme
 
-```r
-blogdown::install_theme("yihui/hugo-xmin", update_config = FALSE, theme_example = FALSE, force = TRUE)
-```
+So if you've tweaked cleanly, you can update your theme when needed!
+
+To "update your theme", you need to replace the theme folder of your website folder with the new theme files. 
+If you work with version control, and you probably should, make a branch and work on the update in that branch.
+If you don't, backup your website's current state first.
+
+You could do update the theme manually, or use `blogdown::install_theme()` with `force = TRUE`.
+
+Build your website, look at what needs to be changed:
+
+* maybe the config parameter names changed (like an R function which would have renamed one of the parameters);
+
+* your custom layout might need some work too.
+
+To figure out what needs to be changed, you'll probably want to read the changelog (or commit history) of your theme, and maybe even Hugo changelog.
+
+Often, changes in your theme, and work needed on
 
 # Follow Hugo news?
 
