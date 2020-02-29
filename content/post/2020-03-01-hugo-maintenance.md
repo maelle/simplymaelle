@@ -44,7 +44,7 @@ Example: [this commit to the theme I'm using](https://github.com/yoshiharuyamash
 
 * Just like R packages need to keep up with changes to their external dependencies (web APIs, data format standard), Hugo _themes_ need to keep with changes to external dependencies (font providers, JS scripts, etc). Example: [a commit to the theme I'm using that updates the templates to use the new syntax for Font Awesome icons](https://github.com/yoshiharuyamashita/blackburn/commit/fef095af788816dbc27f040ca98eee3df6b60c1c).
 
-* Just like R packages often improve with time, Hugo themes evolve. And just as you might like updating packages to get the best new tools, you might like getting the fancy features offered by a new version of your theme.
+* Just like R packages often improve with time, Hugo themes evolve. And just as you might like updating packages to get the best new tools, you might like getting the fancy features offered by a new version of your theme. For instance look at [this releases note for some version of Hugo academic theme](https://sourcethemes.com/academic/updates/v4.6.0/): there are bug fixes but also cool improvements!
 
 * Just like your taste or needs of R packages in your script might evolve, e.g. you might want to update old scripts to use `data.table` instead of `dplyr`, you might even want to switch themes!
 
@@ -81,7 +81,7 @@ As [very well explained in the `blogdown` book](https://bookdown.org/yihui/blogd
 So if you've tweaked cleanly, you can update your theme when needed!
 
 To "update your theme", you need to replace the theme folder of your website folder with the new theme files. 
-If you work with version control, and you probably should, make a branch and work on the update in that branch.
+If you work with version control, and [you probably should](https://happygitwithr.com/), make a branch and work on the update in that branch.
 If you don't, backup your website's current state first.
 
 You could do update the theme manually, or use `blogdown::install_theme()` with `force = TRUE`.
@@ -94,9 +94,16 @@ Build your website, look at what needs to be changed:
 
 To figure out what needs to be changed, you'll probably want to read the changelog (or commit history) of your theme, and maybe even Hugo changelog.
 
-Often, changes in your theme, and work needed on
+Often, changes in your theme, and work needed on your website, won't be dramatic: the theme folder update, maybe one config parameter, a few lines diff in your custom layouts.
 
 # Follow Hugo news?
 
 If you wrote no custom layouts and use a very well maintained theme, you might never need to keep up with Hugo changes yourself.
 However, if you've written Hugo themes, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
+
+So yep having your custom layouts
+
+# Quick fixes to bad news
+
+Retrograte Hugo, build locally, manual Netlify deploy.
+Set time aside later for real fix.
