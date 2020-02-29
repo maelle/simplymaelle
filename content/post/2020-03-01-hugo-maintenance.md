@@ -67,6 +67,11 @@ Now, you'll have to know when the theme gets updated. How?
 * Any other idea? Maybe involving GitHub Actions, Dependabot, something else? 
 Just a reminder to have a coffee date with your theme repo once in a while?
 
+## What if your theme gets orphaned?
+
+What if you changed your theme wisely but it lost its maintainer(s)? 
+In that case you'll need to look into adopting it or rolling out your own version, or changing themes.
+
 ## Make well-defined tweaks to the theme
 
 Although you've adopted a theme, you'll probably want to personalize it a bit.
@@ -74,7 +79,17 @@ As [very well explained in the `blogdown` book](https://bookdown.org/yihui/blogd
 
 * some tweaks are directly supported by the theme via the website config file (think of it as an R function parameters) e.g. adding your name to the homepage rather than Jane Doe's;
 
-* some tweaks require your writing layout files (think of it as writing a wrapper for an R package/re-writing your own version of some functions) e.g. adding some fun sentence to the footer which the original theme doesn't support. In this case you should store your custom layouts, like the fancy footer partial template, in a folder called `layouts/` at the root of your website folder; _not_ in the theme folder. Hugo will give priority to `layouts/` stuff when defined, to use them on top of theme stuff; and you'll easily see what you changed. Your future self will probably find much joy in your documenting the why and how of your custom layouts in some sort of developer notes.
+* some tweaks require your writing layout files (think of it as writing a wrapper for an R package/re-writing your own version of some functions) e.g. adding some fun sentence to the footer which the original theme doesn't support. In this case you should store your custom layouts, like the fancy footer partial template, in a folder called `layouts/` at the root of your website folder; _not_ in the theme folder. Hugo will give priority to `layouts/` stuff when defined, to use them on top of theme stuff; and you'll easily see what you changed. Your future self will probably find much joy in your documenting the why and how of your custom layouts in some sort of developer notes. The more custom layouts you write, the greater your responsability.
+
+## IMHO Have your content as Markdown, not html files
+
+With `blogdown` you can use .Rmd, .RMarkdown or .md as your website source, refer to [this exhaustive and clear comparison](https://bookdown.org/yihui/blogdown/output-format.html).
+I am strongly in favour of never using .Rmd in a blogdown site because its output is an html file, not a .markdown/.md file.
+This html file contains the whole layout of each page, not only its content, so when updating themes you'd need to re-generate all the posts from the Rmd source.
+Ideally your blog posts should be reproducible, of course, but I prefer not to have to worry too much about that and having my content safe and separated from my theme.
+
+Now, as explained in the table mentioned above, using .RMarkdown/.md has its limitations.
+For html widgets I can recommend looking at [the setup Steph Locke created for the RECON learn website](https://www.reconlearn.org/post/tutorial-post-creation.html#html-widgets-plotly-leaflet).
 
 ## Update your theme
 
@@ -102,6 +117,11 @@ If you wrote no custom layouts and use a very well maintained theme, you might n
 However, if you've written Hugo themes, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
 
 So yep having your custom layouts
+
+# What if I just never update Hugo or my theme?
+
+Never updating Hugo (neither locally nor on say Netlify) nor your theme probably means your website will still build as it used to.
+However, updates to Hugo/themes contain both improvements and **bug fixes** so it's better to know you'll probably update the tools at least once in a while.
 
 # Quick fixes to bad news
 
