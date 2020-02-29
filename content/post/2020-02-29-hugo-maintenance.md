@@ -42,7 +42,7 @@ So what's going to break and evolve?
 
 * Just like R packages need to keep up with changes to their external dependencies (web APIs, data format standard), Hugo themes need to keep with changes to external dependencies (font providers, JS scripts, etc). Example: [a commit to the theme I'm using that updates the templates to use the new syntax for Font Awesome icons](https://github.com/yoshiharuyamashita/blackburn/commit/fef095af788816dbc27f040ca98eee3df6b60c1c).
 
-* Just like R packages often improve with time, Hugo themes evolve. And just as you might like updating packages to get the best new tools, you might like getting the fancy features offered by a new version of your theme. For instance look at [this releases note for some version of Hugo academic theme](https://sourcethemes.com/academic/updates/v4.6.0/): there are bug fixes but also cool improvements!
+* Just like R packages often improve with time, Hugo themes evolve. And just as you might like updating packages to get the best new tools, you might like getting the fancy features offered by a new version of your theme. For instance look at [this release notes for some version of Hugo academic theme](https://sourcethemes.com/academic/updates/v4.6.0/): there are bug fixes but also cool improvements!
 
 * Just like your taste or needs of R packages in your script might evolve, e.g. you might want to update old scripts to use `data.table` instead of `dplyr`, you might even want to switch themes!
 
@@ -113,7 +113,7 @@ Often, changes in your theme, and work needed on your website, won't be dramatic
 ## Follow Hugo news?
 
 If you wrote no custom layouts and use a very well maintained theme, you might never need to keep up with Hugo changes yourself.
-However, if you've written Hugo themes, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
+However, if you've written Hugo custom layouts, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
 
 ## Don't live on the edge
 
