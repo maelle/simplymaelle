@@ -125,5 +125,17 @@ However, updates to Hugo/themes contain both improvements and **bug fixes** so i
 
 # Quick fixes to bad news
 
-Retrograte Hugo, build locally, manual Netlify deploy.
+Imagine you made yourself a pretty website to showcase your cool posts and informative slidedecks.
+In the meantime, you changed laptops and today Saturday you want to post the link to your talk from last week,
+ before you head out for a barbecue with friends.
+Your laptop doesn't have Hugo installed so you install its latest version using `blogdown::install_hugo()`, add your talk page, build the website, look at the preview and... notice it all looks wonky! Your website is broken!
+If you remember the beginning of this post, what happened is probably an update in Hugo breaking your theme version. You'll eventually need to update your theme.
+
+But you don't have time right now before your barbecue to do that, let alone to learn how to do that if it's the first time, so what can you do apart from not posting your talk content?
+
+1. Retrograte Hugo to a version of Hugo released at the time you last worked on your website (`blogdown::install_hugo` has a `version`), 
+2. Build locally.
+
+If you use Netlify to build your site, the Hugo version there is the important one, and you could rely on your website's not being broken there.
+
 Set time aside later for real fix.
