@@ -117,7 +117,7 @@ However, if you've written Hugo custom layouts, or strive to become a contributo
 
 ## Don't live on the edge
 
-If you have a workflow on a continuous integration system updating your website every day from an external data source, [like Noam Ross does](https://www.noamross.net/2019/08/09/a-new-website/) (yes that's a very cool and very fancy setup!), use a specific Hugo version there, don't let the workflow install Hugo's latest version because it could break your website without your noticing. 
+If you have a workflow on a continuous integration system updating your website every day from an external data source, [like Noam Ross](https://www.noamross.net/2019/08/09/a-new-website/) and [Jim Hester](https://www.jimhester.com/) do (yes that's a very cool and very fancy setup!), use a specific Hugo version there, don't let the workflow install Hugo's latest version because it could break your website without your noticing. 
 Update Hugo with intent, after reading a bit and/or testing it doesn't break your website.
 
 ## What if I just never update Hugo or my theme?
