@@ -1,8 +1,8 @@
 /feed.xml /post/index.xml 301!
-/satrday_keynote/slides https://maelle.github.io/satrday_keynote/slides 301!
-/rladiesct/slides https://maelle.github.io/rladiesct/slides 301!
-/rladiesseattle/slides https://maelle.github.io/rladiesseattle/slides 301!
-/satrday_package_workshop https://maelle.github.io/satrday_package_workshop/slides 301!
+/satrday_keynote/slides /talks/2018-03-17-satrday-cape-town/ 301!
+/rladiesct/slides /talks/2018-03-15-rladiesct/ 301!
+/rladiesseattle/slides /talks/2018-05-23-rladies-seattle/ 301!
+/satrday_package_workshop /talks/2018-03-16-pkg-cape-town/ 301!
 
 # Redirect default Netlify subdomain to primary domain
 https://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
