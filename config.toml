@@ -9,6 +9,10 @@ paginate = 5
 rssLimit = 10
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+[markup]
+  [markup.highlight]
+    style = "monokailight"
+
 [indexes]
   tag = "tags"
   topic = "topics"
@@ -23,12 +27,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   brand = "Maëlle Salmon"
   googleAnalytics = ""
   disqus = ""
-  # CSS name for highlight.js
-  highlightjs = "github"
-  highlightjsVersion = "9.11.0"
-  highlightjsCDN = "//cdn.bootcss.com"
-  highlightjsLang = ["r", "yaml"]
-  highlightjsTheme = "monokai"
   githubsource = "https://github.com/maelle/simplymaelle/blob/master/content/"
 
   MathJaxCDN = "//cdn.bootcss.com"

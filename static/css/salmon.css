@@ -37,3 +37,8 @@
         #menu .pure-menu li a:focus {
             background: #F69289;
         }
+
+pre {
+    border-radius: 5px;
+    padding: 0.6rem;
+}
