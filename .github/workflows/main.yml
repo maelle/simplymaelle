@@ -15,10 +15,8 @@ jobs:
 
     steps:
     - name: URLs-checker
-      uses: SuperKogito/URLs-checker@0.1.9
+      uses: urlstechie/urlchecker-action@0.1.9
       with:
-        # The project base path.
-        git_path: https://github.com/maelle/simplymaelle
 
         # A comma-separated list of file types to cover in the URL checks
         file_types: .md
