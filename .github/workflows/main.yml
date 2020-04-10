@@ -19,7 +19,7 @@ jobs:
       uses: ./
       with: 
         git_path: https://github.com/urlstechie/urlchecker-test-repo
-        file_types: .m
+        file_types: .md
         timeout: 5
         retry_count: 3
         white_listed_urls: https://github.com/SuperKogito/URLs-checker/issues/1,https://github.com/SuperKogito/URLs-checker/issues/2
