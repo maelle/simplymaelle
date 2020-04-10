@@ -14,11 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - name: URLs-checker
       uses: urlstechie/urlchecker-action@0.1.8
       with:
-        # A project to clone. If not provided, assumes already cloned in the present working directory.
-        git_path: https://github.com/maelle/simplymaelle
         # A comma-separated list of file types to cover in the URL checks
         file_types: .md
         key:  
