@@ -23,4 +23,4 @@ jobs:
         key:  
         # Choose whether to include file with no URLs in the prints.
         print_all: False# A comma separated list of file patterns (direct paths work as well) to exclude
-        white_listed_files: /content/post/2018-03-24-satrdaycapetown.md
+        white_listed_files: /content/post/2018-03-24-satrdaycapetown.md,/content/post/2018-03-04-hrbrpkgs.md
