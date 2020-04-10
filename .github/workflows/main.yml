@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: URLs-checker
-      uses: SuperKogito/URLs-checker@0.1.2
+      uses: SuperKogito/URLs-checker@0.1.9
       with:
         # The project base path.
         git_path: https://github.com/maelle/simplymaelle
