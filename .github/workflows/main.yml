@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: URLs-checker
-      uses: urlstechie/urlchecker-action@0.1.9
+      uses: urlstechie/urlchecker-action@0.1.8
       with:
 
         # A comma-separated list of file types to cover in the URL checks
