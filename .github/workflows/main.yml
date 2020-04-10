@@ -10,18 +10,18 @@ on:
     - cron:  '0 12 * * 1'
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout Actions Repository
-      uses: actions/checkout@v2
-    - name: Test GitHub Action
-      uses: ./
-      with: 
-        git_path: https://github.com/urlstechie/urlchecker-test-repo
+    - name: URLs-checker
+      uses: SuperKogito/URLs-checker@0.1.2
+      with:
+        # The project base path.
+        git_path: https://github.com/maelle/simplymaelle
+
+        # A comma-separated list of file types to cover in the URL checks
         file_types: .md
-        timeout: 5
-        retry_count: 3
-        white_listed_urls: https://github.com/SuperKogito/URLs-checker/issues/1,https://github.com/SuperKogito/URLs-checker/issues/2
-        white_listed_patterns: https://github.com/SuperKogito/Voice-based-gender-recognition/issues
-        white_listed_files: README.md
+        key:  
+        # Choose whether to include file with no URLs in the prints.
+        print_all: False
