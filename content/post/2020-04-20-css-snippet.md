@@ -167,8 +167,8 @@ button {
 ```
 
 ```html
-<p> lalala </p>
-<button onclick="getTime()">What is the time?</button>
+<p> Some text </p>
+<button onclick="getTime()">What time is it??</button>
 <p id="demo"></p>
 ```
 
@@ -193,8 +193,8 @@ button {
 ```
 
 ```html
-<p> lalala </p>
-<button onclick="getTime()">What is the time?</button>
+<p> Some text </p>
+<button onclick="getTime()">What time is it??</button>
 <p id="demo"></p>
 ```
 
@@ -263,8 +263,8 @@ In the previous solution I didn't find how I could do that given I needed to use
   {{< /pcode >}}
   
   {{< pcode html >}}
-  <p> lalala </p>
-  <button onclick="getTime()">What is the time?</button>
+  <p> Some text </p>
+  <button onclick="getTime()">What time is it??</button>
   <p id="demo"></p>
   {{< /pcode >}}
   
