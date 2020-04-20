@@ -12,6 +12,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [markup]
   [markup.highlight]
     style = "monokailight"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true   
 
 [indexes]
   tag = "tags"
@@ -120,5 +123,3 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
-
-    
