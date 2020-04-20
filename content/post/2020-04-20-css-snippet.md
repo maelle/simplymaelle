@@ -20,7 +20,7 @@ In this post I shall go over three solutions, with and without Codepen.
 
 
 
-# The easiest way: embed a Codepen
+# The easiest way: a custom shortcode for embedding a Codepen
 
 As reported in a [2018 blog post by Ryan Campbell](https://ryancampbell.blog/blog/codepen-shortcode/) and a [2019 blog post by Jeremy Kinson](https://kinson.io/post/embed-codepen/), Jorin Vogel [created and shared a Hugo shortcode for Codepen](https://github.com/jorinvo/hugo-shortcodes/blob/master/shortcodes/pen.html).
 
@@ -40,8 +40,27 @@ Moreover, you might want more ownership of your code.
 I was completely stuck trying to find out how to create and embed my own iframe and then luckily found [a perfect post by Josh Pullen](https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls) _"How to Load HTML, CSS, and JS Code into an iFrame"_.
 Good stuff!
 
-Based on the code in the post, I created a shortcode called "snippet.html"
+Based on the code in the post, I created a shortcode called "snippet.html".
+It is a [paired shortcode](https://gohugo.io/templates/shortcode-templates/#paired-example-highlight): there is input between two markers, and one option passed via the first marker.
+It expects input like
 
+{{< highlight go >}}
+{{</* snippet an-id-unique-for-the-post */>}}
+```css
+// css code
+```
+
+```html
+// html code
+```
+
+```js
+// js code
+```
+{{</* /snippet */>}}
+{{< /highlight >}}
+
+The shortcode itself is shown below.
 
 ```html {linenos=table}
 <h4>My snippet {{ .Get 0 }}</h4>
@@ -222,6 +241,12 @@ p {
 Clearly, my custom shortcode could do with... styling, which is sort of ironic, but this is left as an exercise to the reader.
 
 # The compromise: own your code, link to Codepen
+
+A page of Codepen docs caught my attention: ["Prefill Embeds "](https://blog.codepen.io/documentation/prefill-embeds/) _CodePen Prefill Embeds allow you to enhance code that you are already displaying on your own website and transform it into an interactive environment._
+
+Using them make you rely on Codepen, of course, but you can therefore use all of Codepen fixings (even preprocessing!).
+
+I created another shortcode for that, expecting the same output as before, i.e. only html, CSS and JS, but you could probably build on it to include more options such as, well, preprocessing libraries.
 
 [^css]: Yes that's why this website could be prettier, but it has at least has a good colour!
 
