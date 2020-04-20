@@ -1,5 +1,5 @@
 ---
-title: "How to showcase CSS+JS+html snippets with Hugo?"
+title: "How to showcase CSS+JS+HTML snippets with Hugo?"
 date: '2020-04-20'
 tags:
   - css
@@ -9,10 +9,10 @@ slug: css-snippet
 
 I've recently found myself having to write a bit of CSS or JS for Hugo websites.
 _Note for usual readers: it is a topic not directly related to R, but you might have played with either or both CSS and JS for your R blog or Shiny app._
-On a scale from [Peter Griffin programming CSS window blinds](https://www.youtube.com/watch?v=-pzckbNyqfc) to [making art with CSS](https://twitter.com/liatrisbian/status/1251239842861678592), I'm sadly much closer to the former[^css]; my JS knowledge is not better.
-I often scour forums for answers to my numerous and poorly formulated questions, and often end up at code playgrounds like Codepen where folks showcase snippets of html on its own or with either or both CSS and JS, together with the resulting html document.
+On a scale from [Peter Griffin programming CSS window blinds](https://www.youtube.com/watch?v=-pzckbNyqfc) to [making art with CSS](https://twitter.com/liatrisbian/status/1251239842861678592), I'm sadly much closer to the former; my JS knowledge is not better.
+I often scour forums for answers to my numerous and poorly formulated questions, and often end up at code playgrounds like Codepen where folks showcase snippets of HTML on its own or with either or both CSS and JS, together with the resulting HTML document.
 You can even edit the code and run it again.
-Now, as I was listening to [an episode from the Lady bugs podcast about blogging](https://ladybug.dev/blogging-101), one of the hosts, Ali Spittel, mentioned integrating Codepens and I started wondering: **how can one showcase CSS+JS+html snippets on a Hugo website?**
+Now, as I was listening to [an episode from the Lady bugs podcast about blogging](https://ladybug.dev/blogging-101), one of the hosts, Ali Spittel, mentioned integrating Codepens and I started wondering: **how can one showcase CSS+JS+HTML snippets on a Hugo website?**
 In this post I shall go over three solutions, with and without Codepen.
 
 
@@ -51,7 +51,7 @@ It expects input like
 ```
 
 ```html
-// html code
+// J code
 ```
 
 ```js
@@ -100,15 +100,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ```
 
-Lines 2 to 7 create and markdownify the three highlighted blocks, with a note on the language before each.
+Lines 2 to 7 create and [markdownify](https://gohugo.io/functions/markdownify/) the three highlighted blocks, with a note on the language before each.
+Using markdownify means the code will be [highlighted using Chroma](https://gohugo.io/content-management/syntax-highlighting/) without my having to make any further effort.
 
-Then there is some non elegant string manipulation going on to extract the CSS, JS and html until line 58.
+Then there is some non elegant string manipulation going on to extract the CSS, JS and J until line 58.
 
 I then use the code [from Josh Pullen's post](https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls) to create blob URLs and an iframe. 
 
 * I create an iframe with the ID given as argument of the shortcode.
 
-* Once the page is loaded, I call a function defined below, using code from [Josh Pullen's post](https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls), with the html, CSS and JS code, as well as the frame ID, as argument. The code creates blob URLs with the JS and CSS, then a blob URL with the html calling the JS and CSS, and finally assign that last blob URL to the iframe.
+* Once the page is loaded, I call a function defined below, using code from [Josh Pullen's post](https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls), with the J, CSS and JS code, as well as the frame ID, as argument. The code creates blob URLs with the JS and CSS, then a blob URL with the J calling the JS and CSS, and finally assign that last blob URL to the iframe.
 
 ```js
 function mySnippet(html, js, css, id) {
@@ -160,7 +161,7 @@ In this demo below I use [w3schools.com tutorial about buttons](https://www.w3sc
 p {
   color: red;
 }
-.button {
+button {
   background-color: pink;
 }
 ```
@@ -186,7 +187,7 @@ Gives
 p {
   color: red;
 }
-.button {
+button {
   background-color: pink;
 }
 ```
@@ -240,16 +241,43 @@ p {
 
 Clearly, my custom shortcode could do with... styling, which is sort of ironic, but this is left as an exercise to the reader.
 
-# The compromise: own your code, link to Codepen
+# The compromise: own your code, present it through Codepen
 
 A page of Codepen docs caught my attention: ["Prefill Embeds "](https://blog.codepen.io/documentation/prefill-embeds/) _CodePen Prefill Embeds allow you to enhance code that you are already displaying on your own website and transform it into an interactive environment._
 
 Using them make you rely on Codepen, of course, but you can therefore use all of Codepen fixings (even preprocessing!).
 
-I created another shortcode for that, expecting the same output as before, i.e. only html, CSS and JS, but you could probably build on it to include more options such as, well, preprocessing libraries.
+I created another shortcode for that. 
+In this case I was able to use [nested shortcodes](https://gohugo.io/templates/shortcode-templates/#nested-shortcode-image-gallery).
+In the previous solution I didn't find how I could do that given I needed to use the content of each block on its own and together in the iframe.
 
-[^css]: Yes that's why this website could be prettier, but it has at least has a good colour!
+{{< prefillembed "My Pen" >}}
+
+  {{< prefillembedcode css >}}
+  p {
+    color: red;
+  }
+  button {
+    background-color: pink;
+  }
+  {{< /prefillembedcode >}}
+  
+  {{< prefillembedcode html >}}
+  <p> lalala </p>
+  <button onclick="getTime()">What is the time?</button>
+  <p id="demo"></p>
+  {{< /prefillembedcode >}}
+  
+  {{< prefillembedcode js >}}
+  function getTime() {
+    document.getElementById('demo').innerHTML = Date();
+  }
+  {{< /prefillembedcode >}}
+  
+{{< /prefillembed >}}
 
 # Conclusion
 
-In this post I went other three ways to showcase CSS+JS+html snippets with Hugo: adding a custom shortcode for embedding Codepen; creating and styling your own shortcode where the code is loaded into an iframe; building upon such a code 
+In this post I went other three ways to showcase CSS+JS+HTML snippets with Hugo: adding a custom shortcode for embedding Codepen; creating a custom shortcode where the code is displayed in highlighted code blocks but also loaded into an iframe; creating a custom shortcode that uses Codepen prefill embeds.
+Each approach has its pros and cons depending on whether or not you want to rely on Codepen.
+Please don't hesitate to share your alternative approaches or your extensions of my shortcodes!

@@ -1,0 +1,7 @@
+<pre data-lang="{{ .Get 0 }}">
+  {{ if eq (.Get 0) "html" }}
+    {{ .Inner| htmlEscape | safeHTML }}
+  {{ else }}
+    {{ .Inner }}
+  {{ end }}
+</pre>
