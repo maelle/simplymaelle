@@ -14,7 +14,7 @@ function mySnippet(html, js, css, id) {
       <head>
       <meta charset="utf-8"/>
         ${css && `<link rel="stylesheet" type="text/css" href="${cssURL}" />`}
-        ${js && `<script src="${jsURL}"></script>`}
+        ${js && `<script src="${jsURL}" type="text/javascript"></script>`}
       </head>
       <body>
         ${html || ''}

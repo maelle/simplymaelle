@@ -1,10 +1,26 @@
-{{ findRE "```css(.|\n)*?```" .Inner }}
+{{ .Inner | markdownify }}
+
+{{ $css := replaceRE "```html(.|\n)*?```" "$1" .Inner }}
+{{ $css := replaceRE "```js(.|\n)*?```" "$1" $css }}
+{{ $css := replaceRE "```css" "$1" $css }}
+{{ $css := replaceRE "```" "$1" $css }}
+
+{{ $js := replaceRE "```html(.|\n)*?```" "$1" .Inner }}
+{{ $js := replaceRE "```css(.|\n)*?```" "$1" $js }}
+{{ $js := replaceRE "```js" "$1" $js }}
+{{ $js := replaceRE "```" "$1" $js }}
+
+{{ $html := replaceRE "```css(.|\n)*?```" "$1" .Inner }}
+{{ $html := replaceRE "```js(.|\n)*?```" "$1" $html }}
+{{ $html := replaceRE "```html" "$1" $html }}
+{{ $html := replaceRE "```" "$1" $html }}
+
 
 <iframe id="{{ .Get 0 }}"></iframe>
 
 <script src="/js/blob.js" type="text/javascript"></script> 
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
-   mySnippet('<p>Hello, world!</p>', 'console.log("hi")', 'p { color: blue; }', 'number42');
+   mySnippet('{{ $html }}', '{{ $js }}', '{{ $css }}', '{{ .Get 0 }}');
 }, false);
 </script> 
