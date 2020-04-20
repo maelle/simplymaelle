@@ -1,3 +1,5 @@
+<h4>My snippet {{ .Get 0 }}</h4>
+
 {{ .Inner | markdownify }}
 
 {{ $css := replaceRE "```html(.|\n)*?```" "$1" .Inner }}

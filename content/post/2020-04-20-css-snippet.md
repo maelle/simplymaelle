@@ -1,5 +1,5 @@
 ---
-title: "What to know before you adopt Hugo/blogdown"
+title: "Hugo shortcode for loading HTML, CSS, and JS code into an iFrame "
 date: '2020-04-20'
 tags:
   - css
