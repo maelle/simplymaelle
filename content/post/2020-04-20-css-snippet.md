@@ -253,26 +253,26 @@ In the previous solution I didn't find how I could do that given I needed to use
 
 {{< prefillembed "My Pen" >}}
 
-  {{< prefillembedcode css >}}
+  {{< pcode css >}}
   p {
     color: red;
   }
   button {
     background-color: pink;
   }
-  {{< /prefillembedcode >}}
+  {{< /pcode >}}
   
-  {{< prefillembedcode html >}}
+  {{< pcode html >}}
   <p> lalala </p>
   <button onclick="getTime()">What is the time?</button>
   <p id="demo"></p>
-  {{< /prefillembedcode >}}
+  {{< /pcode >}}
   
-  {{< prefillembedcode js >}}
+  {{< pcode js >}}
   function getTime() {
     document.getElementById('demo').innerHTML = Date();
   }
-  {{< /prefillembedcode >}}
+  {{< /pcode >}}
   
 {{< /prefillembed >}}
 
