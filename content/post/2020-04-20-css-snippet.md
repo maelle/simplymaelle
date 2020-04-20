@@ -10,9 +10,23 @@ slug: css-snippet
 https://www.w3schools.com/jsref/event_onclick.asp
 
 https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls
-<script>const getBlobURL = (code, type) => {
-  const blob = new Blob([code], { type })
-  return URL.createObjectURL(blob)
-}
 
-console.log(getBlobURL('<p>My webpage</p>', 'text/html'))</script>
+
+{{< snippet number42 >}}
+```css
+.button {
+  background-color: pink;
+}
+```
+
+```html
+<button onclick="getTime()">What is the time?</button>
+```
+
+```js
+function getTime() {
+  document.getElementById('demo').innerHTML = Date();
+}
+```
+{{< /snippet >}}
+

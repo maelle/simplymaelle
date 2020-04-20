@@ -1,0 +1,10 @@
+{{ findRE "```css(.|\n)*?```" .Inner }}
+
+<iframe id="{{ .Get 0 }}"></iframe>
+
+<script src="/js/blob.js" type="text/javascript"></script> 
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+   mySnippet('<p>Hello, world!</p>', 'console.log("hi")', 'p { color: blue; }', 'number42');
+}, false);
+</script> 
