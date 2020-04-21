@@ -17,7 +17,7 @@ Quite neat!
 Now, as I was listening to [an episode from the Lady bugs podcast about blogging](https://ladybug.dev/blogging-101), one of the hosts, [Ali Spittel](https://twitter.com/ASpittel), mentioned integrating Codepens into blog posts[^podcast], which sounds useful indeed, and I started wondering: **how could one showcase CSS+JS+HTML snippets on a Hugo website?**
 In this post I shall go over three solutions, with and without Codepen, in all cases based on [custom shortcodes](https://gohugo.io/templates/shortcode-templates/#create-custom-shortcodes).
 
-# The easiest way: a custom shortcode for embedding a Codepen
+# The easiest way: Embed a Codepen
 
 As reported in a [2018 blog post by Ryan Campbell](https://ryancampbell.blog/blog/codepen-shortcode/) and a [2019 blog post by Jeremy Kinson](https://kinson.io/post/embed-codepen/), Jorin Vogel [created and shared a Hugo shortcode for Codepen](https://github.com/jorinvo/hugo-shortcodes/blob/master/shortcodes/pen.html).
 
@@ -32,7 +32,7 @@ Gives
 For a blog post showcasing code of yours, it might get a bit tiring to create and keep track of Codepens.
 Moreover, you might want more ownership of your code.
 
-# The DIY way: a custom shortcode for loading HTML, CSS, and JS code into an iFrame 
+# The DIY way: load HTML, CSS, and JS code into an iFrame 
 
 I was completely stuck trying to find out how to create and embed my own iframe and then luckily found [a perfect post by Josh Pullen](https://dev.to/pulljosh/how-to-load-html-css-and-js-code-into-an-iframe-2blc#solution-blob-urls) _"How to Load HTML, CSS, and JS Code into an iFrame"_, with a perfect definition of the problem _"If you've ever used JSFiddle, Codepen, or others, this problem will be familiar to you: The goal is to take some HTML, CSS, and JS (stored as strings) and create an iframe with the code loaded inside."_.  :raised_hands:
 Good stuff!
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 
 Lines 2 to 7 create and [markdownify](https://gohugo.io/functions/markdownify/) the three highlighted blocks, with a note on the language before each.
-Using markdownify means the code will be [highlighted using Chroma](https://gohugo.io/content-management/syntax-highlighting/) without my having to make any further effort.
+Using markdownify means the code will be [highlighted using Chroma](https://gohugo.io/content-management/syntax-highlighting/) without my having to make any further efforts.
 
 Then there is some non elegant string manipulation going on to extract the CSS, JS and HTML, until line 58.
 
@@ -244,7 +244,7 @@ A page of Codepen docs caught my attention: ["Prefill Embeds "](https://blog.cod
 
 Using them make you rely on Codepen, of course, but you can therefore use all of Codepen fixings (even preprocessing!).
 
-I created another shortcode for that. 
+I created another shortcode as a proof-of-concept, not encompassing all features. 
 In this case I was able to use [nested shortcodes](https://gohugo.io/templates/shortcode-templates/#nested-shortcode-image-gallery).
 In the previous solution I didn't find how I could do that given I needed to use the content of each block on its own and together in the iframe.
 
@@ -359,11 +359,12 @@ This shortcode could do with more parameterization to allow using [all features 
 
 # Conclusion
 
-In this post I went other three ways to showcase CSS+JS+HTML snippets with Hugo: adding a custom shortcode for embedding Codepen; creating a custom shortcode where the code is displayed in highlighted code blocks but also loaded into an iframe; creating a custom shortcode that uses Codepen prefill embeds.
+In this post I went other three ways to showcase CSS+JS+HTML snippets with Hugo: adding a custom shortcode for embedding Codepen; creating a custom shortcode thanks to which the code is displayed in highlighted code blocks but also loaded into an iframe; creating a custom shortcode that uses Codepen prefill embeds.
 Each approach has its pros and cons depending on whether or not you want to rely on Codepen.
 Please don't hesitate to share your alternative approaches or your extensions of my shortcodes!
 
 Taking a step back, such shortcodes, if much improved, could maybe be shared in [a Hugo theme](https://discourse.gohugo.io/t/how-to-use-multi-theme/19413/4) as a developer toolbelt[^toolblet]? 
+Even if copy-pasting shortcodes from someone else's repo, with attribution, works well too. :slight_smile:
 It could contains shortcodes for developer websites that use OEmbed (so [not Stack Overflow](https://meta.stackexchange.com/questions/136277/can-we-support-oembed), [not GitHub](https://stackoverflow.com/a/44893092/5489251)), and [unfurling](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254) workarounds for others.
 Quite a lot to explore!
 
