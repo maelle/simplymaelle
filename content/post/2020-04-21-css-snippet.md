@@ -365,7 +365,7 @@ Please don't hesitate to share your alternative approaches or your extensions of
 
 Taking a step back, such shortcodes, if much improved, could maybe be shared in [a Hugo theme](https://discourse.gohugo.io/t/how-to-use-multi-theme/19413/4) as a developer toolbelt[^toolblet]? 
 Even if copy-pasting shortcodes from someone else's repo, with attribution, works well too. :slight_smile:
-It could contains shortcodes for developer websites that use OEmbed (so [not Stack Overflow](https://meta.stackexchange.com/questions/136277/can-we-support-oembed), [not GitHub](https://stackoverflow.com/a/44893092/5489251)), and [unfurling](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254) workarounds for others.
+It could contain shortcodes for developer websites that use OEmbed (so [not Stack Overflow](https://meta.stackexchange.com/questions/136277/can-we-support-oembed), [not GitHub](https://stackoverflow.com/a/44893092/5489251)), and [unfurling](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254) workarounds for others.
 Quite a lot to explore!
 
 [^toolblet]: I am using this term because of [Steph Locke's Hugo utility belt](https://github.com/lockedatapublished/hugo-utilitybelt).
