@@ -14,7 +14,7 @@ I often scour forums for answers to my numerous and poorly formulated questions,
 You can even edit the code and run it again.
 Quite neat!
 
-Now, as I was listening to [an episode from the Lady bugs podcast about blogging](https://ladybug.dev/blogging-101), one of the hosts, [Ali Spittel](https://twitter.com/ASpittel), mentioned integrating Codepens into blog posts[^podcast], which sounds useful indeed, and I started wondering: **how could one showcase CSS+JS+HTML snippets on a Hugo website?**
+Now, as I was listening to [an episode from the Ladybug podcast about blogging](https://ladybug.dev/blogging-101), one of the hosts, [Ali Spittel](https://twitter.com/ASpittel), mentioned integrating Codepens into blog posts[^podcast], which sounds useful indeed, and I started wondering: **how could one showcase CSS+JS+HTML snippets on a Hugo website?**
 In this post I shall go over three solutions, with and without Codepen, in all cases based on [custom shortcodes](https://gohugo.io/templates/shortcode-templates/#create-custom-shortcodes).
 
 # The easiest way: Embed a Codepen
