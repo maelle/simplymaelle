@@ -359,7 +359,7 @@ This shortcode could do with more parameterization to allow using [all features 
 
 # Conclusion
 
-In this post I went other three ways to showcase CSS+JS+HTML snippets with Hugo: adding a custom shortcode for embedding Codepen; creating a custom shortcode thanks to which the code is displayed in highlighted code blocks but also loaded into an iframe; creating a custom shortcode that uses Codepen prefill embeds.
+In this post I went over three ways to showcase CSS+JS+HTML snippets with Hugo: adding a custom shortcode for embedding Codepen; creating a custom shortcode thanks to which the code is displayed in highlighted code blocks but also loaded into an iframe; creating a custom shortcode that uses Codepen prefill embeds.
 Each approach has its pros and cons depending on whether or not you want to rely on Codepen.
 Please don't hesitate to share your alternative approaches or your extensions of my shortcodes!
 
