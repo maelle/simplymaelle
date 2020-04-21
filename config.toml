@@ -7,6 +7,7 @@ copyright = 'Licence: <a href="https://creativecommons.org/licenses/by-sa/2.0/">
 canonifyurls = true
 paginate = 5
 rssLimit = 10
+enableEmoji = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [markup]

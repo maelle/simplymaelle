@@ -1,8 +1,8 @@
 <h4>My snippet {{ .Get 0 }}</h4>
 {{ $content := .Inner }}
-{{ $content := replaceRE "```html" "\n **html code:** \n```html" $content }}
-{{ $content := replaceRE "```css" "\n **css code:** \n```css" $content }}
-{{ $content := replaceRE "```js" "\n **js code:** \n```js" $content }}
+{{ $content := replaceRE "```html" "\n **HTML code:** \n```html" $content }}
+{{ $content := replaceRE "```css" "\n **CSS code:** \n```css" $content }}
+{{ $content := replaceRE "```js" "\n **JS code:** \n```js" $content }}
 
 {{ $content | markdownify }}
 
