@@ -1,6 +1,6 @@
 ---
 title: "How to showcase CSS+JS+HTML snippets with Hugo?"
-date: '2020-04-20'
+date: '2020-04-21'
 tags:
   - css
   - hugo
