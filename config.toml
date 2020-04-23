@@ -12,7 +12,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [markup]
   [markup.highlight]
-    style = "monokai"
+    style = "friendly"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true   
