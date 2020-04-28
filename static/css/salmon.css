@@ -1,9 +1,13 @@
 .header {
-     color: #F69289;
+     color: #983A2E;
  }
 
 #menu {
-    background: #F69289;
+    background: #983A2E;
+}
+
+ .small-print small {
+    color: #ffffff;
 }
     /*
     All anchors inside the menu should be styled like this.
@@ -35,7 +39,7 @@
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #F69289;
+            background: #983A2E;
         }
 
 pre {
