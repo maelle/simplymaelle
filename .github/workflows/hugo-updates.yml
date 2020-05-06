@@ -6,8 +6,8 @@ on:
       
 jobs:  
   hugo-update:
-    name: check-urls
-    runs-on: hugo-update
+    name: hugo-update
+    runs-on: ubuntu-latest
 
     steps:    
     - uses: actions/checkout@v2
