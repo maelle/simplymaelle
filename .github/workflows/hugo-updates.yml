@@ -24,10 +24,11 @@ jobs:
             then
               git config --global user.email "example@example.com"
               git config --global user.name "gh-pages committer"
-              git checkout -b "hugo-update"
+              git checkout -b hugo-update
               sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
               sed -i "$sedp" netlify.toml
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
+              git push --set-upstream origin hugo-update
               curl --request POST \
               --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": "${{ github.repository_owner }}:hugo-update", "base": "master" }' \
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
