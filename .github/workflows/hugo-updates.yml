@@ -1,8 +1,10 @@
 on:
   push:
-    # Sequence of patterns matched against refs/heads
-    branches:    
+    branches: 
       - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '12 0 1 * *'
       
 jobs:  
   hugo-update:
@@ -24,13 +26,15 @@ jobs:
             then
               git config --global user.email "example@example.com"
               git config --global user.name "gh-pages committer"
-              git checkout -b hugo-update
+              git checkout -b "hugo-update$nv"
               sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
               sed -i "$sedp" netlify.toml
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
-              git push --set-upstream origin hugo-update
+              git push --set-upstream origin "hugo-update$nv"
               curl --request POST \
-              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": "${{ github.repository_owner }}:hugo-update", "base": "master" }' \
+              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": "${{ github.repository_owner }}:hugo-update$nv", "base": "master" }' \
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
               --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
+           else
+             echo "Hugo already up-to-date in the Netlify config! :-)"  
           fi
