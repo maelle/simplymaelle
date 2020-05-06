@@ -22,11 +22,11 @@ jobs:
           nv=${nv#v}
           if [ $ov != $nv ]
             then
+              git config --global user.email ${{secrets.EMAIL}}
+              git config --global user.name "gh-pages committer"
               git checkout -b "hugo-update-$nv"
               sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
               sed -i "$sedp" netlify.toml
-              git config --global user.email ${{secrets.EMAIL}}
-              git config --global user.name "gh-pages committer"
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
               curl --request POST \
               --data {"title":"Update Hugo","base":"master", "head":"hugo-update-$nv"}
