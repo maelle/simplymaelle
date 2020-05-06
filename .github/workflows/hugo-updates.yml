@@ -4,7 +4,7 @@ on:
     branches:    
       - master
       
- jobs:  
+jobs:  
   hugo-update:
     name: check-urls
     runs-on: hugo-update
