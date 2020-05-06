@@ -28,8 +28,5 @@ jobs:
               sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
               sed -i "$sedp" netlify.toml
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
-              curl --request POST \
-              --data {"title":"Update Hugo","base":"master", "head":"hugo-update"}
-              --url https://api.github.com/repos/${{ github.repository }}/pulls \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
+              echo "blablabla"
           fi
