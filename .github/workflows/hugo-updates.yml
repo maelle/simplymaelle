@@ -1,0 +1,33 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - master
+      
+ jobs:  
+  hugo-update:
+    name: check-urls
+    runs-on: hugo-update
+
+    steps:    
+    - uses: actions/checkout@v2
+      
+    - name: list files
+      run: |
+          ov=$(grep 'HUGO_VERSION' netlify.toml -m 1 | grep -o -P '(?<=HUGO\_VERSION[[:space:]]\=[[:space:]]\").*(?=\")')
+          nv=$(curl --request GET \
+          --url https://api.github.com/repos/gohugoio/hugo/releases/latest \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          | jq --raw-output .name)
+          nv=${nv#v}
+          if [ $ov != $nv ]
+            then
+              git checkout -b "hugo-update-$nv"
+              sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
+              sed -i "$sedp" netlify.toml
+              git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
+              curl --request POST \
+              --data {"title":"Update Hugo","base":"master", "head":"hugo-update-$nv"}
+              --url https://api.github.com/repos/${{ github.repository }}/pulls \
+              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          fi
