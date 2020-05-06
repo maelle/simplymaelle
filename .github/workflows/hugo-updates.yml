@@ -12,7 +12,7 @@ jobs:
     steps:    
     - uses: actions/checkout@v2
       
-    - name: list files
+    - name: Updating
       run: |
           ov=$(grep 'HUGO_VERSION' netlify.toml -m 1 | grep -o -P '(?<=HUGO\_VERSION[[:space:]]\=[[:space:]]\").*(?=\")')
           nv=$(curl --request GET \
@@ -24,12 +24,12 @@ jobs:
             then
               git config --global user.email ${{secrets.EMAIL}}
               git config --global user.name "gh-pages committer"
-              git checkout -b "hugo-update-$nv"
+              git checkout -b "hugo-update"
               sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
               sed -i "$sedp" netlify.toml
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
               curl --request POST \
-              --data {"title":"Update Hugo","base":"master", "head":"hugo-update-$nv"}
+              --data {"title":"Update Hugo","base":"master", "head":"hugo-update"}
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
               --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
           fi
