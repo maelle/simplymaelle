@@ -29,5 +29,5 @@ jobs:
               curl --request POST \
               --data {"title":"Update Hugo","base":"master", "head":"hugo-update-$nv"}
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
           fi
