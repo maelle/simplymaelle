@@ -29,7 +29,7 @@ jobs:
               sed -i "$sedp" netlify.toml
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
               curl --request POST \
-              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": "hugo-update", "base": "master" }' \
+              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": "simplymaelle:hugo-update", "base": "master" }' \
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
               --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
           fi
