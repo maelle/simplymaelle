@@ -32,9 +32,9 @@ jobs:
               git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
               git push --set-upstream origin "hugo-update$nv"
               head="${{ github.repository_owner }}:hugo-update$nv"
-              echo $head
+              echo "::set-env name=head::$head"
               curl --request POST \
-              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": ${{ head }}, "base": "master" }' \
+              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": ${{ env.head }}, "base": "master" }' \
               --url https://api.github.com/repos/${{ github.repository }}/pulls \
               --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
            else
