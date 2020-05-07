@@ -45,9 +45,9 @@ jobs:
           git push --set-upstream origin "hugo-update${{ env.nv }}"
           head="${{ github.repository_owner }}:hugo-update${{ env.nv }}"
           docsurl="https://gohugo.io/news/${{ env.nv }}-relnotes/"
-          data="--data '{\"title\": \"Update Hugo\", \"body\": \"Hugo needs to be updated. $docsurl\", \"head\": $head, \"base\": \"master\" }' \"
+          data="--data '{\"title\": \"Update Hugo\", \"body\": \"Hugo needs to be updated. $docsurl\", \"head\": $head, \"base\": \"master\" }' "
           curl --request POST \
-          echo $data
           --url https://api.github.com/repos/${{ github.repository }}/pulls \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          echo $data
           
