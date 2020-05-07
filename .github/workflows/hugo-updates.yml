@@ -14,7 +14,7 @@ jobs:
     steps:    
     - uses: actions/checkout@v2
       
-    - name: Updating
+    - name: Assess update need
       run: |
           ov=$(grep 'HUGO_VERSION' netlify.toml -m 1 | grep -o -P '(?<=HUGO\_VERSION[[:space:]]\=[[:space:]]\").*(?=\")')
           nv=$(curl --request GET \
@@ -22,21 +22,32 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           | jq --raw-output .name)
           nv=${nv#v}
+          $needupdate=false
           if [ $ov != $nv ]
             then
-              git config --global user.email "example@example.com"
-              git config --global user.name "gh-pages committer"
-              git checkout -b "hugo-update$nv"
-              sedp="s/HUGO_VERSION\s=\s\"$ov\"/HUGO_VERSION \= \"$nv\"/g" 
-              sed -i "$sedp" netlify.toml
-              git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
-              git push --set-upstream origin "hugo-update$nv"
-              head="${{ github.repository_owner }}:hugo-update$nv"
-              echo "::set-env name=head::$head"
-              curl --request POST \
-              --data '{"title": "Update Hugo", "body": "Please pull these awesome changes in!", "head": ${{ env.head }}, "base": "master" }' \
-              --url https://api.github.com/repos/${{ github.repository }}/pulls \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
-           else
-             echo "Hugo already up-to-date in the Netlify config! :-)"  
+              $needupdate=true
+              echo "Hugo needs to be updated"
+            else
+              echo "Hugo already up-to-date! :-)"
           fi
+          echo "::set-env name=needupdate::$needupdate"
+          echo "::set-env name=ov::$ov"
+          echo "::set-env name=nv::$nv"
+    - name: Updating
+      if: env.needupdate == 'true'
+      run: |
+          git config --global user.email "example@example.com"
+          git config --global user.name "gh-pages committer"
+          git checkout -b "hugo-update${{ env.nv }}"
+          sedp="s/HUGO_VERSION\s=\s\"${{ env.ov }}\"/HUGO_VERSION \= \"${{ env.nv }}\"/g" 
+          sed -i "$sedp" netlify.toml
+          git commit netlify.toml -m 'Update Hugo' || echo "No changes to commit"
+          git push --set-upstream origin "hugo-update${{ env.nv }}"
+          head="${{ github.repository_owner }}:hugo-update${{ env.nv }}"
+          docsurl="https://gohugo.io/news/${{ env.nv }}-relnotes/"
+          cmd="curl --request POST \
+          --data '{"title": "Update Hugo", "body": "Hugo needs to be updated. $docsurl", "head": $head, "base": "master" }' \
+          --url https://api.github.com/repos/${{ github.repository }}/pulls \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'"
+          cmd
+          
