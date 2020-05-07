@@ -45,9 +45,21 @@ jobs:
           git push --set-upstream origin "hugo-update${{ env.nv }}"
           head="${{ github.repository_owner }}:hugo-update${{ env.nv }}"
           docsurl="https://gohugo.io/news/${{ env.nv }}-relnotes/"
-          data="--data '{\"title\": \"Update Hugo\", \"body\": \"Hugo needs to be updated. $docsurl\", \"head\": $head, \"base\": \"master\" }' "
+          # https://stackoverflow.com/questions/17029902/using-curl-post-with-variables-defined-in-bash-script-functions
+          generate_pr_data()
+          {
+          cat <<EOF
+          {
+          "title": "Update Hugo to ${{ env.nv }}",
+          "body": "Hugo needs to be updated. :rocket: [Release notes]($docsurl).",
+          "head": "$head",
+          "base": "master"
+          }
+          EOF
+          }
+          echo "$(generate_pr_data)" 
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/pulls \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          echo $data
+          --data "$(generate_pr_data)"
           
