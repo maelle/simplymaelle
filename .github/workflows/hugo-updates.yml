@@ -22,10 +22,10 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           | jq --raw-output .name)
           nv=${nv#v}
-          $needupdate=false
+          needupdate=false
           if [ $ov != $nv ]
             then
-              $needupdate=true
+              needupdate=true
               echo "Hugo needs to be updated"
             else
               echo "Hugo already up-to-date! :-)"
