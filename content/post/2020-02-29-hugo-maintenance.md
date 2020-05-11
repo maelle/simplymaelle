@@ -115,6 +115,8 @@ Often, changes in your theme, and work needed on your website, won't be dramatic
 If you wrote no custom layouts and use a very well maintained theme, you might never need to keep up with Hugo changes yourself.
 However, if you've written Hugo custom layouts, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
 
+Edit in May 2020. After asking on the Hugo forum how to follow Hugo more automatically for websites I (co-)maintain on GitHub, I ended up [creating a GitHub Actions workflow](https://discourse.gohugo.io/t/how-to-follow-install-hugo-updates-more-automatically/24950/4) that will look for Hugo updates once a month, and if needed open a PR amending Hugo version in the Netlify config file.
+
 ## Don't live on the edge
 
 If you have a workflow on a continuous integration system updating your website every day from an external data source, [like Noam Ross](https://www.noamross.net/2019/08/09/a-new-website/) and [Jim Hester](https://www.jimhester.com/) do (yes that's a very cool and very fancy setup!), use a specific Hugo version there, don't let the workflow install Hugo's latest version because it could break your website without your noticing. 
