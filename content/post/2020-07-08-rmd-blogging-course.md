@@ -189,6 +189,7 @@ I think that with websites, there's a need for technical knowledge for sure, but
 ## Thank you
 
 I'd like to thank Najko Jahn and Anne Hobert for trusting me to give this course and for being such helpful and nice collaborators.
+Thanks to the participants, I'm looking forward to seeing new blogs but no pressure. :wink:
 My course website has a [credits page](https://scientific-rmd-blogging.netlify.app/credits) where I'm sure I forgot names. :grimacing:
 
 ## Next time?
