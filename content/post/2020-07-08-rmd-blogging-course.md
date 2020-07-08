@@ -4,7 +4,7 @@ date: '2020-07-08'
 tags:
   - css
   - hugo
-slug: css-snippet
+slug: rmd-blogging-course
 ---
 
 Last week I had the pleasure to lead an online course about "Scientific Blogging with R Markdown", invited by [Najko Jahn](https://twitter.com/najkoja) and [Anne Hobert](https://twitter.com/ahobert) from [SUB Göttingen](https://www.sub.uni-goettingen.de/en/news/).
