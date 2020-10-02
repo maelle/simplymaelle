@@ -56,7 +56,7 @@ Last but not least in this planning phase, you should call your package somethin
 
 # How to build an R package
 
-Here I'll list useful resources to learn how to build an R package while respecting best practice. When googling a bit about R package development, I was surprised to see that although there are a ton of R packages out there, there aren't that many guides. Maybe we do not need more than CRAN official guide after all, and [Hadley Wickham's book](http://r-pkgs.had.co.nz/) is excellent, especially with the corresponding RStudio and `devtools` magic combo... but well diversity of resources is good too! 
+Here I'll list useful resources to learn how to build an R package while respecting best practice. When googling a bit about R package development, I was surprised to see that although there are a ton of R packages out there, there aren't that many guides. Maybe we do not need more than CRAN official guide after all, and [Hadley Wickham's and Jenny Bryan's book](https://r-pkgs.org/) is excellent, especially with the corresponding RStudio and `devtools` magic combo... but well diversity of resources is good too! 
 
 I'd recommend your building packages in RStudio making the most of automatic tools like `devtools`. Note, in comparison to the content of Hadley's book, some automation is now [supported by `usethis`](https://www.tidyverse.org/articles/2017/11/usethis-1.0.0/).
 
