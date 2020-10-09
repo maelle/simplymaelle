@@ -1,6 +1,13 @@
 [{
+   "description": "Improvements to the book ['HTTP testing in R'](https://github.com/ropensci-books/http-testing),  [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects)",
+   "start": "September 2020"
+},{
+   "description": "Consolidating [R-Ladies organizational guidance](https://guide.rladies.org/),  [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects)",
+   "start": "August 2020"
+},{
    "description": "In charge of the project [_Catalyzing R-hub adoption through R package developer advocacy_](https://docs.r-hub.io/) [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects)",
-   "start": "February 2019"
+   "start": "February 2019",
+   "end": "October 2020"
 },{
    "description": "Part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/)",
    "start": "February 2018"
