@@ -12,7 +12,7 @@ A big part of my work includes putting content about R online, in blog posts and
 I'm therefore very interested in the technical infrastructure that allows us R users to produce beautiful products out of R Markdown or Markdown source files.
 In this post I shall summarize my recent experiments around making HTML and PDF versions of books.
 Thanks to [Julie Blanc's inspiring post in French](https://julie-blanc.fr/blog/2020-11-05_chiragan/), I have learnt this is called [_single-source publishing_](https://en.wikipedia.org/wiki/Single-source_publishing).
-So let's dive in the [incredible machines](https://en.wikipedia.org/wiki/The_Incredible_Machine_%28series%29) allowing single-source publishing for R users. :wink:
+So let's dive into the [incredible machines](https://en.wikipedia.org/wiki/The_Incredible_Machine_%28series%29) allowing single-source publishing for R users. :wink:
 
 ## What I want for writing books
 
