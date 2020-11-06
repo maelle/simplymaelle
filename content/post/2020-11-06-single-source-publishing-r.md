@@ -16,7 +16,7 @@ So let's dive in the [incredible machines](https://en.wikipedia.org/wiki/The_Inc
 
 ## What I want for writing books
 
-~~I want technical tools that allow me to procrastinate a lot whilst learning a ton.~~
+~~I want technical tools that allow me to procrastinate whilst learning a ton.~~
 Just kidding, or not. :innocent:
 My official criteria are:
 
@@ -40,7 +40,7 @@ See for instance [rOpenSci dev guide](https://devguide.ropensci.org), that is de
 Advantages of bookdown include its widespread usage and stability, as well as its docs, both by its authors and users. For instance:
 
 * There is a [bookdown book](https://bookdown.org/yihui/bookdown/) by bookdown maintainer Yihui Xie.
-* Emil Hvitfeldt wrote a post about [](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/).
+* Emil Hvitfeldt wrote a post about [deploying your bookdown project to Netlify with Github Actions](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/).
 
 A downside of bookdown ~~for the procrastinators out there~~ is, in my opinion, that if you want a PDF and HTML versions of a book, you have to knit it twice.
 Furthermore, if you introduce some fancy things such as a custom block, you will have to define it both with CSS and with LaTeX environments.
@@ -50,7 +50,7 @@ So let's dive into two DIY ways of publishing a book in HTML and PDF.
 
 ## Hugo and pagedjs-cli
 
-In this proof-of-concept, content is stored in Markdown files, that could have been generated with hugodown.
+In this proof-of-concept, content is stored in Markdown files, that could have been generated with [hugodown](https://hugodown.r-lib.org/).
 Actors are [Hugo](https://gohugo.io/), a powerful static website generator that you get in the form of a binary, and [pagedjs-cli](https://gitlab.pagedmedia.org/tools/pagedjs-cli), a Node package that prints HTML to PDF.
 
 You can find a [repo corresponding to this experiment](https://github.com/maelle/testbook) on GitHub, and the [resulting book](https://hugo-pagedjs-book.netlify.app/) on Netlify.
@@ -76,7 +76,7 @@ publish = "/public"
 command = "hugo -d public --environment 'website' && hugo -d public2 --environment 'pdf' && pagedjs-cli public2/all/index.html -o public/book.pdf"
 ```
 
-The dependency on pagedjs-cli is indicated with packages.json.
+The dependency on pagedjs-cli is indicated with package.json (the DESCRIPTION of Node projects).
 
 Now if the content lived in R Markdown files, we would need to use a service like GitHub Actions to knit things.
 
@@ -106,17 +106,18 @@ The big differences with my experiment are:
 
 ## bookdown::bs4_book(), xml2 and pagedjs-cli
 
-In another experiment, I used bookdown's brand-new HTML book format, `bs4_book()` by Hadley Wickham (only available in bookdown's dev version).
-I used this one because I find it looks better than gitbook, and because it uses Bootstrap, you get to use divs such as a Bootstrap alerts.
+In another experiment, I used bookdown's brand-new HTML book format, [`bs4_book()` by Hadley Wickham](https://twitter.com/hadleywickham/status/1323038454914187264) (only available in bookdown's dev version).
+I used this one because I find it looks better than gitbook, and because it uses Bootswatch themes, you get to use [divs such as a alerts](https://bootswatch.com/cerulean/).
+See bookdown's docs about [custom blocks](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html).
 
-The [source](https://github.com/maelle/bspagedjs) is open.
+The [source](https://github.com/maelle/bspagedjs) is open. See the
 [HTML version](https://maelle.github.io/bspagedjs/intro.html) and [PDF version](https://maelle.github.io/bspagedjs/result.pdf). 
 This time I took time to learn a bit about print CSS. :smile_cat:
 
 Here the steps are knit using the `bs4_book()` template for HTML and then for getting a PDF
 
-* tweaks of the HTML e.g. moving the chapter table of contents from the sidebar to the main content, and merging of all chapters using xml2 and XPath (so yeah you're ditching LaTeX in favor of a workflow involving XPath, so modern :upside_down_face:) in [build.R](https://github.com/maelle/bspagedjs/blob/master/build.R).
-* some print CSS, see [stylesheet](style.css). It turns out that [following Paged.js docs about print CSS](https://www.pagedjs.org/documentation/05-designing-for-print/) is not that hard.
+* tweaks of the HTML e.g. moving the chapter table of contents from the sidebar to the main content, and merging of all chapters using xml2 and XPath (so yeah you're ditching LaTeX in favor of a workflow involving XPath, so modern :upside_down_face:) in [build.R](https://github.com/maelle/bspagedjs/blob/master/build.R). I could have made my life easier by using [selectr](https://sjp.co.nz/projects/selectr/) for translating _" CSS3 Selectors and translates them to XPath 1.0 expressions. "_.
+* some print CSS, see [stylesheet](style.css). It turns out that [following Paged.js docs about print CSS](https://www.pagedjs.org/documentation/05-designing-for-print/) is not that hard. See my [stylesheet](https://github.com/maelle/bspagedjs/blob/master/style.css), I changed the display of some things in print, and I used [properties](https://www.pagedjs.org/documentation/07-generated-content-in-margin-boxes/`) to add the page number and chapter title to the footer.
 * pagedjs-cli.
 
 Locally I sourced build.R to see whether it works, but then I also wrote a [GitHub Actions workflow](https://github.com/maelle/bspagedjs/blob/master/.github/workflows/main.yml) that installs dependencies, runs the script, and deploys the docs/ folder to a gh-pages branch.
@@ -140,11 +141,11 @@ If you can control said HTML template, that is.
 ## Conclusion
 
 So, as an R user writing content in R Markdown, you have different possibilities for respecting the principles of single-source publishing.
-I would still recommend using bookdown or other official rmarkdown formats, knitting twice[^cache] if you need two versions, for now as it is the only stable and widely used solution, but I found it fun to explore other workflows.
+I would still recommend using bookdown or other official rmarkdown formats, knitting twice[^cache] if you need two versions, as it is the only stable and widely used solution, but I found it fun to explore other workflows.
 Both the DIY ways I presented use pagedjs-cli to generate a PDF out of HTML. I strongly recommend following the work done by the [lovely Paged.js folks](https://www.pagedjs.org/) in the world of paged media, and to learn more about CSS for print.
 If you want to produce only paged content out of your R Markdown file, check out the [pagedown package](https://pagedown.rbind.io/) and its fantastic output formats.
 
-If you want to go another way and experiment with homemade pipelines, have fun customizing things. :wink:
+If you too want to experiment with homemade pipelines, have fun customizing things. :wink:
 Now, of course, the possibility of customization might actually be a curse when you are trying to write something.
 But this was not a blog post about productivity. :grin:
 
