@@ -148,5 +148,6 @@ If you want to produce only paged content out of your R Markdown file, check out
 If you too want to experiment with homemade pipelines, have fun customizing things. :wink:
 Now, of course, the possibility of customization might actually be a curse when you are trying to write something.
 But this was not a blog post about productivity. :grin:
+At this point, let me thank [Romain Lesur](https://twitter.com/RLesur) (one of pagedown authors) for his work promoting Paged.js in the R community. :pray:
 
 [^cache]: Potentially, knitr cache might make knitting a thing a second time very fast? :thinking_face:
