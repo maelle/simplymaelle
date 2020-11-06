@@ -138,6 +138,9 @@ So to not show the burger menu in print, you can either do as I did with a CSS p
 or you'd add the `.d-print-none` to that element in your HTML template.
 If you can control said HTML template, that is.
 
+[Further work needed in this experiment](https://github.com/maelle/bspagedjs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) is listed in GitHub issues.
+For instance footnotes aren't tackled yet.
+
 ## Conclusion
 
 So, as an R user writing content in R Markdown, you have different possibilities for respecting the principles of single-source publishing.
