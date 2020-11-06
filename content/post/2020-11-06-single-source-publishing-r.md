@@ -42,7 +42,7 @@ Advantages of bookdown include its widespread usage and stability, as well as it
 * There is a [bookdown book](https://bookdown.org/yihui/bookdown/) by bookdown maintainer Yihui Xie.
 * Emil Hvitfeldt wrote a post about [](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/).
 
-A downside of bookdown ~~for the procrastinators out there~~ is, in my opinion, that if you want a PDF and HTML versions of a book, you have to need it twice.
+A downside of bookdown ~~for the procrastinators out there~~ is, in my opinion, that if you want a PDF and HTML versions of a book, you have to knit it twice.
 Furthermore, if you introduce some fancy things such as a custom block, you will have to define it both with CSS and with LaTeX environments.
 Now, I have written a [whole book with LaTeX](https://www.editions-ellipses.fr/accueil/5374-l-oral-de-biologie-aux-concours-bcpst-9782729853693.html) so I used to partially know how to use it, but these days I'd prefer learning about CSS only as there's already a lot to digest in there. :sweat_smile:
 
@@ -89,9 +89,29 @@ Now if the content lived in R Markdown files, we would need to use a service lik
 ### Further work
 
 If I decided to take this further, that is!
+All the work would be aimed at making the PDF version better
 
+* Improve the Hugo layout to add different table of contents.
 * Actually work on the CSS print sheet for the PDF version.
 * Make Katex, Mermaid etc. work for the PDF version.
 
+### Related work
 
+The work presented by [Julie Blanc](https://julie-blanc.fr/blog/2020-11-05_chiragan/) is a similar pipeline, where content lives in Markdown files rendered to two HTML versions by Jekyll, another static website generator.
+One HTML version is a website, the other one is a printable version thanks to Paged.js (the PDF is not pre-generated but you can get it from any modern browser).
+The big differences with my experiment are:
+
+* Julie Blanc's work is not an experiment, it's deployed to production!
+* Both versions of the book are absolutely stunning, there was actual CSS work involved. 
+
+## Conclusion
+
+So, as an R user writing content in R Markdown, you have different possibilities for respecting the principles of single-source publishing.
+I would still recommend using bookdown for now as it is the only stable and widely used solution, but I found it fun to explore other workflows.
+Both the DIY ways I presented use pagedjs-cli to generate a PDF out of HTML, and I strongly recommend following the work done by the [lovely Paged.js folks](https://www.pagedjs.org/) in the world of paged media, and to learn more about CSS for print.
+If you want to produce only paged content out of your R Markdown file, check out the [pagedown package](https://pagedown.rbind.io/) and its fantastic output formats.
+
+If you want to go another way and experiment with homemade pipelines, have fun customizing things. :wink:
+Now, of course, the possibility of customization might actually be a curse when you are trying to write something.
+But this was not a blog post about productivity. :grin:`
 
