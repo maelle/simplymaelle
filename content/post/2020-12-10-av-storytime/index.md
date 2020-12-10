@@ -5,7 +5,7 @@ tags:
   - av
 slug: av-storytime
 output: hugodown::hugo_document
-rmd_hash: 58b31a2ad27f73f3
+rmd_hash: cc668271956d4e9b
 
 ---
 
@@ -144,7 +144,7 @@ In reality I started by converting *one* track, then put it in a face folder of 
 Conclusion
 ----------
 
-In this post I presented my small script converting mp3 and wav tracks to mp3 compatible with my offspring's storyteller. To me these were a few empowering lines of utility code. I think it exemplifies the usefulness of av for audio manipulation. Now, maybe I'll go record some tale about R to put on my kids' cube...
+In this post I presented my small script converting mp3 and wav tracks to mp3 compatible with my offspring's storyteller. To me these were a few empowering lines of utility code. I think it exemplifies the usefulness of [av](https://docs.ropensci.org/av) for audio manipulation. Now, maybe I'll go record some tale about R to put on my kids' cube...
 
 [^1]: Apparently when you're a cool new startup you don't call your docs a manual!
 

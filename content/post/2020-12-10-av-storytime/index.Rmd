@@ -120,7 +120,7 @@ In reality I started by converting _one_ track, then put it in a face folder of 
 
 In this post I presented my small script converting mp3 and wav tracks to mp3 compatible with my offspring's storyteller.
 To me these were a few empowering lines of utility code.
-I think it exemplifies the usefulness of av for audio manipulation.
+I think it exemplifies the usefulness of [av](https://docs.ropensci.org/av) for audio manipulation.
 Now, maybe I'll go record some tale about R to put on my kids' cube...
 
 [^manual]: Apparently when you're a cool new startup you don't call your docs a manual!
