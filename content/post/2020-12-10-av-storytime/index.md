@@ -14,7 +14,7 @@ My kids got a cool electronic storyteller as a gift. It is basically a pretty cu
 Official guidance on how to convert audio files on the Conteuse merveilleuse
 ----------------------------------------------------------------------------
 
-The storyteller can be plugged into a computer like an USB key, using its specific red cable. The interface of the storyteller is the file system, which is rather intuitive to me. There is a folder for each face of the cube. When you shake the cube three times with e.g. the lion face facing upwards, it plays a random track from the LION folder.
+The storyteller can be plugged into a computer like an USB stick, using its specific red cable. The interface of the storyteller is the file system, which is rather intuitive to me. There is a folder for each face of the cube. When you shake the cube three times with e.g. the lion face facing upwards, it plays a random track from the LION folder.
 
 As a side note, something that's fascinating to me is that the settings of the cube, like the maximal volume, are to be tweaked via a text file called settings.txt! Not even reglages.txt! Furthermore, your storyteller's ID (needed to register the device on the company's website) is stored as a text filename.
 

@@ -16,7 +16,7 @@ In this post I shall explain how I, a cool anti-mom, used R, in particular the a
 
 ## Official guidance on how to convert audio files on the Conteuse merveilleuse
 
-The storyteller can be plugged into a computer like an USB key, using its specific red cable.
+The storyteller can be plugged into a computer like an USB stick, using its specific red cable.
 The interface of the storyteller is the file system, which is rather intuitive to me.
 There is a folder for each face of the cube.
 When you shake the cube three times with e.g. the lion face facing upwards, it plays a random track from the LION folder.
