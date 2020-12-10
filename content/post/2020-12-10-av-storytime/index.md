@@ -5,7 +5,7 @@ tags:
   - av
 slug: av-storytime
 output: hugodown::hugo_document
-rmd_hash: cc668271956d4e9b
+rmd_hash: e8e59991a2c32426
 
 ---
 
@@ -18,7 +18,7 @@ The storyteller can be plugged into a computer like an USB key, using its specif
 
 As a side note, something that's fascinating to me is that the settings of the cube, like the maximal volume, are to be tweaked via a text file called settings.txt! Not even reglages.txt! Furthermore, your storyteller's ID (needed to register the device on the company's website) is stored as a text filename.
 
-You can buy new tracks from the company's website, record your own tracks in their studio, and upload your local stories to the website for then getting them as compatible mp3. You are limited to 5 conversions a day, of files up to 100Mb. I had some connection issues and couldn't even get a few conversions, and beside, some of the tracks (from our [local kid theater](http://www.lacachette.fr/lacachette_nancy.php), unsurprisingly currently closed) I wanted to use were a bit bigger than 100Mb.
+You can buy new tracks from the company's website, record your own tracks in their studio, and upload your local stories to the website for then getting them as compatible mp3. You are limited to 5 conversions a day, of files up to 100Mb. I had some connection issues and couldn't even get a few conversions, and besides, some of the tracks (from our [local kid theater](http://www.lacachette.fr/lacachette_nancy.php), unsurprisingly currently closed) I wanted to use were a bit bigger than 100Mb.
 
 Using R instead
 ---------------
