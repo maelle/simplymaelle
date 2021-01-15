@@ -5,11 +5,11 @@ tags:
   - polite
 slug: beanie-baby
 output: hugodown::hugo_document
-rmd_hash: d44f0470d475ed7a
+rmd_hash: 39f8c6171181e477
 
 ---
 
-I've just finished teaching blogging with R Markdown at R-Ladies Bangalore. This has two consequences: I need to calm down a bit, and I am inspired to, well, blog with R Markdown! As I've just read a [fascinating book about the beanie baby fad](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com). Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643). I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
+I've just finished teaching blogging with R Markdown at R-Ladies Bangalore. This has two consequences: I need to calm down a bit, and I am inspired to, well, blog with R Markdown! As I've just read a [fascinating book about the beanie baby bubble](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com). Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643). I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
 
 So, as a little challenge for today, what are the most common animals among Beanie babies? Do I even need much webscraping to find this out?
 
@@ -32,21 +32,9 @@ I've noticed Beaniepedia has a [sitemap for all beanies](view-source:https://bea
 Now from there I could either
 
 -   Scrape each of this page, respectfully slowly, and extract the table that includes the beanie's information;
--   Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By using an rcorpora dataset.
+-   Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By extracting the word coming after "the".
 
 I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='c'># I found the right argument via rcorpora::categories() </span>
-<span class='c'># and rcorpora::corpora(category = "animals")</span>
-<span class='nv'>animals</span> <span class='o'>&lt;-</span> <span class='nf'>rcorpora</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/rcorpora/man/corpora.html'>corpora</a></span><span class='o'>(</span><span class='s'>"animals/common"</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='o'>(</span><span class='nv'>animals</span><span class='o'>$</span><span class='nv'>animals</span><span class='o'>)</span>
-
-<span class='c'>#&gt; [1] "aardvark"  "alligator" "alpaca"    "antelope"  "ape"       "armadillo"</span>
-</code></pre>
-
-</div>
 
 Let's get to work! A *sine qua non* condition is obviously the website being ok with our scraping stuff. The polite package would tell us whether the robots.txt file were against our doing this, and I also took time looking whether the website had any warning. I didn't find any so I think we're good to go.
 
@@ -114,46 +102,91 @@ Now I need to parse the URLs. In an URL path like `beanies/beanie-babies/jerry-t
 
 </div>
 
-This gives me 632 Beanie babies. Let's parse the last part of their path.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://magrittr.tidyverse.org'>"magrittr"</a></span><span class='o'>)</span>
-<span class='nv'>urls_df</span> <span class='o'>&lt;-</span> <span class='nv'>urls_df</span> <span class='o'>%&gt;%</span>
-  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/rowwise.html'>rowwise</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
-  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>parsed_path <span class='o'>=</span> <span class='nf'>stringr</span><span class='nf'>::</span><span class='nf'><a href='https://stringr.tidyverse.org/reference/str_split.html'>str_split</a></span><span class='o'>(</span><span class='nv'>path</span>, <span class='s'>"/"</span>, simplify <span class='o'>=</span> <span class='kc'>TRUE</span><span class='o'>)</span><span class='o'>[</span><span class='m'>1</span>,<span class='m'>3</span><span class='o'>]</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
-  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>parsed_path <span class='o'>=</span> <span class='nf'>stringr</span><span class='nf'>::</span><span class='nf'><a href='https://stringr.tidyverse.org/reference/str_split.html'>str_split</a></span><span class='o'>(</span><span class='nv'>parsed_path</span>, <span class='s'>"-"</span><span class='o'>)</span><span class='o'>)</span>
-<span class='nf'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='o'>(</span><span class='nv'>urls_df</span><span class='o'>$</span><span class='nv'>parsed_path</span><span class='o'>)</span>
-
-<span class='c'>#&gt; [[1]]</span>
-<span class='c'>#&gt; [1] "jerry"  "the"    "minion" "2"     </span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; [[2]]</span>
-<span class='c'>#&gt; [1] "snowball" "the"      "snowman" </span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; [[3]]</span>
-<span class='c'>#&gt; [1] "jemima" "puddle" "duck"   "the"    "duck"  </span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; [[4]]</span>
-<span class='c'>#&gt; [1] "jeff"   "gordon" "24"     "the"    "bear"  </span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; [[5]]</span>
-<span class='c'>#&gt; [1] "jeff"   "burton" "no"     "31"     "the"    "bear"  </span>
-<span class='c'>#&gt; </span>
-<span class='c'>#&gt; [[6]]</span>
-<span class='c'>#&gt; [1] "jeepers" "the"     "tiger"</span>
-</code></pre>
-
-</div>
-
-Will "jemima-puddle-duck-the-duck" be a problem? Hopefully not. Now for each parsed path let's see whether it corresponds to any common animal.
+This gives me 632 Beanie babies. Let's parse the last part of their path. An earlier attempt ignored that some Beanie babies don't have any "the" in their names, e.g. the Hello Kitty ones. This is a limitation of my stingy approach. The error messages by dplyr were most helpful! "The error occurred in row 185." is so handy!
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'>
+<span class='nv'>get_animal</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='nv'>parsed_path</span><span class='o'>)</span> <span class='o'>&#123;</span>
+  
+  <span class='kr'>if</span> <span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='o'>(</span><span class='nv'>parsed_path</span><span class='o'>)</span> <span class='o'>!=</span> <span class='s'>"the"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>&#123;</span>
+    <span class='kr'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='o'>(</span><span class='kc'>NA</span><span class='o'>)</span>
+  <span class='o'>&#125;</span>
+  
+  <span class='nv'>animals</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='o'>(</span><span class='nv'>parsed_path</span><span class='o'>)</span><span class='o'>[</span><span class='nf'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='o'>(</span><span class='nv'>parsed_path</span><span class='o'>)</span> <span class='o'>==</span> <span class='s'>"the"</span><span class='o'>)</span> <span class='o'>+</span> <span class='m'>1</span><span class='o'>]</span>
+  <span class='nv'>animals</span><span class='o'>[</span><span class='nf'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='o'>(</span><span class='nv'>animals</span><span class='o'>)</span><span class='o'>]</span> <span class='c'># thanks, "The End the bear"</span>
+<span class='o'>&#125;</span>
 
-<span class='nv'>animals</span> <span class='o'>&lt;-</span> <span class='nf'>tibble</span><span class='nf'>::</span><span class='nf'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span><span class='o'>(</span>animal <span class='o'>=</span> <span class='nv'>animals</span><span class='o'>)</span>
+<span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://magrittr.tidyverse.org'>"magrittr"</a></span><span class='o'>)</span>
+<span class='nv'>animals_df</span> <span class='o'>&lt;-</span> <span class='nv'>urls_df</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/rowwise.html'>rowwise</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>parsed_path <span class='o'>=</span> <span class='nf'>stringr</span><span class='nf'>::</span><span class='nf'><a href='https://stringr.tidyverse.org/reference/str_split.html'>str_split</a></span><span class='o'>(</span><span class='nv'>path</span>, <span class='s'>"/"</span>, simplify <span class='o'>=</span> <span class='kc'>TRUE</span><span class='o'>)</span><span class='o'>[</span><span class='m'>1</span>,<span class='m'>3</span><span class='o'>]</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>parsed_path <span class='o'>=</span> <span class='nf'>stringr</span><span class='nf'>::</span><span class='nf'><a href='https://stringr.tidyverse.org/reference/str_split.html'>str_split</a></span><span class='o'>(</span><span class='nv'>parsed_path</span>, <span class='s'>"-"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>animal <span class='o'>=</span> <span class='nf'>get_animal</span><span class='o'>(</span><span class='nv'>parsed_path</span><span class='o'>)</span><span class='o'>)</span>
 </code></pre>
 
 </div>
+
+Now we're getting somewhere!
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/count.html'>count</a></span><span class='o'>(</span>
+  <span class='nv'>animals_df</span>,
+  <span class='nv'>animal</span>,
+  sort <span class='o'>=</span> <span class='kc'>TRUE</span>
+<span class='o'>)</span>
+
+<span class='c'>#&gt; <span style='color: #555555;'># A tibble: 150 x 2</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'># Rowwise: </span></span>
+<span class='c'>#&gt;    animal      n</span>
+<span class='c'>#&gt;    <span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 1</span><span> bear      222</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 2</span><span> cat        38</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 3</span><span> dog        32</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 4</span><span> rabbit     23</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 5</span><span> </span><span style='color: #BB0000;'>NA</span><span>         15</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 6</span><span> pig        12</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 7</span><span> unicorn     9</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 8</span><span> polar       7</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'> 9</span><span> giraffe     6</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'>10</span><span> penguin     6</span></span>
+<span class='c'>#&gt; <span style='color: #555555;'># … with 140 more rows</span></span>
+</code></pre>
+
+</div>
+
+Is this result surprising? Probably not! Now, let's have a look at the ones we did not identify.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span class='nv'>animals_df</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='o'>(</span><span class='nv'>animal</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>%&gt;%</span>
+  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/pull.html'>pull</a></span><span class='o'>(</span><span class='nv'>path</span><span class='o'>)</span>
+
+<span class='c'>#&gt;  [1] "beanies/beanie-babies/hello-kitty-rainbow-with-cupcake/"    </span>
+<span class='c'>#&gt;  [2] "beanies/beanie-babies/boston-red-sox-key-clip/"             </span>
+<span class='c'>#&gt;  [3] "beanies/beanie-babies/i-love-you-bears/"                    </span>
+<span class='c'>#&gt;  [4] "beanies/beanie-babies/zodiac-horse/"                        </span>
+<span class='c'>#&gt;  [5] "beanies/beanie-babies/hong-kong-toy-fair-2017-brown/"       </span>
+<span class='c'>#&gt;  [6] "beanies/beanie-babies/hello-kitty-bunny-costume/"           </span>
+<span class='c'>#&gt;  [7] "beanies/beanie-babies/hello-kitty-pink-tartan/"             </span>
+<span class='c'>#&gt;  [8] "beanies/beanie-babies/hello-kitty-gold-angel/"              </span>
+<span class='c'>#&gt;  [9] "beanies/beanie-babies/rock-hello-kitty/"                    </span>
+<span class='c'>#&gt; [10] "beanies/beanie-babies/hello-kitty-i-love-japan-usa-version/"</span>
+<span class='c'>#&gt; [11] "beanies/beanie-babies/hello-kitty-i-love-japan-uk-version/" </span>
+<span class='c'>#&gt; [12] "beanies/beanie-babies/zodiac-ox/"                           </span>
+<span class='c'>#&gt; [13] "beanies/beanie-babies/zodiac-tiger/"                        </span>
+<span class='c'>#&gt; [14] "beanies/beanie-babies/happy-birthday-sock-monkey/"          </span>
+<span class='c'>#&gt; [15] "beanies/beanie-babies/zodiac-goat/"</span>
+</code></pre>
+
+</div>
+
+Fair enough, and nothing endangering our conclusion that bears win.
+
+Conclusion
+----------
+
+In this post I set out to find out what animals are the most common among Beanie babies. I thought I'd freshen my rvest-ing skill but thanks to the sitemap, that's my rusty dplyr knowledge I was able to update a bit. In the end, I learnt that 35% of Beanie babies, at least the one registered on Beaniepedia, are bears.
 

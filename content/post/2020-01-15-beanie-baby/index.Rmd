@@ -9,7 +9,7 @@ output: hugodown::hugo_document
 
 I've just finished teaching blogging with R Markdown at R-Ladies Bangalore.
 This has two consequences: I need to calm down a bit, and I am inspired to, well, blog with R Markdown!
-As I've just read a [fascinating book about the beanie baby fad](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com).
+As I've just read a [fascinating book about the beanie baby bubble](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com).
 Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643).
 I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
 
@@ -35,16 +35,9 @@ That's a necessary step.
 Now from there I could either
 
 * Scrape each of this page, respectfully slowly, and extract the table that includes the beanie's information;
-* Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By using an rcorpora dataset.
+* Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By extracting the word coming after "the".
 
 I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
-
-```{r}
-# I found the right argument via rcorpora::categories() 
-# and rcorpora::corpora(category = "animals")
-animals <- rcorpora::corpora("animals/common")$animals
-head(animals)
-```
 
 Let's get to work! 
 A _sine qua non_ condition is obviously the website being ok with our scraping stuff. 
@@ -79,23 +72,54 @@ urls_df <- dplyr::filter(urls_df, stringr::str_detect(path, "beanie-babies"))
 ```
 
 This gives me `r nrow(urls_df)` Beanie babies. Let's parse the last part of their path.
+An earlier attempt ignored that some Beanie babies don't have any "the" in their names, e.g. the Hello Kitty ones.
+This is a limitation of my stingy approach.
+The error messages by dplyr were most helpful! "The error occurred in row 185." is so handy!
 
 ```{r}
+
+get_animal <- function(parsed_path) {
+  
+  if (all(unlist(parsed_path) != "the")) {
+    return(NA)
+  }
+  
+  animals <- unlist(parsed_path)[which(unlist(parsed_path) == "the") + 1]
+  animals[length(animals)] # thanks, "The End the bear"
+}
+
 library("magrittr")
-urls_df <- urls_df %>%
+animals_df <- urls_df %>%
   dplyr::rowwise() %>%
   dplyr::mutate(parsed_path = stringr::str_split(path, "/", simplify = TRUE)[1,3]) %>%
-  dplyr::mutate(parsed_path = stringr::str_split(parsed_path, "-"))
-head(urls_df$parsed_path)
+  dplyr::mutate(parsed_path = stringr::str_split(parsed_path, "-")) %>%
+  dplyr::mutate(animal = get_animal(parsed_path))
 ```
 
-Will "jemima-puddle-duck-the-duck" be a problem?
-Also, clearly, we won't detect minions and snowmen as they are not common animals.
-Hopefully not.
-Now for each parsed path let's see whether it corresponds to any common animal.
+Now we're getting somewhere!
+
 
 ```{r}
-urls_df %>%
-  dplyr::mutate(animals = toString(animals[animals %in% parsed_path[[1]]]))
-
+dplyr::count(
+  animals_df,
+  animal,
+  sort = TRUE
+)
 ```
+
+Is this result surprising? Probably not!
+Now, let's have a look at the ones we did not identify.
+
+```{r}
+animals_df %>%
+  dplyr::filter(is.na(animal)) %>%
+  dplyr::pull(path)
+```
+
+Fair enough, and nothing endangering our conclusion that bears win.
+
+## Conclusion
+
+In this post I set out to find out what animals are the most common among Beanie babies.
+I thought I'd freshen my rvest-ing skill but thanks to the sitemap, that's my rusty dplyr knowledge I was able to update a bit.
+In the end, I learnt that `r round(sum(animals_df$animal=="bear", na.rm=TRUE)/nrow(animals_df), digits=2)*100`% of Beanie babies, at least the one registered on Beaniepedia, are bears.
