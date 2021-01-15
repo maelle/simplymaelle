@@ -39,6 +39,8 @@ Now from there I could either
 
 I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
 
+## From XML to animal frequencies
+
 Let's get to work! 
 A _sine qua non_ condition is obviously the website being ok with our scraping stuff. 
 The polite package would tell us whether the robots.txt file were against our doing this, and I also took time looking whether the website had any warning.

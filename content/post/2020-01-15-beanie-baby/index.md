@@ -5,7 +5,7 @@ tags:
   - polite
 slug: beanie-baby
 output: hugodown::hugo_document
-rmd_hash: b081ccd014244494
+rmd_hash: bbb32d6c6df17837
 
 ---
 
@@ -35,6 +35,9 @@ Now from there I could either
 -   Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By extracting the word coming after "the".
 
 I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
+
+From XML to animal frequencies
+------------------------------
 
 Let's get to work! A *sine qua non* condition is obviously the website being ok with our scraping stuff. The polite package would tell us whether the robots.txt file were against our doing this, and I also took time looking whether the website had any warning. I didn't find any so I think we're good to go.
 
