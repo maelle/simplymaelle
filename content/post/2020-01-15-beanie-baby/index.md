@@ -5,11 +5,11 @@ tags:
   - polite
 slug: beanie-baby
 output: hugodown::hugo_document
-rmd_hash: 39f8c6171181e477
+rmd_hash: b081ccd014244494
 
 ---
 
-I've just finished teaching blogging with R Markdown at R-Ladies Bangalore. This has two consequences: I need to calm down a bit, and I am inspired to, well, blog with R Markdown! As I've just read a [fascinating book about the beanie baby bubble](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com). Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643). I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
+I've just finished teaching [blogging with R Markdown at R-Ladies Bangalore](/talks/2021-01-15-blogging-r-markdown/). This has two consequences: I need to calm down a bit after the stress of live demoing & co, and I am inspired to, well, blog with R Markdown! As I've just read a [fascinating book about the beanie baby bubble](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com). Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643). I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
 
 So, as a little challenge for today, what are the most common animals among Beanie babies? Do I even need much webscraping to find this out?
 
