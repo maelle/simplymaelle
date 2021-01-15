@@ -5,7 +5,7 @@ tags:
   - polite
 slug: beanie-baby
 output: hugodown::hugo_document
-rmd_hash: 9fd129e79e2bc4bf
+rmd_hash: 926e6f8c3a8f242b
 
 ---
 
@@ -31,7 +31,7 @@ I've noticed Beaniepedia has a [sitemap for all beanies](view-source:https://bea
 
 Now from there I could either
 
--   Scrape each of this page, respectfully slowly, and extract the table that includes the beanie's information;
+-   Scrape each of these pages, respectfully slowly, and extract the table that includes the beanie's information;
 -   Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By extracting the word coming after "the".
 
 I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
