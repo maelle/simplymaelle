@@ -1,0 +1,125 @@
+---
+title: "Stingy Beanie baby webscraping"
+date: '2021-01-15'
+tags:
+  - polite
+slug: beanie-baby
+output: hugodown::hugo_document
+---
+
+I've just finished teaching [blogging with R Markdown at R-Ladies Bangalore](/talks/2021-01-15-blogging-r-markdown/).
+This has two consequences: I need to calm down a bit after the stress of live demoing & co, and I am inspired to, well, blog with R Markdown!
+As I've just read a [fascinating book about the beanie baby bubble](https://www.goodreads.com/book/show/20821185-the-great-beanie-baby-bubble) and as I've seen rvest is getting an update, I've decided to harvest [Beaniepedia](https://beaniepedia.com).
+Both of these things show I spend too much time on Twitter, as the book has been tweeted about [by Vicky Boykis](https://twitter.com/vboykis/status/1347575684802240512), and the package changes have been tweeted about [by Hadley Wickham](https://twitter.com/hadleywickham/status/1347260116932976643).
+I call that [staying up-to-date](/2019/01/25/uptodate/), of course.
+
+So, as a little challenge for today, what are the most common animals among Beanie babies?
+Do I even need much webscraping to find this out?
+
+## How does one webscrape these days
+
+I've always liked webscraping, as I think I enjoy getting and transforming data more than I enjoy analyzing it.
+Compared to my former self, 
+
+* I know a bit more about XPath (starting with knowing it exists!) so I don't use regular expression to parse HTML.
+* I use [polite](https://dmi3kno.github.io/polite/) for polite webscraping!
+* I know it's best to spend more time pondering about strategies before hammering requests at a website.
+
+As to rvest recent changes, I had a quick look at the [changelog](https://rvest.tidyverse.org/news/index.html) but since I hadn't used it in so long, it's not as if I had any habit to change!
+
+## How to harvest Beaniepedia
+
+I've noticed Beaniepedia has a [sitemap for all beanies](view-source:https://beaniepedia.com/beanies/sitemap.xml) so from that I can extract the URLs to all Beanie pages. 
+That's a necessary step.
+
+Now from there I could either
+
+* Scrape each of this page, respectfully slowly, and extract the table that includes the beanie's information;
+* Use a more frugal strategy by parsing URLs. E.g. from the path of `https://beaniepedia.com/beanies/beanie-babies/january-the-birthday-bear-series-2/` I can extract the category of the Beanie (a beanie baby as opposed to, say, an attic treasure) and the animal by splitting `january-the-birthday-bear-series-2` into pieces and see whether one is an animal. How would I recognize animals? By extracting the word coming after "the".
+
+I'll choose the second strategy and leave the first one as an exercise to the reader. :wink:
+
+Let's get to work! 
+A _sine qua non_ condition is obviously the website being ok with our scraping stuff. 
+The polite package would tell us whether the robots.txt file were against our doing this, and I also took time looking whether the website had any warning.
+I didn't find any so I think we're good to go.
+
+```{r}
+session <- polite::bow(
+  url = "https://beaniepedia.com/beanies/sitemap.xml",
+  user_agent = "Maëlle Salmon https://masalmon.eu"
+  )
+sitemap <- polite::scrape(session)
+sitemap
+```
+
+The `sitemap` object is an XML document. 
+I will extract URLs with the xml2 package.
+
+```{r}
+sitemap <- xml2::xml_ns_strip(sitemap)
+urls <- xml2::xml_text(xml2::xml_find_all(sitemap, ".//loc"))
+head(urls)
+```
+
+Now I need to parse the URLs.
+In an URL path like `beanies/beanie-babies/jerry-the-minion-2/` the second part is the category, the third part is the Beanie Baby name. 
+I, as if I were a good collector :upside_down_face:, am not interested in Attic treasures, only in Beanie Babies.
+
+```{r}
+urls_df <- urltools::url_parse(urls)
+urls_df <- dplyr::filter(urls_df, stringr::str_detect(path, "beanie-babies"))
+```
+
+This gives me `r nrow(urls_df)` Beanie babies. Let's parse the last part of their path.
+An earlier attempt ignored that some Beanie babies don't have any "the" in their names, e.g. the Hello Kitty ones.
+This is a limitation of my stingy approach.
+The error messages by dplyr were most helpful! "The error occurred in row 185." is so handy!
+
+```{r}
+
+get_animal <- function(parsed_path) {
+  
+  if (all(unlist(parsed_path) != "the")) {
+    return(NA)
+  }
+  
+  animals <- unlist(parsed_path)[which(unlist(parsed_path) == "the") + 1]
+  animals[length(animals)] # thanks, "The End the bear"
+}
+
+library("magrittr")
+animals_df <- urls_df %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(parsed_path = stringr::str_split(path, "/", simplify = TRUE)[1,3]) %>%
+  dplyr::mutate(parsed_path = stringr::str_split(parsed_path, "-")) %>%
+  dplyr::mutate(animal = get_animal(parsed_path))
+```
+
+Now we're getting somewhere!
+
+
+```{r}
+dplyr::count(
+  animals_df,
+  animal,
+  sort = TRUE
+)
+```
+
+Is this result surprising? Probably not!
+Now, let's have a look at the ones we did not identify.
+
+```{r}
+animals_df %>%
+  dplyr::filter(is.na(animal)) %>%
+  dplyr::pull(path)
+```
+
+Fair enough, and nothing endangering our conclusion that bears win.
+
+## Conclusion
+
+In this post I set out to find out what animals are the most common among Beanie babies.
+I thought I'd freshen my rvest-ing skill but thanks to the sitemap, that's my rusty dplyr knowledge I was able to update a bit.
+In the end, I learnt that `r round(sum(animals_df$animal=="bear", na.rm=TRUE)/nrow(animals_df), digits=2)*100`% of Beanie babies, at least the one registered on Beaniepedia, are bears.
