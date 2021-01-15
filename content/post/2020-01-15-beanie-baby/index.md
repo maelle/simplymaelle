@@ -5,7 +5,7 @@ tags:
   - polite
 slug: beanie-baby
 output: hugodown::hugo_document
-rmd_hash: bbb32d6c6df17837
+rmd_hash: 9fd129e79e2bc4bf
 
 ---
 
@@ -191,5 +191,5 @@ Fair enough, and nothing endangering our conclusion that bears win.
 Conclusion
 ----------
 
-In this post I set out to find out what animals are the most common among Beanie babies. I thought I'd freshen my rvest-ing skill but thanks to the sitemap, that's my rusty dplyr knowledge I was able to update a bit. In the end, I learnt that 35% of Beanie babies, at least the one registered on Beaniepedia, are bears.
+In this post I set out to find out what animals are the most common among Beanie babies. I thought I'd freshen my rvest-ing skill but thanks to the sitemap, that's my rusty dplyr knowledge I was able to update a bit. In the end, I learnt that 35% of Beanie babies, at least the one registered on Beaniepedia, are bears. Thanks to Beaniepedia maintainer for allowing this fun!
 
