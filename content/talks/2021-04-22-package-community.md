@@ -5,6 +5,7 @@ event: "rOpenSci community call"
 event_url: "https://ropensci.org/commcalls/apr2021-pkg-community/"
 event_type: "webinar"
 slides: "https://pkg-comm.netlify.app/"
+video: "https://vimeo.com/540502735"
 ---
 
 Summary from rOpenSci website: 
