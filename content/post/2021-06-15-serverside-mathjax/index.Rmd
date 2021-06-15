@@ -78,11 +78,10 @@ Now let's add math to it.
 Note that a real solution would have to differentiate in-line and block maths whose resulting HTML has a different XPath.
 
 ```{r}
-mathp <- xml2::xml_find_first(html, "//p[@id='mathp']")
+mathp <- xml2::xml_find_first(html, "//p[@class='mathp']")
 xml2::xml_text(mathp) <- r"($$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$)"
 as.character(html)
-file <- withr::local_tempfile()
-xml2::write_html(html, file)
+xml2::write_html(html, "raw.html")
 ```
 
 Now we shall load the file in a browser via [chromote](https://github.com/rstudio/chromote/)[^crrri] and extract the HTML Pandoc produced.
@@ -91,7 +90,7 @@ To find the XPath, I examined the HTML with the DevTools of my browser.
 ```{r}
 library("chromote")
 b <- ChromoteSession$new()
-b$Page$navigate("https://www.tuhh.de/MathJax/test/sample-tex.html") #sprintf("file://%s", file))
+b$Page$navigate("https://masalmon.eu/2021/06/15/serverside-mathjax/raw.html") 
 # Make sure we wait long enough
 Sys.sleep(2)
 doc <- b$DOM$getDocument()
