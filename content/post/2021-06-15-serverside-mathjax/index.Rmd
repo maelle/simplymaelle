@@ -42,7 +42,7 @@ The best summary of the state-of-the-art I found is the blog post [Math Renderin
 
 Solutions I saw are:
 
-- a Node module called [mathjax-node-cli](https://github.com/mathjax/mathjax-node-cli). I know there are [ways to use JS from R](https://blog.r-hub.io/2020/08/25/js-r/#bundling-javascript-code) but I got lazy once I saw I hade to update my Node installation or whatever the error message was.
+- a Node module called [mathjax-node-cli](https://github.com/mathjax/mathjax-node-cli). I know there are [ways to use JS from R](https://blog.r-hub.io/2020/08/25/js-r/#bundling-javascript-code) but I got lazy once I saw I had to update my Node installation or whatever the error message was.
 - a way to run a [MathJax API](https://github.com/chialab/math-api), which I have not tried.
 - rendering math [on a browser and extracting the result](https://advancedweb.hu/mathjax-processing-on-the-server-side/).
 

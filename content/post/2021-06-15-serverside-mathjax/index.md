@@ -5,7 +5,7 @@ tags:
   - chromote
 slug: serverside-mathjax
 output: hugodown::hugo_document
-rmd_hash: d3bf104122e6e80e
+rmd_hash: 0cc11f9999fa7de9
 
 ---
 
@@ -31,7 +31,7 @@ Now the second step, how to transform LaTeX code into HTML? The best summary of 
 
 Solutions I saw are:
 
--   a Node module called [mathjax-node-cli](https://github.com/mathjax/mathjax-node-cli). I know there are [ways to use JS from R](https://blog.r-hub.io/2020/08/25/js-r/#bundling-javascript-code) but I got lazy once I saw I hade to update my Node installation or whatever the error message was.
+-   a Node module called [mathjax-node-cli](https://github.com/mathjax/mathjax-node-cli). I know there are [ways to use JS from R](https://blog.r-hub.io/2020/08/25/js-r/#bundling-javascript-code) but I got lazy once I saw I had to update my Node installation or whatever the error message was.
 -   a way to run a [MathJax API](https://github.com/chialab/math-api), which I have not tried.
 -   rendering math [on a browser and extracting the result](https://advancedweb.hu/mathjax-processing-on-the-server-side/).
 
@@ -88,10 +88,10 @@ Now we shall load the file in a browser via [chromote](https://github.com/rstudi
 <span class='nv'>b</span> <span class='o'>&lt;-</span> <span class='nv'><a href='https://rdrr.io/pkg/chromote/man/ChromoteSession.html'>ChromoteSession</a></span><span class='o'>$</span><span class='nf'>new</span><span class='o'>(</span><span class='o'>)</span>
 <span class='nv'>b</span><span class='o'>$</span><span class='nv'>Page</span><span class='o'>$</span><span class='nf'>navigate</span><span class='o'>(</span><span class='s'>"https://www.tuhh.de/MathJax/test/sample-tex.html"</span><span class='o'>)</span> <span class='c'>#sprintf("file://%s", file))</span>
 <span class='c'>#&gt; $frameId</span>
-<span class='c'>#&gt; [1] "3A3E9E498AC0B639102E4ABBC632CF5F"</span>
+<span class='c'>#&gt; [1] "46A413895141E4D6B51693699AE3D5C5"</span>
 <span class='c'>#&gt; </span>
 <span class='c'>#&gt; $loaderId</span>
-<span class='c'>#&gt; [1] "56F5BBCBE3D3E075228B86767174C9DA"</span>
+<span class='c'>#&gt; [1] "92A895B30C7144C29883AB27D6B2C609"</span>
 <span class='c'># Make sure we wait long enough</span>
 <span class='nf'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='o'>(</span><span class='m'>2</span><span class='o'>)</span>
 <span class='nv'>doc</span> <span class='o'>&lt;-</span> <span class='nv'>b</span><span class='o'>$</span><span class='nv'>DOM</span><span class='o'>$</span><span class='nf'>getDocument</span><span class='o'>(</span><span class='o'>)</span>
