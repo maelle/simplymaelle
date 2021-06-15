@@ -22,8 +22,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   topic = "topics"
 
 [params]
-  custom_css = ["css/paper-button.css", "css/salmon.css"]
-  custom_js = ["js/display.js"]
+  custom_css = ["/css/paper-button.css", "/css/salmon.css"]
+  custom_js = ["/js/display.js"]
   title = "Maëlle Salmon"
   description = "Maëlle Salmon's personal website"
   # Shown in the home page
