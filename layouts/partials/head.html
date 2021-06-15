@@ -51,7 +51,7 @@
     {{ if findRE "https?://" . }}
         <link rel="stylesheet" href="{{ . }}">
     {{ else }}
-        <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+        <link rel="stylesheet" href="{{ . | relURL }}">
     {{ end }}
   {{ end }}
   {{ range .Site.Params.custom_js }}

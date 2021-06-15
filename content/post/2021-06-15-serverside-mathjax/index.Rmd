@@ -1,0 +1,155 @@
+---
+title: "Server-side MathJax rendering with R?"
+date: '2021-06-15'
+tags:
+  - chromote
+slug: serverside-mathjax
+output: hugodown::hugo_document
+---
+
+Whilst I most certainly do not write LaTeX formulas on the regular anymore, I got curious about their [MathJax](https://www.mathjax.org/) rendering on websites.[^notmj]
+In brief : your website source contains LaTeX code, and the MathJax JS library (self-hosted or hosted on a CDN) transforms it into something humans can understand: some HTML with inline CSS but also some MathML for screen-reader users.[^accessibility]
+As I quite like the idea of moving things from the client-side to the server-side, I started wondering whether the processing of LaTeX code could happen before an user opens a website.
+Searching for "server-side MathJax rendering" on the web gave a few hits. 
+A few hits only, sure, which shows how niche the topic is, and meant reading resources was not too verwhelming. :grin:
+In this post I am reporting on my findings.
+
+## Why render MathJax on the server-side
+
+Let me be honest, there is no extremely strong reason for _me_.
+Sure loading MathJax from a CDN might be a privacy problem (as the CDN measures traffic) or make your website potentially fragile if the CDN goes down (remember the [Fastly outage](https://en.wikipedia.org/wiki/Fastly#Operation) last week).
+Now you could still self-host MathJax to mitigate that (and to know exactly who to blame in case of an outage i.e. yourself :wink:).
+Not having MathJax might mean the page takes less time to load... if having the MathJax-rendered HTML weren't making the page bigger than the same page with LaTeX code instead. 
+But hey I still think it's an interesting problem.
+
+Something I realized whilst working on this post is that one probably does not want to remove all MathJax JS from the browser, as it includes [accessibility options](https://docs.mathjax.org/en/v2.7-latest/options/extensions/a11y-extensions.html#a11y-extensions)!
+You need some JS in order to have a menu etc. 
+That's not something I've tackled here, I think that to extract the right MathJax JS to have only the components for the menu but not those for processign input, one would need to understand MathJax much better than I do.
+
+## How to render MathJax on the server-side
+
+The recipe would be:
+
+- extract LaTeX code. E.g. use XPath with xml2 for HTML; or regular expressions if that's your jam.
+- transform the LaTeX string into HTML somehow.
+- replace the LaTeX code with the HTML.
+
+The first and second steps are things close to e.g. the [HTML tweaking pkgdown does](https://github.com/r-lib/pkgdown/blob/master/R/html-tweak.R).
+They might well shall entail (un)escaping problems.
+
+Now the second step, how to transform LaTeX code into HTML?
+The best summary of the state-of-the-art I found is the blog post [Math Rendering is Wrong](https://danilafe.com/blog/math_rendering_is_wrong/).
+
+Solutions I saw are:
+
+- a Node module called [mathjax-node-cli](https://github.com/mathjax/mathjax-node-cli). I know there are [ways to use JS from R](https://blog.r-hub.io/2020/08/25/js-r/#bundling-javascript-code) but I got lazy once I saw I hade to update my Node installation or whatever the error message was.
+- a way to run a [MathJax API](https://github.com/chialab/math-api), which I have not tried.
+- rendering math [on a browser and extracting the result](https://advancedweb.hu/mathjax-processing-on-the-server-side/).
+
+I will now focus on the last solution as it works well from R these days.
+
+## MathJax, but not in the viewer's browser!
+
+Let's take a minimal HTML with MathJax loaded from a CDN and an empty paragraph with class "mathp":
+
+```{r}
+html <- xml2::read_html('<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="https://mathjax.rstudio.com/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+<body>
+
+<p class="mathp">
+
+</p>
+
+</body>
+</html>
+')
+
+```
+
+Now let's add math to it.
+Note that a real solution would have to differentiate in-line and block maths whose resulting HTML has a different XPath.
+
+```{r}
+mathp <- xml2::xml_find_first(html, "//p[@id='mathp']")
+xml2::xml_text(mathp) <- r"($$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$)"
+as.character(html)
+file <- withr::local_tempfile()
+xml2::write_html(html, file)
+```
+
+Now we shall load the file in a browser via [chromote](https://github.com/rstudio/chromote/)[^crrri] and extract the HTML Pandoc produced.
+To find the XPath, I examined the HTML with the DevTools of my browser.
+
+```{r}
+library("chromote")
+b <- ChromoteSession$new()
+b$Page$navigate("https://www.tuhh.de/MathJax/test/sample-tex.html") #sprintf("file://%s", file))
+# Make sure we wait long enough
+Sys.sleep(2)
+doc <- b$DOM$getDocument()
+x <- b$DOM$querySelector(doc$root$nodeId, ".MathJax_Display")
+(math_html <- b$DOM$getOuterHTML(x$nodeId))
+```
+
+The `math_html` above is the MathJax-rendered math HTML we were after!
+
+Now we create a minimal HTML without MathJax and add the math HTML to it.
+
+```{r}
+html <- xml2::read_html('<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p id="mathp" class="mathp">
+
+</p>
+
+</body>
+</html>
+')
+mathp <- xml2::xml_find_first(html, "//p[@id='mathp']")
+xml2::xml_text(mathp) <- math_html$outerHTML
+```
+
+Sadly the step above means the math HTML will have been escaped. 
+One could find an actual fix, but my fix will be to unescape the HTML à la pkgdown i.e. literally using an internal function of pkgdown's.
+
+```{r}
+# from https://github.com/r-lib/pkgdown/blob/23eb05ceceda1c44573b254dd8b96e92cd91f825/R/html-build.R#L49
+unescape_html <- function(x) {
+  x <- gsub("&lt;", "<", x)
+  x <- gsub("&gt;", ">", x)
+  x <- gsub("&amp;", "&", x)
+  x
+}
+html <- xml2::read_html(unescape_html(as.character(html)))
+xml2::write_html(html, "example.html")
+```
+
+Now we can look at the [example](example.html) and see that it has indeed some math!
+It's probably lacking fonts, the absence of any MathJax JS means that we see the math twice, one of them being a div for assistive technology.
+
+## Conclusion
+
+In this post I explored server-side MathJax rendering.
+I have not created a workable solution : An actually acceptable solution would necessitate more knowledge of MathJax, be far more detail-oriented and would check the accessibility of the produced document!
+Nevertheless, it was interesting to me to use chromote to extract HTML produced by MathJax and to learn more about MathJax.
+I don't think I'll feel like writing more LaTeX than now but I am sure curious to also check out MathJax "competitors" like KaTeX.[^katex]
+
+[^notmj]: MathJax is not the only way to render math for the web but it is the most popular one.
+[^accessibility]: I found the video [Accessible Math on the Web: A Server/Client Solution](https://www.writethedocs.org/videos/na/2016/accessible-math-on-the-web-a-server-client-solution-tim-arnold/) interesting, albeit a few years old already. Yes, I watched a video about SAS documentation.
+[^crrri]: One could also choose to use [crrri](https://github.com/RLesur/crrri) but this is left as an exercise to the reader.
+[^katex]: If you use Katex you might be interested in a [related PR to rmarkdown](https://github.com/rstudio/rmarkdown/pull/1940).
