@@ -81,7 +81,8 @@ Note that a real solution would have to differentiate in-line and block maths wh
 mathp <- xml2::xml_find_first(html, "//p[@class='mathp']")
 xml2::xml_text(mathp) <- r"($$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$)"
 as.character(html)
-xml2::write_html(html, "raw.html")
+file <- withr::local_tempfile(fileext = ".html")
+xml2::write_html(html, file)
 ```
 
 Now we shall load the file in a browser via [chromote](https://github.com/rstudio/chromote/)[^crrri] and extract the HTML Pandoc produced.
@@ -90,7 +91,7 @@ To find the XPath, I examined the HTML with the DevTools of my browser.
 ```{r}
 library("chromote")
 b <- ChromoteSession$new()
-b$Page$navigate("https://masalmon.eu/2021/06/15/serverside-mathjax/raw.html") 
+b$Page$navigate(sprintf("file://%s", file)) 
 # Make sure we wait long enough
 Sys.sleep(2)
 doc <- b$DOM$getDocument()

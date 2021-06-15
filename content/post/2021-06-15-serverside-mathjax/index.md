@@ -5,7 +5,7 @@ tags:
   - chromote
 slug: serverside-mathjax
 output: hugodown::hugo_document
-rmd_hash: 4556a3a8a12f15b9
+rmd_hash: 7a1fb4f8b1070739
 
 ---
 
@@ -72,7 +72,11 @@ Now let's add math to it. Note that a real solution would have to differentiate 
 <span class='nf'>xml2</span><span class='nf'>::</span><span class='nf'><a href='http://xml2.r-lib.org/reference/xml_text.html'>xml_text</a></span><span class='o'>(</span><span class='nv'>mathp</span><span class='o'>)</span> <span class='o'>&lt;-</span> <span class='s'>r"($$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$)"</span>
 <span class='nf'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='o'>(</span><span class='nv'>html</span><span class='o'>)</span>
 <span class='c'>#&gt; [1] "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;MathJax&lt;/title&gt;\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"&gt;\n&lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"&gt;\n&lt;script type=\"text/javascript\" src=\"https://mathjax.rstudio.com/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"&gt;&lt;/script&gt;\n&lt;/head&gt;\n&lt;body&gt;\n\n&lt;p class=\"mathp\"&gt;$$x = &#123;-b \\pm \\sqrt&#123;b^2-4ac&#125; \\over 2a&#125;.$$&lt;/p&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n"</span>
-<span class='nf'>xml2</span><span class='nf'>::</span><span class='nf'><a href='http://xml2.r-lib.org/reference/write_xml.html'>write_html</a></span><span class='o'>(</span><span class='nv'>html</span>, <span class='s'>"raw.html"</span><span class='o'>)</span></code></pre>
+<span class='nv'>file</span> <span class='o'>&lt;-</span> <span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_tempfile.html'>local_tempfile</a></span><span class='o'>(</span>fileext <span class='o'>=</span> <span class='s'>".html"</span><span class='o'>)</span>
+<span class='c'>#&gt; Setting deferred event(s) on global environment.</span>
+<span class='c'>#&gt;   * Execute (and clear) with `withr::deferred_run()`.</span>
+<span class='c'>#&gt;   * Clear (without executing) with `withr::deferred_clear()`.</span>
+<span class='nf'>xml2</span><span class='nf'>::</span><span class='nf'><a href='http://xml2.r-lib.org/reference/write_xml.html'>write_html</a></span><span class='o'>(</span><span class='nv'>html</span>, <span class='nv'>file</span><span class='o'>)</span></code></pre>
 
 </div>
 
@@ -82,12 +86,12 @@ Now we shall load the file in a browser via [chromote](https://github.com/rstudi
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'>"chromote"</span><span class='o'>)</span>
 <span class='nv'>b</span> <span class='o'>&lt;-</span> <span class='nv'><a href='https://rdrr.io/pkg/chromote/man/ChromoteSession.html'>ChromoteSession</a></span><span class='o'>$</span><span class='nf'>new</span><span class='o'>(</span><span class='o'>)</span>
-<span class='nv'>b</span><span class='o'>$</span><span class='nv'>Page</span><span class='o'>$</span><span class='nf'>navigate</span><span class='o'>(</span><span class='s'>"https://masalmon.eu/2021/06/15/serverside-mathjax/raw.html"</span><span class='o'>)</span> 
+<span class='nv'>b</span><span class='o'>$</span><span class='nv'>Page</span><span class='o'>$</span><span class='nf'>navigate</span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/sprintf.html'>sprintf</a></span><span class='o'>(</span><span class='s'>"file://%s"</span>, <span class='nv'>file</span><span class='o'>)</span><span class='o'>)</span> 
 <span class='c'>#&gt; $frameId</span>
-<span class='c'>#&gt; [1] "84F1B0DAF37C9D58D842202AD3552FF4"</span>
+<span class='c'>#&gt; [1] "7FC1F01C63F746D0D66CC7E2DC40EF87"</span>
 <span class='c'>#&gt; </span>
 <span class='c'>#&gt; $loaderId</span>
-<span class='c'>#&gt; [1] "5705A83187AB50084AE28A9D22D15CAB"</span>
+<span class='c'>#&gt; [1] "A3031F97EEF09D8BF745DF8C089F448F"</span>
 <span class='c'># Make sure we wait long enough</span>
 <span class='nf'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='o'>(</span><span class='m'>2</span><span class='o'>)</span>
 <span class='nv'>doc</span> <span class='o'>&lt;-</span> <span class='nv'>b</span><span class='o'>$</span><span class='nv'>DOM</span><span class='o'>$</span><span class='nf'>getDocument</span><span class='o'>(</span><span class='o'>)</span>
