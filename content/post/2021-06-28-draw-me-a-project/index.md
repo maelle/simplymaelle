@@ -9,11 +9,11 @@ tags:
   - orderly
 slug: serverside-mathjax
 output: hugodown::hugo_document
-rmd_hash: 3d75b21c2aac250a
+rmd_hash: 4f1616dca31d2ae9
 
 ---
 
-*I'll be giving a remote keynote talk at the *Rencontres R* (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
+*I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
 
 <div class="highlight">
 
@@ -25,7 +25,7 @@ Now why should *I* discuss the making of R projects? While I am not often in cha
 
 ## Some "basics"
 
-To start with I'd like to mention some rules or principles that are quite crucial. My main source of information for them is Jenny Bryan who's a Software Engineer at RStudio.
+To start with I'd like to mention some rules or principles that are quite crucial. My main source of information for them is [Jenny Bryan](https://jennybryan.org/).
 
 {{< tweet 1222960316545294337 >}}
 

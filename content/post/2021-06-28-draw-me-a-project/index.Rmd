@@ -11,7 +11,7 @@ slug: serverside-mathjax
 output: hugodown::hugo_document
 ---
 
-_I'll be giving a remote keynote talk at the _Rencontres R_ (French R conference) in two weeks, all in French._
+_I'll be giving a remote keynote talk at the [_Rencontres R_](https://rr2021.sciencesconf.org/program) (French R conference) in two weeks, all in French._
 _This blog post is a written version of my presentation, but in English._
 _I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^title]_
 
@@ -52,7 +52,7 @@ While I am not often in charge of analyses these days, I follow R news quite wel
 ## Some "basics"
 
 To start with I'd like to mention some rules or principles that are quite crucial.
-My main source of information for them is Jenny Bryan who's a Software Engineer at RStudio.
+My main source of information for them is [Jenny Bryan](https://jennybryan.org/).
 
 `r hugodown::embed_tweet("1222960316545294337")`
 
