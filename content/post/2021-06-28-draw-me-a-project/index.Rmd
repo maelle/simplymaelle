@@ -47,7 +47,7 @@ Because any improvement in your workflow might improve the experience of anyone 
 It's also nice that there are always elements to make better, althought that also means one might be procrastinating instead of making actual progress, so beware!
 
 Now why should _I_ discuss the making of R projects?
-While I am not often in charge of analyses these days, I follow R news quite well so thought I might be able to deliver some useful tips to the audience.
+While I am not often in charge of analyses these days, I [follow R news](/2019/01/25/uptodate/) quite well so thought I might be able to deliver some useful tips to the audience.
 
 ## Some "basics"
 
@@ -119,7 +119,7 @@ The renv package is the successor of the packrat package by the same author.
 Using renv is actually quite easy:
 
 * In a new project you run `renv::init()`;
-* After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Metadata about packagtes (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
+* After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Metadata about packages (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
 * Anyone getting the project runs `renv::restore()` to have the exact same project library as you.
 
 Now if you want to go further and also freeze the operating system used etc. you could check out [Docker](https://colinfay.me/docker-r-reproducibility/).

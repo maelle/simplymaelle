@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: serverside-mathjax
 output: hugodown::hugo_document
-rmd_hash: 4f1616dca31d2ae9
+rmd_hash: c917e608ce0237af
 
 ---
 
@@ -21,7 +21,7 @@ rmd_hash: 4f1616dca31d2ae9
 
 Why discuss the making of R projects? Because any improvement in your workflow might improve the experience of anyone trying to run or audit an analysis later, including yourself. It's also nice that there are always elements to make better, althought that also means one might be procrastinating instead of making actual progress, so beware!
 
-Now why should *I* discuss the making of R projects? While I am not often in charge of analyses these days, I follow R news quite well so thought I might be able to deliver some useful tips to the audience.
+Now why should *I* discuss the making of R projects? While I am not often in charge of analyses these days, I [follow R news](/2019/01/25/uptodate/) quite well so thought I might be able to deliver some useful tips to the audience.
 
 ## Some "basics"
 
@@ -80,9 +80,9 @@ To prevent that, you need to encapsulate your project. You can track and restore
 
 Using renv is actually quite easy:
 
--   In a new project you run `renv::init()`;
--   After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Metadata about packagtes (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
--   Anyone getting the project runs `renv::restore()` to have the exact same project library as you.
+-   In a new project you run [`renv::init()`](https://rstudio.github.io/renv//reference/init.html);
+-   After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Metadata about packages (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
+-   Anyone getting the project runs [`renv::restore()`](https://rstudio.github.io/renv//reference/restore.html) to have the exact same project library as you.
 
 Now if you want to go further and also freeze the operating system used etc. you could check out [Docker](https://colinfay.me/docker-r-reproducibility/).
 
