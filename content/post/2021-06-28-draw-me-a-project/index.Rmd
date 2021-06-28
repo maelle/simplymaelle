@@ -309,5 +309,18 @@ In this post/talk I have discussed several aspects of drawing a project
 All in all my tips would be to read everything Jenny Bryan writes :grin:, and to not be afraid to change tools over time as new cool tools will appear and as your needs and experience will change.
 I'd be interested to hear any thoughts in the comments below!
 
+### Further resources
+
+These items might be relevant for you:
+
+* [Course "Reproducible Research Data and Project Management in R"](https://annakrystalli.me/rrresearchACCE20/) by Anna Krystalli.
+
+* [Guide "Organisation d’un projet collaboratif de publication PROPRE"](https://rdes_dreal.gitlab.io/publication_guide/production/index.html#quest-ce-quun-projet-collaboratif-propre) de Sébastien Rochette.
+
+* [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510) Wilson G, Bryan J, Cranston K, Kitzes J, Nederbragt L, et al. (2017) Good enough practices in scientific computing. PLOS Computational Biology 13(6): e1005510. https://doi.org/10.1371/journal.pcbi.1005510
+
+* [The Turing Way](https://the-turing-way.netlify.app/welcome), an open source community-driven guide to reproducible, ethical, inclusive and collaborative data science.
+
+
 [^title]: The Little Prince might have asked "Please draw me a _sheep_", not a _project_, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders, _maybe_ packages).
 [^sharla]: Note that Sharla Gelfand themselves is a great source of good ideas! See e.g. their talk [Don't repeat yourself, talk to yourself! Repeated reporting in the R universe](https://sharla.party/talk/2020-01-01-rstudio-conf/) from the RStudio::conf 2020.

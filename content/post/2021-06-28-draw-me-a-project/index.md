@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: da6f24e90a40271d
+rmd_hash: efe019ae9e42c925
 
 ---
 
@@ -244,6 +244,18 @@ In this post/talk I have discussed several aspects of drawing a project
 -   Using tools for building outputs that answers your needs (optimizing a pipeline? tracking versions of an analysis projects?).
 
 All in all my tips would be to read everything Jenny Bryan writes :grin:, and to not be afraid to change tools over time as new cool tools will appear and as your needs and experience will change. I'd be interested to hear any thoughts in the comments below!
+
+### Further resources
+
+These items might be relevant for you:
+
+-   [Course "Reproducible Research Data and Project Management in R"](https://annakrystalli.me/rrresearchACCE20/) by Anna Krystalli.
+
+-   [Guide "Organisation d'un projet collaboratif de publication PROPRE"](https://rdes_dreal.gitlab.io/publication_guide/production/index.html#quest-ce-quun-projet-collaboratif-propre) de Sébastien Rochette.
+
+-   [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510) Wilson G, Bryan J, Cranston K, Kitzes J, Nederbragt L, et al. (2017) Good enough practices in scientific computing. PLOS Computational Biology 13(6): e1005510. <https://doi.org/10.1371/journal.pcbi.1005510>
+
+-   [The Turing Way](https://the-turing-way.netlify.app/welcome), an open source community-driven guide to reproducible, ethical, inclusive and collaborative data science.
 
 [^1]: The Little Prince might have asked "Please draw me a *sheep*", not a *project*, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders, *maybe* packages).
 
