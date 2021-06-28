@@ -7,13 +7,13 @@ tags:
   - renv
   - targets
   - orderly
-slug: serverside-mathjax
+slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: c917e608ce0237af
+rmd_hash: da6f24e90a40271d
 
 ---
 
-*I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
+*I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not [talk](/talks/) about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
 
 <div class="highlight">
 
@@ -58,7 +58,7 @@ Then I'll "introduce" version control. I'll briefly mention some basic git comma
 
 -   Using RStudio git pane.
 
--   Using the terminal for commands copy-pasted from somewhere on the web (and for the ones I do know by heart now!).
+-   Using the terminal for commands copy-pasted from somewhere on the web (and for the ones I now know by heart!).
 
 -   Using a git interface like GitKraken for more complicated stuff... which I haven't really ever fully explored, actually.
 
@@ -98,10 +98,10 @@ Now how should you structure your project? It's important to use a structure tha
 
 While I have never used the [ProjectTemplate package](https://github.com/KentonWhite/ProjectTemplate) by Kenton White, I really like the blog post [Love for ProjectTemplate](https://hilaryparker.com/2012/08/25/love-for-projecttemplate/) by Hilary Parker as it underlines advantages that should be requirement for any tool that helps create an analysis.
 
-1.  "Routine is your friend".
-2.  "It's easier to start somewhere and then customize, rather than start from the ground up."
-3.  "Reproducibility should be as easy as possible."
-4.  "Finding things should also be as easy as possible."
+1.  *"Routine is your friend".*
+2.  *"It's easier to start somewhere and then customize, rather than start from the ground up."*
+3.  *"Reproducibility should be as easy as possible."*
+4.  *"Finding things should also be as easy as possible."*
 
 Now some people find all these advantages by structuring their analyses as R packages. Creating an R package to share code and data you use throughout projects is not subject to debate: it's great! Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, *is* subject to debate.
 
@@ -130,7 +130,7 @@ How do you go from resources and scripts to the analysis output? If your project
 
 ### Optimize pipeline with targets
 
-The [targets package](https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline) by Will Landau, reviewed at rOpenSci software peer-review, helps optimizing pipelines by recognizing dependencies between steps (e.g. if you change the raw data you need to re-run everything, but if you change only the model fit you only need to re-run the final plot) and only running those that are needed at the moment. To make a project a targets project you need a script called `_targets.R` where you load packages, source e.g. functions from `R/` and defined *targets*. Now what are targets? Looking at part of a `_targets.R` from targets manual,
+The [targets package](https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline) by Will Landau, reviewed at rOpenSci software peer-review, helps optimizing pipelines by recognizing dependencies between steps (e.g. if you change the raw data you need to re-run everything, but if you change only the model fit you only need to re-run the final plot) and only running those that are needed at the moment. To make a project a targets project you need a script called `_targets.R` where you load packages, source e.g. functions from `R/` and define *targets*. Now what are targets? Looking at part of a `_targets.R` from targets manual,
 
 ``` r
 list(
@@ -240,12 +240,12 @@ In this post/talk I have discussed several aspects of drawing a project
 
 -   Some "basics" that are not all easy (all are habits to take, and some are trickier to learn than others);
 -   Encapsulating your project by tracking its dependencies with e.g. renv;
--   Structuring your project in a way that suits your team's wishes, is consistent over time, and can be automatd;
+-   Structuring your project in a way that suits your team's wishes, is consistent over time, and can be automated;
 -   Using tools for building outputs that answers your needs (optimizing a pipeline? tracking versions of an analysis projects?).
 
 All in all my tips would be to read everything Jenny Bryan writes :grin:, and to not be afraid to change tools over time as new cool tools will appear and as your needs and experience will change. I'd be interested to hear any thoughts in the comments below!
 
-[^1]: The Little Prince might have asked "Please draw me a *sheep*", not a *project*, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders).
+[^1]: The Little Prince might have asked "Please draw me a *sheep*", not a *project*, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders, *maybe* packages).
 
 [^2]: Note that Sharla Gelfand themselves is a great source of good ideas! See e.g. their talk [Don't repeat yourself, talk to yourself! Repeated reporting in the R universe](https://sharla.party/talk/2020-01-01-rstudio-conf/) from the RStudio::conf 2020.
 
