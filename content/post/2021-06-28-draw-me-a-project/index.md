@@ -9,11 +9,11 @@ tags:
   - orderly
 slug: serverside-mathjax
 output: hugodown::hugo_document
-rmd_hash: 4c54e3036fb02ea4
+rmd_hash: 3d75b21c2aac250a
 
 ---
 
-*I'll be giving a keynote talk at the *Rencontres R* (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
+*I'll be giving a remote keynote talk at the *Rencontres R* (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not talk about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
 
 <div class="highlight">
 
@@ -76,7 +76,7 @@ I'll share links to my favorite git resources that I send to anyone who asks (or
 
 Here's a [maximum credible accident](https://en.wikipedia.org/wiki/Design-basis_event): you write some pretty and handy code munging your data using `package::my_favorite_function()`. Now you go and update that package and realize `my_favorite_function` is gone! It was apparently removed for good reasons but now your script is broken!
 
-To prevent that, you need to encapsulate your project. You can track and restore package dependencies of your package by using the [renv package](https://rstudio.github.io/renv/) by Kevin Ushey.
+To prevent that, you need to encapsulate your project. You can track and restore package dependencies of your package by using the [renv package](https://rstudio.github.io/renv/) by Kevin Ushey. The renv package is the successor of the packrat package by the same author.
 
 Using renv is actually quite easy:
 
@@ -87,6 +87,163 @@ Using renv is actually quite easy:
 Now if you want to go further and also freeze the operating system used etc. you could check out [Docker](https://colinfay.me/docker-r-reproducibility/).
 
 ## What structure for your project?
+
+What's in your project? Probably something like:
+
+-   Data or the code to get them from a database or a remote resource;
+-   Some code munging and analysing them;
+-   Some output that could be a graph, a report etc.
+
+Now how should you structure your project? It's important to use a structure that's consistent between your (team's) project, and that can be created automatically.
+
+While I have never used the [ProjectTemplate package](https://github.com/KentonWhite/ProjectTemplate) by Kenton White, I really like the blog post [Love for ProjectTemplate](https://hilaryparker.com/2012/08/25/love-for-projecttemplate/) by Hilary Parker as it underlines advantages that should be requirement for any tool that helps create an analysis.
+
+1.  "Routine is your friend".
+2.  "It's easier to start somewhere and then customize, rather than start from the ground up."
+3.  "Reproducibility should be as easy as possible."
+4.  "Finding things should also be as easy as possible."
+
+Now some people find all these advantages by structuring their analyses as R packages. Creating an R package to share code and data you use throughout projects is not subject to debate: it's great! Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, *is* subject to debate.
+
+The advantages are that when doing that you can re-use or refresh your package development skills, and foremost that you can re-use tools made for package development (like devtools and usethis). There's a paper presenting and promoting the approach, where such packages are called research compendia: "Research compendium". [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986?journalCode=utas20), Ben Marwick, Carl Boettiger & Lincoln Mullen (2018), The American Statistician, 72:1, 80-88, DOI: \<10.1080/00031305.2017.1375986\>
+
+There are specific tools for building and using research compendia:
+
+-   [rrtools](https://github.com/benmarwick/rrtools) by Ben Marwick. *"The goal of rrtools is to provide instructions, templates, and functions for making a basic compendium suitable for writing a reproducible journal article or report with R."*
+-   [holepunch](https://karthik.github.io/holepunch/) by Karthik Ram. *"holepunch will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server. Here they can run your scripts and notebooks and see how everything works."*
+
+Now it's good to know not everyone loves the idea of projects as R packages. Miles McBain wrote a blog post ["Project as an R package: An okay idea"](https://www.milesmcbain.com/posts/an-okay-idea/).
+
+I found this quote quite interesting:
+
+> *"My response to advocates of project as a package is: ==You're wasting precious time making the wrong packages.=="*
+
+> *"Instead of shoehorning your work into the package development domain, with all the loss of fidelity that entails, why aren't you packaging tools that create the smooth {devtools}/{usethis} style experience for your own domain?"*
+
+In my talk my own advice is to use whatever structure you, and your team if you have one, prefers, and to choose a structure that can be created automatically. You could be the one creating the package to create projects, as Miles said.
+
+## How to run your project?
+
+How do you go from resources and scripts to the analysis output? If your project is an R Markdown Document, maybe you can simply use the knit button. Now you might be dealing with some challenges warranting the use of dedicated tools. I'll briefly present two.
+
+*Note that not all tools separate ways to structure and run projects i.e. you could be using a workflow package that's opinionated about both.*
+
+### Optimize pipeline with targets
+
+The [targets package](https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline) by Will Landau, reviewed at rOpenSci software peer-review, helps optimizing pipelines by recognizing dependencies between steps (e.g. if you change the raw data you need to re-run everything, but if you change only the model fit you only need to re-run the final plot) and only running those that are needed at the moment. To make a project a targets project you need a script called `_targets.R` where you load packages, source e.g. functions from `R/` and defined *targets*. Now what are targets? Looking at part of a `_targets.R` from targets manual,
+
+``` r
+list(
+  # Raw data file. Notice the format argument is used.
+  tar_target(
+    raw_data_file,
+    "data/raw_data.csv",
+    format = "file"
+  ),
+  tar_target(
+    raw_data,
+    read_csv(raw_data_file, col_types = cols())
+  ),
+  # The dplyr package has been previously loaded
+  tar_target(
+    data,
+    raw_data %>%
+      filter(!is.na(Ozone))
+  ),
+  # The create_plot() function comes from a script that has been previously sourced
+  tar_target(hist, create_plot(data)),
+  tar_target(fit, biglm(Ozone ~ Wind + Temp, data))
+)
+```
+
+the targets are defined in a list. Each of them uses the `tar_target()` function, has a name, and code that creates it, or, in the case of the raw data file, the path to the file. To build the project you run [`targets::tar_make()`](https://docs.ropensci.org/targets/reference/tar_make.html) (and to destroy everything if you need to, [`targets::tar_destroy()`](https://docs.ropensci.org/targets/reference/tar_destroy.html)). To see the network of dependencies between targets you can run [`targets::tar_glimpse()`](https://docs.ropensci.org/targets/reference/tar_glimpse.html) and other functions that [inspect the pipeline](https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline).
+
+There's a [whole ecosystem of packages around targets, the Targetopia](https://wlandau.github.io/targetopia/) e.g. the tarchetypes package defines targets making functions that lets you define targets that need to be re-run after a certain time.
+
+To get started with targets, I'd recommend:
+
+-   Reading the [manual](https://books.ropensci.org/targets/);
+
+-   Watching the talk [Reproducible Computation at Scale in R with {targets}](https://www.youtube.com/watch?v=FODSavXGjYg) (Will Landau at the RUG of Lille).
+
+-   Starting with a small project (my current non-expertise level 😅).
+
+To follow evolutions of targets as it keeps getting better, you can:
+
+-   [Release-watch](https://github.blog/changelog/2018-11-27-watch-releases/) the [targets](https://github.com/ropensci/targets) GitHub repo;
+
+-   Follow [Will Landau](https://twitter.com/wmlandau) on Twitter;
+
+-   Subscribe to [rOpenSci newsletter](https://ropensci.org/news/).
+
+## Track versions of an analysis with orderly
+
+Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/) offers an infrastructure for that kind of workflows.
+
+With orderly you have repos and in repos you have reports, or only one report. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
+
+In the `blop/` folder there's a general orderly configuration that I haven't needed to touch, `oderly_config.yml".` There's also a `src/` folder corresponding to the source of my example report.
+
+    blop
+    ├── orderly_config.yml
+    └── src
+        └── example
+            ├── orderly.yml
+            └── script.R
+
+That example report consists of two files so it's a very small one. You could put anything in there as orderly is not opinionated about that! It *is* opinionated about being told about packages, resources, scripts, artefacts in the `blop/src/example/orderly.yml` configuration.
+
+In the example the configuration lists one script and two artefacts:
+
+``` yaml
+script: script.R
+
+artefacts:
+  - staticgraph:
+      description: A graph of things
+      filenames: mygraph.png
+  - data:
+      description: Data that went into the plot
+      filenames: mydata.csv
+```
+
+The script creates those two artefacts:
+
+``` r
+dat <- data.frame(x = 1:10, y = runif(10))
+write.csv(dat, "mydata.csv", row.names = FALSE)
+
+png("mygraph.png")
+plot(dat)
+dev.off()
+```
+
+Now how do you run the project?
+
+1.  You can use the [development mode](https://www.vaccineimpact.org/orderly/articles/orderly.html#developing-a-report-1) when developing a report, to have things at your current working directory.
+2.  You can build a draft version of the report with `id <- orderly::orderly_run("example", root = "blop")` after which your whole analysis, input and output, appears in `blop/draft/example/some-id-that-contains-the-date-and-a-hash`.
+3.  If you like it you can commit it with `orderly::orderly_commit(id, root = "blop")` which moves the whole analysis folder from `blop/draft/example/some-id-that-contains-the-date-and-a-hash` to `blop/archive/example/some-id-that-contains-the-date-and-a-hash`.
+
+Note that as the draft and archive folders can be gigantic you are expected to back up with some system. You are not expected to use git as it does not behave well with very large files.
+
+To get started with orderly you can read the [orderly website](https://www.vaccineimpact.org/orderly/) that I found very clear, and you should start with a small project... which again is my current non-expertise level.
+
+To follow orderly news you can read [the blog of the team behind orderly](https://reside-ic.github.io/) or follow [Rich FitzJohn](https://twitter.com/rgfitzjohn) on Twitter.
+
+### Other tools for building analyses
+
+The targets and orderly packages are not the only ones helping run analyses. You might even want to build your own!
+
+## Conclusion
+
+In this post/talk I have discussed several aspects of drawing a project
+
+-   Some "basics" that are not all easy (all are habits to take, and some are trickier to learn than others);
+-   Encapsulating your project by tracking its dependencies with e.g. renv;
+-   Structuring your project in a way that suits your team's wishes, is consistent over time, and can be automatd;
+-   Using tools for building outputs that answers your needs (optimizing a pipeline? tracking versions of an analysis projects?).
+
+All in all my tips would be to read everything Jenny Bryan writes :grin:, and to not be afraid to change tools over time as new cool tools will appear and as your needs and experience will change. I'd be interested to hear any thoughts in the comments below!
 
 [^1]: The Little Prince might have asked "Please draw me a *sheep*", not a *project*, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders).
 
