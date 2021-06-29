@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 109d09659fbfb99d
+rmd_hash: 3c7c30b525b650d5
 
 ---
 
@@ -180,9 +180,9 @@ To follow evolutions of targets as it keeps getting better, you can:
 
 Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/), maintained by Rich FitzJohn, offers an infrastructure for that kind of workflows.
 
-With orderly you have repos and in repos you have reports, or only one report. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
+With orderly you have repos and in repos you have reports/tasks, or only one report/task. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
 
-In the `blop/` folder there's a general orderly configuration that I haven't needed to touch, `oderly_config.yml".` There's also a `src/` folder corresponding to the source of my example report.
+In the `blop/` folder there's a general orderly configuration that I haven't needed to touch, `oderly_config.yml`. There's also a `src/` folder corresponding to the source of my example report.
 
     blop
     ├── orderly_config.yml
@@ -224,11 +224,11 @@ Now how do you run the project?
 2.  You can build a draft version of the report with `id <- orderly::orderly_run("example", root = "blop")` after which your whole analysis, input and output, appears in `blop/draft/example/some-id-that-contains-the-date-and-a-hash`.
 3.  If you like it you can commit it with `orderly::orderly_commit(id, root = "blop")` which moves the whole analysis folder from `blop/draft/example/some-id-that-contains-the-date-and-a-hash` to `blop/archive/example/some-id-that-contains-the-date-and-a-hash`.
 
-Note that as the draft and archive folders can be gigantic you are expected to back up with some system. You are not expected to use git as it does not behave well with very large files.
+Note that as the draft and archive folders can be gigantic you are expected to back up with some system. You are expected *not* to use git to track these folders as git does not behave well with very large files. You can still use git to track other files in the orderly repo.
 
 To get started with orderly you can read the [orderly website](https://www.vaccineimpact.org/orderly/) that I found very clear, and you should start with a small project... which again is my current non-expertise level.
 
-To follow orderly news you can
+To follow orderly news, as it's actively used and developed, you can:
 
 -   [Release-watch](https://github.blog/changelog/2018-11-27-watch-releases/) the [orderly GitHub repo](https://github.com/vimc/orderly);
 -   read [the blog of the team behind orderly](https://reside-ic.github.io/);
