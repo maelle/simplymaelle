@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: efe019ae9e42c925
+rmd_hash: 109d09659fbfb99d
 
 ---
 
@@ -19,7 +19,7 @@ rmd_hash: efe019ae9e42c925
 
 </div>
 
-Why discuss the making of R projects? Because any improvement in your workflow might improve the experience of anyone trying to run or audit an analysis later, including yourself. It's also nice that there are always elements to make better, althought that also means one might be procrastinating instead of making actual progress, so beware!
+Why discuss the making of R projects? Because any improvement in your workflow might improve the experience of anyone trying to run or audit an analysis later, including yourself. It's also nice that there are always elements to refine, although that also means one might be procrastinating instead of making actual progress, so beware!
 
 Now why should *I* discuss the making of R projects? While I am not often in charge of analyses these days, I [follow R news](/2019/01/25/uptodate/) quite well so thought I might be able to deliver some useful tips to the audience.
 
@@ -39,7 +39,7 @@ Why a laptop on fire?!
 
 {{< tweet 940021008764846080 >}}
 
-That's a reference to a talk Jenny Bryan gave years ago, to which she said she'd put your computer of fire if you used `setwd("C:\Users\jenny\path\that\only\I\have")` or `rm(list = ls())` at the beginning of your scripts. This goes against the notion of a ["project-oriented workflow"](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). I do not need to repeat the wisdom of her blog post in mine, so will only use cliff notes:
+That's a reference to a talk Jenny Bryan gave years ago, to which she said she'd put your computer on fire if you used `setwd("C:\Users\jenny\path\that\only\I\have")` or `rm(list = ls())` at the beginning of your scripts. This goes against the notion of a ["project-oriented workflow"](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). I do not need to repeat the wisdom of her blog post in mine, so will only use cliff notes:
 
 -   When reading in data etc. use paths relative to the root of your project, possibly using the [here package by Kirill Müller](https://github.com/jennybc/here_here).
 -   Re-start R often, do not e.g. load packages in your [.Rprofile](https://rstats.wtf/r-startup.html#rprofile), [`usethis::use_blank_slate()`](https://usethis.r-lib.org/reference/use_blank_slate.html).
@@ -105,12 +105,12 @@ While I have never used the [ProjectTemplate package](https://github.com/KentonW
 
 Now some people find all these advantages by structuring their analyses as R packages. Creating an R package to share code and data you use throughout projects is not subject to debate: it's great! Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, *is* subject to debate.
 
-The advantages are that when doing that you can re-use or refresh your package development skills, and foremost that you can re-use tools made for package development (like devtools and usethis). There's a paper presenting and promoting the approach, where such packages are called research compendia: "Research compendium". [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986?journalCode=utas20), Ben Marwick, Carl Boettiger & Lincoln Mullen (2018), The American Statistician, 72:1, 80-88, DOI: \<10.1080/00031305.2017.1375986\>
+The advantages are that when doing that you can re-use or refresh your package development skills, and foremost that you can re-use tools made for package development (like devtools and usethis). There's a paper presenting and promoting the approach, where such packages are called research compendia: [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986?journalCode=utas20), Ben Marwick, Carl Boettiger & Lincoln Mullen (2018), The American Statistician, 72:1, 80-88, DOI: \<10.1080/00031305.2017.1375986\>
 
 There are specific tools for building and using research compendia:
 
 -   [rrtools](https://github.com/benmarwick/rrtools) by Ben Marwick. *"The goal of rrtools is to provide instructions, templates, and functions for making a basic compendium suitable for writing a reproducible journal article or report with R."*
--   [holepunch](https://karthik.github.io/holepunch/) by Karthik Ram. *"holepunch will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server. Here they can run your scripts and notebooks and see how everything works."*
+-   [holepunch](https://karthik.github.io/holepunch/) by Karthik Ram. *"holepunch will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server. Here they can run your scripts and notebooks and see how everything works."* (🤫 holepunch works [without the compendium structure](https://github.com/karthik/holepunch#alternate-setup-method) as well.)
 
 Now it's good to know not everyone loves the idea of projects as R packages. Miles McBain wrote a blog post ["Project as an R package: An okay idea"](https://www.milesmcbain.com/posts/an-okay-idea/).
 
@@ -120,7 +120,7 @@ I found this quote quite interesting:
 
 > *"Instead of shoehorning your work into the package development domain, with all the loss of fidelity that entails, why aren't you packaging tools that create the smooth {devtools}/{usethis} style experience for your own domain?"*
 
-In my talk my own advice is to use whatever structure you, and your team if you have one, prefers, and to choose a structure that can be created automatically. You could be the one creating the package to create projects, as Miles said.
+In my talk my own advice is to use whatever structure you, and your team if you have one, prefers, and to choose a structure that can be created automatically. You could be the one creating the package to create projects, as Miles said -- although he also mentioned the [risk of "bitrot"](https://www.milesmcbain.com/posts/an-okay-idea/#where-to-next) for tools maintained and used by few people.
 
 ## How to run your project?
 
@@ -178,7 +178,7 @@ To follow evolutions of targets as it keeps getting better, you can:
 
 ## Track versions of an analysis with orderly
 
-Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/) offers an infrastructure for that kind of workflows.
+Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/), maintained by Rich FitzJohn, offers an infrastructure for that kind of workflows.
 
 With orderly you have repos and in repos you have reports, or only one report. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
 
@@ -228,7 +228,11 @@ Note that as the draft and archive folders can be gigantic you are expected to b
 
 To get started with orderly you can read the [orderly website](https://www.vaccineimpact.org/orderly/) that I found very clear, and you should start with a small project... which again is my current non-expertise level.
 
-To follow orderly news you can read [the blog of the team behind orderly](https://reside-ic.github.io/) or follow [Rich FitzJohn](https://twitter.com/rgfitzjohn) on Twitter.
+To follow orderly news you can
+
+-   [Release-watch](https://github.blog/changelog/2018-11-27-watch-releases/) the [orderly GitHub repo](https://github.com/vimc/orderly);
+-   read [the blog of the team behind orderly](https://reside-ic.github.io/);
+-   follow [Rich FitzJohn](https://twitter.com/rgfitzjohn) on Twitter.
 
 ### Other tools for building analyses
 
