@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 12988520db30baed
+rmd_hash: b1e09602b6e43fa8
 
 ---
 
@@ -43,8 +43,12 @@ Why a laptop on fire?!
 
 That's a reference to a talk Jenny Bryan gave years ago, to which she said she'd put your computer on fire if you used `setwd("C:\Users\jenny\path\that\only\I\have")` or `rm(list = ls())` at the beginning of your scripts. This goes against the notion of a ["project-oriented workflow"](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). I do not need to repeat the wisdom of her blog post in mine, so will only use cliff notes:
 
+-   When reading in data etc. use paths relative to the root of your project, possibly using the [here package by Kirill Müller](https://here.r-lib.org/articles/here.html).
+
 -   It's handy to create your project with [`usethis::create_project()`](https://usethis.r-lib.org/reference/create_package.html). RStudio IDE and projects work well together cf [IDE support for projects](https://rstats.wtf/project-oriented-workflow.html#ide-support-for-projects) and [RStudio projects](https://rstats.wtf/project-oriented-workflow.html#rstudio-projects) (although you could use the principles of a project-oriented workflow outside of RStudio!).
+
 -   When reading in data etc. use paths relative to the root of your project, possibly using the [here package by Kirill Müller](https://github.com/jennybc/here_here).
+
 -   Re-start R often, do not e.g. load packages in your [.Rprofile](https://rstats.wtf/r-startup.html#rprofile), [`usethis::use_blank_slate()`](https://usethis.r-lib.org/reference/use_blank_slate.html).
 
 Really, go and read her post if you haven't yet!
