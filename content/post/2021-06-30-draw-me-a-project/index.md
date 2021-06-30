@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 63b7a63104983dee
+rmd_hash: 1d9d13e964ecb5ec
 
 ---
 
@@ -187,7 +187,7 @@ To follow evolutions of targets as it keeps getting better, you can:
 
 ## Track versions of an analysis with orderly
 
-Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/), maintained by Rich FitzJohn, offers an infrastructure for that kind of workflows.
+Imagine you want to keep track of the different versions of an analysis and everything that went into it, and to run analysis comparing versions. The [orderly package](https://www.vaccineimpact.org/orderly/), maintained by Rich FitzJohn[^4], offers an infrastructure for that kind of workflows.
 
 With orderly you have repos and in repos you have reports/tasks, or only one report/task. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
 
@@ -277,4 +277,6 @@ These items might be relevant for you:
 [^2]: Note that Sharla Gelfand themselves is a great source of good ideas! See e.g. their talk [Don't repeat yourself, talk to yourself! Repeated reporting in the R universe](https://sharla.party/talk/2020-01-01-rstudio-conf/) from the RStudio::conf 2020.
 
 [^3]: Unless you go for [automatic snapshots](https://rstudio.github.io/renv/reference/config.html#configuration).
+
+[^4]: Many thanks to Rich for answering some questions of mine!
 
