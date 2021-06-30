@@ -9,11 +9,13 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 3c7c30b525b650d5
+rmd_hash: 5c9efcd2a6747382
 
 ---
 
-*I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) in two weeks, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not [talk](/talks/) about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
+*I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) on July the 12th, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not [talk](/talks/) about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
+
+*Many thanks to [Christophe Dervieux](https://cderv.rbind.io/) for useful feedback on this post! Merci beaucoup !*
 
 <div class="highlight">
 
@@ -41,6 +43,7 @@ Why a laptop on fire?!
 
 That's a reference to a talk Jenny Bryan gave years ago, to which she said she'd put your computer on fire if you used `setwd("C:\Users\jenny\path\that\only\I\have")` or `rm(list = ls())` at the beginning of your scripts. This goes against the notion of a ["project-oriented workflow"](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). I do not need to repeat the wisdom of her blog post in mine, so will only use cliff notes:
 
+-   It's handy to create your project with [`usethis::create_project()`](https://usethis.r-lib.org/reference/create_package.html). RStudio IDE and projects work well together cf [IDE support for projects](https://rstats.wtf/project-oriented-workflow.html#ide-support-for-projects) and [RStudio projects](https://rstats.wtf/project-oriented-workflow.html#rstudio-projects) (although you could use the principles of a project-oriented workflow outside of RStudio!).
 -   When reading in data etc. use paths relative to the root of your project, possibly using the [here package by Kirill Müller](https://github.com/jennybc/here_here).
 -   Re-start R often, do not e.g. load packages in your [.Rprofile](https://rstats.wtf/r-startup.html#rprofile), [`usethis::use_blank_slate()`](https://usethis.r-lib.org/reference/use_blank_slate.html).
 
@@ -52,15 +55,15 @@ In my talk I'll show pictures of the Kei-tora Gardening Contest where participan
 
 As the first part of my talk really is a collection of awesome content by Jenny Bryan, I will also show her rules for [naming files](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf). What Shakespeare said about [roses](https://en.wikipedia.org/wiki/A_rose_by_any_other_name_would_smell_as_sweet) isn't true when programming. 😅
 
-Then I'll "introduce" version control. I'll briefly mention some basic git commands, and most importantly, how to run them! Here are my preferences:
+Then I'll "introduce" version control. I'll first underline that you want to have a back-up of your stuff somewhere no matter how you do it (so even if you do not use git, think of backing things up with a good system!). I'll briefly mention some basic git commands, and most importantly, how to run them! Here are my preferences:
 
 -   Using usethis ([`usethis::use_git()`](https://usethis.r-lib.org/reference/use_git.html), [`usethis::use_github()`](https://usethis.r-lib.org/reference/use_github.html), etc.) and gert ([`gert::git_push()`](https://docs.ropensci.org/gert/reference/git_fetch.html)) so that I don't need to leave R.
 
--   Using RStudio git pane.
+-   Using RStudio git pane to not be too far from the R console.
 
 -   Using the terminal for commands copy-pasted from somewhere on the web (and for the ones I now know by heart!).
 
--   Using a git interface like GitKraken for more complicated stuff... which I haven't really ever fully explored, actually.
+-   Using a git interface like GitKraken (or the editor VSCODE that has a good git integration) for more complicated stuff... which I haven't really ever fully explored, actually.
 
 I'll share links to my favorite git resources that I send to anyone who asks (or doesn't ask):
 
@@ -71,6 +74,8 @@ I'll share links to my favorite git resources that I send to anyone who asks (or
 {{< tweet 970383613119184896 >}}
 
 -   [Reflections on 4 months of GitHub: my advice to beginners](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), Suzan Baert.
+
+And in French there's a great blog post by ThinkR: [Travailler avec Git via RStudio et versionner son code](https://thinkr.fr/travailler-avec-git-via-rstudio-et-versionner-son-code/).
 
 ## How to protect your project from external changes
 
