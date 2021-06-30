@@ -1,6 +1,6 @@
 ---
 title: "Draw me a project"
-date: '2021-06-28'
+date: '2021-06-30'
 tags:
   - reproducibility
   - here
@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 785b3dbe395b9748
+rmd_hash: 509c0b7f4c6dbd56
 
 ---
 
