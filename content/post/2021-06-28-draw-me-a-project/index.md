@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 5c9efcd2a6747382
+rmd_hash: 12988520db30baed
 
 ---
 
@@ -86,8 +86,10 @@ To prevent that, you need to encapsulate your project. You can track and restore
 Using renv is actually quite easy:
 
 -   In a new project you run [`renv::init()`](https://rstudio.github.io/renv//reference/init.html);
--   After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Metadata about packages (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
+-   After that you install and remove packages as you normally would (renv is smart and will copy files from your local not-project library to be faster). Regularly run [`renv::snapshot()`](https://rstudio.github.io/renv//reference/snapshot.html).[^3] Metadata about packages (where do they come from) are stored in the `renv.lock` file that you'd put under version control;
 -   Anyone getting the project runs [`renv::restore()`](https://rstudio.github.io/renv//reference/restore.html) to have the exact same project library as you.
+
+Also worth of a mention is [capsule](https://github.com/MilesMcBain/capsule) by Miles McBain that is "an inversion of renv for low effort reproducible R package libraries".
 
 Now if you want to go further and also freeze the operating system used etc. you could check out [Docker](https://colinfay.me/docker-r-reproducibility/).
 
@@ -269,4 +271,6 @@ These items might be relevant for you:
 [^1]: The Little Prince might have asked "Please draw me a *sheep*", not a *project*, but I liked tweaking that quote for a title as one will often end up putting R projects in boxes (folders, *maybe* packages).
 
 [^2]: Note that Sharla Gelfand themselves is a great source of good ideas! See e.g. their talk [Don't repeat yourself, talk to yourself! Repeated reporting in the R universe](https://sharla.party/talk/2020-01-01-rstudio-conf/) from the RStudio::conf 2020.
+
+[^3]: Unless you go for [automatic snapshots](https://rstudio.github.io/renv/reference/config.html#configuration).
 
