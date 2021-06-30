@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 01863ba52a859640
+rmd_hash: 785b3dbe395b9748
 
 ---
 
@@ -135,7 +135,7 @@ In my talk my own advice is to use whatever structure you, and your team if you 
 
 ## How to run your project?
 
-How do you go from resources and scripts to the analysis output? If your project is an R Markdown Document, maybe you can simply use the knit button. Now you might be dealing with some challenges warranting the use of dedicated tools. I'll briefly present two.
+How do you go from resources and scripts to the analysis output? If your project "only" contains one or a few R Markdown document(s), maybe you can simply use the knit button. Now you might be dealing with some challenges warranting the use of dedicated tools. I'll briefly present two.
 
 *Note that not all tools separate ways to structure and run projects i.e. you could be using a workflow package that's opinionated about both.*
 

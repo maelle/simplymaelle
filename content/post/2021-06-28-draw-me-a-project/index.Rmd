@@ -182,7 +182,7 @@ You could be the one creating the package to create projects, as Miles said -- a
 ## How to run your project?
 
 How do you go from resources and scripts to the analysis output?
-If your project is an R Markdown Document, maybe you can simply use the knit button.
+If your project "only" contains one or a few R Markdown document(s), maybe you can simply use the knit button.
 Now you might be dealing with some challenges warranting the use of dedicated tools.
 I'll briefly present two.
 
