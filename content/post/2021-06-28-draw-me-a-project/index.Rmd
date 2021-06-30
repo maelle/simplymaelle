@@ -156,6 +156,7 @@ While I have never used the [ProjectTemplate package](https://github.com/KentonW
 
 Now some people find all these advantages by structuring their analyses as R packages.
 Creating an R package to share code and data you use throughout projects is not subject to debate: it's great!
+You can even build [Shiny apps as package with golem](https://golemverse.org/).
 Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, _is_ subject to debate.
 
 The advantages are that when doing that you can re-use or refresh your package development skills, and foremost that you can re-use tools made for package development (like devtools and usethis).

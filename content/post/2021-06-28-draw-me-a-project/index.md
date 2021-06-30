@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 45516ee2503771f6
+rmd_hash: 01863ba52a859640
 
 ---
 
@@ -114,7 +114,7 @@ While I have never used the [ProjectTemplate package](https://github.com/KentonW
 3.  *"Reproducibility should be as easy as possible."*
 4.  *"Finding things should also be as easy as possible."*
 
-Now some people find all these advantages by structuring their analyses as R packages. Creating an R package to share code and data you use throughout projects is not subject to debate: it's great! Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, *is* subject to debate.
+Now some people find all these advantages by structuring their analyses as R packages. Creating an R package to share code and data you use throughout projects is not subject to debate: it's great! You can even build [Shiny apps as package with golem](https://golemverse.org/). Creating your analysis as a package, with dependencies in `DESCRIPTION`, functions in `R/`, analysis in e.g. a vignette, *is* subject to debate.
 
 The advantages are that when doing that you can re-use or refresh your package development skills, and foremost that you can re-use tools made for package development (like devtools and usethis). There's a paper presenting and promoting the approach, where such packages are called research compendia: [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986?journalCode=utas20), Ben Marwick, Carl Boettiger & Lincoln Mullen (2018), The American Statistician, 72:1, 80-88, DOI: \<10.1080/00031305.2017.1375986\>
 
