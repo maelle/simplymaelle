@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: b1e09602b6e43fa8
+rmd_hash: 45516ee2503771f6
 
 ---
 
@@ -247,7 +247,7 @@ To follow orderly news, as it's actively used and developed, you can:
 
 ### Other tools for building analyses
 
-The targets and orderly packages are not the only ones helping run analyses. You might even want to build your own!
+The [targets](https://docs.ropensci.org/targets) and [orderly](https://www.vaccineimpact.org/orderly) packages are not the only ones helping run analyses: [workflowr](https://jdblischak.github.io/workflowr/), [cabinets](https://github.com/nt-williams/cabinets), [etc.](https://cran.r-project.org/web/views/ReproducibleResearch.html). You might even want to build your own!
 
 ## Conclusion
 
