@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 49daee495e2ad367
+rmd_hash: 71815ba49a2e3209
 
 ---
 
@@ -240,7 +240,9 @@ To get started with orderly you can read the [orderly website](https://www.vacci
 To follow orderly news, as it's actively used and developed, you can:
 
 -   [Release-watch](https://github.blog/changelog/2018-11-27-watch-releases/) the [orderly GitHub repo](https://github.com/vimc/orderly);
+
 -   read [the blog of the team behind orderly](https://reside-ic.github.io/);
+
 -   follow [Rich FitzJohn](https://twitter.com/rgfitzjohn) on Twitter.
 
 ### Other tools for building analyses
