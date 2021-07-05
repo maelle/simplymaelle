@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 1d9d13e964ecb5ec
+rmd_hash: 2349e81185f4efa0
 
 ---
 
@@ -191,7 +191,7 @@ Imagine you want to keep track of the different versions of an analysis and ever
 
 With orderly you have repos and in repos you have reports/tasks, or only one report/task. Here's an example with an orderly repo with one report. From an RStudio project I ran `orderly::orderly_init("blop")` which created the repo in a new folder "blop", and then `orderly::orderly_new("example", "blop")` after which I modified files using [the orderly introduction vignette](https://www.vaccineimpact.org/orderly/articles/orderly.html).
 
-In the `blop/` folder there's a general orderly configuration that I haven't needed to touch, `oderly_config.yml`. There's also a `src/` folder corresponding to the source of my example report.
+In the `blop/` folder there's a general orderly configuration that I haven't needed to touch, `orderly_config.yml`. There's also a `src/` folder corresponding to the source of my example report.
 
     blop
     ├── orderly_config.yml
