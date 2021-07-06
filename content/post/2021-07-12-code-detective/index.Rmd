@@ -39,6 +39,11 @@ I suppose that if I were fancy I'd say this step is your [_mise en place_](https
 Obviously to reach that stage you'll need to know _what_ codebase is the one to be working on.
 However, you'll probably start from some code in any case, e.g. your currently buggy code.
 
+## Make your problem smaller
+
+* reprex.
+* Clear scope of what you're after.
+
 ## Pull an end / Follow the trails
 
 As you are not going to read code from cover to cover, you'll need to find a logical way to explore the code.
@@ -89,5 +94,13 @@ Resources for learning proper debugging tools.
 `r hugodown::embed_tweet("1409533060790558725")`
 
 ## Asking for help
+
+## Reading other people's debugging journeys, document yours
+
+Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird.
+Besides, few people write actual debugging games.
+
+In the meantime, you might enjoy watching or hearing some debugging journeys.
+You will notice how these programmers make and invalidate hypotheses.
 
 ## Conclusion

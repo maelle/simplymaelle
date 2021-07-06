@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: f85c610d6e12a7c3
+rmd_hash: 0a60a6082f28dc58
 
 ---
 
@@ -34,6 +34,11 @@ In sharing this life-changing tip I am inspired by the talk "Reading other peopl
 Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then install open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
 
 Obviously to reach that stage you'll need to know *what* codebase is the one to be working on. However, you'll probably start from some code in any case, e.g. your currently buggy code.
+
+## Make your problem smaller
+
+-   reprex.
+-   Clear scope of what you're after.
 
 ## Pull an end / Follow the trails
 
@@ -83,6 +88,12 @@ Resources for learning proper debugging tools.
 {{< tweet 1409533060790558725 >}}
 
 ## Asking for help
+
+## Reading other people's debugging journeys, document yours
+
+Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird. Besides, few people write actual debugging games.
+
+In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
 
 ## Conclusion
 
