@@ -134,6 +134,8 @@ You will notice how these programmers make and invalidate hypotheses.
 * https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/
 * https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/
 
+If you end up documenting your own code detective story, please tell me, I'd like to read it!
+
 ## Conclusion
 
 Being tired
