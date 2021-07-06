@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: e39cf5c5d504d910
+rmd_hash: 4c27d1b14ebf7a7d
 
 ---
 
@@ -124,4 +124,8 @@ In the meantime, you might enjoy watching or hearing some debugging journeys. Yo
 Being tired
 
 `hugodown::embed_tweet("1385573317277532162")`
+
+Also non technical aspects
+
+`hugodown::embed_tweet("1403405539971842052")`
 

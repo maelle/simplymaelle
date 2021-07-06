@@ -139,3 +139,7 @@ You will notice how these programmers make and invalidate hypotheses.
 Being tired
 
 `hugodown::embed_tweet("1385573317277532162")` 
+
+Also non technical aspects
+
+`hugodown::embed_tweet("1403405539971842052")`
