@@ -122,7 +122,7 @@ Also https://qntm.org/clean
 
 ## Reading other people's debugging journeys, document yours
 
-Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird.
+Sadly but understandably people will often only take the time to document their debugging journey when the bug is especially tricky or weird.
 Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
 
 In the meantime, you might enjoy watching or hearing some debugging journeys.
