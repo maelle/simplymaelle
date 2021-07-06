@@ -7,13 +7,15 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 0a60a6082f28dc58
+rmd_hash: 4e7fbe198781f7e0
 
 ---
 
 When trying to fix a bug or add a feature to a package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will? In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else or yourself long enough ago to feel foreign.
 
 From step 2, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
+
+Apart from the idea of adding tests, most tips could apply to non-package code.
 
 ## Step 0: Only deal with well-designed code
 
@@ -81,19 +83,35 @@ That's what Patricia Aas call "mental machine". You might want to draw some sort
 
 Resources for learning proper debugging tools.
 
+### Beyond R
+
+Sometimes the bug or element to tweak will actively live outside of R. Maybe in some C code you are wrapping, maybe in a CSS file. You will therefore have to learn debugging tools for these things too!
+
 ## Read tests? Write some for sure
+
+In Kara Woo's talk, she explained she added tests. In Jenny Bryan's talk she uses the word "deter".
 
 ## Rubberducking to a persona
 
 {{< tweet 1409533060790558725 >}}
 
+## Refactoring
+
+Tip by Patricia Aas. Do not actually contribute that as a first PR.
+
+clean code contributions to codemetar. Also <https://qntm.org/clean>
+
 ## Asking for help
 
 ## Reading other people's debugging journeys, document yours
 
-Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird. Besides, few people write actual debugging games.
+Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird. Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
 
 In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
 
 ## Conclusion
+
+Being tired
+
+`hugodown::embed_tweet("1385573317277532162")`
 
