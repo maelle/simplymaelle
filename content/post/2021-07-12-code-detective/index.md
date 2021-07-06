@@ -7,11 +7,13 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 4e7fbe198781f7e0
+rmd_hash: e39cf5c5d504d910
 
 ---
 
 When trying to fix a bug or add a feature to a package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will? In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else or yourself long enough ago to feel foreign.
+
+[keep track](https://wizardzines.com/comics/track-your-progress/)
 
 From step 2, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
 
@@ -41,6 +43,8 @@ Obviously to reach that stage you'll need to know *what* codebase is the one to 
 
 -   reprex.
 -   Clear scope of what you're after.
+
+Maybe your problem is on a debugging bingo? <https://twitter.com/cogscimom/status/1354508785365078016>
 
 ## Pull an end / Follow the trails
 
@@ -108,6 +112,12 @@ clean code contributions to codemetar. Also <https://qntm.org/clean>
 Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird. Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
 
 In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
+
+-   ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/)
+-   <https://www.jimhester.com/post/2018-03-30-debugging-journey/> reminds me of <https://wizardzines.com/comics/track-your-progress/>
+-   <https://blog.r-hub.io/2020/02/20/processx-blocked-sigchld/>
+-   <https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/>
+-   <https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/>
 
 ## Conclusion
 
