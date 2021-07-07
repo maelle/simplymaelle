@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 9a6e2fc0ba22b983
+rmd_hash: 266efe42047a12b7
 
 ---
 
@@ -43,10 +43,13 @@ Obviously to reach that stage you'll need to know *what* codebase is the one to 
 
 ## Make your problem smaller
 
--   reprex.
--   Clear scope of what you're after.
+In case of a bug, you'll often be advised to make it a reproducible example.
 
-Maybe your problem is on a debugging bingo? <https://twitter.com/cogscimom/status/1354508785365078016>
+Also in the case of a bug maybe you don't need to read this post further if your problem is in the bingo below but sometimes you'll only notice obvious mistakes after making the problem smaller.
+
+{{< tweet 1354508785365078016 >}}
+
+In case of amending the features of a package, it'll be important to clearly defined the scope of what you're after.
 
 ## Pull an end / Follow the trails
 
@@ -108,6 +111,30 @@ Tip by Patricia Aas. Do not actually contribute that as a first PR.
 clean code contributions to codemetar. Also <https://qntm.org/clean>
 
 ## Asking for help
+
+### How
+
+### Where
+
+A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, both promoted and maintained by Jenny Bryan. Why use reprex?
+
+-   The isolated bug is easier to solve or will be solved by creating it !
+
+-   You can send your bug in a format ideal for experts !
+
+How does reprex work?
+
+-   You write some code somewhere (including loading libraries, creating toy data etc.).
+
+-   You copy the code to your clipboard.
+
+-   You run [`reprex::reprex()`](https://reprex.tidyverse.org/reference/reprex.html) and reprex runs your code in an isolated session!
+
+-   You get the rendered code on the clipboard (and a preview in RStudio Viewer pane)! Error messages rendered, images uploaded to imgur.
+
+-   You paste the rendered code somewhere to show to someone.
+
+To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular \["Reprex do's and don'ts"\]\](<https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html>).
 
 ## Reading other people's debugging journeys, document yours
 

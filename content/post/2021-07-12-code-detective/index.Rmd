@@ -48,11 +48,40 @@ However, you'll probably start from some code in any case, e.g. your currently b
 
 ## Make your problem smaller
 
-* reprex.
-* Clear scope of what you're after.
+In case of a bug, you'll often be advised to make it a minimal reproducible example.
+You'll often hear this when you try and communicate your bug to someone else, but it is great practice to do this for yourself!
+An important
+A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, both promoted and maintained by Jenny Bryan.
+Why use reprex?
 
-Maybe your problem is on a debugging bingo?
-https://twitter.com/cogscimom/status/1354508785365078016
+* The isolated bug is easier to solve or will be solved by creating it ! In Jenny Bryan's talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) there's an example of original code and its minified version.
+
+* As it is run in an isolated session you can be more sure that it's reproducible.
+
+* You can send your bug in a format ideal for experts !
+
+How does reprex work?
+
+* You write some code somewhere (including loading libraries, creating toy data etc.).
+
+* You copy the code to your clipboard.
+
+* You run `reprex::reprex()` and reprex runs your code in an isolated session!
+
+* You get the rendered code on the clipboard (and a preview in RStudio Viewer pane)! Error messages rendered, images uploaded to imgur.
+
+* You paste the rendered code somewhere to show to someone.
+
+To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular ["Reprex do's and don'ts"]](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
+
+
+Also in the case of a bug maybe you don't need to read this post further if your problem is in the bingo below but sometimes you'll only notice obvious mistakes after making the problem smaller.
+
+`r hugodown::embed_tweet("1354508785365078016")` 
+
+In case of amending the features of a package, it'll be important to clearly defined the scope of what you're after.
+
+
 
 ## Pull an end / Follow the trails
 
@@ -122,6 +151,10 @@ clean code contributions to codemetar.
 Also https://qntm.org/clean
 
 ## Asking for help
+
+### How
+
+### Where
 
 ## Reading other people's debugging journeys, document yours
 
