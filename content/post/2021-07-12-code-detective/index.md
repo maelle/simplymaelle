@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 4c27d1b14ebf7a7d
+rmd_hash: 9a6e2fc0ba22b983
 
 ---
 
@@ -15,25 +15,27 @@ When trying to fix a bug or add a feature to a package, how do you go from viewi
 
 [keep track](https://wizardzines.com/comics/track-your-progress/)
 
-From step 2, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
+After step 1, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
 
 Apart from the idea of adding tests, most tips could apply to non-package code.
 
 ## Step 0: Only deal with well-designed code
 
-This is obviously not an actual tip, but more of a encouragement to try and write "good" code yourself.
+This is obviously not an actual tip, but more of a encouragement to try and write better and better code ourselves.
 
-<https://style.tidyverse.org/functions.html#comments-1>
+The [Tidyverse style guide](https://style.tidyverse.org/) is a good read, both for learning tips, and for seeing what aspects such a style guide applies to. Of particular interest are e.g. the mention of [function comments](https://style.tidyverse.org/functions.html#comments-1), and [file organization](https://style.tidyverse.org/package-files.html#organisation-1).
 
-<https://style.tidyverse.org/package-files.html#organisation-1>
+Regarding code comments, I was intrigued and impressed by the notion of "explaining variables" mentioned in the tweet below referring a [great short post](https://blog.thepete.net/blog/2021/06/24/explaining-variable/).
 
 {{< tweet 1412140590842597385 >}}
 
-It'll also help if the code is well tested: tests can help you understand the goals behind functions, and will help you refactor without breaking features.
+Beyond its being well designed, it'll also help if the code is well tested: tests can help you understand the goals behind functions, and will help you re-factor without breaking features.
+
+Now, we don't always choose what code we get, and even if it was well-designed, we might still need detective skills anyway!
 
 ## Step 1: Clone and build
 
-In sharing this life-changing tip I am inspired by the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
+In sharing this life-changing tip I am merely repeating the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
 
 Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then install open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
 
@@ -74,10 +76,10 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 -   You can use "grepping" as said by Patricia Aas: look for the occurrences of a function or variable name in a local folder, or via GitHub (advanced) search. You can limit the hits to some types of files e.g. R scripts in `R/`.
 -   In your IDE e.g. RStudio there might be a way to go directly to the *definition* of function.
 
-### How to read code
+### How to read code: space and time
 
 -   Hopefully the code makes sense on its own.
--   Sometimes using git blame or looking at the git history might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though.
+-   Sometimes using git blame or looking at the git history might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though. To make your git history more informative, use branches + squash and merge.
 
 ## Build your mental model of the code
 
@@ -109,7 +111,7 @@ clean code contributions to codemetar. Also <https://qntm.org/clean>
 
 ## Reading other people's debugging journeys, document yours
 
-Sadly people will often only take the time to document their debugging journey when the bug is especially tricly or weird. Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
+Sadly but understandably people will often only take the time to document their debugging journey when the bug is especially tricky or weird. Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
 
 In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
 
@@ -118,6 +120,8 @@ In the meantime, you might enjoy watching or hearing some debugging journeys. Yo
 -   <https://blog.r-hub.io/2020/02/20/processx-blocked-sigchld/>
 -   <https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/>
 -   <https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/>
+
+If you end up documenting your own code detective story, please tell me, I'd like to read it!
 
 ## Conclusion
 

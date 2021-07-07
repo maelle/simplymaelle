@@ -14,25 +14,28 @@ In this post, I will share some resources and tips on getting better at debuggin
 
 [keep track](https://wizardzines.com/comics/track-your-progress/)
 
-From step 2, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
+After step 1, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
 
 Apart from the idea of adding tests, most tips could apply to non-package code.
 
 ## Step 0: Only deal with well-designed code
 
-This is obviously not an actual tip, but more of a encouragement to try and write "good" code yourself.
+This is obviously not an actual tip, but more of a encouragement to try and write better and better code ourselves.
 
-https://style.tidyverse.org/functions.html#comments-1
+The [Tidyverse style guide](https://style.tidyverse.org/) is a good read, both for learning tips, and for seeing what aspects such a style guide applies to.
+Of particular interest are e.g. the mention of [function comments](https://style.tidyverse.org/functions.html#comments-1), and [file organization](https://style.tidyverse.org/package-files.html#organisation-1).
 
-https://style.tidyverse.org/package-files.html#organisation-1
+Regarding code comments, I was intrigued and impressed by the notion of "explaining variables" mentioned in the tweet below referring a [great short post](https://blog.thepete.net/blog/2021/06/24/explaining-variable/).
 
 `r hugodown::embed_tweet("1412140590842597385")`
 
-It'll also help if the code is well tested: tests can help you understand the goals behind functions, and will help you refactor without breaking features.
+Beyond its being well designed, it'll also help if the code is well tested: tests can help you understand the goals behind functions, and will help you re-factor without breaking features.
+
+Now, we don't always choose what code we get, and even if it was well-designed, we might still need detective skills anyway!
 
 ## Step 1: Clone and build
 
-In sharing this life-changing tip I am inspired by the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
+In sharing this life-changing tip I am merely repeating the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
 
 Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it!
 E.g. fork a GitHub repo, and use `usethis::create_from_github()`.
