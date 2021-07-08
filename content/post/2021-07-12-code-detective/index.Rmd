@@ -12,8 +12,6 @@ output: hugodown::hugo_document
 When trying to fix a bug or add a feature to a package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will?
 In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else or yourself long enough ago to feel foreign.
 
-[keep track](https://wizardzines.com/comics/track-your-progress/)
-
 After step 1, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
 
 Apart from the idea of adding tests, most tips could apply to non-package code.
@@ -155,12 +153,15 @@ Also https://qntm.org/clean
 
 ## Asking for help
 
-
+As much as solving a problem on one's own is nice, asking for help might be the solution!
+It is also a skill: both how and where to ask for help but also deciding when to ask for help, when it's no longer worh anyone's time to have your keeping working alone on a problem.
 
 ### How
 
 In the section of this post about making your problem smaller, we mentioned creating a reprex and having a clear scope.
 These are elements that will be featured in your plea for help.
+
+It can also be good if you have [tracked your progress](https://wizardzines.com/comics/track-your-progress/), the various things you have tried.
 
 ### Where
 
@@ -181,7 +182,7 @@ In the meantime, you might enjoy watching or hearing some debugging journeys.
 You will notice how these programmers make and invalidate hypotheses.
 
 * ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/)
-* https://www.jimhester.com/post/2018-03-30-debugging-journey/ reminds me of https://wizardzines.com/comics/track-your-progress/
+* https://www.jimhester.com/post/2018-03-30-debugging-journey/ reminds me of 
 * https://blog.r-hub.io/2020/02/20/processx-blocked-sigchld/
 * https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/
 * https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/
