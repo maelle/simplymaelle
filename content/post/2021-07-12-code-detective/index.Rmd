@@ -94,6 +94,7 @@ I like the phrase _follow the trails_ by Kara Woo in her excellent RStudio confe
 ### Find where to start
 
 Easy case: there's a message on screen telling you where an error occurred, or you know what function you want to amend.
+
 Alternatively,
 
 * You can put the error / warning in a search engine.
@@ -112,12 +113,12 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 ### Explore from that starting point
 
 * You can use "grepping" as said by Patricia Aas: look for the occurrences of a function or variable name in a local folder, or via GitHub (advanced) search. You can limit the hits to some types of files e.g. R scripts in `R/`.
-* In your IDE e.g. RStudio there might be a way to go directly to the _definition_ of function.
+* In your IDE e.g. RStudio there might be a way to go directly to the _definition_ of function. With the lookup package you can also easily look up the source of functions [locally and on GitHub](https://blog.r-hub.io/2019/05/14/read-the-source/).
 
 ### How to read code: space and time
 
-* Hopefully the code makes sense on its own.
-* Sometimes using git blame or looking at the git history might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually _blame_ people, though. To make your git history more informative, use branches + squash and merge.
+* Hopefully the code makes sense on its own. If not, fear not, the next item right here, and the other sections of this post, as well as patience, will help.
+* Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually _blame_ people, though. To make your git history more informative, use branches + squash and merge.
 
 
 ## Build your mental model of the code
@@ -131,7 +132,7 @@ Resources for learning proper debugging tools.
 
 ### Beyond R
 
-Sometimes the bug or element to tweak will actively live outside of R.
+Sometimes the bug or element to tweak will live outside of R.
 Maybe in some C code you are wrapping, maybe in a CSS file.
 You will therefore have to learn debugging tools for these things too!
 
@@ -154,9 +155,22 @@ Also https://qntm.org/clean
 
 ## Asking for help
 
+
+
 ### How
 
+In the section of this post about making your problem smaller, we mentioned creating a reprex and having a clear scope.
+These are elements that will be featured in your plea for help.
+
 ### Where
+
+Where to ask for help depends on your question and the codebase you are working on.
+If you are working on a pull request in a package where you already have a good working relationship with other developers, or where you were encouraged to open a PR (directly or via the contributing guide), you might get help from other contributors.
+
+I wrote a blog post on [where to get help with your R questions](/2018/07/22/wheretogethelp/).
+
+See also my post on R-hub blog, [_How to get help with R package development? R-package-devel and beyond_](https://blog.r-hub.io/2019/04/11/r-package-devel/), for general venues where to ask help about package development.
+My favorite ones are the [rOpenSci forum](https://discuss.ropensci.org/) and the [package development category of the RStudio community forum](https://community.rstudio.com/c/package-development/11).
 
 ## Reading other people's debugging journeys, document yours
 
@@ -176,6 +190,19 @@ If you end up documenting your own code detective story, please tell me, I'd lik
 
 ## Conclusion
 
+In this post I presented various techniques useful for code detectives.
+Getting better at them will help you debug and amend codebases.
+Now, I was able to summarize these tips, but I can't say I never get stuck. 🙂
+
+Last but not least I want to emphasize that there are also human aspects to this process.
+
+`r hugodown::embed_tweet("1403405539971842052")`
+
+`r hugodown::embed_tweet("1385573317277532162")`
+
+What are your favourite tips and resources?
+Are you too eagerly awaiting Julia Evans' zine about debugging?
+Please tell me in the comments below!
 Being tired
 
 `hugodown::embed_tweet("1385573317277532162")` 
