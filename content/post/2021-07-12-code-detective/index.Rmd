@@ -204,10 +204,3 @@ Last but not least I want to emphasize that there are also human aspects to this
 What are your favourite tips and resources?
 Are you too eagerly awaiting [Julia Evans' zine about debugging](https://wizardzines.com/zines/bugs/)?
 Please tell me in the comments below!
-Being tired
-
-`hugodown::embed_tweet("1385573317277532162")` 
-
-Also non technical aspects
-
-`hugodown::embed_tweet("1403405539971842052")`
