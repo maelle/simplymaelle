@@ -17,6 +17,8 @@ _I decided to not [talk](/talks/) about package development for once, but rather
 
 _Many thanks to [Christophe Dervieux](https://cderv.rbind.io/) for useful feedback on this post! Merci beaucoup !_
 
+_This post was featured on the [R Weekly podcast](https://share.fireside.fm/episode/87RSVeFz+W6_0jLXR) by Eric Nantz._
+
 ```{r, echo=FALSE}
 library("magrittr")
 knitr::opts_chunk$set(comment = '' )

@@ -9,13 +9,15 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 2349e81185f4efa0
+rmd_hash: 860e218718e80a2e
 
 ---
 
 *I'll be giving a remote keynote talk at the [*Rencontres R*](https://rr2021.sciencesconf.org/program) (French R conference) on July the 12th, all in French.* *This blog post is a written version of my presentation, but in English.* *I decided to not [talk](/talks/) about package development for once, but rather about workflows and how to structure & run an analysis.[^1]*
 
 *Many thanks to [Christophe Dervieux](https://cderv.rbind.io/) for useful feedback on this post! Merci beaucoup !*
+
+*This post was featured on the [R Weekly podcast](https://share.fireside.fm/episode/87RSVeFz+W6_0jLXR) by Eric Nantz.*
 
 <div class="highlight">
 
