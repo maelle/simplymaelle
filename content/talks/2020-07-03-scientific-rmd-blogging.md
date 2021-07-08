@@ -4,7 +4,7 @@ date: '2020-07-03'
 event: "Reproducible and transparent documentation of data and quantitative analyses with R Markdown"
 event_url: "https://wiho-fdm.github.io/"
 event_type: "course"
-slides: "https://scientific-rmd-blogging.netlify.app/"
+materials: "https://scientific-rmd-blogging.netlify.app/"
 links:
   - name: Blog post about the course
     url: /2020/07/08/rmd-blogging-course/
