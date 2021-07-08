@@ -50,19 +50,19 @@ However, you'll probably start from some code in any case, e.g. your currently b
 
 In case of a bug, you'll often be advised to make it a minimal reproducible example.
 You'll often hear this when you try and communicate your bug to someone else, but it is great practice to do this for yourself!
-An important
-A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, both promoted and maintained by Jenny Bryan.
+An important thing to know here is _reprex_.
+A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, respectively promoted and maintained by Jenny Bryan.
 Why use reprex?
 
 * The isolated bug is easier to solve or will be solved by creating it ! In Jenny Bryan's talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) there's an example of original code and its minified version.
 
 * As it is run in an isolated session you can be more sure that it's reproducible.
 
-* You can send your bug in a format ideal for experts !
+* You can send your bug in a format ideal for experts ! But you might be writing a reprex just for yourself, to accompany some notes in a GitHub issue for instance.
 
 How does reprex work?
 
-* You write some code somewhere (including loading libraries, creating toy data etc.).
+* You write some code in an editor (including loading libraries, creating toy data etc.).
 
 * You copy the code to your clipboard.
 
@@ -70,20 +70,22 @@ How does reprex work?
 
 * You get the rendered code on the clipboard (and a preview in RStudio Viewer pane)! Error messages rendered, images uploaded to imgur.
 
-* You paste the rendered code somewhere to show to someone.
+* You paste the rendered code somewhere, potentially to show to someone.
 
 To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular ["Reprex do's and don'ts"]](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
 
-
-Also in the case of a bug maybe you don't need to read this post further if your problem is in the bingo below but sometimes you'll only notice obvious mistakes after making the problem smaller.
+Also in the case of a bug maybe you don't need to read this post further if your problem is in the bingo below. 
+Sometimes you'll only notice obvious mistakes after making the problem smaller (or after taking a break!).
 
 `r hugodown::embed_tweet("1354508785365078016")` 
 
 In case of amending the features of a package, it'll be important to clearly defined the scope of what you're after.
-
+Easier for your work as a code detective, but also for many other reasons, see [Sarah Drasner's post _How to Scope Down PRs_](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/) and Yihui Xie's post [_"Bite-sized" Pull Requests_](https://yihui.org/en/2018/02/bite-sized-pull-requests/).
 
 
 ## Pull an end / Follow the trails
+
+!!! add something about options and environmental variables !!!
 
 As you are not going to read code from cover to cover, you'll need to find a logical way to explore the code.
 
