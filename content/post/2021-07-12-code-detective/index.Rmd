@@ -202,7 +202,7 @@ Last but not least I want to emphasize that there are also human aspects to this
 `r hugodown::embed_tweet("1385573317277532162")`
 
 What are your favourite tips and resources?
-Are you too eagerly awaiting Julia Evans' zine about debugging?
+Are you too eagerly awaiting [Julia Evans' zine about debugging](https://wizardzines.com/zines/bugs/)?
 Please tell me in the comments below!
 Being tired
 
