@@ -182,7 +182,7 @@ Those can also be useful to read, especially when they start breaking after your
 
 In any case, once you have amended a codebase to fix a bug or add a feature, add tests!
 In Kara Woo's talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests.
-In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
+In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the [part of the talk where she gives such advice](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable?slide=69): adding tests and assertions, but also other tips such as running those on continuous integration, "using mind bendy stuff in moderation", leaving access panels (e.g. verbose modes), writing error messages for humans.
 
 You could even write a failing test at the beginning of your code exploration, [even leaving it failing for an easier restart when you come back to the codebase](https://r-pkgs.org/tests.html) (better than a sticky note for sure!).
 

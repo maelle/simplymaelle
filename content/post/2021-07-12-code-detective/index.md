@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 002de1aec0f46678
+rmd_hash: 5e7102cfde76375d
 
 ---
 
@@ -152,7 +152,7 @@ Sometimes the bug or element to tweak will live outside of R. Maybe in some C co
 
 In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do. She especially mentions integration tests, whereas in R packages you'll mostly find unit tests. Those can also be useful to read, especially when they start breaking after your experiments.
 
-In any case, once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
+In any case, once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the [part of the talk where she gives such advice](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable?slide=69): adding tests and assertions, but also other tips such as running those on continuous integration, "using mind bendy stuff in moderation", leaving access panels (e.g. verbose modes), writing error messages for humans.
 
 You could even write a failing test at the beginning of your code exploration, [even leaving it failing for an easier restart when you come back to the codebase](https://r-pkgs.org/tests.html) (better than a sticky note for sure!).
 
