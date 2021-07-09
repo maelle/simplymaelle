@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: bebce5b64eadcae5
+rmd_hash: e7b255c6fc4d0fd1
 
 ---
 
@@ -37,7 +37,7 @@ Now, we don't always choose what code we get, and even if it was well-designed, 
 
 In sharing this life-changing tip I am merely repeating the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html). The techniques presented by Patricia Aas are not specific to R but many of them are relevant for R codebases.
 
-Now to this tip... Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step preparing a local codebase to play with is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
+Now to this tip... Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step, preparing a local codebase to play with, is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
 
 Obviously to reach that stage you'll need to know *what* codebase is the one to be working on. However, you'll probably start from some code in any case, e.g. your currently buggy code.
 
