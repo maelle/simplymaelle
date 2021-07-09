@@ -9,7 +9,7 @@ tags:
   - orderly
 slug: r-projects
 output: hugodown::hugo_document
-rmd_hash: 860e218718e80a2e
+rmd_hash: ed29f04cc025455b
 
 ---
 
@@ -122,6 +122,7 @@ There are specific tools for building and using research compendia:
 
 -   [rrtools](https://github.com/benmarwick/rrtools) by Ben Marwick. *"The goal of rrtools is to provide instructions, templates, and functions for making a basic compendium suitable for writing a reproducible journal article or report with R."*
 -   [holepunch](https://karthik.github.io/holepunch/) by Karthik Ram. *"holepunch will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server. Here they can run your scripts and notebooks and see how everything works."* (🤫 holepunch works [without the compendium structure](https://github.com/karthik/holepunch#alternate-setup-method) as well.)
+-   The [R-universe project](https://ropensci.org/r-universe/) at rOpenSci, built by Jeroen Ooms. As it automatically builds vignettes, it could be used to publish your packaged analysis online.
 
 Now it's good to know not everyone loves the idea of projects as R packages. Miles McBain wrote a blog post ["Project as an R package: An okay idea"](https://www.milesmcbain.com/posts/an-okay-idea/).
 
