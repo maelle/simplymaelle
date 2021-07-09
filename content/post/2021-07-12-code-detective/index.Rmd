@@ -128,7 +128,7 @@ Patricia Aas remarks that such diagrams might even be contributed to the codebas
 
 ## Browse code by others
 
-The life-hack below by Julia Silge for fixing Travis CI builds, looking at other people's configuration files, applies to any code endeavour.
+The life-hack below by Julia Silge for fixing Travis CI builds[^travis], looking at other people's configuration files, applies to any code endeavour.
 
 `r hugodown::embed_tweet("1205183124868681728")`
 
@@ -282,3 +282,5 @@ Last but not least I want to emphasize that there are also human aspects to this
 What are your favourite tips and resources?
 Are you too eagerly awaiting [Julia Evans' zine about debugging](https://wizardzines.com/zines/bugs/)?
 Please tell me in the comments below!
+
+[^travis]: Travis CI itself is no longer recommended [by rOpenSci for instance](https://ropensci.org/blog/2020/11/19/moving-away-travis/).

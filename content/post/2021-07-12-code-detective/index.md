@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 1343508f76156ddf
+rmd_hash: 44fa56233014f4d3
 
 ---
 
@@ -112,7 +112,7 @@ That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/e
 
 ## Browse code by others
 
-The life-hack below by Julia Silge for fixing Travis CI builds, looking at other people's configuration files, applies to any code endeavour.
+The life-hack below by Julia Silge for fixing Travis CI builds[^1], looking at other people's configuration files, applies to any code endeavour.
 
 {{< tweet 1205183124868681728 >}}
 
@@ -234,4 +234,6 @@ Last but not least I want to emphasize that there are also human aspects to this
 {{< tweet 1385573317277532162 >}}
 
 What are your favourite tips and resources? Are you too eagerly awaiting [Julia Evans' zine about debugging](https://wizardzines.com/zines/bugs/)? Please tell me in the comments below!
+
+[^1]: Travis CI itself is no longer recommended [by rOpenSci for instance](https://ropensci.org/blog/2020/11/19/moving-away-travis/).
 
