@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: eb74d3c8a2d596a1
+rmd_hash: 0fc3d75cc9460be8
 
 ---
 
@@ -99,7 +99,7 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 -   You can use "grepping" as said by Patricia Aas: look for the occurrences of a function or variable name in a local folder, or via [GitHub (advanced) search](https://docs.github.com/en/github/searching-for-information-on-github/getting-started-with-searching-on-github/about-searching-on-github). You can limit the hits to some types of files e.g. R scripts in `R/`.
 -   In your IDE e.g. RStudio there might be a way to go directly to the *definition* of function. With the [lookup package](https://github.com/jimhester/lookup) you can also easily look up the source of functions [locally and on GitHub](https://blog.r-hub.io/2019/05/14/read-the-source/).
 
-### How to read code: space and time
+### How to read code: space... and time
 
 -   Hopefully the code makes sense on its own. If not, fear not, the next item right here, and the other sections of this post, as well as patience, will help.
 -   Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though. To make your own git history more informative for such later code archaeology, use branches and squash and merge.
@@ -107,6 +107,18 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 ## Build your mental model of the code
 
 That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html). You might want to draw some sort of diagram by hand (or [programmatically](https://blog.r-hub.io/2019/12/12/internal-functions/#explore-internal-functions-within-a-package)). Patricia Aas remarks that such diagrams might even be contributed to the codebase as developer documentation.
+
+## Browse code by others
+
+The life-hack below by Julia Silge for fixing Travis CI builds, looking at other people's configuration files, applies to other CI services (good as Travis is e.g. no longer recommended by rOpenSci) and to any other code endeavour.
+
+{{< tweet 1205183124868681728 >}}
+
+How to find good examples?
+
+-   The lookup package can help you [look up usage of a function on GitHub](https://blog.r-hub.io/2019/05/14/read-the-source/#how-to-search-the-source) and in general [GitHub Advanced search](https://github.com/search/advanced) is really useful;
+-   You might look at the reverse dependencies of a package you are using;
+-   You might try to think of packages doing something similar to yours (e.g. another package munging XML data from an API ; another package wrapping a C library).
 
 ## Beyond browsing files, `browser()`
 
@@ -120,11 +132,15 @@ The basic idea is that you just replace the [`print()`](https://rdrr.io/r/base/p
 
 Here are some good resources to learn about debugging tools. These resources also overlap with some of the objectives of this very blog post.
 
--   [Debugging advice in the Advanced R book by Hadley Wickham](https://adv-r.hadley.nz/debugging.html)
--   [Webinar debugging techniques in RStudio by Amanda Gadrow](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/)
--   [Debugging advice in the Hands-on programming with R book by Garrett Grolemund](https://rstudio-education.github.io/hopr/debug.html)
--   [Debugging advice in the materials of the course "What they forgot to teach you about R" by Jenny Bryan and Jim Hester](https://rstats.wtf/debugging-r-code.html) -- it even includes tips for R Markdown debugging.
--   [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme)
+-   [Debugging advice in the Advanced R book by Hadley Wickham](https://adv-r.hadley.nz/debugging.html);
+
+-   [Webinar debugging techniques in RStudio by Amanda Gadrow](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/);
+
+-   [Debugging advice in the Hands-on programming with R book by Garrett Grolemund](https://rstudio-education.github.io/hopr/debug.html);
+
+-   [Debugging advice in the materials of the course "What they forgot to teach you about R" by Jenny Bryan and Jim Hester](https://rstats.wtf/debugging-r-code.html) -- it even includes tips for R Markdown debugging;
+
+-   [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme).
 
 ### Beyond R
 
@@ -136,6 +152,8 @@ In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peopl
 
 In any case once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
 
+You could even write a failing test at the beginning of your code exploration, [even leaving it failing for an easier restart when you come back to the codebase](https://r-pkgs.org/tests.html) (better than a sticky note for sure!).
+
 ## Rubberducking to a persona
 
 Another technique you will often see mentioned is rubberducking i.e. explaining your problem to a rubber duck. The simple fact of phrasing your issue might help you solve it.
@@ -144,7 +162,7 @@ However, you might prefer to speak to an actual person, or pretend you are as wr
 
 {{< tweet 1409533060790558725 >}}
 
-I sometimes open a Slack conversation with someone as if I were about to ask for their help, and whilst preparing my notes for them, I'll solve my issue.
+I liked seeing that as I sometimes open a Slack conversation with someone as if I were about to ask for their help, and whilst preparing my notes for them, I'll solve my issue.
 
 ## Refactoring
 
@@ -178,11 +196,15 @@ Sadly but understandably people will often only take the time to document their 
 
 In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
 
--   ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/)
--   <https://www.jimhester.com/post/2018-03-30-debugging-journey/> reminds me of
--   <https://blog.r-hub.io/2020/02/20/processx-blocked-sigchld/>
--   <https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/>
--   <https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/>
+-   [Kara Woo's talk "Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/);
+
+-   ["A debugging journey" by Jim Hester](https://www.jimhester.com/post/2018-03-30-debugging-journey/);
+
+-   ["Debugging: Signals and Subprocesses" by Gábor Csárdi](https://blog.r-hub.io/2020/02/20/processx-blocked-sigchld/);
+
+-   ["Debugging and Fixing CRAN's 'Additional Checks' errors" by Rich FitzJohn](https://reside-ic.github.io/blog/debugging-and-fixing-crans-additional-checks-errors/);
+
+-   ["Debugging memory errors with valgrind and gdb" by Rich FitzJohn](https://reside-ic.github.io/blog/debugging-memory-errors-with-valgrind-and-gdb/).
 
 If you end up documenting your own code detective story, please tell me, I'd like to read it!
 
