@@ -44,7 +44,7 @@ Instead of being overwhelmed by the idea of starting to tinker with a codebase, 
 E.g. fork a GitHub repo, and use `usethis::create_from_github()`.
 Then open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it.
 Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`.
-I suppose that if I were fancy I'd say this step is your [_mise en place_](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
+I suppose that if I were fancy I'd say this step preparing a local codebase to play with is your [_mise en place_](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
 
 Obviously to reach that stage you'll need to know _what_ codebase is the one to be working on.
 However, you'll probably start from some code in any case, e.g. your currently buggy code.
