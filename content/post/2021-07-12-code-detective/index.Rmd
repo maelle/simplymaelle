@@ -9,12 +9,13 @@ slug: code-detective
 output: hugodown::hugo_document
 ---
 
-When trying to fix a bug or add a feature to a package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will?
-In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else or yourself long enough ago to feel foreign.
+When trying to fix a bug or add a feature to an R package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will?
+In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else (or yourself but long enough ago to feel foreign!).
 
-After step 1, there's not really an order for the steps, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
+After step 1, there's not really an order for applying the techniques, but you definitely want to acquire enough knowledge through research before you tinker, otherwise you will be tinkering quite randomly.
 
 Apart from the idea of adding tests, most tips could apply to non-package code.
+If your motivation is to contribute to R itself please refer to [A Guide to Contributing to R Core](https://forwards.github.io/rdevguide/introduction.html) by Saranjeet Kaur and colleagues.
 
 ## Step 0: Only deal with well-designed code
 
@@ -34,7 +35,9 @@ Now, we don't always choose what code we get, and even if it was well-designed, 
 ## Step 1: Clone and build
 
 In sharing this life-changing tip I am merely repeating the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
+The techniques presented by Patricia Aas are not specific to R but many of them are relevant for R codebases.
 
+Now to this tip...
 Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it!
 E.g. fork a GitHub repo, and use `usethis::create_from_github()`.
 Then install open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it.
@@ -70,24 +73,21 @@ How does reprex work?
 
 * You paste the rendered code somewhere, potentially to show to someone.
 
-To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular ["Reprex do's and don'ts"]](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
+To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular ["Reprex do's and don'ts"](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
 
-Also in the case of a bug maybe you don't need to read this post further if your problem is in the bingo below. 
-Sometimes you'll only notice obvious mistakes after making the problem smaller (or after taking a break!).
+Also in the case of a bug, maybe you don't need to read this post further if your problem is in the bingo below. 
+Often, you'll only notice "obvious" mistakes after making the problem smaller (or after taking a break!).
 
 `r hugodown::embed_tweet("1354508785365078016")` 
 
 In case of amending the features of a package, it'll be important to clearly defined the scope of what you're after.
 Easier for your work as a code detective, but also for many other reasons, see [Sarah Drasner's post _How to Scope Down PRs_](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/) and Yihui Xie's post [_"Bite-sized" Pull Requests_](https://yihui.org/en/2018/02/bite-sized-pull-requests/).
 
-
 ## Pull an end / Follow the trails
-
-!!! add something about options and environmental variables !!!
 
 As you are not going to read code from cover to cover, you'll need to find a logical way to explore the code.
 
-I like the phrase _follow the trails_ by Kara Woo in her excellent RStudio conference talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/) as well as the phrase _pull an end_ by Patricia Aas in her also excellent talk ["Reading Other People's Code"](https://patricia.no/2018/09/19/reading_other_peoples_code.html)
+I like the phrase _follow the trails_ by Kara Woo in her excellent RStudio conference talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/) as well as the phrase _pull an end_ by Patricia Aas in her also excellent talk ["Reading Other People's Code"](https://patricia.no/2018/09/19/reading_other_peoples_code.html) already mentioned in this post.
 
 ### Find where to start
 
@@ -110,23 +110,45 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 
 ### Explore from that starting point
 
-* You can use "grepping" as said by Patricia Aas: look for the occurrences of a function or variable name in a local folder, or via GitHub (advanced) search. You can limit the hits to some types of files e.g. R scripts in `R/`.
-* In your IDE e.g. RStudio there might be a way to go directly to the _definition_ of function. With the lookup package you can also easily look up the source of functions [locally and on GitHub](https://blog.r-hub.io/2019/05/14/read-the-source/).
+* You can use "grepping" as said by Patricia Aas: look for the occurrences of a function or variable name in a local folder, or via [GitHub (advanced) search](https://docs.github.com/en/github/searching-for-information-on-github/getting-started-with-searching-on-github/about-searching-on-github). You can limit the hits to some types of files e.g. R scripts in `R/`.
+* In your IDE e.g. RStudio there might be a way to go directly to the _definition_ of function. With the [lookup package](https://github.com/jimhester/lookup) you can also easily look up the source of functions [locally and on GitHub](https://blog.r-hub.io/2019/05/14/read-the-source/).
 
 ### How to read code: space and time
 
 * Hopefully the code makes sense on its own. If not, fear not, the next item right here, and the other sections of this post, as well as patience, will help.
-* Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually _blame_ people, though. To make your git history more informative, use branches + squash and merge.
-
+* Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually _blame_ people, though. To make your own git history more informative for such later code archaeology, use branches and squash and merge.
 
 ## Build your mental model of the code
 
-That's what Patricia Aas call "mental machine".
-You might want to draw some sort of diagram by hand (or programmatically).
+That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html).
+You might want to draw some sort of diagram by hand (or [programmatically](https://blog.r-hub.io/2019/12/12/internal-functions/#explore-internal-functions-within-a-package)).
+Patricia Aas remarks that such diagrams might even be contributed to the codebase as developer documentation.
 
 ## Beyond browsing files, `browser()`
 
-Resources for learning proper debugging tools.
+Reading code and imagining what it does only goes so long.
+You can edit the code and see whether, from the outside, it does what you want it to.
+Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check a part of the code was run, or `print(class(x))` to check an assumption about thing. 
+Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging).
+It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
+
+`r hugodown::embed_tweet("1382090144229044226")`
+
+But often you will have to go experiment under the hood.
+For doing that efficiently you will need to learn about `browser()` and friends!
+Or only just `browser()` to start with!
+
+The basic idea is that you just replace the `print()` command you were about to right with `browser()`, run the code and voilà! You entered the debugger and can run code line by line, explore options and environment variables, etc.
+Over time it'll become a habit of yours, at least that's what happened to me once I saw the light. 😁
+
+Here are some good resources to learn about debugging tools.
+These resources also overlap with some of the objectives of this very blog post.
+
+- [Debugging advice in the Advanced R book by Hadley Wickham](https://adv-r.hadley.nz/debugging.html)
+- [Webinar debugging techniques in RStudio by Amanda Gadrow](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/)
+- [Debugging advice in the Hands-on programming with R book by Garrett Grolemund](https://rstudio-education.github.io/hopr/debug.html)
+- [Debugging advice in the materials of the course "What they forgot to teach you about R" by Jenny Bryan and Jim Hester](https://rstats.wtf/debugging-r-code.html) -- it even includes tips for R Markdown debugging.
+- [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme)
 
 ### Beyond R
 
@@ -136,34 +158,51 @@ You will therefore have to learn debugging tools for these things too!
 
 ## Read tests? Write some for sure
 
-In Kara Woo's talk, she explained she added tests.
-In Jenny Bryan's talk she uses the word "deter".
+In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do.
+She especially mentions integration tests, whereas in R packages you'll mostly find unit tests.
+Those can be useful too to read, especially when they start breaking after your experiments I suppose.
+
+In any case once you have amended a codebase to fix a bug or add a feature, add tests!
+In Kara Woo's talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests.
+In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
 
 ## Rubberducking to a persona
 
+Another technique you will often see mentioned is rubberducking i.e. explaining your problem to a rubber duck.
+The simple fact of phrasing your issue might help you solve it.
+
+However, you might prefer to speak to an actual person, or pretend you are as written in the tweet by Julia Evans below:
+
 `r hugodown::embed_tweet("1409533060790558725")`
+
+I sometimes open a Slack conversation with someone as if I were about to ask for their help, and whilst preparing my notes for them, I'll solve my issue.
 
 ## Refactoring
 
-Tip by Patricia Aas.
-Do not actually contribute that as a first PR.
+Another [tip by Patricia Aas](https://patricia.no/2018/09/19/reading_other_peoples_code.html) is refactoring the code as it might improve your understanding of it.
+They underline that you should not contribute the results of your refactoring, especially as a first PR, as people might hate you!
+It's an exercise for you.
 
-clean code contributions to codemetar.
-Also https://qntm.org/clean
+In a package I co-maintain I however remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://www.goodreads.com/book/show/3735293-clean-code).
+They started with a small one, and were very polite.
+Since then I've seen [some bad critic of the book](https://qntm.org/clean) but these PRs made perfect sense.
+I can however easily imagine a big refactoring PR would not be happily received!
+
+So, in a nutshell, as said by Patricia Aas, refactor to learn, _in your own local copy or your own fork_.
 
 ## Asking for help
 
 As much as solving a problem on one's own is nice, asking for help might be the solution!
-It is also a skill: both how and where to ask for help but also deciding when to ask for help, when it's no longer worh anyone's time to have your keeping working alone on a problem.
+It is also a skill or a bunch of skills: both how and where to ask for help but also deciding when to ask for help, when it's no longer worth anyone's time to have your keeping working alone on a problem.
 
-### How
+### How to ask for help?
 
 In the section of this post about making your problem smaller, we mentioned creating a reprex and having a clear scope.
 These are elements that will be featured in your plea for help.
 
 It can also be good if you have [tracked your progress](https://wizardzines.com/comics/track-your-progress/), the various things you have tried.
 
-### Where
+### Where to ask for help?
 
 Where to ask for help depends on your question and the codebase you are working on.
 If you are working on a pull request in a package where you already have a good working relationship with other developers, or where you were encouraged to open a PR (directly or via the contributing guide), you might get help from other contributors.
