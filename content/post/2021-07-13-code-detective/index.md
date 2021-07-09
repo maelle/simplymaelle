@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 7c4352c7d5876981
+rmd_hash: c723c06e35609f5c
 
 ---
 
@@ -126,7 +126,7 @@ How to find good examples?
 
 ## Beyond browsing files, `browser()`
 
-Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check a part of the code was run, or `print(class(x))` to check an assumption about a thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
+Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check whether a part of the code was run, or `print(class(x))` to check an assumption about a thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
 
 {{< tweet 1382090144229044226 >}}
 
@@ -152,13 +152,13 @@ Sometimes the bug or element to tweak will live outside of R. Maybe in some C co
 
 ## Read tests? Write some for sure
 
-In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do. She especially mentions integration tests, whereas in R packages you'll mostly find unit tests. Those can also be useful to read, especially when they start breaking after your experiments.
+In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do. They especially mention integration tests, whereas in R packages you'll mostly find unit tests. Those can also be useful to read, especially when they start breaking after your experiments.
 
 In any case, once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the [part of the talk where she gives such advice](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable?slide=69): adding tests and assertions, but also other tips such as running those on continuous integration, "using mind bendy stuff in moderation", leaving access panels (e.g. verbose modes), writing error messages for humans.
 
 You could even write a failing test at the beginning of your code exploration, [even leaving it failing for an easier restart when you come back to the codebase](https://r-pkgs.org/tests.html) (better than a sticky note for sure!).
 
-## Rubberducking to a persona
+## Rubberducking to a person
 
 Another technique you will often see mentioned is rubberducking i.e. explaining your problem to a rubber duck. The simple act of phrasing your issue might help you solve it.
 
