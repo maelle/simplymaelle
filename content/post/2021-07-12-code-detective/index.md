@@ -7,9 +7,11 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: a67640971e80a126
+rmd_hash: 002de1aec0f46678
 
 ---
+
+*Huge thanks to [Hannah Frick](https://www.frick.ws/) for her useful feedback on this post! Vielen Dank!*
 
 When trying to fix a bug or add a feature to an R package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will? In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else (or yourself but long enough ago to feel foreign!).
 
@@ -35,19 +37,19 @@ Now, we don't always choose what code we get, and even if it was well-designed, 
 
 In sharing this life-changing tip I am merely repeating the talk "Reading other people's code" by Patricia Aas that I actually listened to as [an episode of the All Things Git podcast](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html). The techniques presented by Patricia Aas are not specific to R but many of them are relevant for R codebases.
 
-Now to this tip... Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then install open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
+Now to this tip... Instead of being overwhelmed by the idea of starting to tinker with a codebase, create a local version-controlled project with the codebase in it! E.g. fork a GitHub repo, and use [`usethis::create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html). Then open it, install the dependencies via `remotes::install_deps(dependencies = TRUE)`, build or load it. Before amending things, create a new branch via e.g. `gert::git_branch_create("tinkering")`. I suppose that if I were fancy I'd say this step is your [*mise en place*](https://fortelabs.co/blog/mise-en-place-for-knowledge-workers/).
 
 Obviously to reach that stage you'll need to know *what* codebase is the one to be working on. However, you'll probably start from some code in any case, e.g. your currently buggy code.
 
 ## Make your problem smaller
 
-In case of a bug, you'll often be advised to make it a minimal reproducible example. You'll often hear this when you try and communicate your bug to someone else, but it is great practice to do this for yourself! An important thing to know here is *reprex*. A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, respectively promoted and maintained by Jenny Bryan. Why use reprex?
+In case of a bug, you'll often be advised to make it a minimal reproducible example. While you'll often hear this when you try to communicate your bug to someone else, it is also great practice to do this for yourself! An important thing to know here is *reprex*. A reprex is both a concept (reprex for reproducible example) and a package for communicating such examples, respectively promoted and maintained by Jenny Bryan. Why use reprex?
 
--   The isolated bug is easier to solve or will be solved by creating it ! In Jenny Bryan's talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) there's an example of original code and its minified version.
+-   The isolated bug is easier to solve or will be solved by creating it! In Jenny Bryan's talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) there's an example of original code and its minified version.
 
 -   As it is run in an isolated session you can be more sure that it's reproducible.
 
--   You can send your bug in a format ideal for experts ! But you might be writing a reprex just for yourself, to accompany some notes in a GitHub issue for instance.
+-   You can send your bug in a format ideal for experts! But you might be writing a reprex just for yourself, to accompany some notes in a GitHub issue for instance.
 
 How does reprex work?
 
@@ -61,7 +63,7 @@ How does reprex work?
 
 -   You paste the rendered code somewhere, potentially to show to someone.
 
-To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes in particular ["Reprex do's and don'ts"](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
+To learn more about reprex and adopt it, I'd recommend watching [the RStudio webinar about reprex](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) and reading reprex vignettes, in particular ["Reprex do's and don'ts"](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
 
 Also in the case of a bug, maybe you don't need to read this post further if your problem is in the bingo below. Often, you'll only notice "obvious" mistakes after making the problem smaller (or after taking a break!).
 
@@ -73,7 +75,7 @@ In case of amending the features of a package, it'll be important to clearly def
 
 As you are not going to read code from cover to cover, you'll need to find a logical way to explore the code.
 
-I like the phrase *follow the trails* by Kara Woo in her excellent RStudio conference talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/) as well as the phrase *pull an end* by Patricia Aas in her also excellent talk ["Reading Other People's Code"](https://patricia.no/2018/09/19/reading_other_peoples_code.html) already mentioned in this post.
+I like the phrase *follow the trails* by Kara Woo in her excellent RStudio conference talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/) as well as the phrase *pull an end* by Patricia Aas in her also excellent talk ["Reading Other People's Code"](https://patricia.no/2018/09/19/reading_other_peoples_code.html) already mentioned in this post.
 
 ### Find where to start
 
@@ -92,7 +94,7 @@ rlang_backtrace_on_error = "branch")
 
 thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/1202269314029621251) reporting a tip by Jenny Bryan. "It gives trimmed tracebacks when using pipes."
 
--   If there's no error but say a warning you could try to [convert the warning to an error](https://adv-r.hadley.nz/debugging.html#non-error-failures).
+-   If there's no error but a warning you could try to [convert the warning to an error](https://adv-r.hadley.nz/debugging.html#non-error-failures).
 
 ### Explore from that starting point
 
@@ -110,7 +112,7 @@ That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/e
 
 ## Browse code by others
 
-The life-hack below by Julia Silge for fixing Travis CI builds, looking at other people's configuration files, applies to other CI services (good as Travis is e.g. no longer recommended by rOpenSci) and to any other code endeavour.
+The life-hack below by Julia Silge for fixing Travis CI builds, looking at other people's configuration files, applies to any code endeavour.
 
 {{< tweet 1205183124868681728 >}}
 
@@ -122,13 +124,13 @@ How to find good examples?
 
 ## Beyond browsing files, `browser()`
 
-Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check a part of the code was run, or `print(class(x))` to check an assumption about thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
+Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check a part of the code was run, or `print(class(x))` to check an assumption about a thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
 
 {{< tweet 1382090144229044226 >}}
 
 But often you will have to go experiment under the hood. For doing that efficiently you will need to learn about [`browser()`](https://rdrr.io/r/base/browser.html) and friends! Or only just [`browser()`](https://rdrr.io/r/base/browser.html) to start with!
 
-The basic idea is that you just replace the [`print()`](https://rdrr.io/r/base/print.html) command you were about to right with [`browser()`](https://rdrr.io/r/base/browser.html), run the code and voilà! You entered the debugger and can run code line by line, explore options and environment variables, etc. Over time it'll become a habit of yours, at least that's what happened to me once I saw the light. 😁
+The basic idea is that you just replace the [`print()`](https://rdrr.io/r/base/print.html) command you were about to write with [`browser()`](https://rdrr.io/r/base/browser.html), run the code and voilà! You entered the debugger and can run code line by line, explore options and environment variables, etc. Over time it'll become a habit of yours, at least that's what happened to me once I saw the light. 😁
 
 Here are some good resources to learn about debugging tools. These resources also overlap with some of the objectives of this very blog post.
 
@@ -148,15 +150,15 @@ Sometimes the bug or element to tweak will live outside of R. Maybe in some C co
 
 ## Read tests? Write some for sure
 
-In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do. She especially mentions integration tests, whereas in R packages you'll mostly find unit tests. Those can be useful too to read, especially when they start breaking after your experiments I suppose.
+In Patricia Aas' [techniques](https://patricia.no/2018/09/19/reading_other_peoples_code.html) features the idea of writing and running tests to see what's the code is supposed to do. She especially mentions integration tests, whereas in R packages you'll mostly find unit tests. Those can also be useful to read, especially when they start breaking after your experiments.
 
-In any case once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
+In any case, once you have amended a codebase to fix a bug or add a feature, add tests! In Kara Woo's talk ["Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/), she explained she added tests. In [Jenny Bryan's talk "Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme) she uses the word "deter" in the part of the talk where she gives such advice.
 
 You could even write a failing test at the beginning of your code exploration, [even leaving it failing for an easier restart when you come back to the codebase](https://r-pkgs.org/tests.html) (better than a sticky note for sure!).
 
 ## Rubberducking to a persona
 
-Another technique you will often see mentioned is rubberducking i.e. explaining your problem to a rubber duck. The simple fact of phrasing your issue might help you solve it.
+Another technique you will often see mentioned is rubberducking i.e. explaining your problem to a rubber duck. The simple act of phrasing your issue might help you solve it.
 
 However, you might prefer to speak to an actual person, or pretend you are as written in the tweet by Julia Evans below:
 
@@ -168,13 +170,13 @@ I liked seeing that as I sometimes open a Slack conversation with someone as if 
 
 Another [tip by Patricia Aas](https://patricia.no/2018/09/19/reading_other_peoples_code.html) is refactoring the code as it might improve your understanding of it. They underline that you should not contribute the results of your refactoring, especially as a first PR, as people might hate you! It's an exercise for you.
 
-In a package I co-maintain I however remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://www.goodreads.com/book/show/3735293-clean-code). They started with a small one, and were very polite. Since then I've seen [some bad critic of the book](https://qntm.org/clean) but these PRs made perfect sense. I can however easily imagine a big refactoring PR would not be happily received!
+That said, I remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://www.goodreads.com/book/show/3735293-clean-code) . They started with a small one, and were very polite. Since then I've seen [some bad critic of the book](https://qntm.org/clean) but these PRs made perfect sense. I can however easily imagine a big refactoring PR would not be happily received!
 
 So, in a nutshell, as said by Patricia Aas, refactor to learn, *in your own local copy or your own fork*.
 
 ## Asking for help
 
-As much as solving a problem on one's own is nice, asking for help might be the solution! It is also a skill or a bunch of skills: both how and where to ask for help but also deciding when to ask for help, when it's no longer worth anyone's money to have your keeping working alone on a problem.
+As nice as solving a problem on one's own is, asking for help might be the solution! It is also a skill, or more, a bunch of skills: both how and where to ask for help but also deciding when to ask for help, when it's no longer worth anyone's money to have you continuing to work alone on a problem.
 
 ### How to ask for help?
 
@@ -188,15 +190,15 @@ Where to ask for help depends on your question and the codebase you are working 
 
 I wrote a blog post on [where to get help with your R questions](/2018/07/22/wheretogethelp/).
 
-See also my post on R-hub blog, [*How to get help with R package development? R-package-devel and beyond*](https://blog.r-hub.io/2019/04/11/r-package-devel/), for general venues where to ask help about package development. My favorite ones are the [rOpenSci forum](https://discuss.ropensci.org/) and the [package development category of the RStudio community forum](https://community.rstudio.com/c/package-development/11).
+See also my post on the R-hub blog, [*How to get help with R package development? R-package-devel and beyond*](https://blog.r-hub.io/2019/04/11/r-package-devel/), for general venues where to ask for help about package development. My favorite ones are the [rOpenSci forum](https://discuss.ropensci.org/) and the [package development category of the RStudio community forum](https://community.rstudio.com/c/package-development/11).
 
 ## Reading other people's debugging journeys, document yours
 
-Sadly but understandably people will often only take the time to document their debugging journey when the bug is especially tricky or weird. Besides, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
+Sadly but understandably people will often only take the time to document their debugging journey when the bug is especially tricky or weird. However, few people write actual [debugging games](https://jvns.ca/blog/2021/04/16/notes-on-debugging-puzzles/).
 
 In the meantime, you might enjoy watching or hearing some debugging journeys. You will notice how these programmers make and invalidate hypotheses.
 
--   [Kara Woo's talk "Box plots A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/);
+-   [Kara Woo's talk "Box plots - A case study in debugging and perseverance"](https://www.rstudio.com/resources/rstudioconf-2019/box-plots-a-case-study-in-debugging-and-perseverance/);
 
 -   ["A debugging journey" by Jim Hester](https://www.jimhester.com/post/2018-03-30-debugging-journey/);
 
