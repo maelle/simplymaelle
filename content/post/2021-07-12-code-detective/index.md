@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: c6ec4ec1270b1322
+rmd_hash: 355e5bc14593a0fa
 
 ---
 
@@ -104,7 +104,9 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 ### How to read code: space... and time
 
 -   Hopefully the code makes sense on its own. If not, fear not, the next item right here, and the other sections of this post, as well as patience, will help.
--   Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though. To make your own git history more informative for such later code archaeology, use branches and squash and merge.
+-   Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though. To make your own git history more informative for such later code archaeology, use [branches](https://happygitwithr.com/git-branches.html) and [squash and merge](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
+
+{{< tweet 1108031633750478849 >}}
 
 ## Build your mental model of the code
 
