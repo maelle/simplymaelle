@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: e7b255c6fc4d0fd1
+rmd_hash: c6ec4ec1270b1322
 
 ---
 
@@ -84,7 +84,7 @@ Easy case: there's a message on screen telling you where an error occurred, or y
 Alternatively,
 
 -   You can put the error / warning in a search engine.
--   If there's an unclear error you can try to see the traceback i.e. what functions were called leading to that error. In her talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme), Jenny Bryan explains very well what a traceback is. In my `.Rprofile` I have
+-   If there's an unclear error you can try to see the traceback i.e. what functions were called leading to that error. In her talk ["Object of type 'closure' is not subsettable"](https://github.com/jennybc/debugging#readme), Jenny Bryan explains very well what a traceback is. In my [`.Rprofile`](https://rstats.wtf/r-startup.html#rprofile) I have
 
 ``` r
 options(
