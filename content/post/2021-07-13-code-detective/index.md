@@ -1,13 +1,13 @@
 ---
 title: "How to become a better R code detective?"
-date: '2021-07-12'
+date: '2021-07-13'
 tags:
   - package-development
   - debugging
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 355e5bc14593a0fa
+rmd_hash: 7c4352c7d5876981
 
 ---
 
