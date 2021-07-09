@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: 0fc3d75cc9460be8
+rmd_hash: a67640971e80a126
 
 ---
 
@@ -174,7 +174,7 @@ So, in a nutshell, as said by Patricia Aas, refactor to learn, *in your own loca
 
 ## Asking for help
 
-As much as solving a problem on one's own is nice, asking for help might be the solution! It is also a skill or a bunch of skills: both how and where to ask for help but also deciding when to ask for help, when it's no longer worth anyone's time to have your keeping working alone on a problem.
+As much as solving a problem on one's own is nice, asking for help might be the solution! It is also a skill or a bunch of skills: both how and where to ask for help but also deciding when to ask for help, when it's no longer worth anyone's money to have your keeping working alone on a problem.
 
 ### How to ask for help?
 
