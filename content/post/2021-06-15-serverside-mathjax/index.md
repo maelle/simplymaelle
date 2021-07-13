@@ -9,6 +9,8 @@ rmd_hash: 7a1fb4f8b1070739
 
 ---
 
+_Edit: now there is an R package for server-side MathJax rendering, [katex by Jeroen Ooms](https://ropensci.org/blog/2021/07/13/katex-release/)._
+
 Whilst I most certainly do not write LaTeX formulas on the regular anymore, I got curious about their [MathJax](https://www.mathjax.org/) rendering on websites.[^1] In brief : your website source contains LaTeX code, and the MathJax JS library (self-hosted or hosted on a CDN) transforms it into something humans can understand: some HTML with inline CSS but also some MathML for screen-reader users.[^2] As I quite like the idea of moving things from the client-side to the server-side, I started wondering whether the processing of LaTeX code could happen before an user opens a website. Searching for "server-side MathJax rendering" on the web gave a few hits. A few hits only, sure, which shows how niche the topic is, and meant reading resources was not too verwhelming. :grin: In this post I am reporting on my findings.
 
 ## Why render MathJax on the server-side
