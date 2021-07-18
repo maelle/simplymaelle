@@ -7,7 +7,7 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: c723c06e35609f5c
+rmd_hash: d8b76a2a4a0e6302
 
 ---
 
@@ -172,7 +172,7 @@ I liked seeing that as I sometimes open a Slack conversation with someone as if 
 
 Another [tip by Patricia Aas](https://patricia.no/2018/09/19/reading_other_peoples_code.html) is refactoring the code as it might improve your understanding of it. They underline that you should not contribute the results of your refactoring, especially as a first PR, as people might hate you! It's an exercise for you.
 
-That said, I remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://www.goodreads.com/book/show/3735293-clean-code) . They started with a small one, and were very polite. Since then I've seen [some bad critic of the book](https://qntm.org/clean) but these PRs made perfect sense. I can however easily imagine a big refactoring PR would not be happily received!
+That said, I remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://qntm.org/clean). That contributor started with a small PR, and were very polite. Since then I've seen [some bad critic of the book and its author and wouldn't recommend reading it](https://blog.wesleyac.com/posts/robert-martin) but these PRs made perfect sense. I can however easily imagine a big refactoring PR would not be happily received!
 
 So, in a nutshell, as said by Patricia Aas, refactor to learn, *in your own local copy or your own fork*.
 

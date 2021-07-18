@@ -205,9 +205,9 @@ Another [tip by Patricia Aas](https://patricia.no/2018/09/19/reading_other_peopl
 They underline that you should not contribute the results of your refactoring, especially as a first PR, as people might hate you!
 It's an exercise for you.
 
-That said, I remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://www.goodreads.com/book/show/3735293-clean-code) .
-They started with a small one, and were very polite.
-Since then I've seen [some bad critic of the book](https://qntm.org/clean) but these PRs made perfect sense.
+That said, I remember receiving nice PRs from someone who had just read the [Clean Code book by Robert C. Martin](https://qntm.org/clean).
+That contributor started with a small PR, and were very polite.
+Since then I've seen [some bad critic of the book and its author and wouldn't recommend reading it](https://blog.wesleyac.com/posts/robert-martin) but these PRs made perfect sense.
 I can however easily imagine a big refactoring PR would not be happily received!
 
 So, in a nutshell, as said by Patricia Aas, refactor to learn, _in your own local copy or your own fork_.
