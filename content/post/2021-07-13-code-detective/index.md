@@ -7,11 +7,13 @@ tags:
   - reprex
 slug: code-detective
 output: hugodown::hugo_document
-rmd_hash: d8b76a2a4a0e6302
+rmd_hash: 1983e5ddd07e5175
 
 ---
 
 *Huge thanks to [Hannah Frick](https://www.frick.ws/) for her useful feedback on this post! Vielen Dank!*
+
+*This post was featured on the [R Weekly podcast](https://share.fireside.fm/episode/87RSVeFz+alD0Og1X) by Eric Nantz.*
 
 When trying to fix a bug or add a feature to an R package, how do you go from viewing the code as a big messy ball of wool, to a logical diagram that you can bend to your will? In this post, I will share some resources and tips on getting better at debugging and reading code, written by someone else (or yourself but long enough ago to feel foreign!).
 
