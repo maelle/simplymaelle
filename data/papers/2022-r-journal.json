@@ -1,0 +1,9 @@
+{ 
+   "name": "rjournal2022",
+   "authors": ["M. Salmon", "K. Ram"],
+   "title": "The R Developer Community Does Have a Strong Software Engineering Culture",
+   "journal": "The R Journal",
+   "year": "2022",
+   "doi" : "10.32614/RJ-2021-110",
+   "abstract": "There is a strong software engineering culture in the R developer community. We recommend creating, updating and vetting packages as well as keeping up with community standards. We invite contributions to the rOpenSci project, where participants can gain experience that will shape their work and that of their peers."
+}
