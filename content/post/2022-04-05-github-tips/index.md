@@ -5,7 +5,7 @@ tags:
   - github
 slug: github-tips
 output: hugodown::hugo_document
-rmd_hash: f67dd9df3221dcdf
+rmd_hash: f4dfaad46ab7009c
 
 ---
 
@@ -15,7 +15,7 @@ I'm spending quite a lot of my working time on GitHub, so have taken some habits
 
 I've never actually taught git and GitHub, but I like sharing these useful links:
 
--   \[Happy Git and GitHub for the useR\] by Jenny Bryan, the STAT 545 TAs, Jim Hester. It includes a big picture section ["Why Git? Why GitHub?"](https://happygitwithr.com/big-picture.html).
+-   [Happy Git and GitHub for the useR](https://happygitwithr.com) by Jenny Bryan, the STAT 545 TAs, Jim Hester. It includes a big picture section ["Why Git? Why GitHub?"](https://happygitwithr.com/big-picture.html).
 
 -   [Reflections on 4 months of GitHub: my advice to beginners](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/) by Suzan Baert. It's pragmatic and encouraging.
 
