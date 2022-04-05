@@ -1,0 +1,43 @@
+---
+title: "8 (octo!) GitHub Tips"
+date: '2022-05-04'
+tags:
+  - github
+slug: github-tips
+output: hugodown::hugo_document
+---
+
+I'm spending quite a lot of my working time on GitHub, so have taken some habits.
+Maybe some of them can be useful to you!
+
+# 1: How to get started
+
+I've never actually taught git and GitHub, but I like sharing these useful links:
+
+* [Happy Git and GitHub for the useR] by Jenny Bryan, the STAT 545 TAs, Jim Hester. It includes a big picture section ["Why Git? Why GitHub?"](https://happygitwithr.com/big-picture.html).
+
+* [Reflections on 4 months of GitHub: my advice to beginners](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/) by Suzan Baert. It's pragmatic and encouraging.
+
+* [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159/) by Jenny Bryan.
+
+# 2: Secure your account
+
+Please use a password manager with some sort of cloud backup.
+
+Enable two factor-authentication for your GitHub account. 
+It takes a few minutes.
+Make sure you store the recovery keys into your password manager.
+Also make sure your two factor-authentication app, if that's an app, has some sort of cloud backup.
+
+If you interact with GitHub programmatically, say with the usethis package, refer to
+
+* [Managing Git(Hub) Credentials](https://usethis.r-lib.org/articles/git-credentials.html) in usethis docs;
+
+* [Managing GitHub credentials from R, difficulty level linux](https://blog.djnavarro.net/posts/2021-08-08_git-credential-helpers/) by Danielle Navarro (if you use Linux, that is!).
+
+# 3: Refine GitHub interface with... Refined GitHub
+
+[Refined GitHub](https://github.com/refined-github/refined-github) is a browser extension that adds nice features such as the default ordering of issues from most recently udpated to least recently updated.
+It's quite neat.
+
+# 4: 
