@@ -5,7 +5,7 @@ tags:
   - github
 slug: github-tips
 output: hugodown::hugo_document
-rmd_hash: 7e54651657a3fe35
+rmd_hash: f67dd9df3221dcdf
 
 ---
 
@@ -59,7 +59,7 @@ When reviewing a pull request, in comments you can make actual change suggestion
 
 # 6: Custom watch repositories
 
-Watching repositories can be very useful: a favorite package of yours, an important dependency of a project of yours, [Hacker News Daily Top 10](https://github.com/headllines/hackernews-daily/), etc.
+Watching repositories can be very useful: your own repositories, a favorite package of yours, an important dependency of a project of yours, [Hacker News Daily Top 10](https://github.com/headllines/hackernews-daily/), etc.
 
 When you watch a repository, you get notified of all issues, PRs, discussions, and also see all commits in your timeline. That last part might be a bit too much. Well, you can customize what to watch by [configuring your watch settings for an individual repository](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository=). I tend to subscribe to all issues, PRs and discussions, which I then tackle from my [notifications inbox](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/viewing-and-triaging-notifications/managing-notifications-from-your-inbox#about-your-inbox=), one repository at a time.
 

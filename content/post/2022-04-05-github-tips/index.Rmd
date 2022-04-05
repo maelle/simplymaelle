@@ -67,7 +67,7 @@ When you are on the receiving end, to [incorporate the feedback](https://docs.gi
 
 # 6: Custom watch repositories
 
-Watching repositories can be very useful: a favorite package of yours, an important dependency of a project of yours, [Hacker News Daily Top 10](https://github.com/headllines/hackernews-daily/), etc.
+Watching repositories can be very useful: your own repositories, a favorite package of yours, an important dependency of a project of yours, [Hacker News Daily Top 10](https://github.com/headllines/hackernews-daily/), etc.
 
 When you watch a repository, you get notified of all issues, PRs, discussions, and also see all commits in your timeline.
 That last part might be a bit too much.
