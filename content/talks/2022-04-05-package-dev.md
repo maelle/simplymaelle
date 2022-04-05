@@ -1,6 +1,6 @@
 ---
 title: 'Become an R Package Developer!'
-date: '2022-05-04'
+date: '2022-04-04'
 event: "R-Ladies Johannesburg"
 event_url: "https://www.meetup.com/rladies-johannesburg/events/284974968/"
 event_type: "meetup"
