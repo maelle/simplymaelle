@@ -5,7 +5,7 @@ tags:
   - github
 slug: github-tips
 output: hugodown::hugo_document
-rmd_hash: fbe11411db764def
+rmd_hash: 7e54651657a3fe35
 
 ---
 
@@ -47,13 +47,13 @@ Furthermore,
 
 -   Make public the [organization memberships](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership) you want to show.
 
--   Add a [profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) (yes, I still have not done this myself).
+-   Add a [profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) (yes, I have still not done this myself).
 
 # 5: Handle PR states and suggestions with available features
 
 You can make [*draft* pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests=) to indicate they are not ready yet. You can revert a pull request to the draft state. I find this most useful.
 
-In the first comment of a pull request, if you add a line [`Fix #42`](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword=) (or some other recognized keyzord), merging the PR will close issue 42. From the issue 42 itself, one will be able to see the PR is "linked" to it.
+In the first comment of a pull request, if you add a line [`Fix #42`](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword=) (or some other [recognized keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword=)), merging the PR will close issue 42. From the issue 42 itself, one will be able to see the PR is "linked" to it.
 
 When reviewing a pull request, in comments you can make actual change suggestions, ["commit suggestions"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request) that the receiver can accept with a click. Using this instead of writing something à la `tipo -> typo` is quite handy. When you are on the receiving end, to [incorporate the feedback](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request) you can either accept each suggestion individually or batch-accept them, but only from the files tab of the PR, not the main tab.
 
