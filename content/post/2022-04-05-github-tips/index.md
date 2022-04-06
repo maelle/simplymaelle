@@ -5,7 +5,7 @@ tags:
   - github
 slug: github-tips
 output: hugodown::hugo_document
-rmd_hash: f4dfaad46ab7009c
+rmd_hash: a6cbf8983f231df6
 
 ---
 
@@ -45,7 +45,7 @@ Furthermore,
 
 -   [Pin your most important repositories](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile). They do not have to be *your* repositories, actually, they only need to be repositories you contributed to.
 
--   Make public the [organization memberships](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership) you want to show.
+-   Publicize the [organization memberships](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership) you want to show.
 
 -   Add a [profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) (yes, I have still not done this myself).
 
@@ -67,9 +67,9 @@ When you watch a repository, you get notified of all issues, PRs, discussions, a
 
 At the very bottom of your GitHub timeline there is a link to your RSS feed, "Subscribe to your news feed" (it has a token in it so do not publicize it!). I have added mine to Feedly. Even if [GitHub has recently improved the timeline interface](https://github.blog/2022-03-22-improving-your-github-feed/), I like it to be grouped with other tech RSS feeds I subscribe to. That might change, though.
 
-# 8: Subscribe to GitHub blog
+# 8: Subscribe to the GitHub blog
 
-I've also added GitHub blog to Feedly to be aware of new features in a less random way than on Twitter (I'm actively reducing my dependency on Twitter for crucial information).
+I've also added the [GitHub blog](https://github.blog/) to Feedly to be aware of new features in a less random way than on Twitter (I'm actively reducing my dependency on Twitter for crucial information).
 
 # Conclusion
 
