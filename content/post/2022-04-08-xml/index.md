@@ -7,7 +7,7 @@ tags:
   - XPath
 slug: xml-xpath
 output: hugodown::hugo_document
-rmd_hash: b318ca26c16ba472
+rmd_hash: f0e93139f35ff30e
 
 ---
 
@@ -68,7 +68,7 @@ Knowing XPath, or even knowing it exists, is really empowering. In the rest of t
 
 At the beginning of this blog I liked extracting data from websites. I did that with [regular expressions](/2017/03/07/blinddates/). Now I know better and would [wrangle HTML as HTML](/2021/01/15/beanie-baby/). Goodbye, [`stringr::str_detect()`](https://stringr.tidyverse.org/reference/str_detect.html), hello, [`xml2::xml_find_all()`](http://xml2.r-lib.org/reference/xml_find_all.html).
 
-A package that's especially useful for web scraping is [rvest by Hadley Wickham](https://rvest.tidyverse.org/).
+A package that's especially useful for web scraping is [rvest by Hadley Wickham](https://rvest.tidyverse.org/). rvest builds upon selectr, and will write XPath for you.
 
 ### pkgdown
 

@@ -67,6 +67,7 @@ Now I know better and would [wrangle HTML as HTML](/2021/01/15/beanie-baby/).
 Goodbye, `stringr::str_detect()`, hello, `xml2::xml_find_all()`.
 
 A package that's especially useful for web scraping is [rvest by Hadley Wickham](https://rvest.tidyverse.org/).
+rvest builds upon selectr, and will write XPath for you.
 
 ### pkgdown
 
