@@ -7,7 +7,7 @@ tags:
   - XPath
 slug: xml-xpath
 output: hugodown::hugo_document
-rmd_hash: a60135128ff94f52
+rmd_hash: 04da9e49ce8671d4
 
 ---
 
@@ -143,7 +143,7 @@ To me, having an XML tree at hand makes it easier to think of, and work with, an
 
 ### XPath for all the things
 
-A tool that I haven't used, but that sounds intriguing, is [rpath by Gabriel Becker](https://twitter.com/groundwalkergmb/status/1502095683788042240), an *R package implementing xpath-like functionality for querying R objects *.
+A tool that I haven't used, but that sounds intriguing, is [rpath by Gabriel Becker](https://twitter.com/groundwalkergmb/status/1502095683788042240), an *R package implementing xpath-like functionality for querying R objects*.
 
 ### Data documentation with EML
 

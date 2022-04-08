@@ -120,7 +120,7 @@ To me, having an XML tree at hand makes it easier to think of, and work with, an
 
 ### XPath for all the things
 
-A tool that I haven't used, but that sounds intriguing, is [rpath by Gabriel Becker](https://twitter.com/groundwalkergmb/status/1502095683788042240), an _R package implementing xpath-like functionality for querying R objects _.
+A tool that I haven't used, but that sounds intriguing, is [rpath by Gabriel Becker](https://twitter.com/groundwalkergmb/status/1502095683788042240), an _R package implementing xpath-like functionality for querying R objects_.
 
 ### Data documentation with EML
 
