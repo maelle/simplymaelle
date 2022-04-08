@@ -7,7 +7,7 @@ tags:
   - XPath
 slug: xml-xpath
 output: hugodown::hugo_document
-rmd_hash: f0e93139f35ff30e
+rmd_hash: a60135128ff94f52
 
 ---
 
@@ -58,7 +58,7 @@ Where to learn XPath? Two good websites to get started are
 
 A primary skill to learn is the name of elements, e.g. nodes, attributes, which will help write type better keywords into search engines when trying to figure out a query. :wink:
 
-Note that if you are handling HTML, you might enjoy [selectr by Simon Potter](https://sjp.co.nz/projects/selectr/) that creates XPath filters based on CSS selectors
+Note that if you are handling HTML, you might enjoy [selectr by Simon Potter](https://sjp.co.nz/projects/selectr/) that creates XPath filters based on CSS selectors.
 
 Knowing XPath, or even knowing it exists, is really empowering. In the rest of this post, I'll highlight cases where this is useful.
 
