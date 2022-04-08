@@ -1,17 +1,19 @@
 ---
 title: "Why I like XPath, XML and HTML"
-date: '2022-04-07'
+date: '2022-04-08'
 tags:
   - XML
   - xml2
   - XPath
 slug: xml-xpath
 output: hugodown::hugo_document
-rmd_hash: 894180d188cc2ae1
+rmd_hash: b318ca26c16ba472
 
 ---
 
-One of my favorite tool is XPath, the query language for exploring XML and HTML trees. In this post, I will highlight a few use cases and hope to convince you that it's an awesome thing to know about and play with.
+One of my favorite tool is XPath, the query language for exploring XML and HTML trees. In this post, I will highlight a few use cases of this ["angle-bracket crunching tool"](https://github.com/hrbrmstr/htmltidy#htmltidy=) and hope to convince you that it's an awesome thing to know about and play with.
+
+*Many thanks to [Christophe Dervieux](https://cderv.rbind.io/) for useful feedback on this post! Mille mercis !*
 
 ## Brief intro to XPath in R
 
@@ -23,9 +25,9 @@ Say I have some XML,
 
 </div>
 
-I'm using xml2, by Hadley Wickham, Jim Hester and Jeroen Ooms. This package is recommended over the XML package by e.g. the [rOpenSci dev guide](https://devguide.ropensci.org/building.html#recommended-scaffolding).
+I'm using [xml2](https://xml2.r-lib.org/), by Hadley Wickham, Jim Hester and Jeroen Ooms. This package is recommended over the XML package by e.g. the [rOpenSci dev guide](https://devguide.ropensci.org/building.html#recommended-scaffolding).
 
-With XPath I can query the thing element:
+With XPath I can query the "thing" element:
 
 <div class="highlight">
 
@@ -47,15 +49,26 @@ I can extract its content via [`xml2::xml_text()`](http://xml2.r-lib.org/referen
 
 I could also [replace the element](https://blog.r-hub.io/2020/01/22/mutable-api/#exposing-the-c-api-in-xml2).
 
-Now, that was an especially simple XPath query. XPath's strength is to allow you to really take advantage of the structure of the XML or HTML tree. With the help of a search engine (or without), you can extract nodes based on their attributes, on their parents, etc. Note that if you are handling HTML, you might enjoy [selectr by Simon Potter](https://sjp.co.nz/projects/selectr/) that creates XPath filters based on CSS selectors.
+Now, that was an especially simple XPath query. XPath's strength is to allow you to really take advantage of the structure of the XML or HTML tree. You can extract nodes based on their attributes, on their parents, on their siblings, etc.
 
-It's really empowering. In the rest of this post, I'll highlight places where this is useful.
+Where to learn XPath? Two good websites to get started are
+
+-   [Mozilla Developer Network's intro to XPath](https://developer.mozilla.org/en-US/docs/Web/XPath);
+-   [w3schools' XPath tutorial](https://www.w3schools.com/xml/xpath_intro.asp).
+
+A primary skill to learn is the name of elements, e.g. nodes, attributes, which will help write type better keywords into search engines when trying to figure out a query. :wink:
+
+Note that if you are handling HTML, you might enjoy [selectr by Simon Potter](https://sjp.co.nz/projects/selectr/) that creates XPath filters based on CSS selectors
+
+Knowing XPath, or even knowing it exists, is really empowering. In the rest of this post, I'll highlight cases where this is useful.
 
 ## When life gives you XML or HTML
 
 ### Web scraping
 
 At the beginning of this blog I liked extracting data from websites. I did that with [regular expressions](/2017/03/07/blinddates/). Now I know better and would [wrangle HTML as HTML](/2021/01/15/beanie-baby/). Goodbye, [`stringr::str_detect()`](https://stringr.tidyverse.org/reference/str_detect.html), hello, [`xml2::xml_find_all()`](http://xml2.r-lib.org/reference/xml_find_all.html).
+
+A package that's especially useful for web scraping is [rvest by Hadley Wickham](https://rvest.tidyverse.org/).
 
 ### pkgdown
 
@@ -128,11 +141,19 @@ The way we translate the code is to transform it to an XML tree via [Gábor Csá
 
 To me, having an XML tree at hand makes it easier to think of, and work with, an "abstract syntax tree".
 
+### XPath for all the things
+
+A tool that I haven't used, but that sounds intriguing, is [rpath by Gabriel Becker](https://twitter.com/groundwalkergmb/status/1502095683788042240), an *R package implementing xpath-like functionality for querying R objects *.
+
 ### Data documentation with EML
 
-No matter what format your data is, you can create its metadata using the [EML package](https://docs.ropensci.org/EML/) that creates XML metadata following the Ecological Metadata Language. Sure, you might prefer using [dataspice](https://docs.ropensci.org/dataspice/) (and get JSON).
+No matter what format your data is, you can create its metadata using the [EML package](https://docs.ropensci.org/EML/) maintained by Carl Boettiger that creates XML metadata following the Ecological Metadata Language. Sure, you might prefer using [dataspice](https://docs.ropensci.org/dataspice/) maintained by Bryce Mecum (and get JSON).
+
+## When you are creating XML or HTML
+
+If the goal of your code or package is to produce XML or HTML, knowing XPath will help you write unit tests (that you might want to complement with [snapshot unit tests](https://testthat.r-lib.org/articles/snapshotting.html)).
 
 ## Conclusion
 
-In this post I've explained why I find XPath, XML, HTML so useful. Applications are endless, not limited to the examples from this post: web scraping, pkgdown tweaks, Markdown manipulation, code tree manipulation...
+In this post I've explained why I find XPath, XML, HTML so useful. Applications are endless, not limited to the examples from this post: web scraping, HTML tweaks, Markdown manipulation, code tree manipulation...
 
