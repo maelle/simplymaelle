@@ -6,11 +6,11 @@ tags:
   - rss
 slug: rss-feeds
 output: hugodown::hugo_document
-rmd_hash: 677c37771c4ec35f
+rmd_hash: 72a991578a5967cf
 
 ---
 
-I found an excuse to blog about XML again! Yes, RSS feeds are in practice XML, but for most people, that's not why they are cool. An RSS (*really simple syndication*) feed is metadata about all, or the most recent posts published by a website: publication date, content or summary, etc. Much handier in my opinion to use that to get updates among Twitter "noise".
+I found an excuse to blog about XML [again](/2022/04/08/xml-xpath/)! Yes, RSS feeds are in practice XML, but for most people, that's not why they are cool. An RSS (*really simple syndication*) feed is metadata about all, or the most recent posts published by a website: publication date, content or summary, etc. Much handier in my opinion to use that to get updates among Twitter "noise".
 
 ## RSS feed example
 

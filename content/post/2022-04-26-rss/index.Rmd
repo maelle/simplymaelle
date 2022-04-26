@@ -8,7 +8,7 @@ slug: rss-feeds
 output: hugodown::hugo_document
 ---
 
-I found an excuse to blog about XML again!
+I found an excuse to blog about XML [again](/2022/04/08/xml-xpath/)!
 Yes, RSS feeds are in practice XML, but for most people, that's not why they are cool.
 An RSS (_really simple syndication_) feed is metadata about all, or the most recent posts published by a website: publication date, content or summary, etc.
 Much handier in my opinion to use that to get updates among Twitter "noise".
