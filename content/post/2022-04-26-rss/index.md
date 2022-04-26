@@ -14,7 +14,7 @@ I found an excuse to blog about XML [again](/2022/04/08/xml-xpath/)! Yes, RSS fe
 
 ## RSS feed example
 
-Have a look at the RSS feed for this blog over at <https://masalmon.eu/index.xml>
+Have a look at the RSS feed for this blog over at <https://masalmon.eu/post/index.xml>
 
 ## How to consume RSS
 
