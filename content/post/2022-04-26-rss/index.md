@@ -1,0 +1,50 @@
+---
+title: "RSS, fantastic tool for keeping up-to-date"
+date: '2022-04-26'
+tags:
+  - XML
+  - rss
+slug: rss-feeds
+output: hugodown::hugo_document
+rmd_hash: 677c37771c4ec35f
+
+---
+
+I found an excuse to blog about XML again! Yes, RSS feeds are in practice XML, but for most people, that's not why they are cool. An RSS (*really simple syndication*) feed is metadata about all, or the most recent posts published by a website: publication date, content or summary, etc. Much handier in my opinion to use that to get updates among Twitter "noise".
+
+## RSS feed example
+
+Have a look at the RSS feed for this blog over at <https://masalmon.eu/index.xml>
+
+## How to consume RSS
+
+Take a list of all your favorite websites whose updates you want to follow. Then you can syndicate all of them to some tool that will regularly look for new posts in the feed and present them to you, potentially with some bells and whistles like letting you mark them as "read" or "to read later".
+
+That tool could be [Feedly](https://feedly.com/). Note that Feedly will find RSS feed addresses directly based on an URL. I'm quite happy with it.
+
+It could also be a local Hugo website you'd build as Hugo has support for XML hence RSS since version 0.90 (see <https://github.com/gohugoio/hugo/releases/tag/v0.90.0>). I can imagine one would store addresses to RSS feeds in a JSON file, then have a template that fetch all of them and then transform them. Although, to be honest, it'd seem more natural to me to use some sort of R pipeline. Both ideas would be fun exercises. :wink:
+
+Beyond the tool used, subscribing to RSS feeds is in my opinion very empowering. Instead of following an organization or person on say Twitter, I much prefer making sure I get notified of their important stuff via a feed (or a [newsletter](https://ropensci.org/blog/2021/06/24/news-meta/)!). Obviously it does not have the social aspect of social media but you can still share and discuss posts ["somewhere"](https://r-way.netlify.app/#/38).
+
+Last but not least, as mentioned in my [previous post about GitHub](/2022/04/05/github-tips/#7-add-your-github-timeline-to-your-rss-feed-reader), you can subscribe to your own GitHub timeline.
+
+## How to produce RSS
+
+If you maintain some sort of blog, please make sure it produces an RSS feed! Type the name of your website generator and "RSS" into a search engine. E.g. here are the docs for [RSS feeds for Quarto blogs](https://quarto.org/docs/websites/website-blog.html#rss-feed).
+
+Your website generator might let you create distinct RSS feeds for different categories or tags which might useful for your different audiences.
+
+If you created your RSS feed yourself, e.g. by tweaking a Hugo template quite a lot, validate it with this [online validator](https://validator.w3.org/feed/).
+
+## How to broadcast RSS
+
+If your website has an RSS feed, aggregators, not only individuals, can subscribe to it!
+
+-   You could try and syndicate your blog on [R bloggers](https://www.r-bloggers.com/).
+-   At the moment [R Weekly](https://rweekly.org/) no longer uses RSS feeds but it'll probably soon use them again.
+-   There might be some sort of aggregators for some other communities you're part of?
+
+## Conclusion
+
+In this post I briefly explained how to consume and produce RSS feeds. Note that there are also JSON feeds :sweat_smile:, that there are newsletter tools for letting people subscribe to your updates by email, and that services such as Feedly have paid features that create feeds for websites that do not produce one, so that you can follow them. RSS feeds are not going away right now, and are regularly the topic of trending discussions on Hacker News (together with some trendy phrases like "slow web"). So it's not that uncool to be [part of the group of old fashion RSSers](https://twitter.com/d_olivaw/status/1518584526188027904), right? :sunglasses:
+
