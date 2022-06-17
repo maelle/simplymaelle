@@ -1,9 +1,13 @@
 .header {
-     color: #983A2E;
+     color: #912B5B;
+ }
+ 
+.header h2 {
+     color: #777;
  }
 
 #menu {
-    background: #983A2E;
+    background: #912B5B;
 }
 
  .small-print small {
@@ -39,7 +43,7 @@
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #983A2E;
+            background: #912B5B;
         }
 
 pre {
