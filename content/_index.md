@@ -4,7 +4,10 @@ sidemenu = "true"
 description = "R(esearch) Software Engineer & Blogger based in Nancy, France"
 +++
 
-<img src="../img/barbie_office.jpg" style="display: block;margin-left: auto;margin-right: auto" alt="maelle" width="300">
+<figure>
+<img src="../img/JulieNourySoyer_0001.jpg" style="display: block;margin-left: auto;margin-right: auto" alt="maelle on the verge of laughing" width="300">
+<figcaption>©Photo <a href="https://www.photographe-julienourysoyer.com">Julie Noury Soyer</a></figcaption>
+</figure>
 
 {{< about >}}
 
