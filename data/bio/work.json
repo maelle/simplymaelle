@@ -1,4 +1,11 @@
 [{
+   "description": "Part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/)",
+   "start": "February 2018"
+},{
+   "description": "Part-time __software engineer__ for [cynkra](https://cynkra.com/about/)",
+   "start": "June 2022"
+},
+  {
    "description": "Improvements to the book ['HTTP testing in R'](https://github.com/ropensci-books/http-testing),  [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects)",
    "start": "September 2020",
    "end": "December 2020"
@@ -10,9 +17,6 @@
    "description": "In charge of the project [_Catalyzing R-hub adoption through R package developer advocacy_](https://docs.r-hub.io/) [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects)",
    "start": "February 2019",
    "end": "October 2020"
-},{
-   "description": "Part-time __research software engineer__ [for rOpenSci](https://ropensci.org/blog/2018/01/29/rse-ma%C3%ABlle-salmon/)",
-   "start": "February 2018"
 },{
    "description": "Various R development/training contracts. Examples: [R-hub blog](https://blog.r-hub.io), [HTTP testing in R book](https://books.ropensci.org/http-testing)",
    "start": "February 2018"
