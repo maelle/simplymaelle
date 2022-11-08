@@ -16,6 +16,10 @@
       <a class="pure-menu-link" href="https://twitter.com/{{ . }}" rel="me" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
     </li>
     {{ end }}
+    
+     <li class="pure-menu-item">
+    <a  class="pure-menu-link" rel="me" href="https://mastodon.social/@maelle"><i class="fab fa-mastodon"></i>Mastodon</a>
+    </li>
 
     {{ with .Site.Social.gnusocial }}
     <li class="pure-menu-item">
@@ -204,12 +208,6 @@
     {{ with .Site.Social.orcid }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="http://orcid.org/{{ . }}" target="_blank"><i class="fab fa-orcid"></i>ORCID</a>
-    </li>
-    {{ end }}
-    
-    {{ with .Site.Social.researchgate }}
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://www.researchgate.net/profile/{{ . }}" target="_blank"><i class="fa fa-flask fa-fw"></i>ResearchGate</a>
     </li>
     {{ end }}
 
