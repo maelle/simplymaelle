@@ -149,14 +149,19 @@ If you intend to leave GitHub for a while,
 ## Procrastinate on your profile
 
 A nice touch would be to make your [GitHub profile](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/about-your-profile) informative, setting a picture, description, and potentially a [GitHub README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-If you have GitHub repositories you are proud of, pin them to your profile.
-Info
-README
-Pinned repositories
+If you have GitHub repositories you are proud of, [pin them](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile) to your profile.
 
-Schedule training sessions?
-Not necessarily with another trainer, potentially just yourself!
-Experimenting with branches and pull requests in your own toy repository, or your own real repository.
-Make a first PR to a repo owned by someone else.
+## Schedule training sessions?
 
+Your work on checking your git/GitHub situation in RStudio, credentials and such will make your next restart easier.
+However practice will also help a lot!
 
+Beside trying to get a bit more git into your daily work, you might want to schedule some sessions where you experiment with branches and pull requests in a toy or real repository you own, where you make you first pull request to an external repository.
+You could run these sessions with other (false) beginners!
+
+## Conclusion
+
+First of all, it is awesome you want to use git and GitHub (or GitLab or something else for that matter)! 
+It is not an easy toolset to learn, so no wonder you can get frustated.
+Hopefully the tips in this post, which I'd summarize as "Remember happygitwithr.com, usethis, Openscapes illustrated series; Be patient with yourself", can help a bit.
+Good luck!
