@@ -6,7 +6,7 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: c0ae6cc576e99f6a
+rmd_hash: bc0630ff4cd9b528
 
 ---
 
@@ -41,6 +41,8 @@ Why are you doing this anyway? :sweat_smile: Good reads are the ["Big picture" s
 ## Check your R/GitHub situation
 
 In this I assume you have R and RStudio IDE installed. One problem at a time. :smile_cat:
+
+[Tip by Hao Ye](https://mastodon.social/@hye@glammr.us/109676766952787983): first [setup R so that it loads usethis at each session start](https://usethis.r-lib.org/articles/usethis-setup.html), so you might skip writing `usethis::` in front of each usethis function.
 
 Let's see if you have git correctly installed and hooked with GitHub, and remediate if not. Run [`usethis::git_sitrep()`](https://usethis.r-lib.org/reference/git_sitrep.html). Also run [`usethis::gh_token_help()`](https://usethis.r-lib.org/reference/github-token.html).
 

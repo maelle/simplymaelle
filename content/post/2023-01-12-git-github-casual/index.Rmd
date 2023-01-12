@@ -51,6 +51,8 @@ Good reads are the ["Big picture" section of happygitwithr](https://happygitwith
 In this I assume you have R and RStudio IDE installed.
 One problem at a time. :smile_cat:
 
+[Tip by Hao Ye](https://mastodon.social/@hye@glammr.us/109676766952787983): first [setup R so that it loads usethis at each session start](https://usethis.r-lib.org/articles/usethis-setup.html), so you might skip writing `usethis::` in front of each usethis function.
+
 Let's see if you have git correctly installed and hooked with GitHub, and remediate if not.
 Run [`usethis::git_sitrep()`](https://usethis.r-lib.org/reference/git_sitrep.html).
 Also run [`usethis::gh_token_help()`](https://usethis.r-lib.org/reference/github-token.html).
@@ -93,6 +95,7 @@ Once you have your project folder set up with `create_project()` for instance,
 ## Upload your project to GitHub
 
 ### First, where on GitHub do you want to upload your project?
+
 Your personal account or an organization?
 
 If you wish to upload it to an organization, be aware that it might fail if you don't have the [correct access level](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
