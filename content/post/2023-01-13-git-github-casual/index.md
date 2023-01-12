@@ -6,7 +6,7 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: 89fad4ec9c834151
+rmd_hash: 3cfd1331140b2c6a
 
 ---
 
@@ -103,7 +103,7 @@ If you feel icky submitting ugly commits to your pristine repo, think about the 
 
 -   create one with [`gert::git_branch_create()`](https://docs.ropensci.org/gert/reference/git_branch.html),
 -   experiment and make the ugly commits in there until the whole set of changes is good to go,
--   then open a "pull request" on GitHub with usethis helpers,
+-   then open a "pull request" on GitHub with [usethis helpers](https://usethis.r-lib.org/articles/pr-functions.html),
 -   then you can "squash and merge it" which means the whole thing becomes one single beautiful commit.
 
 ## Keep track of your TODOS

@@ -126,7 +126,7 @@ You
 
 - create one with [`gert::git_branch_create()`](https://docs.ropensci.org/gert/reference/git_branch.html), 
 - experiment and make the ugly commits in there until the whole set of changes is good to go, 
-- then open a "pull request" on GitHub with usethis helpers, 
+- then open a "pull request" on GitHub with [usethis helpers](https://usethis.r-lib.org/articles/pr-functions.html), 
 - then you can "squash and merge it" which means the whole thing becomes one single beautiful commit.
 
 ## Keep track of your TODOS
