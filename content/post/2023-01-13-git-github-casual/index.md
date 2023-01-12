@@ -6,7 +6,7 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: 6c18c23004e42c95
+rmd_hash: 89fad4ec9c834151
 
 ---
 
@@ -93,7 +93,7 @@ Now run `usethis::use_github(organisation = "your-account-username-or-an-organiz
 
 ## Make commits as you work
 
-Ideally, make a commit everytime you make a substantial, coherent set of changes. To encourage you, you could fill a jar of marbles, one marble per commit?
+Ideally, make a [commit](https://happygitwithr.com/git-basics.html#commits-diffs-and-tags) everytime you make a substantial, coherent set of changes. To encourage you, you could fill a jar of marbles, one marble per commit?
 
 Realistically, at least make a commit every time you take a break, especially when leaving at the end of your working session.
 
@@ -110,9 +110,9 @@ If you feel icky submitting ugly commits to your pristine repo, think about the 
 
 Since you are working on GitHub, you could use the [issue tracker](https://docs.github.com/en/issues) of your repository to write down ideas! You can create labels, milestones (so you could procrastinate a lot here :sweat_smile:).
 
-## Put the "Closed" shield before you leave
+## Put the "Closed" sign before you leave
 
-Have you done your last commit, last push and opened your last TODO issue?
+Have you done your last commit, last push and opened your last TODO issue? Have you looked over the history of what you did today and earlier in your GitHub repository?
 
 If you intend to leave GitHub for a while,
 

@@ -134,9 +134,10 @@ You
 Since you are working on GitHub, you could use the [issue tracker](https://docs.github.com/en/issues) of your repository to write down ideas!
 You can create labels, milestones (so you could procrastinate a lot here :sweat_smile:).
 
-## Put the “Closed” shield before you leave
+## Put the “Closed” sign before you leave
 
 Have you done your last commit, last push and opened your last TODO issue?
+Have you looked over the history of what you did today and earlier in your GitHub repository?
 
 If you intend to leave GitHub for a while,
 
