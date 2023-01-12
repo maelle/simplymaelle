@@ -114,7 +114,7 @@ Now run `usethis::use_github(organisation = "your-account-username-or-an-organiz
 
 ## Make commits as you work
 
-Ideally, make a commit everytime you make a substantial, coherent set of changes.
+Ideally, make a [commit](https://happygitwithr.com/git-basics.html#commits-diffs-and-tags) everytime you make a substantial, coherent set of changes.
 To encourage you, you could fill a jar of marbles, one marble per commit?
 
 Realistically, at least make a commit every time you take a break, especially when leaving at the end of your working session.
