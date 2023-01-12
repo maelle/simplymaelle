@@ -167,3 +167,8 @@ First of all, it is awesome you want to use git and GitHub (or GitLab or somethi
 It is not an easy toolset to learn, so no wonder you can get frustated.
 Hopefully the tips in this post, which I'd summarize as "Remember happygitwithr.com, usethis, Openscapes illustrated series; Be patient with yourself", can help a bit.
 Good luck!
+
+## PS: improve your tooling?
+
+- Tip by Robert M Flight: [find a diff viewer you like](https://mastodon.social/@rmflight/109676738327559708).
+- Tip by Dave Braze: [experiment with other IDEs, use magit](https://mastodon.social/@davidbraze@mstdn.social/109676715427221572)
