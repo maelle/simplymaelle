@@ -116,9 +116,7 @@ That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/e
 
 ## Browse code by others
 
-The life-hack below by Julia Silge for fixing Travis CI builds[^1], looking at other people's configuration files, applies to any code endeavour.
-
-{{< tweet 1205183124868681728 >}}
+The life-hack [now deleted] by Julia Silge for fixing Travis CI builds[^1], looking at other people's configuration files, applies to any code endeavour.
 
 How to find good examples?
 

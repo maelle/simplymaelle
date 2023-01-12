@@ -1,12 +1,12 @@
 ---
 title: "git and GitHub in R for the casual user"
-date: '2023-01-13'
+date: '2023-01-12'
 tags:
   - git
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: 8d73a7e5cbb34efd
+rmd_hash: 2a579be94b0da47b
 
 ---
 
@@ -42,7 +42,7 @@ Why are you doing this anyway? :sweat_smile: Good reads are the ["Big picture" s
 
 In this I assume you have R and RStudio IDE installed. One problem at a time. :smile_cat:
 
-Let's see if you have git correctly installed and hooked with GitHub, and remediate if not. Run [`usethis::git_sitrep()`](https://usethis.r-lib.org/reference/git_sitrep.html). Also run [`usethis::gh_token_help()`](https://usethis.r-lib.org/reference/github-token.html). Do not be surprised if your tokens expired since the last time you used GitHub from R. When re-creating
+Let's see if you have git correctly installed and hooked with GitHub, and remediate if not. Run [`usethis::git_sitrep()`](https://usethis.r-lib.org/reference/git_sitrep.html). Also run [`usethis::gh_token_help()`](https://usethis.r-lib.org/reference/github-token.html).
 
 You might also want to run the whole [usethis article about git and gitHub credentials](https://usethis.r-lib.org/articles/git-credentials.html). On Linux, you might need [Managing GitHub credentials from R, difficulty level linux](https://blog.djnavarro.net/posts/2021-08-08_git-credential-helpers/) by Danielle Navarro.
 
@@ -68,7 +68,10 @@ Did it work? If not, turn to the docs, a search engine and your support network.
 
 ## Initiate your project right
 
-Once you have your project folder set up with `create_project()` for instance, \* Initiate git usage with [`usethis::use_git()`](https://usethis.r-lib.org/reference/use_git.html). \* Make sure `.gitignore` is correct: is there for instance a gigantic data file you work with locally but that you do not wish to commit to git, lest it is too heavy for git or GitHub? List it in `.gitignore`. You can use [`usethis::use_git_ignore()`](https://usethis.r-lib.org/reference/use_git_ignore.html) for that.
+Once you have your project folder set up with `create_project()` for instance,
+
+-   Initiate git usage with [`usethis::use_git()`](https://usethis.r-lib.org/reference/use_git.html).
+-   Make sure `.gitignore` is correct: is there for instance a gigantic data file you work with locally but that you do not wish to commit to git, lest it is too heavy for git or GitHub? List it in `.gitignore`. You can use [`usethis::use_git_ignore()`](https://usethis.r-lib.org/reference/use_git_ignore.html) for that.
 
 ## Upload your project to GitHub
 
@@ -78,7 +81,7 @@ Your personal account or an organization?
 
 If you wish to upload it to an organization, be aware that it might fail if you don't have the [correct access level](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization). In some GitHub organizations any member can create a repository, in others only owners can. Contact an organization owner if needed.
 
-You might want to *create* a GitHub organization for your project. Even with a single project in it, the big advantage is that you can better give access to your project to collaborators, with more granularity than for a repository hosted in a personal account.
+You might want to [*create* a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) for your project. Even with a single project in it, the big advantage is that you can better give access to your project to collaborators, with more granularity than for a repository hosted in a personal account.
 
 Organization or individual account? Why create an organization?
 
