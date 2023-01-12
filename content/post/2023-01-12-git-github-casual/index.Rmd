@@ -106,11 +106,12 @@ Even with a single project in it, the big advantage is that you can better give 
 
 Do you want your repository to be public or private?
 Sometimes the choice is obvious, for instance your project is top secret or you really don't want to share it as is right now.
-Private repositories have a few less features than public repositories (for instance draft pull requests) based on your GitHub subscription.
+Private repositories have a few less features than public repositories (for instance draft pull requests) depending on your GitHub subscription.
 
 ### `use_github()`
 
 Now run `usethis::use_github(organisation = "your-account-username-or-an-organization", private = TRUE)` with the correct arguments.
+After this you should see your project in a GitHub repository! :tada:
 
 ## Make commits as you work
 

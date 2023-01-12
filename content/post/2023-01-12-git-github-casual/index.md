@@ -6,7 +6,7 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: 3cfd1331140b2c6a
+rmd_hash: c0ae6cc576e99f6a
 
 ---
 
@@ -85,11 +85,11 @@ You might want to [*create* a GitHub organization](https://docs.github.com/en/or
 
 ### Private or public?
 
-Do you want your repository to be public or private? Sometimes the choice is obvious, for instance your project is top secret or you really don't want to share it as is right now. Private repositories have a few less features than public repositories (for instance draft pull requests) based on your GitHub subscription.
+Do you want your repository to be public or private? Sometimes the choice is obvious, for instance your project is top secret or you really don't want to share it as is right now. Private repositories have a few less features than public repositories (for instance draft pull requests) depending on your GitHub subscription.
 
 ### `use_github()`
 
-Now run `usethis::use_github(organisation = "your-account-username-or-an-organization", private = TRUE)` with the correct arguments.
+Now run `usethis::use_github(organisation = "your-account-username-or-an-organization", private = TRUE)` with the correct arguments. After this you should see your project in a GitHub repository! :tada:
 
 ## Make commits as you work
 
