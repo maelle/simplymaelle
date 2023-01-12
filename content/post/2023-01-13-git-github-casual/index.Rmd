@@ -102,8 +102,6 @@ Contact an organization owner if needed.
 You might want to [_create_ a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) for your project.
 Even with a single project in it, the big advantage is that you can better give access to your project to collaborators, with more granularity than for a repository hosted in a personal account.
 
-Organization or individual account? Why create an organization?
-
 ### Private or public?
 
 Do you want your repository to be public or private?

@@ -6,7 +6,7 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: 2a579be94b0da47b
+rmd_hash: 6c18c23004e42c95
 
 ---
 
@@ -82,8 +82,6 @@ Your personal account or an organization?
 If you wish to upload it to an organization, be aware that it might fail if you don't have the [correct access level](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization). In some GitHub organizations any member can create a repository, in others only owners can. Contact an organization owner if needed.
 
 You might want to [*create* a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) for your project. Even with a single project in it, the big advantage is that you can better give access to your project to collaborators, with more granularity than for a repository hosted in a personal account.
-
-Organization or individual account? Why create an organization?
 
 ### Private or public?
 
