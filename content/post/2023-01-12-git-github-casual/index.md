@@ -6,13 +6,15 @@ tags:
   - GitHub
 slug: git-github-casual
 output: hugodown::hugo_document
-rmd_hash: bc0630ff4cd9b528
+rmd_hash: b32c0e87e795fff3
 
 ---
 
 If you've been taught git and GitHub but practice so rarely that you're discouraged, what should you do to re-start more easily? Let's imagine you have to, or really want to, use git and GitHub for your next analysis project. Here's what I would recommend...
 
 *I assume you already own a GitHub account. If not, refer to [happygitwithr guidance](https://happygitwithr.com/github-acct.html).*
+
+*Thanks to the people who shared recommendations on Mastodon, whose names are acknowledged in the rest of the post!*
 
 ## Prepare your tissues...
 
@@ -38,7 +40,13 @@ Now if you notice you've been missing important notifications, try to either com
 
 Why are you doing this anyway? :sweat_smile: Good reads are the ["Big picture" section of happygitwithr](https://happygitwithr.com/big-picture.html) (by Jenny Bryan and collaborators) and the [Openscapes GitHub illustrated series](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/) by Allison Horst and Julie Lowndes.
 
+## Decide whether to use GitHub Desktop
+
+After I first shared my post on Mastodon, several people ([Robert M Flight](https://mastodon.social/@rmflight/109676738327559708), [Steven P Sanderson](https://mastodon.social/@stevensanderson@mstdn.social/109677107513778953), [Jim Gardner](https://mastodon.social/@jimgar@fosstodon.org/109678458557655706), [Francisco Rodriguez-Sanchez](https://mastodon.social/@frod_san@ecoevo.social/109677386173703866)) recommended using [GitHub Desktop](https://docs.github.com/en/desktop). Its nice interface would, as far as I understand, replace usethis. It'd mean you have R open somewhere, do your thing there, and regularly you do the git/GitHub stuff in the GitHub Desktop interface (setting up a GitHub repository, commits, pushes).
+
 ## Check your R/GitHub situation
+
+Skip if you use GitHub Desktop (and have installed git!). :wink:
 
 In this I assume you have R and RStudio IDE installed. One problem at a time. :smile_cat:
 
@@ -64,7 +72,7 @@ Even if your fantastic analysis project is still waiting for you to finish the *
 -   Initiate git usage with [`usethis::use_git()`](https://usethis.r-lib.org/reference/use_git.html).
 -   Add a text file containing, for instance "I will excel at git today!".
 -   git commit this file. Use RStudio git tab, or [`gert::git_add()`](https://docs.ropensci.org/gert/reference/git_commit.html) then [`gert::git_commit()`](https://docs.ropensci.org/gert/reference/git_commit.html), or the command line... whatever you were taught and remember vaguely liking.
--   Create a GitHub repository with [`usethis::use_github()`](https://usethis.r-lib.org/reference/use_github.html).
+-   Create a GitHub repository with [`usethis::use_github()`](https://usethis.r-lib.org/reference/use_github.html), or GitHub Desktop.
 
 Did it work? If not, turn to the docs, a search engine and your support network. If yes, continue!
 
@@ -89,7 +97,7 @@ You might want to [*create* a GitHub organization](https://docs.github.com/en/or
 
 Do you want your repository to be public or private? Sometimes the choice is obvious, for instance your project is top secret or you really don't want to share it as is right now. Private repositories have a few less features than public repositories (for instance draft pull requests) depending on your GitHub subscription.
 
-### `use_github()`
+### `use_github()` (or GitHub Desktop)
 
 Now run `usethis::use_github(organisation = "your-account-username-or-an-organization", private = TRUE)` with the correct arguments. After this you should see your project in a GitHub repository! :tada:
 
@@ -99,18 +107,27 @@ Ideally, make a [commit](https://happygitwithr.com/git-basics.html#commits-diffs
 
 Realistically, at least make a commit every time you take a break, especially when leaving at the end of your working session.
 
-Push often, each time you make a commit, with the RStudio git tab, the command line or [`gert::git_push()`](https://docs.ropensci.org/gert/reference/git_fetch.html).
+Push often, each time you make a commit, with the RStudio git tab, the command line or [`gert::git_push()`](https://docs.ropensci.org/gert/reference/git_fetch.html), or GitHub Desktop.
 
-If you feel icky submitting ugly commits to your pristine repo, think about the idea of branches. You
+If you feel icky submitting ugly commits to your pristine repo, think about the idea of branches. With usethis you
 
 -   create one with [`gert::git_branch_create()`](https://docs.ropensci.org/gert/reference/git_branch.html),
 -   experiment and make the ugly commits in there until the whole set of changes is good to go,
 -   then open a "pull request" on GitHub with [usethis helpers](https://usethis.r-lib.org/articles/pr-functions.html),
--   then you can "squash and merge it" which means the whole thing becomes one single beautiful commit.
+-   then you can ["squash and merge"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) it which means the whole thing becomes one single beautiful commit.
+
+With GitHub Desktop you
+
+-   [create a branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches),
+-   experiment and make the ugly commits in there until the whole set of changes is good to go,
+-   then [open a "pull request" on GitHub](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request),
+-   then you can ["squash and merge"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) it which means the whole thing becomes one single beautiful commit.
 
 ## Keep track of your TODOS
 
 Since you are working on GitHub, you could use the [issue tracker](https://docs.github.com/en/issues) of your repository to write down ideas! You can create labels, milestones (so you could procrastinate a lot here :sweat_smile:).
+
+On Mastodon, Francisco Rodriguez-Sanchez [underlined how handy it can be to use GitHub for project management](https://mastodon.social/@frod_san@ecoevo.social/109677386173703866).
 
 ## Put the "Closed" sign before you leave
 
@@ -133,5 +150,10 @@ Beside trying to get a bit more git into your daily work, you might want to sche
 
 ## Conclusion
 
-First of all, it is awesome you want to use git and GitHub (or GitLab or something else for that matter)! It is not an easy toolset to learn, so no wonder you can get frustated. Hopefully the tips in this post, which I'd summarize as "Remember happygitwithr.com, usethis, Openscapes illustrated series; Be patient with yourself", can help a bit. Good luck!
+First of all, it is awesome you want to use git and GitHub (or GitLab or something else for that matter)! It is not an easy toolset to learn, so no wonder you can get frustated. Hopefully the tips in this post, which I'd summarize as "Remember happygitwithr.com, usethis and/or GitHub Desktop, Openscapes illustrated series; Be patient with yourself", can help a bit. Good luck!
+
+## PS: improve your tooling?
+
+-   Tip by Robert M Flight: [find a diff viewer you like](https://mastodon.social/@rmflight/109676738327559708).
+-   Tip by Dave Braze: [experiment with other IDEs, use magit](https://mastodon.social/@davidbraze@mstdn.social/109676715427221572).
 
