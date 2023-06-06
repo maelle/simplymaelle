@@ -4,7 +4,7 @@ date: '2023-06-06'
 tags:
   - good practice
   - code style
-slug: git-github-casual
+slug: basic-patterns
 output: hugodown::hugo_document
 ---
 

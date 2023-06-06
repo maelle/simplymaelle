@@ -4,9 +4,9 @@ date: '2023-06-06'
 tags:
   - good practice
   - code style
-slug: git-github-casual
+slug: basic-patterns
 output: hugodown::hugo_document
-rmd_hash: 2b918b159d5f67cb
+rmd_hash: 69fbb9668e8c2ffa
 
 ---
 
