@@ -6,9 +6,11 @@ tags:
   - code style
 slug: basic-patterns
 output: hugodown::hugo_document
-rmd_hash: 69fbb9668e8c2ffa
+rmd_hash: bedc81b134dbc78d
 
 ---
+
+*This post was featured on the [R Weekly highlights podcast](https://podverse.fm/episode/g2Gtd-78N) hosted by Eric Nantz and Mike Thomas.*
 
 I'm happy to report that I thought "oh but I know a better way to write that code!" a few times lately when reading old scripts of mine, or scripts by others. It's a good feeling because it shows progress! I've tooted about all three things I'll present in this post: After reading Julia Evans' [post about blogging](https://jvns.ca/blog/2023/06/05/some-blogging-myths/), I decided to train the blogging muscle a bit using these low-hanging fruits/toots[^1].
 
