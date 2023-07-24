@@ -13,7 +13,7 @@ This post will allow me to throw away this beaten down sticky note, and maybe to
 
 [^three]: I am aware that the idea of "three things" can remind of Nick Tierney's ["Just three things" format](https://www.njtierney.com/post/2019/02/18/announcing-jtt/). What a nice idea of his and Karthik Ram's.
 
-## `nzchar()`: a fast way to find out if elements of a character vector are non-empty strings
+## `nzchar()`: "a fast way to find out if elements of a character vector are non-empty strings"
 
 One of my favorite testing technique is the escape hatch strategy, about which I wrote a [post on the R-hub blog](https://blog.r-hub.io/2023/01/23/code-switch-escape-hatch-test/): you make part of your code responsive to an environment variable, and you locally set that environment variable in your tests.
 In your code, to determine whether the environment variable has been set to something, anything, you can use the `nzchar()` function.
