@@ -4,9 +4,9 @@ date: '2023-07-24'
 tags:
   - good practice
   - code style
-slug: basic-patterns
+slug: basic-notions
 output: hugodown::hugo_document
-rmd_hash: b5c9353140cc39f7
+rmd_hash: 8156fe4e8a8c2c61
 
 ---
 
