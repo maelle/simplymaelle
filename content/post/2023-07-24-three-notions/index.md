@@ -6,7 +6,7 @@ tags:
   - code style
 slug: basic-patterns
 output: hugodown::hugo_document
-rmd_hash: e94149db8ca78b52
+rmd_hash: b5c9353140cc39f7
 
 ---
 
@@ -63,7 +63,7 @@ Sometimes you might have an ordered "wish list" in your code: use A, then if A i
 
 I only recently realized this idea is usually called *coalescing*. dplyr has a [`coalesce()`](https://dplyr.tidyverse.org/reference/coalesce.html) function.
 
-> Given a set of vectors, coalesce() finds the first non-missing value at each position. It's inspired by the SQL COALESCE function which does the same thing for SQL NULLs.
+> "Given a set of vectors, coalesce() finds the first non-missing value at each position. It's inspired by the SQL COALESCE function which does the same thing for SQL NULLs."
 
 I know close to NULL about SQL, but I did notice the `COALESCE` function in another query language, SPARQL, for which Lise Vaudor and I are working on a DSL, meaning a helper package, called [glitter](https://lvaudor.github.io/glitter/).
 
