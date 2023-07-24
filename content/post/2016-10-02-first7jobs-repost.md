@@ -17,8 +17,6 @@ Note that this is a repost of [my post on Monkeylearn's blog](https://blog.monke
 
 Have you tweeted about your "#firstsevenjobs"? I did!
 
-{{< tweet 762351796132118529 >}}
-
 <!--more-->
 
 "#firstsevenjobs" and "#first7jobs" tweets initial goal was to provide a short description of the 7 first activities they were paid for. It was quite fun to read them in my timeline! Of course the hashtag was also used by spammers, for making jokes, and for commenting the hashtag, so not all the tweets contain 7 job descriptions. 
