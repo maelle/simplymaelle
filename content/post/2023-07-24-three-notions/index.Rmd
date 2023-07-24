@@ -37,7 +37,7 @@ I spent too much time looking at the following piece of code last week: `nzchar(
 
 ## The backports R package, and its README
 
-R is quite stable, but useful new functions have been added to it over time.
+R is quite stable to say the least, but useful new functions have been added to it over time.
 For instance, R 3.3.0 saw the birth of `trimws()`, that trims white space.
 
 ```{r}

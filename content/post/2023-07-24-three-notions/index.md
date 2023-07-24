@@ -6,7 +6,7 @@ tags:
   - code style
 slug: basic-patterns
 output: hugodown::hugo_document
-rmd_hash: 6b8d7e828a88ae38
+rmd_hash: e94149db8ca78b52
 
 ---
 
@@ -43,7 +43,7 @@ Allow me to mention the obvious: if you're using [`nzchar()`](https://rdrr.io/r/
 
 ## The backports R package, and its README
 
-R is quite stable, but useful new functions have been added to it over time. For instance, R 3.3.0 saw the birth of [`trimws()`](https://rdrr.io/r/base/trimws.html), that trims white space.
+R is quite stable to say the least, but useful new functions have been added to it over time. For instance, R 3.3.0 saw the birth of [`trimws()`](https://rdrr.io/r/base/trimws.html), that trims white space.
 
 <div class="highlight">
 
