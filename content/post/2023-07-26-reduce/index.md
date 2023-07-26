@@ -6,7 +6,7 @@ tags:
   - code style
 slug: reduce
 output: hugodown::hugo_document
-rmd_hash: 0f5d73b1e6971e64
+rmd_hash: 11c0e94ee102edd2
 
 ---
 
@@ -240,7 +240,7 @@ In this post I presented my approximate understanding of [`purrr::reduce()`](htt
 
 For more information I'd recommend reading the documentation of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html) to be aware of other features, [the content on the reduce family in Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)... and release-watching the purrr repo to keep up-to-date with latest recommendations. You can also use GitHub Advanced Search to find examples of usage of the function in, say, [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
 
-Edit: For another take of / use case of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html), June Choe wrote a nice detailed tutorial ["Collapse repetitive piping with reduce()"](https://yjunechoe.github.io/posts/2020-12-13-collapse-repetitive-piping-with-reduce/)
+Edit: For another take of / use case of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html), June Choe wrote a nice detailed tutorial ["Collapse repetitive piping with reduce()"](https://yjunechoe.github.io/posts/2020-12-13-collapse-repetitive-piping-with-reduce/).
 
 [^1]: The package is [glitter](https://github.com/lvaudor/glitter), where we store query objects as a list.
 
