@@ -70,7 +70,7 @@ for (info in info_list) {
 movies
 ```
 
-It's not to bad, really.
+It's not too bad, really.
 But since there's another way, we can change it.
 
 ## After
@@ -182,6 +182,6 @@ that helped me avoid writing some for loops and instead more elegant code... or 
 I can only hope I `purrr::accumulate()` more experience, as I very much still feel like a newbie.
 
 For more information I'd recommend reading the documentation of `purrr::reduce()` to be aware of other features, [the content on the reduce family in Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)... and release-watching the purrr repo to keep up-to-date with latest recommendations.
-You can also use GitHub Advanced Search to find examples of usage of the function, in, say [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
+You can also use GitHub Advanced Search to find examples of usage of the function in, say, [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
 
 [^glitter]: The package is [glitter](https://github.com/lvaudor/glitter), where we store query objects as a list.

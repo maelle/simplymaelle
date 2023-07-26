@@ -6,7 +6,7 @@ tags:
   - code style
 slug: reduce
 output: hugodown::hugo_document
-rmd_hash: 7811451b47fc4907
+rmd_hash: 9687891f2c5d8547
 
 ---
 
@@ -105,7 +105,7 @@ Now how do I add each element of the list to the original table? I could type so
 
 </div>
 
-It's not to bad, really. But since there's another way, we can change it.
+It's not too bad, really. But since there's another way, we can change it.
 
 ## After
 
@@ -238,7 +238,7 @@ And voilà!
 
 In this post I presented my approximate understanding of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html), that helped me avoid writing some for loops and instead more elegant code... or at least helped me understand a pattern that in the future I could use elegantly. I can only hope I [`purrr::accumulate()`](https://purrr.tidyverse.org/reference/accumulate.html) more experience, as I very much still feel like a newbie.
 
-For more information I'd recommend reading the documentation of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html) to be aware of other features, [the content on the reduce family in Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)... and release-watching the purrr repo to keep up-to-date with latest recommendations. You can also use GitHub Advanced Search to find examples of usage of the function, in, say [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
+For more information I'd recommend reading the documentation of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html) to be aware of other features, [the content on the reduce family in Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)... and release-watching the purrr repo to keep up-to-date with latest recommendations. You can also use GitHub Advanced Search to find examples of usage of the function in, say, [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
 
 [^1]: The package is [glitter](https://github.com/lvaudor/glitter), where we store query objects as a list.
 
