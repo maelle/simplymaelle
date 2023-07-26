@@ -8,7 +8,7 @@ slug: reduce
 output: hugodown::hugo_document
 ---
 
-I (only! but luckily!) recently got introduced to the magic of `purrr::reduce()`.
+I (only! but luckily!) recently got introduced to the magic of `purrr::reduce()`. _Thank you, [Tobias](https://github.com/TSchiefer)!_
 I was told about it right as I was unhappily using many for loops in a package[^glitter], for lack of a better idea. 
 In this post I'll explain how `purrr::reduce()` helped me reduce my for loop usage. 
 I also hope that if I'm doing something wrong, [someone will come forward and tell me](https://xkcd.com/386/)!
