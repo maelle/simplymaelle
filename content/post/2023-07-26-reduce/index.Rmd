@@ -1,0 +1,187 @@
+---
+title: "Reducing my for loop usage with purrr::reduce()"
+date: '2023-07-26'
+tags:
+  - good practice
+  - code style
+slug: reduce
+output: hugodown::hugo_document
+---
+
+I (only! but luckily!) recently got introduced to the magic of `purrr::reduce()`.
+I was told about it right as I was unhappily using many for loops in a package[^glitter], for lack of a better idea. 
+In this post I'll explain how `purrr::reduce()` helped me reduce my for loop usage. 
+I also hope that if I'm doing something wrong, [someone will come forward and tell me](https://xkcd.com/386/)!
+
+## Before: many for, much sadness
+
+I was starting from a thing, that could be a list, or even a data.frame.
+Then for a bunch of variables, I tweaked the thing.
+My initial coding pattern was therefore:
+
+```{r, eval=FALSE}
+for (var in variables_vector) {
+  thing <- do_something(thing, var, other_argument = other_argument)
+}
+```
+
+I was iteratively changing the thing, along a `variables_vector`, or sometimes a `variables_list`.
+
+### Silly example
+
+Ugh, finding an example is hard, it feels very contrived but I promise my real-life adoption of `purrr::usage()` was life-changing!
+
+```{r}
+# Some basic movie information
+movies <- tibble::tribble(
+  ~title, ~color, ~elements,
+  "Barbie", "pink", "shoes",
+  "Oppenheimer", "red", "history"
+)
+
+# More information to add to movies
+info_list <- list(
+  list(title = "Barbie", info = list(element = "sparkles")),
+  list(title = "Barbie", info = list(element = "feminism")),
+  list(title = "Oppenheimer", info = list(element = "fire"))
+)
+
+# Don't tell me this is weirdly formatted data,
+# who never obtains weirdly formatted data?!
+info_list
+
+add_element <- function(movies, info) {
+  movies[movies[["title"]] == info[["title"]],][["elements"]] <-
+    toString(c(
+      movies[movies[["title"]] == info[["title"]],][["elements"]],
+      info[["info"]][[1]]
+    ))
+  movies
+}
+```
+
+Now how do I add each element of the list to the original table?
+I could type something like:
+
+```{r}
+for (info in info_list) {
+  movies <- add_element(movies, info)
+}
+movies
+```
+
+It's not to bad, really.
+But since there's another way, we can change it.
+
+## After
+
+With `purrr::reduce()`
+
+```{r, eval=FALSE}
+for (var in variables_vector) {
+  thing <- do_something(thing, var)
+}
+```
+
+can become
+
+```{r, eval=FALSE}
+thing <- purrr::reduce(variables_vector, do_something, .init = thing)
+``` 
+
+And (notice the other argument),
+
+```{r, eval=FALSE}
+for (var in variables_vector) {
+  thing <- do_something(thing, var, other_argument = other_argument)
+}
+```
+
+can become
+
+```{r, eval=FALSE}
+thing <- purrr::reduce(
+  variables_vector, 
+  \(thing, x) do_something(thing, x, other_argument = other_argument), 
+  .init = thing
+)
+``` 
+
+I haven't completely internalized the pattern above but the [documentation of `purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html#arguments) states
+
+> "We now generally recommend against using ... to pass additional (constant) arguments to .f. Instead use a shorthand anonymous function:
+> 
+> Instead of
+> x |> map(f, 1, 2, collapse = ",")
+> do:
+> x |> map(\(x) f(x, 1, 2, collapse = ","))
+> This makes it easier to understand which arguments belong to which function and will tend to yield better error messages."
+
+It might remind you of how things work for `dplyr::across()` [these days](https://mastodon.social/deck/@blasbenito@fosstodon.org/110745684166845628).
+
+### Back to our silly example!
+
+```{r}
+# Some basic movie information
+movies <- tibble::tribble(
+  ~title, ~color, ~elements,
+  "Barbie", "pink", "shoes",
+  "Oppenheimer", "red", "history"
+)
+
+# More information to add to movies
+info_list <- list(
+  list(title = "Barbie", info = list(element = "sparkles")),
+  list(title = "Barbie", info = list(element = "feminism")),
+  list(title = "Oppenheimer", info = list(element = "fire"))
+)
+
+add_element <- function(movies, info) {
+  movies[movies[["title"]] == info[["title"]],][["elements"]] <-
+    toString(c(
+      movies[movies[["title"]] == info[["title"]],][["elements"]],
+      info[["info"]][[1]]
+    ))
+  movies
+}
+
+purrr::reduce(info_list, add_element, .init = movies)
+```
+
+If we tweak the `add_element()` function to add a `separator` argument to it,
+
+```{r}
+add_element <- function(movies, info, separator) {
+  movies[movies[["title"]] == info[["title"]],][["elements"]] <-
+    paste(c(
+      movies[movies[["title"]] == info[["title"]],][["elements"]],
+      info[["info"]][[1]]
+    ), collapse = separator)
+  movies
+}
+
+purrr::reduce(
+  info_list, 
+  \(movies, x) add_element(movies, x, separator = " - "), 
+  .init = movies
+)
+
+purrr::reduce(
+  info_list, 
+  \(movies, x) add_element(movies, x, separator = " PLUS "), 
+  .init = movies
+)
+```
+
+And voilà!
+
+## Conclusion
+
+In this post I presented my approximate understanding of `purrr::reduce()`,
+that helped me avoid writing some for loops and instead more elegant code... or at least helped me understand a pattern that in the future I could use elegantly.
+I can only hope I `purrr::accumulate()` more experience, as I very much still feel like a newbie.
+
+For more information I'd recommend reading the documentation of `purrr::reduce()` to be aware of other features, [the content on the reduce family in Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)... and release-watching the purrr repo to keep up-to-date with latest recommendations.
+You can also use GitHub Advanced Search to find examples of usage of the function, in, say [CRAN packages](https://github.com/search?q=purrr%3A%3Areduce+org%3Acran&type=code).
+
+[^glitter]: The package is [glitter](https://github.com/lvaudor/glitter), where we store query objects as a list.
