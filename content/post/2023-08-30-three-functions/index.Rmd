@@ -1,0 +1,110 @@
+---
+title: "Three (four?) R functions I enjoyed this week"
+date: '2023-08-30'
+slug: three-R-functions
+output: hugodown::hugo_document
+---
+
+There are already three functions of note on a piece of paper on my desk, so it's time to blog about them!
+
+## How does this package depend on this other package? [`pak::pkg_deps_explain()`](https://pak.r-lib.org/reference/pkg_deps_explain.html)
+
+The [pak package by Gábor Csárdi](https://pak.r-lib.org) makes installing packages easier. 
+If I need to start working on a package, I clone it, then run [`pak::pak()`](https://pak.r-lib.org/reference/pak.html#details) to install and update its dependencies.
+It's a "convenience function" that is convenient for sure! 
+Bye bye `remotes::install_deps()`.
+
+Anyway, pak is truly a treasure trove, even for challenges that happen less often.
+Earlier this week I was seeing an error in a GitHub Actions log due to a package that I didn't know was a dependency of the package I was working on.
+It was clearly not a direct dependency, it was not listed in `DESCRIPTION`.
+It was a dependency of a dependency and I couldn't guess which one it was...
+Luckily one doesn't need to guess!
+Although I didn't think of it right away, the [`pak::pkg_deps_explain()`](https://pak.r-lib.org/reference/pkg_deps_explain.html) is my friend in such cases[^1]!
+
+For instance, if you are wondering why usethis depends on httr2, 
+
+```{r}
+pak::pkg_deps_explain("usethis", "httr2")
+```
+
+usethis depends on gh (client for GitHub API) that in turns depends on httr2.
+
+Next time I encounter a similar problem I can only hope I'll remember about this function sooner!
+
+## Where in the file are there non ASCII characters? `tools::showNonASCIIfile()`
+
+If you get the dreaded R CMD check WARNING "Found the following file with non-ASCII characters" and can't see at once what character that is in the file, you don't need to comb through each line of code.
+You can simply run `tools::showNonASCIIfile(<filename>)`.
+After that an easy fix can be to replace then with the `\uxxxx` escape as indicated in the WARNING.
+I'm not saying it's always that easy but that's what happened to me this week!
+I found the correct escape by using a search engine.
+
+## How do these two text files differ? `tools::Rdiff()` or `gert::git_diff_patch()`
+
+I'm working on the [babeldown R package](https://docs.ropensci.org/babeldown/) that helps translate mostly Markdown files.
+Support for first-time automatic translation is there, but a next step is to add support for automatic update of a translation based on a git commit.
+Say I have a file in English and its translation in Spanish and a contributor edits part of the Spanish file.
+We want to have a function update the English file based on this diff.
+As part of that work I need to programmatically parse the difference between two text files.
+
+I saw `gert::git_diff()` but I didn't find the patch to be easily parsable.
+
+I had better luck with `tools::Rdiff()` especially after a GitHub search showed me an example using it with `Log = TRUE`.
+Before that I was unsuccessfully trying `capture.output()` to capture what was printed... I should have read the arguments list more carefully.
+
+```{r}
+original_lines <- c(
+  "# Title", "",
+  "## Subtitle", "",
+  "Some info", "",
+  "First line of a paragraph",
+  "Second line of a paragraph"
+)
+
+amended_lines <- c(
+  "# BIG Title", "",
+  "## Subtitle", "",
+  "Some info", "",
+  "First line of a paragraph",
+  "Second line of a paragraph",
+  "More info"
+)
+
+file1 <- withr::local_tempfile()
+file2 <- withr::local_tempfile()
+
+brio::write_lines(original_lines, file1)
+brio::write_lines(amended_lines, file2)
+
+diff <- tools::Rdiff(file1, file2, Log = TRUE)
+diff
+```
+
+What I especially liked in this output, is the lines `<line-numbers-in-original-file><letter-indicated-status><line-numbers-in-new-file>` where the status can be a (added), d (deleted) or c (changed).
+
+In comparison here's what gert gives me.
+
+```{r}
+dir <- withr::local_tempdir()
+gert::git_init(dir)
+
+brio::write_lines(original_lines, file.path(dir, "file.txt"))
+gert::git_add("file.txt", repo = dir)
+gert::git_commit("first commit", repo = dir)
+
+brio::write_lines(amended_lines, file.path(dir, "file.txt"))
+gert::git_add("file.txt", repo = dir)
+commit_of_interest <- gert::git_commit("second commit", repo = dir)
+
+cat(gert::git_diff_patch(commit_of_interest, repo = dir))
+
+```
+
+I'm not exactly sure yet whether `tools::Rdiff()` will be enough for my [use case](https://mastodon.social/deck/@maelle/110972627375018302) but it might!
+
+## Conclusion
+
+My sticky note mentioned `pak::pkg_deps_explain()`, `tools::showNonASCIIfile()` (what case is this :sweat_smile:) and `tools::Rdiff()`, that helped me make progress on R code earlier this week.
+Time to break out a fresh sticky note and see what ends up on it!
+
+[^1]: I first wrote it "pak_deps_explain" instead of "pkg_deps_explain". :grimacing:
