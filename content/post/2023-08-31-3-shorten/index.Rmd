@@ -1,0 +1,118 @@
+---
+title: "R functions that shorten/filter stuff: less is more"
+date: '2023-08-31'
+slug: three-shorten
+output: hugodown::hugo_document
+---
+
+My sticky note is full! And luckily all functions on it can be squeezed into a similar topic: making things smaller!
+
+## Make lists smaller with `purrr::compact()`, `purrr::keep()`, `purrr::discard()`
+
+Once upon a time there was a list (isn't this the beginning of all R scripts?!)
+
+```{r}
+my_list <- list(
+  name = "Maëlle",
+  city = "Nancy",
+  r_problems_encountered = Inf,
+  python_skills = NULL
+)
+```
+
+Imagine you want to get rid of `NULL` elements.
+That's what `purrr::compact()` does!
+
+```{r}
+purrr::compact(my_list)
+```
+
+Imagine you want to only keep elements that are infinite numbers.
+For some unknown reason `is.infinite()` works on strings (but not on `NULL`) so the following works.
+
+```{r}
+my_list |>
+  purrr::compact() |>
+  purrr::keep(is.infinite)
+```
+
+Similarly, imagine you want to discard all elements that are character.
+
+```{r}
+purrr::discard(my_list, is.character)
+```
+
+We've only used built-in functions as predicate functions (the second argument of all these calls).
+You can really unleash the power of these three functions when pairing them with your own predicate functions!
+
+Related to these functions, don't miss Jonathan Carroll's great post ["Four Filters for Functional (Programming) Friends"](https://jcarroll.com.au/2023/08/30/four-filters-for-functional-programming-friends/).
+
+## Make string (vectors) smaller with `stringr::str_squish()`, `stringr::str_subset()`
+
+This week when removing stringr from the dependencies of the [glitter](https://github.com/lvaudor/glitter) package I discovered `stringr::str_subset()`.
+It will help you keep, in purrr's parlance, only the elements of a string vector that have a match with a pattern.
+
+```{r}
+string <- c("R", "Python", "Julia", "Ruby")
+stringr::str_subset(string, "R")
+```
+
+It will also help you discard them if you use the `negate` arguments.
+
+```{r}
+stringr::str_subset(string, "R", negate = TRUE)
+```
+
+In glitter, where I chose to write similar-looking functions for the stringr functions that we used, I replaced `stringr::str_subset()` with
+
+```r
+str_subset <- function(x, pattern, negate = FALSE) {
+  grep(pattern, x, value = TRUE, invert = negate)
+}
+```
+
+since its docs mentioned this base R's equivalence.
+
+Another stringr function that makes things smaller is `stringr::str_squish()` that removes useless whitespace from a string vector: whitespace at the start and end, and repeated whitespace in the middle.
+
+```{r}
+text <- " So much\n\n useless    whitespace    "
+stringr::str_squish(text)
+```
+
+It's documented on the same page as `stringr::str_trim()` which is stringr's own `trimws()` (a base R function) that only removes whitespace from the start and end. 💇
+
+## Make your code shorter with `purrr::partial()`
+
+I am working on a vignette for glitter where I write (well, copy-paste) the same function call over and over again.
+
+```r
+blablabla %>%
+  spq_perform(
+    endpoint = "https://ld.admin.ch/query", 
+    request_type = "body-form"
+  )
+```
+
+From the developer's perspective it makes me wonder whether we should add some options as default.
+From an user's perspective it reminded me of `purrr::partial()`!
+With `purrr::partial` one easily creates a function that corresponds to a function with some arguments pre-filled.
+
+So, as a glitter user, I could use
+
+```r
+my_spq_perform <- purrr::partial(
+    my_spq_perform,
+    endpoint = "https://ld.admin.ch/query", 
+    request_type = "body-form"
+)
+
+blablabla %>%
+  my_spq_perform
+```
+
+Quite neat!
+
+## Conclusion
+
+In this short (of course) post I presented functions for making lists, string vectors and code shorter by filtering or squishing them. 🔨
