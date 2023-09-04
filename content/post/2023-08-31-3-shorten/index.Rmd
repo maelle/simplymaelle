@@ -102,7 +102,7 @@ So, as a glitter user, I could use
 
 ```r
 my_spq_perform <- purrr::partial(
-    my_spq_perform,
+    spq_perform,
     endpoint = "https://ld.admin.ch/query", 
     request_type = "body-form"
 )

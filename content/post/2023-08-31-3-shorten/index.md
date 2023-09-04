@@ -3,7 +3,7 @@ title: "R functions that shorten/filter stuff: less is more"
 date: '2023-08-31'
 slug: three-shorten
 output: hugodown::hugo_document
-rmd_hash: 7b12ae734b2c1210
+rmd_hash: 9ffc89a57eceffbc
 
 ---
 
@@ -136,7 +136,7 @@ So, as a glitter user, I could use
 
 ``` r
 my_spq_perform <- purrr::partial(
-    my_spq_perform,
+    spq_perform,
     endpoint = "https://ld.admin.ch/query", 
     request_type = "body-form"
 )
