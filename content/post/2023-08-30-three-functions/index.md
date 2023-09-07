@@ -3,11 +3,13 @@ title: "Three (four?) R functions I enjoyed this week"
 date: '2023-08-30'
 slug: three-R-functions
 output: hugodown::hugo_document
-rmd_hash: 7bb282a1ce968d1d
+rmd_hash: 5ad886b3c83e0885
 
 ---
 
 There are already three functions of note on a piece of paper on my desk, so it's time to blog about them!
+
+*This post was featured on the [R Weekly podcast](https://podverse.fm/episode/tUcOmY5AN) by Eric Nantz and Mike Thomas.*
 
 ## How does this package depend on this other package? [`pak::pkg_deps_explain()`](https://pak.r-lib.org/reference/pkg_deps_explain.html)
 
@@ -19,9 +21,12 @@ For instance, if you are wondering why usethis depends on httr2,
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>pak</span><span class='nf'>::</span><span class='nf'><a href='http://pak.r-lib.org/reference/pkg_deps_explain.html'>pkg_deps_explain</a></span><span class='o'>(</span><span class='s'>"usethis"</span>, <span class='s'>"httr2"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Loading metadata database</span></span>
-<span></span><span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Loading metadata database ... done</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>pak</span><span class='nf'>::</span><span class='nf'><a href='https://pak.r-lib.org/reference/pkg_deps_explain.html'>pkg_deps_explain</a></span><span class='o'>(</span><span class='s'>"usethis"</span>, <span class='s'>"httr2"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; </span></span>
+<span></span><span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Updated metadata database: 3.97 MB in 4 files.</span></span>
+<span></span><span><span class='c'>#&gt; </span></span>
+<span></span><span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Updating metadata database</span></span>
+<span></span><span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Updating metadata database ... done</span></span>
 <span></span><span><span class='c'>#&gt; </span></span>
 <span></span><span><span class='c'>#&gt; usethis -&gt; gh -&gt; httr2</span></span>
 <span></span></code></pre>
@@ -99,7 +104,7 @@ In comparison here's what gert gives me.
 <span><span class='c'>#&gt;       file status staged</span></span>
 <span><span class='c'>#&gt; 1 file.txt    new   TRUE</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit</a></span><span class='o'>(</span><span class='s'>"first commit"</span>, repo <span class='o'>=</span> <span class='nv'>dir</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "38d0abf2aee7169ddabab0e83676fdee190a136a"</span></span>
+<span><span class='c'>#&gt; [1] "b56a48d10dc033e4c6a3bb81be6e18d27b34032a"</span></span>
 <span></span><span></span>
 <span><span class='nf'>brio</span><span class='nf'>::</span><span class='nf'><a href='https://brio.r-lib.org/reference/write_lines.html'>write_lines</a></span><span class='o'>(</span><span class='nv'>amended_lines</span>, <span class='nf'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='o'>(</span><span class='nv'>dir</span>, <span class='s'>"file.txt"</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_add</a></span><span class='o'>(</span><span class='s'>"file.txt"</span>, repo <span class='o'>=</span> <span class='nv'>dir</span><span class='o'>)</span></span>
@@ -131,7 +136,7 @@ I'm not exactly sure yet whether [`tools::Rdiff()`](https://rdrr.io/r/tools/Rdif
 
 ## Conclusion
 
-My sticky note mentioned [`pak::pkg_deps_explain()`](http://pak.r-lib.org/reference/pkg_deps_explain.html), [`tools::showNonASCIIfile()`](https://rdrr.io/r/tools/showNonASCII.html) (what case is this :sweat_smile:) and [`tools::Rdiff()`](https://rdrr.io/r/tools/Rdiff.html), that helped me make progress on R code earlier this week. Time to break out a fresh sticky note and see what ends up on it!
+My sticky note mentioned [`pak::pkg_deps_explain()`](https://pak.r-lib.org/reference/pkg_deps_explain.html), [`tools::showNonASCIIfile()`](https://rdrr.io/r/tools/showNonASCII.html) (what case is this :sweat_smile:) and [`tools::Rdiff()`](https://rdrr.io/r/tools/Rdiff.html), that helped me make progress on R code earlier this week. Time to break out a fresh sticky note and see what ends up on it!
 
 [^1]: I first wrote it "pak_deps_explain" instead of "pkg_deps_explain". :grimacing:
 

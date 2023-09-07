@@ -6,11 +6,13 @@ tags:
   - code style
 slug: reduce
 output: hugodown::hugo_document
-rmd_hash: 11c0e94ee102edd2
+rmd_hash: 8a8d754d417ed683
 
 ---
 
 I (only! but luckily!) recently got introduced to the magic of [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html). *Thank you, [Tobias](https://github.com/TSchiefer)!* I was told about it right as I was unhappily using many for loops in a package[^1], for lack of a better idea. In this post I'll explain how [`purrr::reduce()`](https://purrr.tidyverse.org/reference/reduce.html) helped me reduce my for loop usage. I also hope that if I'm doing something wrong, [someone will come forward and tell me](https://xkcd.com/386/)!
+
+*This post was featured on the [R Weekly podcast](https://podverse.fm/episode/1odIoSlJl) by Eric Nantz and Mike Thomas.*
 
 ## Before: many for, much sadness
 

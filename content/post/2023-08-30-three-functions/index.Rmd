@@ -7,6 +7,8 @@ output: hugodown::hugo_document
 
 There are already three functions of note on a piece of paper on my desk, so it's time to blog about them!
 
+*This post was featured on the [R Weekly podcast](https://podverse.fm/episode/tUcOmY5AN) by Eric Nantz and Mike Thomas.*
+
 ## How does this package depend on this other package? [`pak::pkg_deps_explain()`](https://pak.r-lib.org/reference/pkg_deps_explain.html)
 
 The [pak package by Gábor Csárdi](https://pak.r-lib.org) makes installing packages easier. 

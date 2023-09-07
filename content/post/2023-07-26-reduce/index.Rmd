@@ -13,6 +13,8 @@ I was told about it right as I was unhappily using many for loops in a package[^
 In this post I'll explain how `purrr::reduce()` helped me reduce my for loop usage. 
 I also hope that if I'm doing something wrong, [someone will come forward and tell me](https://xkcd.com/386/)!
 
+*This post was featured on the [R Weekly podcast](https://podverse.fm/episode/1odIoSlJl) by Eric Nantz and Mike Thomas.*
+
 ## Before: many for, much sadness
 
 I was starting from a thing, that could be a list, or even a data.frame.
