@@ -25,7 +25,7 @@ glue::glue("My name is {name} and you'll find me on GitHub as {github_username}!
 The code above is very readable.
 The nice syntax with curly braces is something one finds again in the [cli package](https://cli.r-lib.org/).[^cli]
 
-[^cli]: Curious about cli? Come to this cool [rOpenSci coworkign session next week](https://ropensci.org/events/coworking-2023-10/)!
+[^cli]: Curious about cli? Come to this cool [rOpenSci coworking session next week](https://ropensci.org/events/coworking-2023-10/)!
 
 Now, there's a dependency-free version of the glue code!
 Albeit a bit uglier 🤐
@@ -71,7 +71,7 @@ Do you know about the [servr package by Yihui Xie](https://github.com/yihui/serv
 
 Its use case is having a local directory that is the source of a website, and wanting to preview it locally in your browser as if it were served by a real server.
 
-I make use of it when working on the babelquarto package for instance, that builds multilingual Quarto books or websites.
+I make use of it when working on the [babelquarto](https://docs.ropensci.org/babelquarto/) package for instance, that builds multilingual Quarto books or websites.
 In the code of the multilingual books/websites, links to the other language versions are relative so they don't work if I simply open HTML files in my browser.
 So, instead, I write `servr::httw(<directory-with-the-website-source>)`.
 

@@ -3,7 +3,7 @@ title: "3 R functions that I enjoy"
 date: '2023-09-29'
 slug: three-functions
 output: hugodown::hugo_document
-rmd_hash: 449c834b43027fdd
+rmd_hash: 9c2b39b368c1eab3
 
 ---
 
@@ -77,7 +77,7 @@ Do you know about the [servr package by Yihui Xie](https://github.com/yihui/serv
 
 Its use case is having a local directory that is the source of a website, and wanting to preview it locally in your browser as if it were served by a real server.
 
-I make use of it when working on the babelquarto package for instance, that builds multilingual Quarto books or websites. In the code of the multilingual books/websites, links to the other language versions are relative so they don't work if I simply open HTML files in my browser. So, instead, I write `servr::httw(<directory-with-the-website-source>)`.
+I make use of it when working on the [babelquarto](https://docs.ropensci.org/babelquarto/) package for instance, that builds multilingual Quarto books or websites. In the code of the multilingual books/websites, links to the other language versions are relative so they don't work if I simply open HTML files in my browser. So, instead, I write `servr::httw(<directory-with-the-website-source>)`.
 
 You can also use servr if you want to preview locally your pkgdown website and be able to use the [search function](https://pkgdown.r-lib.org/articles/search.html#bootstrap-5-built-in-search).
 
@@ -87,5 +87,5 @@ There's [`servr::httw()`](https://rdrr.io/pkg/servr/man/httd.html) that watches 
 
 Today I shared about [`sprintf()`](https://rdrr.io/r/base/sprintf.html) for glue-like functionality, [`append()`](https://rdrr.io/r/base/append.html) and its `after` argument for appending values where you want in a vector, and [`servr::httw()`](https://rdrr.io/pkg/servr/man/httd.html) for serving static files.
 
-[^1]: Curious about cli? Come to this cool [rOpenSci coworkign session next week](https://ropensci.org/events/coworking-2023-10/)!
+[^1]: Curious about cli? Come to this cool [rOpenSci coworking session next week](https://ropensci.org/events/coworking-2023-10/)!
 
