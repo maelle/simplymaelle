@@ -1,9 +1,9 @@
 ---
 title: "3 R functions that I enjoy"
 date: '2023-09-29'
-slug: three-shorten
+slug: three-functions
 output: hugodown::hugo_document
-rmd_hash: 7d258f1ab9d77f3d
+rmd_hash: 449c834b43027fdd
 
 ---
 

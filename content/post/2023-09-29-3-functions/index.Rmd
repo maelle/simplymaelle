@@ -1,7 +1,7 @@
 ---
 title: "3 R functions that I enjoy"
 date: '2023-09-29'
-slug: three-shorten
+slug: three-functions
 output: hugodown::hugo_document
 ---
 
