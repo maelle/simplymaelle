@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 ---
 
 I spend a lot of quality time with testthat, that sometimes deigns to praise my code with emojis, sometimes has to encourage me.
-No one gets it right on the first time apparently?
+No one gets it right on their first try apparently?
 
 Anyway, in honor of [testthat 3.2.0 release](https://www.tidyverse.org/blog/2023/10/testthat-3-2-0/) :tada: :clap:, I'd like to mention two small things that improved my testing workflow a whole lot!
 
@@ -20,7 +20,7 @@ This is huge!
 When I am struggling with a single test called "My great function works", I can now call `devtools::test_active_file(desc = "My great function works")`!
 I'm not entirely sure yet it perfectly integrates with snapshot recording, but I'm very happy nonetheless.
 
-Now if I were struggling with more times at a time (Remember, no one gets it right on their first time :sweat_smile:), I should use the handy [lazytest](https://github.com/cynkra/lazytest) package.
+Now if I were struggling with more tests at a time (Remember, no one gets it right on their first try :sweat_smile:), I should use the handy [lazytest](https://github.com/cynkra/lazytest) package.
 
 ## Getting back to the package directory and project
 

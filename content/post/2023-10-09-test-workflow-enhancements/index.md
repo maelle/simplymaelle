@@ -3,11 +3,11 @@ title: "Two recent enhancements to my testing workflow"
 date: '2023-10-09'
 slug: test-workflow-enhancement
 output: hugodown::hugo_document
-rmd_hash: 12324d091183d1d4
+rmd_hash: 4457092bd0bb902f
 
 ---
 
-I spend a lot of quality time with testthat, that sometimes deigns to praise my code with emojis, sometimes has to encourage me. No one gets it right on the first time apparently?
+I spend a lot of quality time with testthat, that sometimes deigns to praise my code with emojis, sometimes has to encourage me. No one gets it right on their first try apparently?
 
 Anyway, in honor of [testthat 3.2.0 release](https://www.tidyverse.org/blog/2023/10/testthat-3-2-0/) :tada: :clap:, I'd like to mention two small things that improved my testing workflow a whole lot!
 
@@ -19,7 +19,7 @@ Under [testthat 3.2.0 minor features](https://testthat.r-lib.org/news/index.html
 
 This is huge! When I am struggling with a single test called "My great function works", I can now call `devtools::test_active_file(desc = "My great function works")`! I'm not entirely sure yet it perfectly integrates with snapshot recording, but I'm very happy nonetheless.
 
-Now if I were struggling with more times at a time (Remember, no one gets it right on their first time :sweat_smile:), I should use the handy [lazytest](https://github.com/cynkra/lazytest) package.
+Now if I were struggling with more tests at a time (Remember, no one gets it right on their first try :sweat_smile:), I should use the handy [lazytest](https://github.com/cynkra/lazytest) package.
 
 ## Getting back to the package directory and project
 
