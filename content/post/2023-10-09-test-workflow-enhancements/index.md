@@ -3,7 +3,7 @@ title: "Two recent enhancements to my testing workflow"
 date: '2023-10-09'
 slug: test-workflow-enhancement
 output: hugodown::hugo_document
-rmd_hash: 9016c53802d85f2e
+rmd_hash: f815a3625776be16
 
 ---
 
@@ -23,7 +23,7 @@ Now if I were struggling with more tests at a time (Remember, no one gets it rig
 
 ## Getting back to the package directory and project
 
-**Update on 2023-10-16: here's a [better, more general solution to fix local mess from a test](/2023/10/17/test-local-mess-reset/).**
+**Update on 2023-10-16: here's a [better, more general solution to fix local mess from a test](/2023/10/16/test-local-mess-reset/).**
 
 I recently realized that if...
 
