@@ -1,12 +1,12 @@
 ---
 title: "The real reset button for local mess fom tests: withr::deferred_run()"
-date: '2023-10-17'
+date: '2023-10-16'
 slug: test-local-mess-reset
 output: hugodown::hugo_document
 ---
 
 
-Following last week's post on my testing workflow enhancements, Jenny Bryan kindly reminded me of the existence of an actual reset button when you've been interactively running tests that include some "local mess": `withr::local_envvar()`, `withr::local_dir()`, `usethis::local_project()`...
+Following [last week's post on my testing workflow enhancements](/2023/10/09/test-workflow-enhancement/), Jenny Bryan kindly reminded me of the existence of an actual reset button when you've been interactively running tests that include some "local mess": `withr::local_envvar()`, `withr::local_dir()`, `usethis::local_project()`...
 The reset button is `withr::deferred_run()`.
 
 It is documented in Jenny's article about [test fixtures](https://testthat.r-lib.org/articles/test-fixtures.html):
@@ -83,5 +83,5 @@ I'm not sure exactly where the compatibility comes from, maybe from [the standal
  
 ## Conclusion
 
-So, in summary, if you're running test code interactively to debug them, and this test code changed some things using `withr::local_` or other compatible `local_` functions, to get back your session back to its initial state without restarting R, run `withr::deferred_run()`!
+So, in summary, if you're running test code interactively to debug them, and this test code changed some things using `withr::local_` or other compatible `local_` functions, to get your session back to its initial state without restarting R, run `withr::deferred_run()`!
 Thanks Jenny for the reminder!
