@@ -3,7 +3,7 @@ title: "Two recent enhancements to my testing workflow"
 date: '2023-10-09'
 slug: test-workflow-enhancement
 output: hugodown::hugo_document
-rmd_hash: 4457092bd0bb902f
+rmd_hash: 9016c53802d85f2e
 
 ---
 
@@ -22,6 +22,8 @@ This is huge! When I am struggling with a single test called "My great function 
 Now if I were struggling with more tests at a time (Remember, no one gets it right on their first try :sweat_smile:), I should use the handy [lazytest](https://github.com/cynkra/lazytest) package.
 
 ## Getting back to the package directory and project
+
+**Update on 2023-10-16: here's a [better, more general solution to fix local mess from a test](/2023/10/17/test-local-mess-reset/).**
 
 I recently realized that if...
 
