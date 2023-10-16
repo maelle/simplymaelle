@@ -3,7 +3,7 @@ title: "The real reset button for local mess fom tests: withr::deferred_run()"
 date: '2023-10-17'
 slug: test-local-mess-reset
 output: hugodown::hugo_document
-rmd_hash: 9e8c604dc0f4dbb1
+rmd_hash: 612994cdb9797294
 
 ---
 
@@ -38,7 +38,7 @@ Imagine the test fails and I run this in my R session probably after throwing a 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>temp_dir</span> <span class='o'>&lt;-</span> <span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_tempfile.html'>local_tempdir</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_options.html'>local_options</a></span><span class='o'>(</span>blop <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span></span>
 <span><span class='nf'>usethis</span><span class='nf'>::</span><span class='nf'><a href='https://usethis.r-lib.org/reference/proj_utils.html'>local_project</a></span><span class='o'>(</span><span class='nv'>temp_dir</span>, force <span class='o'>=</span> <span class='kc'>TRUE</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Setting active project to <span style='color: #0000BB;'>'/tmp/RtmpEglLMy/file5f7c21d2f506'</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Setting active project to <span style='color: #0000BB;'>'/tmp/RtmpFH1MM4/file645e1b25d736'</span></span></span>
 <span></span><span><span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_envvar.html'>local_envvar</a></span><span class='o'>(</span><span class='s'>"TEST_SWITCH"</span> <span class='o'>=</span> <span class='s'>"something"</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -53,7 +53,7 @@ Then I do the actual debugging. At the end my session is all messy!
 <span><span class='c'>#&gt; [1] FALSE</span></span>
 <span></span><span><span class='nf'>usethis</span><span class='nf'>::</span><span class='nf'><a href='https://usethis.r-lib.org/reference/proj_sitrep.html'>proj_sitrep</a></span><span class='o'>(</span><span class='o'>)</span> <span class='c'># cool function!</span></span>
 <span><span class='c'>#&gt; •   working_directory: <span style='color: #0000BB;'>'/home/maelle/Documents/blog/simplymaelle/content/post/2023-10-16-deferred-run'</span></span></span>
-<span><span class='c'>#&gt; • active_usethis_proj: <span style='color: #0000BB;'>'/tmp/RtmpEglLMy/file5f7c21d2f506'</span></span></span>
+<span><span class='c'>#&gt; • active_usethis_proj: <span style='color: #0000BB;'>'/tmp/RtmpFH1MM4/file645e1b25d736'</span></span></span>
 <span><span class='c'>#&gt; • active_rstudio_proj: <span style='color: #555555;'>&lt;unset&gt;</span></span></span>
 <span><span class='c'>#&gt; <span style='color: #BB0000;'>•</span> Your working directory is not the same as the active usethis project.</span></span>
 <span><span class='c'>#&gt;   Set working directory to the project: <span style='color: #555555;'>`setwd(proj_get())`</span></span></span>
@@ -90,7 +90,7 @@ I'm not sure exactly where the compatibility comes from, maybe from [the standal
 
 ## Conclusion
 
-So, in summary, if you're running test code interactively to debug them, and this test code changed some things using [`withr::local_`](https://withr.r-lib.org/reference/with_.html) or other compatible `local_` functions, to get back your session back to its initial state without restarting R, run [`withr::deferred_run()`](https://withr.r-lib.org/reference/defer.html)! Thanks Jenny for the reminder.
+So, in summary, if you're running test code interactively to debug them, and this test code changed some things using [`withr::local_`](https://withr.r-lib.org/reference/with_.html) or other compatible `local_` functions, to get back your session back to its initial state without restarting R, run [`withr::deferred_run()`](https://withr.r-lib.org/reference/defer.html)! Thanks Jenny for the reminder!
 
 [^1]: [Test switches](https://blog.r-hub.io/2023/01/23/code-switch-escape-hatch-test/) are sooo handy.
 

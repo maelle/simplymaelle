@@ -84,4 +84,4 @@ I'm not sure exactly where the compatibility comes from, maybe from [the standal
 ## Conclusion
 
 So, in summary, if you're running test code interactively to debug them, and this test code changed some things using `withr::local_` or other compatible `local_` functions, to get back your session back to its initial state without restarting R, run `withr::deferred_run()`!
-Thanks Jenny for the reminder.
+Thanks Jenny for the reminder!
