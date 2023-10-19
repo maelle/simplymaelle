@@ -3,9 +3,11 @@ title: "How to translate your package's messages with {potools}"
 date: '2023-10-06'
 slug: potools-mwe
 output: hugodown::hugo_document
-rmd_hash: f130acc3be58c44f
+rmd_hash: 48d31a2a23fdc3e2
 
 ---
+
+*This post was featured on the [R Weekly highlights podcast](https://rweekly.fireside.fm/140) hosted by Eric Nantz and Mike Thomas.*
 
 In November I'll give a talk about multilingualism in R at the [Spanish R conference](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html) in Barcelona (:heart_eyes:). I can't wait! Until then, I need to prepare my talk. :sweat_smile: I plan to present [the rOpenSci "multilingual publishing" project](https://ropensci.org/multilingual-publishing/) but also other related tools, like potools. In this post, I'll walk you through a minimal example of using potools to translate messages in an R package!
 

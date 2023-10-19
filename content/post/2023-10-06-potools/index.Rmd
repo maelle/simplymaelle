@@ -5,6 +5,8 @@ slug: potools-mwe
 output: hugodown::hugo_document
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://rweekly.fireside.fm/140) hosted by Eric Nantz and Mike Thomas.*
+
 In November I'll give a talk about multilingualism in R at the [Spanish R conference](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html) in Barcelona (:heart_eyes:).
 I can't wait!
 Until then, I need to prepare my talk. :sweat_smile:

@@ -3,9 +3,11 @@ title: "The real reset button for local mess fom tests: withr::deferred_run()"
 date: '2023-10-16'
 slug: test-local-mess-reset
 output: hugodown::hugo_document
-rmd_hash: d6012d7187796c44
+rmd_hash: 57fac4e93fd63ea0
 
 ---
+
+*This post was featured on the [R Weekly highlights podcast](https://rweekly.fireside.fm/141) hosted by Eric Nantz and Mike Thomas.*
 
 Following [last week's post on my testing workflow enhancements](/2023/10/09/test-workflow-enhancement/), Jenny Bryan kindly reminded me of the existence of an actual reset button when you've been interactively running tests that include some "local mess": [`withr::local_envvar()`](https://withr.r-lib.org/reference/with_envvar.html), [`withr::local_dir()`](https://withr.r-lib.org/reference/with_dir.html), [`usethis::local_project()`](https://usethis.r-lib.org/reference/proj_utils.html)... The reset button is [`withr::deferred_run()`](https://withr.r-lib.org/reference/defer.html).
 
@@ -38,7 +40,7 @@ Imagine the test fails and I run this in my R session probably after throwing a 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>temp_dir</span> <span class='o'>&lt;-</span> <span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_tempfile.html'>local_tempdir</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_options.html'>local_options</a></span><span class='o'>(</span>blop <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span></span>
 <span><span class='nf'>usethis</span><span class='nf'>::</span><span class='nf'><a href='https://usethis.r-lib.org/reference/proj_utils.html'>local_project</a></span><span class='o'>(</span><span class='nv'>temp_dir</span>, force <span class='o'>=</span> <span class='kc'>TRUE</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Setting active project to <span style='color: #0000BB;'>'/tmp/RtmplMLAWb/file1f4143b2c0a1'</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BB00;'>✔</span> Setting active project to <span style='color: #0000BB;'>'/tmp/RtmpTxY51U/file1dbe2032be39'</span></span></span>
 <span></span><span><span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_envvar.html'>local_envvar</a></span><span class='o'>(</span><span class='s'>"TEST_SWITCH"</span> <span class='o'>=</span> <span class='s'>"something"</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -53,7 +55,7 @@ Then I do the actual debugging. At the end my session is all messy!
 <span><span class='c'>#&gt; [1] FALSE</span></span>
 <span></span><span><span class='nf'>usethis</span><span class='nf'>::</span><span class='nf'><a href='https://usethis.r-lib.org/reference/proj_sitrep.html'>proj_sitrep</a></span><span class='o'>(</span><span class='o'>)</span> <span class='c'># cool function!</span></span>
 <span><span class='c'>#&gt; •   working_directory: <span style='color: #0000BB;'>'/home/maelle/Documents/blog/simplymaelle/content/post/2023-10-16-deferred-run'</span></span></span>
-<span><span class='c'>#&gt; • active_usethis_proj: <span style='color: #0000BB;'>'/tmp/RtmplMLAWb/file1f4143b2c0a1'</span></span></span>
+<span><span class='c'>#&gt; • active_usethis_proj: <span style='color: #0000BB;'>'/tmp/RtmpTxY51U/file1dbe2032be39'</span></span></span>
 <span><span class='c'>#&gt; • active_rstudio_proj: <span style='color: #555555;'>&lt;unset&gt;</span></span></span>
 <span><span class='c'>#&gt; <span style='color: #BB0000;'>•</span> Your working directory is not the same as the active usethis project.</span></span>
 <span><span class='c'>#&gt;   Set working directory to the project: <span style='color: #555555;'>`setwd(proj_get())`</span></span></span>
