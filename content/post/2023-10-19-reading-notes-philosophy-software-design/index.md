@@ -3,7 +3,7 @@ title: "Reading notes on A Philosophy of Software Design by John Ousterhout"
 date: '2023-10-19'
 slug: reading-notes-philosophy-software-design
 output: hugodown::hugo_document
-rmd_hash: e4243a1ffcb6eb0f
+rmd_hash: 66191c0b805769c8
 
 ---
 
@@ -41,7 +41,7 @@ Another point about the interface is that you only split two things if it simpli
 
 ## Tactical vs strategic programming
 
-The author compares to approaches to programming:
+The author compares two approaches to programming:
 
 -   **Tactical programming** is where you squash bugs and add features while racking up tech debt, not thinking about software design.
 
@@ -69,13 +69,18 @@ Apart from the idea I've just mentioned, one piece of advice that is reported in
 
 ## Consistency
 
-The author underlines the importance of consistency (in names, coding style, design patterns...), that makes your codebase easier to grasp and contribute to. To ensure consistency you should document it which made me think of contributing guides, and/or use automatic tools, which made me think of the lintr package.
+The author underlines the importance of consistency (in names, coding style, design patterns...), that makes your codebase easier to grasp and contribute to. To ensure consistency you should document it which made me think of [contributing guides](https://devdevguide.netlify.app/maintenance_collaboration#contributing-guide), and/or use automatic tools, which made me think of the [lintr package](https://lintr.r-lib.org/reference/index.html).
 
 ## Conclusion
 
-I am glad I ordered this book past me had bookmarked! I found it was very readable, with some good advice and ways to express it. My first recommendation of resources about good code would remain [The Art of Readable Code by Dustin Boswell and Trevor Foucher](https://www.oreilly.com/library/view/the-art-of/9781449318482/), [The Programmer's Brain by Felienne Hermans](https://www.manning.com/books/the-programmers-brain), [Jenny Bryan's talk "Code Smells and Feels"](https://github.com/jennybc/code-smells-and-feels) and [Hadley Wickham's Tidy Design newsletter that goes with a book-in-progress](https://tidydesign.substack.com/).
+I am glad I ordered this book past me had bookmarked! I found it was very readable, with some good advice and ways to express it. I am pretty sure I'll skim it in the future. My first recommendation of resources about good code would remain [The Art of Readable Code by Dustin Boswell and Trevor Foucher](https://www.oreilly.com/library/view/the-art-of/9781449318482/), [The Programmer's Brain by Felienne Hermans](https://www.manning.com/books/the-programmers-brain), [Jenny Bryan's talk "Code Smells and Feels"](https://github.com/jennybc/code-smells-and-feels) and [Hadley Wickham's Tidy Design newsletter that goes with a book-in-progress](https://tidydesign.substack.com/).
 
 If you read the book, what were your take-aways? What is your favorite resource to learn how to program better?
+
+## Other reviews of / notes on the book
+
+-   <https://johz.bearblog.dev/book-review-philosophy-software-design/>
+-   <https://blog.pragmaticengineer.com/a-philosophy-of-software-design-review/>
 
 [^1]: Unless you blog about it.
 
