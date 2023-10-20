@@ -3,7 +3,7 @@ title: "3 (actually 4) neat R functions"
 date: '2023-10-20'
 slug: three-neat-functions
 output: hugodown::hugo_document
-rmd_hash: 4485686578880f77
+rmd_hash: 2cfe0c5f95f4352c
 
 ---
 
@@ -135,5 +135,5 @@ I should write
 
 ## Conclusion
 
-In this post I shared about [`grep()`](https://rdrr.io/r/base/grep.html) to be used in lieu of `which(grepl())`, about [`strrep()`](https://rdrr.io/r/base/strrep.html) (string repetition) to be used in lieu of `paste(rep(), collapse ="")` and about [`startsWith()`](https://rdrr.io/r/base/startsWith.html) and [`endsWith()`](https://rdrr.io/r/base/startsWith.html) to be used in lieu of some regular expression with respectively `^` and `$`.
+In this post I shared about [`grep()`](https://rdrr.io/r/base/grep.html) to be used in lieu of `which(grepl())`, about [`strrep()`](https://rdrr.io/r/base/strrep.html) (string repetition) to be used in lieu of `paste(rep(), collapse ="")` and about [`startsWith()`](https://rdrr.io/r/base/startsWith.html) and [`endsWith()`](https://rdrr.io/r/base/startsWith.html) to be used in lieu of some regular expressions with respectively `^` and `$`.
 

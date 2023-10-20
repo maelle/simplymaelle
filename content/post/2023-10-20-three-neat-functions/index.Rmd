@@ -100,4 +100,4 @@ endsWith(animals, "t")
 
 ## Conclusion
 
-In this post I shared about `grep()` to be used in lieu of `which(grepl())`, about `strrep()` (string repetition) to be used in lieu of `paste(rep(), collapse ="")` and about `startsWith()` and `endsWith()` to be used in lieu of some regular expression with respectively `^` and `$`.    
+In this post I shared about `grep()` to be used in lieu of `which(grepl())`, about `strrep()` (string repetition) to be used in lieu of `paste(rep(), collapse ="")` and about `startsWith()` and `endsWith()` to be used in lieu of some regular expressions with respectively `^` and `$`.    
