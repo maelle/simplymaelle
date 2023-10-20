@@ -1,0 +1,103 @@
+---
+title: "3 (actually 4) neat R functions"
+date: '2023-10-20'
+slug: three-neat-functions
+output: hugodown::hugo_document
+---
+
+Time for me to throw away my sticky note after sharing what I wrote on it!
+
+## `grep(...)` not `which(grepl(...))`
+
+Recently I caught myself using `which(grepl(...))`,
+
+```{r}
+animals <- c("cat", "bird", "dog", "fish")
+which(grepl("i", animals))
+```
+
+when the simpler alternative is 
+
+```{r}
+animals <- c("cat", "bird", "dog", "fish")
+grep("i", animals)
+```
+
+And should I need the values instead of the indices, I know I shouldn't write
+
+```{r}
+animals <- c("cat", "bird", "dog", "fish")
+animals[grepl("i", animals)]
+```
+
+but
+
+```{r}
+animals <- c("cat", "bird", "dog", "fish")
+grep("i", animals, value = TRUE)
+```
+
+How to remember to use `grep()`?
+Re-reading oneself, or having code reviewed, probably helps, but why not automate this?
+When I shared my note to self on Mastodon, Hugo Gruson [explained](https://mastodon.social/deck/@grusonh/111181373365621067) that detecting usage of `which(grepl(` was part of planned linters to be added to lintr from [Google linting suite](https://github.com/r-lib/lintr/issues/884).
+This is excellent news!
+
+## `strrep()` and other defence tools against poor usages of `paste()`
+
+Yihui Xie wrote a [blog post inspired by my own series](https://yihui.org/en/2023/10/three-functions/), where one of the three presented functions was one that was on my sticky note! 
+I'll still present it: `strrep()`.
+
+`strrep()` means "string repeat". Instead of writing
+
+```{r}
+paste(rep("bla", 3), collapse = "")
+```
+
+you can, and should, write
+
+```{r}
+strrep("bla", 3)
+```
+
+I discovered this function because Hugo Gruson telling me about lintr inspired me to skim through lintr reference, where I saw ["Raise lints for several common poor usages of `paste()`"](https://lintr.r-lib.org/reference/paste_linter.html).
+That linter would also tell you when you use `paste(, sep = "")` instead of `paste0()`.
+
+## `startsWith()` and `endsWith()`
+
+I learned about `startsWith()` and `endsWith()` by reading lintr reference but I also got notified about it when running lintr on a package I was working on.
+Have you ever tried [running all linters on your code](https://github.com/r-lib/lintr/issues/1482#issuecomment-1198590483)? Fun experience.
+Anyhow, one linter is [Require usage of `startsWith()` and `endsWith()` over `grepl()`/`substr()` versions](https://lintr.r-lib.org/reference/string_boundary_linter.html), with an interesting Details section on missing values.
+
+Instead of writing
+
+```{r}
+animals <- c("cat", "cow", "dog", "fish")
+grepl("^c", animals)
+```
+
+I should write
+
+```{r}
+animals <- c("cat", "cow", "dog", "fish")
+startsWith(animals, "c")
+```
+
+A nice side-effect of the switch, beyond good practice of its sake and more readability, is that the argument order is more logical in `startsWith()`.
+
+Similarly, instead of writing
+
+```{r}
+animals <- c("cat", "cow", "dog", "fish")
+grepl("t$", animals)
+```
+
+I should write
+
+```{r}
+animals <- c("cat", "cow", "dog", "fish")
+endsWith(animals, "t")
+```
+
+## Conclusion
+
+In this post I shared about `grep()` to be used in lieu of `which(grepl())`, about `strrep()` (string repetition) to be used in lieu of `paste(rep(), collapse ="")` and about `startsWith()` and `endsWith()` to be used in lieu of some regular expression with respectively `^` and `$`.    
