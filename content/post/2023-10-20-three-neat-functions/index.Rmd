@@ -82,7 +82,7 @@ animals <- c("cat", "cow", "dog", "fish")
 startsWith(animals, "c")
 ```
 
-A nice side-effect of the switch, beyond good practice of its sake and more readability, is that the argument order is more logical in `startsWith()`.
+A nice side-effect of the switch, beyond good practice for its own sake and more readability, is that the argument order is more logical in `startsWith()`.
 
 Similarly, instead of writing
 

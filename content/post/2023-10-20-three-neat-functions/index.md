@@ -3,7 +3,7 @@ title: "3 (actually 4) neat R functions"
 date: '2023-10-20'
 slug: three-neat-functions
 output: hugodown::hugo_document
-rmd_hash: 055542cf8bcbefba
+rmd_hash: 4485686578880f77
 
 ---
 
@@ -109,7 +109,7 @@ I should write
 
 </div>
 
-A nice side-effect of the switch, beyond good practice of its sake and more readability, is that the argument order is more logical in [`startsWith()`](https://rdrr.io/r/base/startsWith.html).
+A nice side-effect of the switch, beyond good practice for its own sake and more readability, is that the argument order is more logical in [`startsWith()`](https://rdrr.io/r/base/startsWith.html).
 
 Similarly, instead of writing
 
