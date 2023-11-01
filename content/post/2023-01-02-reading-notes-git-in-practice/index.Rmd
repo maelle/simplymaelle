@@ -11,6 +11,8 @@ tags:
 
 While preparing materials for teaching Git a few months ago, I re-read Suzan Baert's excellent [post about Git and GitHub](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), where she [mentioned](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/#final-thoughts) having read ["Git in Practice" by Mike McQuaid](https://www.manning.com/books/git-in-practice).
 I added the book to my [Momox](https://en.wikipedia.org/wiki/Momox) alerts, where it got available a few weeks later.
+The book source is on [GitHub](https://github.com/MikeMcQuaid/GitInPractice#readme).
+
 Here are my reading notes, since I hope this habit of writing book learnings will stick.
 These notes are of limited generalizability, depending on what your own Git practice and knowledge are.
 
@@ -228,3 +230,42 @@ Again an use case that resonated with me (well I don't use Rails but still)
 
 So in that case one can run `Git update-index --assume-unchanged <path>`. 
 Then you undo this by running `Git update-index --no-assume-unchanged <path>`.
+
+## Chapter 4: History visualization
+
+Honestly most of this chapter made me happy about the GitHub interface!
+
+The other thing is that it has an explanation of `git bisect` that I need to come back to next time I need to find which commit caused a particular bug.
+I tend to be scared of `git bisect`, but the explanation made sense.
+Also I guess I need to focus on making small informative commits before bisect really shines in my use cases. :innocent:
+
+I am especially curious about `git bisect run` for automating `git bisect`, I wonder how that would work with a testthat unit test.
+
+## Chapter 5: Advanced branching
+
+### Merge strategies
+
+I learnt there's a merge strategy, `--ours`, that will ignore all changes from the incoming branch but still indicate it in the history.
+That's supposed to be useful for when you want to keep an experiment from an experimental branch in the history.
+
+There's another interesting merge strategy, `--patience`, that "uses a slightly more expensive git diff algorithm to try to decrease the chance of a merge conflict". 
+It sounds like a joke.
+
+### Not useful to me but fun name: git rerere
+
+`git rerere`, Reuse Recorded Resolution, allows you to resolve each merge conflict only once.
+
+I sort of understand the use case but it doesn't sound useful to my work:
+
+> "You may find yourself in a situation where you have a long-running branch that you have to keep merging in another branch, and you get the same merge conflict every time."
+
+### Yay git cherry-pick
+
+`git cherry-pick` allows you to add a single commit to the current branch.
+I recently successfully used it!
+
+A collaborator had mistakenly created a new feature branch from another feature branch instead of from the brain branch.
+After that they added their feature commit but the PR was all broken.
+I created a new branch from the main branch, cherry-picked the commit and then opened a new PR.
+It's a small step for humanity but it was a big step for me. :grin:
+It was very cool to be able to say "don't worry, I've got it" to that collaborator.

@@ -7,11 +7,13 @@ tags:
   - good practice
   - books
   - git
-rmd_hash: 4540565d08c22e78
+rmd_hash: c52c7fe9533eab6f
 
 ---
 
-While preparing materials for teaching Git a few months ago, I re-read Suzan Baert's excellent [post about Git and GitHub](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), where she [mentioned](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/#final-thoughts) having read ["Git in Practice" by Mike McQuaid](https://www.manning.com/books/git-in-practice). I added the book to my [Momox](https://en.wikipedia.org/wiki/Momox) alerts, where it got available a few weeks later. Here are my reading notes, since I hope this habit of writing book learnings will stick. These notes are of limited generalizability, depending on what your own Git practice and knowledge are.
+While preparing materials for teaching Git a few months ago, I re-read Suzan Baert's excellent [post about Git and GitHub](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), where she [mentioned](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/#final-thoughts) having read ["Git in Practice" by Mike McQuaid](https://www.manning.com/books/git-in-practice). I added the book to my [Momox](https://en.wikipedia.org/wiki/Momox) alerts, where it got available a few weeks later. The book source is on [GitHub](https://github.com/MikeMcQuaid/GitInPractice#readme).
+
+Here are my reading notes, since I hope this habit of writing book learnings will stick. These notes are of limited generalizability, depending on what your own Git practice and knowledge are.
 
 ## First impressions
 
@@ -102,7 +104,7 @@ I didn't know that one could call `git diff` without an argument, and that it'd 
 <span><span class='c'>#&gt; &lt;0 rows&gt; (or 0-length row.names)</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_status</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;                                                              file   status</span></span>
-<span><span class='c'>#&gt; 2  content/post/2023-01-02-reading-notes-git-in-practice/index.md      new</span></span>
+<span><span class='c'>#&gt; 2  content/post/2023-01-02-reading-notes-git-in-practice/index.md modified</span></span>
 <span><span class='c'>#&gt; 1 content/post/2023-01-02-reading-notes-git-in-practice/index.Rmd modified</span></span>
 <span><span class='c'>#&gt;   staged</span></span>
 <span><span class='c'>#&gt; 2  FALSE</span></span>
@@ -116,7 +118,7 @@ I didn't know that one could call `git diff` without an argument, and that it'd 
 <span><span class='c'>#&gt; 1 diff --git a/bla.txt b/bla.txt\nindex 35733a0..94652b8 100644\n--- a/bla.txt\n+++ b/bla.txt\n@@ -1 +1 @@\n-blop\n+bip\n</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_status</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;                                                              file   status</span></span>
-<span><span class='c'>#&gt; 2  content/post/2023-01-02-reading-notes-git-in-practice/index.md      new</span></span>
+<span><span class='c'>#&gt; 2  content/post/2023-01-02-reading-notes-git-in-practice/index.md modified</span></span>
 <span><span class='c'>#&gt; 1 content/post/2023-01-02-reading-notes-git-in-practice/index.Rmd modified</span></span>
 <span><span class='c'>#&gt;   staged</span></span>
 <span><span class='c'>#&gt; 2  FALSE</span></span>
@@ -143,28 +145,28 @@ So if you use say `main^^` and want to get the actual SHA, you can use `git rev-
 <span><span class='c'>#&gt;      file status staged</span></span>
 <span><span class='c'>#&gt; 1 bla.txt    new   TRUE</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit</a></span><span class='o'>(</span><span class='s'>"first commit"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "a4c57c453adabe9f44706bb861e2e72b66fad8f8"</span></span>
+<span><span class='c'>#&gt; [1] "a85508e5185b2e4a1091d70bf0e1f58f62453038"</span></span>
 <span></span><span></span>
 <span><span class='nf'>brio</span><span class='nf'>::</span><span class='nf'><a href='https://brio.r-lib.org/reference/write_lines.html'>write_lines</a></span><span class='o'>(</span><span class='s'>"blip"</span>, path <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='o'>(</span><span class='nv'>git_repo</span>, <span class='s'>"bla.txt"</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_add</a></span><span class='o'>(</span><span class='s'>"bla.txt"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;      file   status staged</span></span>
 <span><span class='c'>#&gt; 1 bla.txt modified   TRUE</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit</a></span><span class='o'>(</span><span class='s'>"second commit"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "9cf1a500b5096725624be0e5b6d7cdf35edbfba6"</span></span>
+<span><span class='c'>#&gt; [1] "e9efc41953f8a2b189e258945776e392aed4dde9"</span></span>
 <span></span><span></span>
 <span><span class='nf'>brio</span><span class='nf'>::</span><span class='nf'><a href='https://brio.r-lib.org/reference/write_lines.html'>write_lines</a></span><span class='o'>(</span><span class='s'>"blup"</span>, path <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='o'>(</span><span class='nv'>git_repo</span>, <span class='s'>"bla.txt"</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_add</a></span><span class='o'>(</span><span class='s'>"bla.txt"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;      file   status staged</span></span>
 <span><span class='c'>#&gt; 1 bla.txt modified   TRUE</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit</a></span><span class='o'>(</span><span class='s'>"third commit"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "4e1b1b6264d804a72c91d0289b780117168fac9b"</span></span>
+<span><span class='c'>#&gt; [1] "734f3dc01ac5bfe58ef7613f16180229e5045537"</span></span>
 <span></span><span></span>
 <span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit_id</a></span><span class='o'>(</span><span class='s'>"main"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "4e1b1b6264d804a72c91d0289b780117168fac9b"</span></span>
+<span><span class='c'>#&gt; [1] "734f3dc01ac5bfe58ef7613f16180229e5045537"</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit_id</a></span><span class='o'>(</span><span class='s'>"main^"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "9cf1a500b5096725624be0e5b6d7cdf35edbfba6"</span></span>
+<span><span class='c'>#&gt; [1] "e9efc41953f8a2b189e258945776e392aed4dde9"</span></span>
 <span></span><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_commit.html'>git_commit_id</a></span><span class='o'>(</span><span class='s'>"main^^"</span>, repo <span class='o'>=</span> <span class='nv'>git_repo</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "a4c57c453adabe9f44706bb861e2e72b66fad8f8"</span></span>
+<span><span class='c'>#&gt; [1] "a85508e5185b2e4a1091d70bf0e1f58f62453038"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -244,4 +246,34 @@ Again an use case that resonated with me (well I don't use Rails but still)
 > "I've found myself in a situation in the past where I wanted to test a Rails configuration file change for a week or two while continuing to do my normal work. I didn't want to commit it because I didn't want it to apply to servers or my coworkers, but I did want to continue testing it while I made other commits rather than change to a particular branch each time."
 
 So in that case one can run `Git update-index --assume-unchanged <path>`. Then you undo this by running `Git update-index --no-assume-unchanged <path>`.
+
+## Chapter 4: History visualization
+
+Honestly most of this chapter made me happy about the GitHub interface!
+
+The other thing is that it has an explanation of `git bisect` that I need to come back to next time I need to find which commit caused a particular bug. I tend to be scared of `git bisect`, but the explanation made sense. Also I guess I need to focus on making small informative commits before bisect really shines in my use cases. :innocent:
+
+I am especially curious about `git bisect run` for automating `git bisect`, I wonder how that would work with a testthat unit test.
+
+## Chapter 5: Advanced branching
+
+### Merge strategies
+
+I learnt there's a merge strategy, `--ours`, that will ignore all changes from the incoming branch but still indicate it in the history. That's supposed to be useful for when you want to keep an experiment from an experimental branch in the history.
+
+There's another interesting merge strategy, `--patience`, that "uses a slightly more expensive git diff algorithm to try to decrease the chance of a merge conflict". It sounds like a joke.
+
+### Not useful to me but fun name: git rerere
+
+`git rerere`, Reuse Recorded Resolution, allows you to resolve each merge conflict only once.
+
+I sort of understand the use case but it doesn't sound useful to my work:
+
+> "You may find yourself in a situation where you have a long-running branch that you have to keep merging in another branch, and you get the same merge conflict every time."
+
+### Yay git cherry-pick
+
+`git cherry-pick` allows you to add a single commit to the current branch. I recently successfully used it!
+
+A collaborator had mistakenly created a new feature branch from another feature branch instead of from the brain branch. After that they added their feature commit but the PR was all broken. I created a new branch from the main branch, cherry-picked the commit and then opened a new PR. It's a small step for humanity but it was a big step for me. :grin: It was very cool to be able to say "don't worry, I've got it" to that collaborator.
 
