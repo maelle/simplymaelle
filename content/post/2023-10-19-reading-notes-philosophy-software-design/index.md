@@ -3,7 +3,10 @@ title: "Reading notes on A Philosophy of Software Design by John Ousterhout"
 date: '2023-10-19'
 slug: reading-notes-philosophy-software-design
 output: hugodown::hugo_document
-rmd_hash: 66191c0b805769c8
+tags:
+  - good practice
+  - books
+rmd_hash: b13652d03e297b61
 
 ---
 

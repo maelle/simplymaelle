@@ -3,6 +3,9 @@ title: "Reading notes on A Philosophy of Software Design by John Ousterhout"
 date: '2023-10-19'
 slug: reading-notes-philosophy-software-design
 output: hugodown::hugo_document
+tags:
+  - good practice
+  - books
 ---
 
 When I see a book recommendation somewhere, be it for work or leisure, I often either order the book or set an alert in my [favorite online second-hand bookstore](https://www.momox-shop.fr/).
