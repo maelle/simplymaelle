@@ -1,16 +1,18 @@
 ---
 title: "Reading notes on Git in Practice by Mike McQuaid"
-date: '2023-01-02'
+date: '2023-11-02'
 slug: reading-notes-git-in-practice
 output: hugodown::hugo_document
 tags:
   - good practice
   - books
+  - git
 ---
 
-While preparing materials for teaching Git a few months ago, I re-read Suzan Baert's excellent [post about Git and GitHub](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), where she [mentioned](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/#final-thoughts) having read "Git in Practice" by Mike McQuaid.
+While preparing materials for teaching Git a few months ago, I re-read Suzan Baert's excellent [post about Git and GitHub](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/), where she [mentioned](https://suzan.rbind.io/2018/03/reflections-4-months-of-github/#final-thoughts) having read ["Git in Practice" by Mike McQuaid](https://www.manning.com/books/git-in-practice).
 I added the book to my [Momox](https://en.wikipedia.org/wiki/Momox) alerts, where it got available a few weeks later.
 Here are my reading notes, since I hope this habit of writing book learnings will stick.
+These notes are of limited generalizability, depending on what your own Git practice and knowledge are.
 
 ## First impressions
 
@@ -40,7 +42,7 @@ What aged really bad: the screenshots from GitHub interface!
 ### 66 "techniques"
 
 The book cover indicates it includes 66 techniques.
-The first techniques are Git init, Git add, Git commit: calling them techniques is a bit of a stretch to me?
+The first techniques are `git init`, `git add`, `git commit`: calling them techniques is a bit of a stretch to me?
 But then the very predictable structure of the book content was actually great, so using that structure from the get go wasn't bad at all.
 
 ## Chapter 1: Local Git
@@ -49,9 +51,9 @@ But then the very predictable structure of the book content was actually great, 
 
 > "Rather than require all changes in the working tree to make up the next commit, Git allows files to be added incrementally to the index"
 
-So, while I've been practicing this, I'm not sure I ever expressed the usefulness of Git add.
+So, while I've been practicing this, I'm not sure I ever expressed the usefulness of `git add`.
 
-I also underlined a sentence explaining that git add does two things:
+I also underlined a sentence explaining that `git add` does two things:
 
 > "git add is used both to initially add a file to the Git repository and to request that changes to the fine be used in the next commit."
 
@@ -78,3 +80,151 @@ I guess there's also a parallel between conventional commits convention, where y
 > "there's no need for everyone to see the mistakes you made along the way"
 
 Now let's see if this, and other parts of the book, motivate me enough to rewrite the history of my Git branches before I mark a PR as ready for review.
+
+### A better understanding of Git diff
+
+I didn't know that one could call `git diff` without an argument, and that it'd show the diff between the working directory and the index staging area... but apparently only for files that were already added, which answers my question about how different that is from `git status`:
+
+```{r}
+git_repo <- withr::local_tempdir()
+gert::git_init(git_repo)
+
+brio::write_lines("blop", path = file.path(git_repo, "bla.txt"))
+gert::git_add("bla.txt", repo = git_repo)
+first_commit <- gert::git_commit("first commit", repo = git_repo)
+
+brio::write_lines("bip", path = file.path(git_repo, "other.txt"))
+
+gert::git_diff("HEAD", repo = git_repo)
+gert::git_diff(first_commit, repo = git_repo)
+gert::git_diff(repo = git_repo)
+gert::git_status()
+
+brio::write_lines("bip", path = file.path(git_repo, "bla.txt"))
+gert::git_diff(repo = git_repo)
+gert::git_status()
+
+```
+
+### Smiling refs
+
+I learnt that `main^` is equivalent to `main~1` and `main^^` is equivalent to `main~2`. ^_^
+
+### Git rev-parse
+
+So if you use say `main^^` and want to get the actual SHA, you can use `git rev-parse`.
+In gert, that's [gert::git_commit_id()](https://github.com/r-lib/gert/issues/70).
+
+```{r}
+git_repo <- withr::local_tempdir()
+gert::git_init(git_repo)
+
+brio::write_lines("blop", path = file.path(git_repo, "bla.txt"))
+gert::git_add("bla.txt", repo = git_repo)
+gert::git_commit("first commit", repo = git_repo)
+
+brio::write_lines("blip", path = file.path(git_repo, "bla.txt"))
+gert::git_add("bla.txt", repo = git_repo)
+gert::git_commit("second commit", repo = git_repo)
+
+brio::write_lines("blup", path = file.path(git_repo, "bla.txt"))
+gert::git_add("bla.txt", repo = git_repo)
+gert::git_commit("third commit", repo = git_repo)
+
+gert::git_commit_id("main", repo = git_repo)
+gert::git_commit_id("main^", repo = git_repo)
+gert::git_commit_id("main^^", repo = git_repo)
+```
+
+## Chapter 2: Remote Git
+
+Interestingly that's the chapter where branches are introduced.
+
+### Git as a distributed version control system
+
+My first version control experience was with SVN, for a package developed on R-forge.
+I only remember two things: the cute tortoise of Tortoise-SVN, and the fact that instead of doing commit+push I'd only do commit.
+It makes sense now that I understand that Git is a distributed version control system whereas SVN is centralized, with a remote repo being the source of truth.
+
+### Why Git fetch?
+
+To be honest, I'm still not sure when I would use `git fetch`!
+`git fetch` is for fetching changes from a remote without modifying local branches.
+I only use `git pull` (which is fetch+merge) or `git pull --rebase` when that fails, mostly.
+Note that the ["Pull, but you have local work" chapter](https://happygitwithr.com/pull-tricky.html) of happygitwithr by Jenny Bryan, the STAT 545 TAs, Jim Hester looks useful (I found it by searching for "fetch" in that book).
+
+Mike McQuaid wrote a paragraph "Should you use pull or fetch?" where he explains he prefers git fetch because he can incorporate remote changes when it makes sense, using a method of his choice (merging, rebasing, resetting).
+He also says `git fetch` is better for working in situations with no internet connection, which was unclear to me.
+
+### Branch names
+
+Mike McQuaid recommends creating a branch name that describes "the branch's purpose in multiple words separated by hyphens".
+That's what I tend to do, probably imitating what I saw elsewhere.
+Sometimes my branch names are less informative, and this makes me cringe when I open the corresponding PR.
+
+### Pushing a local branch remotely
+
+This section just made me very happy I push local branches with `gert::git_push()`, because it sets the upstream branch automatically by default.
+
+### Slowly, slowly understanding merge commits
+
+I learnt that merge commits are commits with multiple parents when working on the fledge package.
+When reading "Git in practice", I at least understood "fast-forward merge" which is something I had simply ignored when Git told me it had done one.
+
+So, for my future reference...
+If I am merging a branch A into main, and Git tells me it did a fast-forward merge, it means no merge commit was needed so none was made. 
+The branch A commits were added to the main branch without new commit before that.
+
+### Conflicts and merge commits
+
+> "When conflicts have been resolved, a _merge commit_ can be made. This stores the two parent commits and the conflicts that were resolved so they can be inspected un the future. Unfortunately, sometimes people pick the wrong option or merge incorrectly, so it's good to be able to later see what conflicts they had to resolve."
+
+This was new to me, certaintly not something I had in mind when resolving conflicts.
+
+## Chapter 3: Filesystem interactions
+
+### Git mv, Git rm
+
+I was never aware of `git mv`, for renaming and moving a file.
+I think it's because the RStudio IDE Git thingie was doing this for me?
+When I rename a file, I see the status becomes "R" once I've added both the file deletion (old name) and the file adding (new name).
+
+The same goes for `git rm` for removing a file.
+
+### I should use Git reset more often
+
+An use case for `git reset` that was described really resonated with me. :sweat_smile:
+
+> "Perhaps you added debugging statements to files and have now commited a fix, so you want to reset all the files that haven't been committed to their last committed state (on the current branch)".
+
+So instead of looking at the Git diff to remember where I added `browser()`, or looking for occurrences of a given debugging thing, I could use `git reset`, now that sounds smarter!
+
+### I should adopt Git clean
+
+`git clean` will remove any untracked file from the filesystem.
+Like the previous idea, it sounds like something I could use when debugging something and creating files à la "blop.text".
+
+Now `git clean` can be dangerous so you can first run `git clean -n` or `git clean --dry-run` to see what would be removed.
+
+Note that gert doesn't seem to support `git clean` so I'd do this from a terminal.
+
+The book also explains the `-X` argument of `git clean` for removing only ignored files, compared to the lower case `-x` argument for removing both ignored and untracked files.
+
+In conclusion I need to practice using `git clean`, and to refer to its docs when doing so, but at least now I know it exists.
+
+### Could Git stash be useful to me
+
+`git stash save` is a command for temporarily stashing some changes.
+`git stash pop` gets them back.
+`git stadsh clear` clears stashed commits.
+
+I can't think of an use case right now but maybe I will encounter one one day?
+
+### Git update-index --assume-unchanged <path>
+
+Again an use case that resonated with me (well I don't use Rails but still)
+
+> "I've found myself in a situation in the past where I wanted to test a Rails configuration file change for a week or two while continuing to do my normal work. I didn't want to commit it because I didn't want it to apply to servers or my coworkers, but I did want to continue testing it while I made other commits rather than change to a particular branch each time."
+
+So in that case one can run `Git update-index --assume-unchanged <path>`. 
+Then you undo this by running `Git update-index --no-assume-unchanged <path>`.
