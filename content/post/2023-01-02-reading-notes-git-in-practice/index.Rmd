@@ -13,8 +13,11 @@ While preparing materials for teaching Git a few months ago, I re-read Suzan Bae
 I added the book to my [Momox](https://en.wikipedia.org/wiki/Momox) alerts, where it got available a few weeks later.
 The book source is on [GitHub](https://github.com/MikeMcQuaid/GitInPractice#readme).
 
+The book isn't too heavy, so I took it with me on a long train journey! :train:
+
 Here are my reading notes, since I hope this habit of writing book learnings will stick.
 These notes are of limited generalizability, depending on what your own Git practice and knowledge are.
+Some chapter numbers are missing: they are those that were less relevant to me.
 
 ## First impressions
 
