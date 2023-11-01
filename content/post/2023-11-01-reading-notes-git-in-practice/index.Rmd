@@ -1,6 +1,6 @@
 ---
 title: "Reading notes on Git in Practice by Mike McQuaid"
-date: '2023-11-02'
+date: '2023-11-01'
 slug: reading-notes-git-in-practice
 output: hugodown::hugo_document
 tags:
@@ -23,7 +23,7 @@ Some chapter numbers are missing: they are those that were less relevant to me.
 
 ### Manning Publications book cover
 
-This is the second book published by Manning that I own, the other being "The Programmer's Brain" by Felienne Hermans.
+This is the second book published by Manning that I own, the other being ["The Programmer's Brain" by Felienne Hermans](https://www.manning.com/books/the-programmers-brain).
 Both have covers featuring an ancient drawing of someone wearing a traditional dress, but different drawings of course, and different artists.
 For "Git in Practice" the cover is "A Kamtchadale in her full dress in 1768".
 While the editor didn't explain why a particular drawing was chosen, they have a general explanation
@@ -78,7 +78,7 @@ Then the author mentions two reasons why small commits are better:
 And apparently this comes from the history of Git, where commits could be sent as email.
 So the first line of a commit message is the subject and the rest, the body.
 
-I guess there's also a parallel between conventional commits convention, where you add a prefix to the subject indicating its category: "fix:" for bug fixes, "feat:" for features, is like adding a prefix to an email subject: "[ACTION REQUIRED]".
+I guess there's also a parallel between the [conventional commits convention](https://www.conventionalcommits.org/en/v1.0.0/), where you add a prefix to the subject indicating its category: "fix:" for bug fixes, "feat:" for features, is like adding a prefix to an email subject: "[ACTION REQUIRED]".
 
 ### A motivation for rewriting history
 
@@ -173,7 +173,7 @@ This section just made me very happy I push local branches with `gert::git_push(
 
 ### Slowly, slowly understanding merge commits
 
-I learnt that merge commits are commits with multiple parents when working on the fledge package.
+I learnt that merge commits are commits with multiple parents when working on the [fledge package](https://fledge.cynkra.com/).
 When reading "Git in practice", I at least understood "fast-forward merge" which is something I had simply ignored when Git told me it had done one.
 
 So, for my future reference...
@@ -225,7 +225,7 @@ In conclusion I need to practice using `git clean`, and to refer to its docs whe
 
 I can't think of an use case right now but maybe I will encounter one one day?
 
-### Git update-index --assume-unchanged <path>
+### Git update-index `--assume-unchanged` <path>
 
 Again an use case that resonated with me (well I don't use Rails but still)
 
@@ -267,8 +267,102 @@ I sort of understand the use case but it doesn't sound useful to my work:
 `git cherry-pick` allows you to add a single commit to the current branch.
 I recently successfully used it!
 
-A collaborator had mistakenly created a new feature branch from another feature branch instead of from the brain branch.
+A collaborator had mistakenly created a new feature branch from another feature branch instead of from the main branch.
 After that they added their feature commit but the PR was all broken.
 I created a new branch from the main branch, cherry-picked the commit and then opened a new PR.
 It's a small step for humanity but it was a big step for me. :grin:
 It was very cool to be able to say "don't worry, I've got it" to that collaborator.
+
+## Chapter 6: Rewriting history and disaster recovery
+
+### Another new-to-me command: git reflog
+
+`git reflog` will list "all changes including history rewrites", for the local repository.
+Commits that are deleted on all branches are only kept in the reflog for 90 days.
+
+### Git reset can take a list of paths as arguments
+
+An example would be `git reset HEAD^ -- path.txt`
+
+### Actually retired now: Git filter-branch
+
+One technique presented in the book, for rewriting git repository history, is `git filter-branch` but then I saw a [toot by Kirill Müller](https://mastodon.social/deck/@kirill@fosstodon.org/111302703034532823) indicating it's retired.
+A replacement is [git filter-repo](https://github.com/newren/git-filter-repo/), that I'd have to explore a bit more before being able to use it.
+The [simple example](https://github.com/newren/git-filter-repo/#simple-example-with-comparisons) looks convincing enough!
+According to the book this can be useful for some cases of disaster recovery.
+
+### Commit regularly
+
+This is the main message of this chapter, and it's not an advanced technique at all, just a good habit. :smile_cat:
+
+## Chapter 7: Personalizing Git
+
+### Option for pruning branches automatically
+
+If you want the references to now deleted remote branches to be deleted, you can run `git remote prune origin` or configure Git so that this will happen every time you pull or fetch.
+
+```{r, eval=FALSE}
+gert::git_config_global_set("fetch.prune", 1)
+```
+
+### Global gitignore
+
+I already knew about the global gitignore file thanks to the handy [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html).
+
+### An option for autocorrecting misspelled commands
+
+There's a Git option for autocorrecting misspelled commands, [help.autocorrect](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_help_autocorrect).
+It would not help me since my most frequent typo is "gut" instead of "git", sadly.
+
+## Chapter 8: Vendoring dependencies as submodules
+
+If I ever have to work again with a repo that uses submodules :sob:, I might go back to this chapter to see which commands to run.
+
+## Chapter 12: Creating a clean history
+
+### One can build a commit from parts of files
+
+Using `git add --patch <path>`.
+This opens an interactive menu letting you choose which hunk(s) to add to a commit.
+Each hunk can be split into smaller hunks.
+Then one uses `git commit` as usual.
+
+The book also mentions that `git commit --patch` also exists.
+It seems less intuitive to me to do the hunk selection at that stage.
+
+## Chapter 13: merging vs. rebasing
+
+This chapter compares the strategies of two projects:
+
+- CMake's branching and merging strategy.
+- Homebrew's rebasing and squashing strategy. "This hides merge commits, evidence of branches, and temporary commits (for example, those that fix previous commits on the same branch) from the main branch."
+
+To me CMake history looks like a mess or even a nightmare so I guess I'm in favor of the Homebrew's strategy!
+
+But in each project, it is worth to have a discussion about the chosen strategy, to educate contributors.
+
+I liked reading that in Homebrew, metadata is included into commit messages.
+For instance I enjoy the fact that GitHub automatically adds co-authors when you squash and merge a PR that add multiple contributors: https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors
+
+## Chapter 14: Recommended team workflows
+
+Have you heard of GitHub flow, Git flow?
+These are _team workflows_.
+
+> "The different strategies for deciding how and when to branch, merge or rebase as part of a team are called _team workflows_."
+
+I much prefer GitHub flow where the default branch is stable and where there is no long-lived development branch, because in my experience, having such a long-lived development branch has lead to more confusion than gains.
+For [rOpenSci dev guide](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) we went from some sort of Git flow to GitHub flow, where actual relases will be, well, actual releases/tags of the main branch.
+Changing flows was such a relief!
+
+The author also presented his own two usual flows.
+
+## Conclusion
+
+"Git in practice" by Mike McQuaid was a nice train travel companion.
+I feared it would be too dry or obscure but found it clear and well explained.
+I learnt a lot, but now, I will have to... practice what I learnt! :grin:
+
+Did you read this book, or another Git book?
+How did you learn Git?
+Any strong opinion on any of the topics mentioned in those notes?
