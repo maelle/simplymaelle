@@ -1,0 +1,155 @@
+---
+title: "Useful functions for dealing with object names"
+date: '2023-11-06'
+slug: functions-dealing-with-names
+output: hugodown::hugo_document
+---
+
+My sticky note filled up quickly after I only added `setNames()` on it, with related functions for dealing with object names, in base R and beyond!
+
+## (Un)Set object names: `stats::setNames()`, `unname()` and `rlang::set_names()`
+
+I noticed a function ending with something like this:
+
+```{r, eval=FALSE}
+blop <- function() {
+  
+  # code creating the df data.frame
+  # ...
+  
+  names(df) <- c("col1", "col2")
+  df
+}
+```
+
+It striked me as simplifiable by:
+
+```{r, eval=FALSE}
+blop <- function() {
+  
+  # code creating the df data.frame
+  # ...
+  
+  stats::setNames(df, c("col1", "col2"))
+}
+```
+
+Interestingly the docs for `setNames()` sound as if it were created just for this use case!
+
+> "This is a convenience function that sets the names on an object and returns the object. It is most useful at the end of a function definition where one is creating the object to be returned and would prefer not to store it under a name just so the names can be assigned."
+
+For the opposite operation, removing the names of an object, we can use `unname()`.
+
+Unsurprisingly, the rlang package has its own special `rlang::set_names()`, that is more or less a `stats::setNames()` + `unname()` + generic `janitor::clean_names()` combo!
+
+```{r}
+(df <- data.frame(c(1, 2), c(5, 7)))
+
+rlang::set_names(df, c("a", "b")) # sets names!
+
+rlang::set_names(df, NULL) # removes names
+
+df2 <- rlang::set_names(df, c("SHOUTING", "LOUDLY"))
+df2
+rlang::set_names(df2, tolower) # using a function to transform names
+
+```
+
+Of note, 
+
+> "`set_names()` is stable and exported in purrr".
+
+So if you prefer, you can use `purrr::set_names()` instead.
+
+Last but not least, despite the examples above being on a data.frame, these functions can be used on lists, vectors...
+
+## Extracting names: `names()`, `rlang::names2()`
+
+`names()` probably doesn't need any introduction, but it's interesting to mention it in contrast to `rlang::names2()` that " always returns a character vector, even when an object does not have a names attribute.".
+
+```{r}
+vector <- c(1, 2)
+names(vector)
+rlang::names2(vector)
+```
+
+rlang also has a replacement variant, `rlang::names2<-`, that "never adds NA names and instead fills unnamed vectors with `""`."
+
+I didn't know all this before skimming the list of rlang functions [dealing with object attributes](https://rlang.r-lib.org/reference/index.html#attributes).
+
+## Checking names: 
+
+### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_names()`
+
+To check whether an object has names, no matter the names, we can use `rlang::is_named()` or its variant `rlang::is_named2()` that "always returns TRUE for empty vectors, even those that don't have a names attribute." I suspect that I'll forget the difference as soon as I publish this post, so I'll have to practice and pay extra attention.
+
+`rlang::have_name()` is the vectorized version of `rlang::is_name()`, not to be confused with `rlang::has_name()`. :sweat_smile:
+
+```{r}
+rlang::is_named(c(a = 1))
+
+rlang::is_named(NULL)
+rlang::is_named2(NULL)
+
+rlang::have_name(c(a = 1, 2)) # the example from the manual page
+
+```
+
+I do not know of a base R equivalent, I mean I'd find a way to express it, but not as directly.
+But maybe I am missing yet another base R gem!
+
+### Does the object have an element called X, does the object have elements called X, Y: `utils::hasName()`, `rlang::has_name()`
+
+If you want to check that an object contains elements with certain names, you can use `utils::hasName()`
+
+```{r}
+expected_names <- c("pof", "blop")
+
+vector1 <- c(pof = 1, bla = 2)
+vector2 <- c(pof = 1, bla = 2, blop = 3)
+
+utils::hasName(vector1, expected_names)
+utils::hasName(vector2, expected_names)
+```
+
+
+The rlang package has a similar function,  `rlang::has_name()`.
+
+```{r}
+expected_names <- c("pof", "blop")
+
+vector1 <- c(pof = 1, bla = 2)
+vector2 <- c(pof = 1, bla = 2, blop = 3)
+
+rlang::has_name(vector1, expected_names)
+rlang::has_name(vector2, expected_names)
+```
+
+I'm honestly not sure whether there's any difference between the utils and rlang versions, apart from the name!
+
+### In package tests: `testthat::expect_named()`
+
+`testthat::expect_named()` allows you to check that an object returned by your code has the names you expect, or simply has names.
+You can ignore case and order based on the arguments `ignore.case` and `ignore.order`.
+
+```{r, error=TRUE}
+(object <- tibble::tibble(a = c(1, 2), b = c(3, 4)))
+
+testthat::expect_named(object)
+
+unnamed_object <- unname(object)
+testthat::expect_named(unnamed_object)
+
+testthat::expect_named(object, c("b", "a"))
+testthat::expect_named(object, c("b", "a"), ignore.order = TRUE)
+
+testthat::expect_named(object, c("A", "B"))
+testthat::expect_named(object, c("A", "B"), ignore.case = TRUE)
+```
+
+If you're not used to using this expectation yet, lintr can [help you a bit](https://lintr.r-lib.org/reference/expect_named_linter.html).
+
+## Conclusion
+
+In this post I went through functions that deals with names: `stats::setNames()`, `unname()` and `rlang::set_names()` for (un)setting names (my initial motivation for this post!); `names()`, `rlang::names2()` for extracting names; `rlang::is_named()`, `rlang::is_named2()` and `rlang::have_names()` to find out whether an object is named; `utils::hasName()` and `rlang::has_name()` to find out whether an object contains elements of a given name; `testthat::expect_named()` for testing whether an object has names, or specific names.
+Any other related function that comes to mind?
