@@ -3,7 +3,7 @@ title: "Useful functions for dealing with object names"
 date: '2023-11-06'
 slug: functions-dealing-with-names
 output: hugodown::hugo_document
-rmd_hash: 1c7b3de33ea27a85
+rmd_hash: 4d1b6771c8a45a4f
 
 ---
 
@@ -200,5 +200,5 @@ If you're not used to using this expectation yet, lintr can [help you a bit](htt
 
 ## Conclusion
 
-In this post I went through functions that deals with names: [`stats::setNames()`](https://rdrr.io/r/stats/setNames.html), [`unname()`](https://rdrr.io/r/base/unname.html) and [`rlang::set_names()`](https://rlang.r-lib.org/reference/set_names.html) for (un)setting names (my initial motivation for this post!); [`names()`](https://rdrr.io/r/base/names.html), [`rlang::names2()`](https://rlang.r-lib.org/reference/names2.html) for extracting names; [`rlang::is_named()`](https://rlang.r-lib.org/reference/is_named.html), [`rlang::is_named2()`](https://rlang.r-lib.org/reference/is_named.html) and `rlang::have_names()` to find out whether an object is named; [`utils::hasName()`](https://rdrr.io/r/utils/hasName.html) and [`rlang::has_name()`](https://rlang.r-lib.org/reference/has_name.html) to find out whether an object contains elements of a given name; [`testthat::expect_named()`](https://testthat.r-lib.org/reference/expect_named.html) for testing whether an object has names, or specific names. Any other related function that comes to mind?
+In this post I went through functions that deals with names: [`stats::setNames()`](https://rdrr.io/r/stats/setNames.html), [`unname()`](https://rdrr.io/r/base/unname.html) and [`rlang::set_names()`](https://rlang.r-lib.org/reference/set_names.html) for (un)setting names (my initial motivation for this post!); [`names()`](https://rdrr.io/r/base/names.html), [`rlang::names2()`](https://rlang.r-lib.org/reference/names2.html) for extracting names; [`rlang::is_named()`](https://rlang.r-lib.org/reference/is_named.html), [`rlang::is_named2()`](https://rlang.r-lib.org/reference/is_named.html) and [`rlang::have_name()`](https://rlang.r-lib.org/reference/is_named.html) to find out whether an object is named; [`utils::hasName()`](https://rdrr.io/r/utils/hasName.html) and [`rlang::has_name()`](https://rlang.r-lib.org/reference/has_name.html) to find out whether an object contains elements of a given name; [`testthat::expect_named()`](https://testthat.r-lib.org/reference/expect_named.html) for testing whether an object has names, or specific names. Any other related function that comes to mind?
 

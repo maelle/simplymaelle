@@ -150,5 +150,5 @@ If you're not used to using this expectation yet, lintr can [help you a bit](htt
 
 ## Conclusion
 
-In this post I went through functions that deals with names: `stats::setNames()`, `unname()` and `rlang::set_names()` for (un)setting names (my initial motivation for this post!); `names()`, `rlang::names2()` for extracting names; `rlang::is_named()`, `rlang::is_named2()` and `rlang::have_names()` to find out whether an object is named; `utils::hasName()` and `rlang::has_name()` to find out whether an object contains elements of a given name; `testthat::expect_named()` for testing whether an object has names, or specific names.
+In this post I went through functions that deals with names: `stats::setNames()`, `unname()` and `rlang::set_names()` for (un)setting names (my initial motivation for this post!); `names()`, `rlang::names2()` for extracting names; `rlang::is_named()`, `rlang::is_named2()` and `rlang::have_name()` to find out whether an object is named; `utils::hasName()` and `rlang::has_name()` to find out whether an object contains elements of a given name; `testthat::expect_named()` for testing whether an object has names, or specific names.
 Any other related function that comes to mind?
