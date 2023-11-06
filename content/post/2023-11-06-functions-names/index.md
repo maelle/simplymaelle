@@ -3,7 +3,7 @@ title: "Useful functions for dealing with object names"
 date: '2023-11-06'
 slug: functions-dealing-with-names
 output: hugodown::hugo_document
-rmd_hash: 4a5581e2b485cb1f
+rmd_hash: 77857b8063dbdc05
 
 ---
 
@@ -107,7 +107,7 @@ I didn't know all this before skimming the list of rlang functions [dealing with
 
 ## Checking names
 
-### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_names()`
+### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_name()`
 
 To check whether an object has names, no matter the names, we can use [`rlang::is_named()`](https://rlang.r-lib.org/reference/is_named.html) or its variant [`rlang::is_named2()`](https://rlang.r-lib.org/reference/is_named.html) that "always returns TRUE for empty vectors, even those that don't have a names attribute." I suspect that I'll forget the difference as soon as I publish this post, so I'll have to practice and pay extra attention.
 

@@ -79,7 +79,7 @@ I didn't know all this before skimming the list of rlang functions [dealing with
 
 ## Checking names
 
-### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_names()`
+### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_name()`
 
 To check whether an object has names, no matter the names, we can use `rlang::is_named()` or its variant `rlang::is_named2()` that "always returns TRUE for empty vectors, even those that don't have a names attribute." I suspect that I'll forget the difference as soon as I publish this post, so I'll have to practice and pay extra attention.
 
