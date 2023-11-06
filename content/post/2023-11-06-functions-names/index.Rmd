@@ -77,7 +77,7 @@ rlang also has a replacement variant, `rlang::names2<-`, that "never adds NA nam
 
 I didn't know all this before skimming the list of rlang functions [dealing with object attributes](https://rlang.r-lib.org/reference/index.html#attributes).
 
-## Checking names: 
+## Checking names
 
 ### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_names()`
 

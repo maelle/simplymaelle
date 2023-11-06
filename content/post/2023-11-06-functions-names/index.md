@@ -3,7 +3,7 @@ title: "Useful functions for dealing with object names"
 date: '2023-11-06'
 slug: functions-dealing-with-names
 output: hugodown::hugo_document
-rmd_hash: 36a0b1795bf373af
+rmd_hash: 4a5581e2b485cb1f
 
 ---
 
@@ -105,7 +105,7 @@ rlang also has a replacement variant, `rlang::names2<-`, that "never adds NA nam
 
 I didn't know all this before skimming the list of rlang functions [dealing with object attributes](https://rlang.r-lib.org/reference/index.html#attributes).
 
-## Checking names:
+## Checking names
 
 ### Is the object named: `rlang::is_named()`, `rlang::is_named2()`, `rlang::have_names()`
 
