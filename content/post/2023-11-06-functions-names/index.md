@@ -3,13 +3,13 @@ title: "Useful functions for dealing with object names"
 date: '2023-11-06'
 slug: functions-dealing-with-names
 output: hugodown::hugo_document
-rmd_hash: 8d58e9029771adcc
+rmd_hash: 36a0b1795bf373af
 
 ---
 
 My sticky note filled up quickly after I only added [`setNames()`](https://rdrr.io/r/stats/setNames.html) on it, with related functions for dealing with object names, in base R and beyond!
 
-## (Un)Set object names: `stats::setNames()`, `unname()` and `rlang::set_names()`
+## (Un)Setting object names: `stats::setNames()`, `unname()` and `rlang::set_names()`
 
 I noticed a function ending with something like this:
 
