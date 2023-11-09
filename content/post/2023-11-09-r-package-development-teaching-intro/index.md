@@ -1,0 +1,102 @@
+---
+title: "The current introduction to my package development workshops"
+date: '2023-11-09'
+slug: r-package-development-teaching-intro
+output: hugodown::hugo_document
+rmd_hash: 3538e0842873c524
+
+---
+
+I somewhat regularly teach about package development. One recent example was a [workshop for rOpenSci champions](https://ropensci.org/blog/2023/08/04/champions-program-training/#package-development-the-mechanicshttpsrpkgdev-mechanicsnetlifyapp). I am improving my teaching over time (thankfully :sweat_smile:) but one thing I have down by now is the intro, which is mostly my throwing together my **favorite quotes about R package development**! Let me write it up.
+
+## Where I explain why people shouldn't flee the workshop
+
+After boasting a bit (a.k.a. sharing my package development creds to introduce myself), I answer three retorical questions:
+
+### Why develop an R package?
+
+Developing an R package is the easiest way to share code/data/R Markdown templates... with
+
+-   (future) you: a package for organizing your utility functions in a smart way;
+
+-   the collaborators you know: a package for your team;
+
+-   and the collaborators you don't: a package for the whole wide world. Without needing to be a generalist tool à la ggplot2, your package could help other R users!
+
+### Why learn about package development?
+
+This is a different question! I love [Jon Calder](https://joncalder.co.za/)'s [wording about this](https://github.com/iandurbach/datasci-fi/tree/master/docs/packages/slides). You should learn about package development
+
+> "- To share code (and data)";
+
+Which is learning about package development to develop your packages.
+
+> "- To leverage existing tooling";
+
+Which could be learning about package development for using part of the infrastructure, like the one for testing, in your own projects.
+
+> "- To contribute to other packages".
+
+Which is learning about package development to improve packages owned by other people (in my words, being a package aunt/babysitter).
+
+So you don't need to even have an idea or need for your own R package for that learning to be relevant.
+
+### Who can learn about package development?
+
+To answer this question I use the [wise words](https://github.com/susjoh/fibonacci) of [Susan Johnston](https://github.com/susjoh).
+
+> "- Can you open R or RStudio?"
+
+> "- Can you install a package?"
+
+> "- Have you ever written a function in R?"
+
+> "- Could you learn how to write a function in R?"
+
+> "➡️ You can write a package in R!"
+
+#### Side-note: where to learn about functions
+
+Knowing vaguely what a function is a pre-requisite when I teach package development (the example functions I use are nothing fancy) but I've collated links for those who want to learn:
+
+-   [Materials from Stephanie Kirmer's R-Ladies East Lansing tutorial](https://github.com/rladies-eastlansing/2021-rfunctions#writing-r-functions)
+-   [Write your own R functions](https://stat545.com/functions-part1.html), stat 545 course by Jenny Bryan and The STAT 545 TAs;
+-   [Chapter about functions](https://r4ds.hadley.nz/functions) in the book "R for Data Science" by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund;
+-   [Fun with Functions talk](https://zealous-wiles-e22e83.netlify.app/talk/funwithfunctions/) by Kaylea Haynes, R-Ladies Manchester.
+
+## Where I go more into details about packages
+
+### What is a package?
+
+The author of this excellent quote (first reproduced in French) is [Sébastien Rochette](https://thinkr.fr/transformer-plusieurs-scripts-eparpilles-en-beau-package-r):
+
+> "Pour réduire ses craintes, il faut se dire que ce n'est ni plus ni moins qu'un dossier organisé d'une manière contrainte."
+
+> "To be less afraid you have to tell yourself that it's simply a folder organized in a constrained way."
+
+At this point what could remain scary is, how do I remember about these constraints and rules? So here comes...
+
+### Automation!
+
+At this point I introduce [usethis](https://usethis.r-lib.org/) as an "actually useful Clippy".
+
+I don't necessarily use, but think of, this great [quote](https://twitter.com/JennyBryan/status/935562495816753153) of [Jenny Bryan](https://github.com/jennybc)'s:
+
+> "The usethis package implements this important principle: Automate that which can be automated. Your computer was literally born to implement rote-but-fussy stuff for you."
+
+### Why automate?
+
+Even in the intro I like to underline that automating package development tasks is useful not only for the regular work of package development, but also for teaching (:wink:) and for reproducing problems.
+
+### Goals of a beginner workshop
+
+At least the latest one I taught had two goals:
+
+-   For the learners to get to know the tools for package development that I use myself;
+
+-   For the learners to learn that there is no magic, only practice and ✨ tips ✨.
+
+## Conclusion
+
+In this post I wrote up the intro that I've now used a few times for my package development teaching. If you're curious, to conclude such workshops I list what I think is actually difficult: writing good code, writing a good interface, writing good docs. But even that can be learnt (still learning myself :muscle:). In my teaching materials I share a list of [resources](https://rpkgdev-mechanics.netlify.app/resources/).
+
