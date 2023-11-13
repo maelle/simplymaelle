@@ -4,6 +4,10 @@ date: '2023-08-30'
 slug: three-R-functions
 output: hugodown::hugo_document
 rmd_hash: 5ad886b3c83e0885
+tags:
+  - good practice
+  - code style
+  - useful functions
 
 ---
 

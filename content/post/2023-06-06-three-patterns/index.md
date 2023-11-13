@@ -4,6 +4,7 @@ date: '2023-06-06'
 tags:
   - good practice
   - code style
+  - useful functions
 slug: basic-patterns
 output: hugodown::hugo_document
 rmd_hash: bedc81b134dbc78d

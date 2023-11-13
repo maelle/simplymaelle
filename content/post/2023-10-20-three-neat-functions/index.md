@@ -4,7 +4,10 @@ date: '2023-10-20'
 slug: three-neat-functions
 output: hugodown::hugo_document
 rmd_hash: 2cfe0c5f95f4352c
-
+tags:
+  - good practice
+  - code style
+  - useful functions
 ---
 
 Time for me to throw away my sticky note after sharing what I wrote on it!

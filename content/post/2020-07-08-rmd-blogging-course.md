@@ -4,6 +4,7 @@ date: '2020-07-08'
 tags:
   - css
   - hugo
+  - teaching
 slug: rmd-blogging-course
 ---
 

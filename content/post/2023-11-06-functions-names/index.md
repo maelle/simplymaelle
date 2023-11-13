@@ -4,7 +4,10 @@ date: '2023-11-06'
 slug: functions-dealing-with-names
 output: hugodown::hugo_document
 rmd_hash: 4d1b6771c8a45a4f
-
+tags:
+  - good practice
+  - code style
+  - useful functions
 ---
 
 My sticky note filled up quickly after I only added [`setNames()`](https://rdrr.io/r/stats/setNames.html) on it, with related functions for dealing with object names, in base R and beyond!

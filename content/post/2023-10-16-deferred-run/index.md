@@ -4,7 +4,11 @@ date: '2023-10-16'
 slug: test-local-mess-reset
 output: hugodown::hugo_document
 rmd_hash: 57fac4e93fd63ea0
-
+tags:
+  - good practice
+  - code style
+  - package development
+  - testing
 ---
 
 *This post was featured on the [R Weekly highlights podcast](https://rweekly.fireside.fm/141) hosted by Eric Nantz and Mike Thomas.*

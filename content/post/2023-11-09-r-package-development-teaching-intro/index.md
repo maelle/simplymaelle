@@ -3,7 +3,10 @@ title: "The current introduction to my package development workshops"
 date: '2023-11-09'
 slug: r-package-development-teaching-intro
 output: hugodown::hugo_document
-rmd_hash: 3538e0842873c524
+tags:
+  - package development
+  - teaching
+rmd_hash: b87fa9ca10757b97
 
 ---
 

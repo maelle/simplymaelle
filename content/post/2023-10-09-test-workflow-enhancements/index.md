@@ -4,7 +4,11 @@ date: '2023-10-09'
 slug: test-workflow-enhancement
 output: hugodown::hugo_document
 rmd_hash: f815a3625776be16
-
+tags:
+  - good practice
+  - code style
+  - package development
+  - testing
 ---
 
 I spend a lot of quality time with testthat, that sometimes deigns to praise my code with emojis, sometimes has to encourage me. No one gets it right on their first try apparently?

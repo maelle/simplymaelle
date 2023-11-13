@@ -2,6 +2,10 @@
 title: "R functions that shorten/filter stuff: less is more"
 date: '2023-08-31'
 slug: three-shorten
+tags:
+  - good practice
+  - code style
+  - useful functions
 output: hugodown::hugo_document
 rmd_hash: 9ffc89a57eceffbc
 

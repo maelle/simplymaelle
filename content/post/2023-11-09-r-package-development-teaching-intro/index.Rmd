@@ -3,6 +3,9 @@ title: "The current introduction to my package development workshops"
 date: '2023-11-09'
 slug: r-package-development-teaching-intro
 output: hugodown::hugo_document
+tags:
+  - package development
+  - teaching
 ---
 
 I somewhat regularly teach about package development.
