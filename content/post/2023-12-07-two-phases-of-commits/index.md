@@ -1,0 +1,54 @@
+---
+title: "The two phases of commits in a Git branch"
+date: '2023-12-07'
+slug: two-phases-git-branches
+output: hugodown::hugo_document
+tags:
+  - good practice
+  - git
+rmd_hash: 5002177f95489a54
+
+---
+
+I seem to have at last entered my Git era. :tada: Reading and applying [Git in practice](/2023/11/01/reading-notes-git-in-practice/) was probably the best thing I did for my upskilling this year. One Git workflow aspect I've finally realized is that it's fine to have two phases of work in a Git branch. I'll explain it in this post.
+
+## Set up: create a branch for your work!
+
+Ideally, in most cases, when adding a feature or fixing a bug or whatever, I'll work in a branch.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>gert</span><span class='nf'>::</span><span class='nf'><a href='https://docs.ropensci.org/gert/reference/git_branch.html'>git_branch_create</a></span><span class='o'>(</span><span class='s'>"feature"</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+I really like running the code above as I feel it puts me in the right mind space. I signal my intention to work on a given issue to the universe, it can't hurt, right. :grin:
+
+## Phase 1: do not think about clean Git history nor your reputation, just commit all the time
+
+Now, even if I might already open a **draft** PR to signal my working on a given thing, I just do the thing and try to not think about looking stupid with 1,000 commits "try to make R CMD check happy". I absolutely do not want to lose my work so I commit (with RStudio IDE tab) and push (with [`gert::git_push()`](https://docs.ropensci.org/gert/reference/git_fetch.html) or that same tab) regularly. In this phase, Git is merely my backup.
+
+## Phase 2: clean up!
+
+That's the phase I used to never do[^1] but that I'm trying to consciously practice. I guess blogging about this will force me to keep doing it.
+
+In the comments of my [reading notes on Git in practice](/2023/11/01/reading-notes-git-in-practice/), one of my Git models, [Hugo Gruson](https://github.com/Bisaloo)[^2], recommended the post ["Write Better Commits, Build Better Projects"](https://github.blog/2022-06-30-write-better-commits-build-better-projects/). The kind of posts I used to think were for other people since I did not understand half of the Git words in it. :wink: (Have I mentioned reading a Git book was life-changing? :sweat_smile:)
+
+Basically once you have your PR code ready, you have to try and create nice commits, in a nice order. It's important both for the people that will have to review your code (which might even be just you in a few days for lack of collaborators), and for the people who might have to perform a `Git bisect`-ion or some other form of archeology on the code base later (again, this might be you).
+
+Part of the work is thinking about what a good set of commits might be.
+
+Then in practice I'll use
+
+-   `Git rebase -i` to squash, reorder or even drop commits and to improve commit messages;
+-   `Git reset --soft` to remove changes from the Git history but not from the files, and then commit them incrementally in a smarter way than when I was in phase 1.
+-   `Git push -f` which is fine since my branch is mine only until I mark the PR as ready to review. :smiling_imp:
+
+## Conclusion
+
+In this post I explained how I now think as work in a branch as happening in two phases, one phase where Git is my backup, and one phase where I try to think more of code reviewers (for the PR) and code archeologists (for later when the PR is merged). I'm still very much learning so don't think you'll get perfect PRs from me just yet!
+
+[^1]: And I was so embarrassed when a PR of mine was merged without being squashed.
+
+[^2]: If you've ever reviewed a PR by Hugo you have to know what I mean! Such good story-telling in commits!
+
