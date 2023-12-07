@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: 5002177f95489a54
+rmd_hash: 4e9dbd7b530eca75
 
 ---
 
@@ -24,7 +24,7 @@ Ideally, in most cases, when adding a feature or fixing a bug or whatever, I'll 
 
 I really like running the code above as I feel it puts me in the right mind space. I signal my intention to work on a given issue to the universe, it can't hurt, right. :grin:
 
-## Phase 1: do not think about clean Git history nor your reputation, just commit all the time
+## Phase 1: do not think about a clean Git history nor your reputation, just commit all the time
 
 Now, even if I might already open a **draft** PR to signal my working on a given thing, I just do the thing and try to not think about looking stupid with 1,000 commits "try to make R CMD check happy". I absolutely do not want to lose my work so I commit (with RStudio IDE tab) and push (with [`gert::git_push()`](https://docs.ropensci.org/gert/reference/git_fetch.html) or that same tab) regularly. In this phase, Git is merely my backup.
 
@@ -46,7 +46,7 @@ Then in practice I'll use
 
 ## Conclusion
 
-In this post I explained how I now think as work in a branch as happening in two phases, one phase where Git is my backup, and one phase where I try to think more of code reviewers (for the PR) and code archeologists (for later when the PR is merged). I'm still very much learning so don't think you'll get perfect PRs from me just yet!
+In this post I explained how I now think as work in a branch as happening in two phases, one phase where Git is my backup, and one phase where I try to think more about code reviewers (for the PR) and code archeologists (for later when the PR is merged). I'm still very much learning so don't think you'll get perfect PRs from me just yet!
 
 [^1]: And I was so embarrassed when a PR of mine was merged without being squashed.
 
