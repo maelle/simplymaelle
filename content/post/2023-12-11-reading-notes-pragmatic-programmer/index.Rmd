@@ -68,7 +68,7 @@ The authors encourage the practice of writing down things you learn, challenges,
 I most often have a piece of paper near me, including my sticky note for my posts about [useful functions](/tags/useful-functions/), but haven't been able to really stick to maintaining an engineering daybook.
 Since I work from home I don't observe many people at work, so have to resort to tech books to imagine people working :wink:, and know that the protagonist of [The Unicorn Project](https://itrevolution.com/product/the-unicorn-project/) maintains one.[^unicorn]
 
-[^unicorn]: Have you ever read riveting kid books about some little character "who don't want to share", "who cooks a cake", or "who discovers daycare"? The Unicorn Project, and The Phoenix Project are similar books, but for adults working with tech. 
+[^unicorn]: Have you ever read riveting kid books about some little character "who don't want to share", "who bakes a cake", or "who discovers daycare"? The Unicorn Project, and The Phoenix Project are similar books, but for adults working with tech. 
 
 ### "Act locally"
 

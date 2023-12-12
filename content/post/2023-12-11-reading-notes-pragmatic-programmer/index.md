@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 tags:
   - good practice
   - books
-rmd_hash: ad999f308b4d1bd2
+rmd_hash: df35a06122bcffe5
 
 ---
 
@@ -80,5 +80,5 @@ The book's second edition ends with some thoughts on responsability, with the ti
 
 I have ambivalent thoughts about The Pragmatic Programmer: it's an extensive reference for programmers, but not my favorite tech book. Have you read it? Do you know other similar reference books? Are you planning to write one and do you need readers of advanced copies? :smile_cat:
 
-[^1]: Have you ever read riveting kid books about some little character "who don't want to share", "who cooks a cake", or "who discovers daycare"? The Unicorn Project, and The Phoenix Project are similar books, but for adults working with tech.
+[^1]: Have you ever read riveting kid books about some little character "who don't want to share", "who bakes a cake", or "who discovers daycare"? The Unicorn Project, and The Phoenix Project are similar books, but for adults working with tech.
 
