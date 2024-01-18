@@ -5,7 +5,7 @@ slug: saperlipopette-package-practice-git
 output: hugodown::hugo_document
 tags:
   - git
-rmd_hash: b7d91f3b85a284f3
+rmd_hash: af198d0646b140f4
 
 ---
 
@@ -46,10 +46,10 @@ Let's try the [`saperlipopette::exo_one_small_change()`](https://maelle.github.i
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://maelle.github.io/saperlipopette/'>"saperlipopette"</a></span><span class='o'>)</span></span>
 <span><span class='nv'>parent_path</span> <span class='o'>&lt;-</span> <span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_tempfile.html'>local_tempdir</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='nv'>path</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html'>exo_one_small_change</a></span><span class='o'>(</span><span class='nv'>parent_path</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Follow along in /tmp/RtmpaRVGjp/file14ce858effbee/one-small-change!</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Follow along in /tmp/RtmpoAeVTm/file152cb747520d9/one-small-change!</span></span>
 <span></span><span><span class='c'># what's in path</span></span>
 <span><span class='nf'>fs</span><span class='nf'>::</span><span class='nf'><a href='https://fs.r-lib.org/reference/dir_tree.html'>dir_tree</a></span><span class='o'>(</span><span class='nv'>path</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #0000BB; font-weight: bold;'>/tmp/RtmpaRVGjp/file14ce858effbee/one-small-change</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #0000BB; font-weight: bold;'>/tmp/RtmpoAeVTm/file152cb747520d9/one-small-change</span></span></span>
 <span><span class='c'>#&gt; ├── <span style='color: #0000BB; font-weight: bold;'>R</span></span></span>
 <span><span class='c'>#&gt; └── bla</span></span>
 <span></span><span><span class='c'># with Git in a command line: git log</span></span>
@@ -95,5 +95,5 @@ We've set the Git author, committer and date so that the automatic commits get t
 
 ## Feedback welcome!
 
-In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environments! I am very grateful to Jim Gardner for [useful feedback](https://github.com/maelle/saperlipopette/issues/9) and would love to [hear](https://github.com/maelle/saperlipopette/issues) from more users, if saperlipopette is of any interest to you.
+In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environment! I am very grateful to Jim Gardner for [useful feedback](https://github.com/maelle/saperlipopette/issues/9) and would love to [hear](https://github.com/maelle/saperlipopette/issues) from more users, if saperlipopette is of any interest to you.
 

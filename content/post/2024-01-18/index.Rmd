@@ -91,5 +91,5 @@ hashes, which could be useful when teaching a group: everyone should be looking 
 
 ## Feedback welcome!
 
-In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environments!
+In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environment!
 I am very grateful to Jim Gardner for [useful feedback](https://github.com/maelle/saperlipopette/issues/9) and would love to [hear](https://github.com/maelle/saperlipopette/issues) from more users, if saperlipopette is of any interest to you.
