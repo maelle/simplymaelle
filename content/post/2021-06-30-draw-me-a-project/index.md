@@ -31,8 +31,6 @@ Now why should *I* discuss the making of R projects? While I am not often in cha
 
 To start with I'd like to mention some rules or principles that are quite crucial. My main source of information for them is [Jenny Bryan](https://jennybryan.org/).
 
-{{< tweet 1222960316545294337 >}}
-
 Like many I identified with Sharla Gelfand's quote[^2] as reported by Kara Woo on Twitter, "Everything I know is from Jenny Bryan".
 
 {{< figure src="https://raw.githubusercontent.com/MonkmanMH/EIKIFJB/main/EIKIFJB_sigmar_hex.png" alt="hex logo de 'Everything I know is from Jenny Bryan' avec un ordinateur portable en feu" width=350 link="https://github.com/MonkmanMH/EIKIFJB" >}}
