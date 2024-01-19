@@ -7,7 +7,7 @@ tags:
   - good practice
   - books
   - git
-rmd_hash: 36b537d05f110c70
+rmd_hash: c3f0a26510a7b6c7
 
 ---
 
@@ -21,7 +21,7 @@ In the Chapter 1 (Getting Started), I underlined:
 
 ## Awesome diagrams
 
-One of my favorite parts of the book were the diagram such as the one illustrating "Git stores data as snapshots of the project over time".
+One of my favorite parts of the book were the diagrams such as the one illustrating "Git stores data as snapshots of the project over time".
 
 ## A reminder of why we use Git
 
