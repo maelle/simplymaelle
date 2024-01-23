@@ -1,12 +1,12 @@
 ---
 title: "Load different R package versions at once with git worktree"
 date: '2024-01-23'
-slug: pro-git-scott-chacon-reading-notes
+slug: git-worktree
 output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: dfd4dfd7b7872544
+rmd_hash: db884b61b88f5587
 
 ---
 
