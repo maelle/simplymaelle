@@ -1,0 +1,43 @@
+---
+title: "Load different R package versions at once with git worktree"
+date: '2024-01-23'
+slug: pro-git-scott-chacon-reading-notes
+output: hugodown::hugo_document
+tags:
+  - good practice
+  - git
+---
+
+Do you ever see [GitHub issue comments](https://github.com/igraph/rigraph/issues/1097) where someone posts the results of a reprex with a current package version, and then with an older one, to prove a regression?
+How would you go about preparing such a report?
+Today I learnt there is a clean way to have different versions of a codebase at once on your computer, thanks to the ever powerful Git.
+
+## Assumption: you want to load the package at different stages of its history
+
+I'm not talking about _installing_ different R package versions at once, this is not a post about [renv](https://rstudio.github.io/renv/articles/renv.html) or Docker. :wink:
+I mean having the ability to quickly run `devtools::test()` or `devtools::test_active_file()` on two different versions of an R package source.
+
+Although I guess that for running an actual `reprex::reprex()` on your code, you'd need a quick installation in each version of the codebase.
+
+## Solution: git worktree!
+
+The `git worktree` command tends to be introduced as an [alternative to a quick git stash when switching from feature work to a hot fix](https://www.gitkraken.com/learn/git/git-worktree) (well, in all three posts I read/skimmed on the topic :sweat_smile:).
+With `git worktree` you can create a new folder somewhere on your computer, that is at a different Git state than your current folder (other commit/branch/release -- aren't all of those the same thing anyway :zany_face:).
+
+Say, in `Documents/rigraph` you are working on the main branch of the https://github.com/igraph/rigraph repository.
+Now, someone asks you "what did this code do with version 1.6.0".
+
+Past me would have diligently installed that version of the package in the same R session, probably from CRAN or with pak, run the code, re-started my R session, re-loaded the development version or something like that.
+
+Current me would run `git worktree add ../rigraphv1.6.0 v1.6.0` which means I now have a folder `Documents/rigraphv1.6.0` with the rigraph repository as it was at the v1.6.0 release. 
+Then inside that folder I can open my favorite IDE, load rigraph as it was at the time, and run the code I am curious about.
+I can switch between my two IDE windows to try things out with the two package versions.
+
+Once I am done, from my original rigraph folder I can run `git worktree remove rigraphv1.6.0` (or `git worktree remove rigraphv1.6.0 --force` if there are some changes in that folder). 
+`git worktree list` shows me what worktrees (folders!) there are.
+
+## Conclusion: git worktree is great!
+
+I'm glad I learnt about [`git worktree`](https://git-scm.com/docs/git-worktree), "Manage multiple working trees" a.k.a (in my head) "Create multiple folders corresponding to a single Git repo at different states". 
+Do you use `git worktree`? 
+Did I miss something in the around 10 minutes I've known about it? :sweat_smile:
