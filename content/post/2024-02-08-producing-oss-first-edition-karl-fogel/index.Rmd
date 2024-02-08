@@ -35,7 +35,7 @@ When visiting old repositories, I often have the impression to visit a less dram
 
 At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
 
-## About motivations for participating in open-source.
+## About motivations for participating in open-source
 
 To the questions "What will persuade all these people to stick together long enough to produce something useful?", Karl Fogel answers:
 

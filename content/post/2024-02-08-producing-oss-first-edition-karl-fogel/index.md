@@ -5,7 +5,7 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: f86438257b648f6f
+rmd_hash: 19ee750b4ec56673
 
 ---
 
@@ -31,7 +31,7 @@ When visiting old repositories, I often have the impression to visit a less dram
 
 At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
 
-## About motivations for participating in open-source.
+## About motivations for participating in open-source
 
 To the questions "What will persuade all these people to stick together long enough to produce something useful?", Karl Fogel answers:
 
