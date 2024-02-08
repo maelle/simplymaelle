@@ -5,21 +5,17 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
+rmd_hash: 2e549ea0c5a28356
+
 ---
 
-I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public).
-This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/).
-It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide.
-Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
+I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
 
-I really enjoyed it, and found myself refering to or thinking of parts of the books at work.
-Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters.
-Here are some of my highlights
+I really enjoyed it, and found myself refering to or thinking of parts of the books at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights
 
 ## What didn't age well
 
-In 2005, Git was still in development (the book author is actually a Subversion contributor).
-Furthermore, mailing lists were apparently big.
+In 2005, Git was still in development (the book author is actually a Subversion contributor). Furthermore, mailing lists were apparently big.
 
 Now, the R project still uses Subversion and has mailing lists...
 
@@ -59,17 +55,13 @@ Also related to motivation...
 
 The author makes the point that by providing expected information in expected places in a nice way, you help potential users and contributors feel their time will not be wasted.
 
-To me as an R package developer, "appearances matter" means: please [switch your pkgdown website to Bootstrap 5](https://pkgdown.r-lib.org/articles/customise.html#getting-started). :smile_cat: 
-The small font size of the former template doesn't give me a good impression as I need to zoom!
-Also, creating a pkgdown website in the first place, and linking it from your Git(Hub) repository, takes very little time in general.
-By the way, in 2005 the author already recommended for docs to be available locally but also online for people to be able to read it without installing your thing.
+To me as an R package developer, "appearances matter" means: please [switch your pkgdown website to Bootstrap 5](https://pkgdown.r-lib.org/articles/customise.html#getting-started). :smile_cat: The small font size of the former template doesn't give me a good impression as I need to zoom! Also, creating a pkgdown website in the first place, and linking it from your Git(Hub) repository, takes very little time in general. By the way, in 2005 the author already recommended for docs to be available locally but also online for people to be able to read it without installing your thing.
 
 ## "Hacktivation energy"
 
 The "hacktivation energy" is "the amount of energy a newcomer must put before she starts getting something back".
 
-Obviously, that something maintainers should strive to minimize. 
-I like catchy phrases!
+Obviously, that something maintainers should strive to minimize. I like catchy phrases!
 
 ## The case for sitrep
 
@@ -85,8 +77,7 @@ reminds me of ["sitrep" functions in usethis and devtools](https://ropensci.org/
 
 ## About secrecy
 
-The author writes about discussions in public vs in private several times. 
-I like the sentence below, although I guess any project can operate on a different degree of openness based on its goals:
+The author writes about discussions in public vs in private several times. I like the sentence below, although I guess any project can operate on a different degree of openness based on its goals:
 
 > "Making important decision in private is like spraying contributions repellent on your project."
 
@@ -150,7 +141,5 @@ Examples of this would be [usethis](https://twitter.com/jennybryan/status/935562
 
 ## Conclusion
 
-"Producing open-source software" was a nice read.
-I don't want to read more things on screen, so will wait for the second edition to be in print to read it, but I am glad to have already read the first and feel it'd be a nice book to discuss with others.
-It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool;
-and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
+"Producing open-source software" was a nice read. I don't want to read more things on screen, so will wait for the second edition to be in print to read it, but I am glad to have already read the first and feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
+
