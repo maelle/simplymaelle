@@ -1,0 +1,155 @@
+---
+title: "Reading notes on Producing open source software by Karl Fogel (First edition)"
+date: '2024-02-08'
+slug: producing-oss-first-edition-karl-fogel
+output: hugodown::hugo_document
+tags:
+  - books
+rmd_hash: f86438257b648f6f
+
+---
+
+I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
+
+I really enjoyed it, and found myself refering to or thinking of parts of the books at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
+
+## What didn't age well
+
+In 2005, Git was still in development (the book author is actually a Subversion contributor). Furthermore, mailing lists were apparently big.
+
+Now, the R project still uses Subversion and has mailing lists...
+
+Beside, it was nice to think of some things GitHub has, like discussions board, in general terms.
+
+## The Pompei projects :volcano:
+
+In the introduction, the author says it's hard to define failures of open-source projects because often the project quietly dies.
+
+> "There may be a moment when a final change is made to the project, but those who made it usually didn't know at the time that it was the last one."
+
+When visiting old repositories, I often have the impression to visit a less dramatic version of Pompei.
+
+At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
+
+## About motivations for participating in open-source.
+
+To the questions "What will persuade all these people to stick together long enough to produce something useful?", Karl Fogel answers:
+
+> "People should feel that their connection to a project, and influence over it, is directly proportional to their contributions."
+
+A further aspect mentioned in the book is the idea that participants have a direct interest in the project because they, or their organization, use(s) it.
+
+Later in the book, Karl Fogel also writes this about participants' motivation:
+
+> "The desire to produce good software may be among those motivations, along with the challenge and educational value of working on hard problems. But humans also have a built-in desire to work with other humans, and to give and earn respect through cooperative activities."
+
+:heart:
+
+Another quote I don't want to forget:
+
+> "Credit is the primary currency of the free software world."
+
+(yes, there are [different currencies of payment](https://yabellini.netlify.app/blog/2023-10-13-three-payments/), though but it is nice to underline that credit is important)
+
+## On code review
+
+Also related to motivation...
+
+> "code review also serves an indirect purpose: it confirms to people that what they do matters, because one obviously wouldn't take time to review a commit unless one cared about its effect."
+
+## "Treat Every User as a Potential Volunteer"
+
+The idea is that people you meet in the issue tracker are already more involved than most users. :wink:
+
+## "Appearances matter"
+
+The author makes the point that by providing expected information in expected places in a nice way, you help potential users and contributors feel their time will not be wasted.
+
+To me as an R package developer, "appearances matter" means: please [switch your pkgdown website to Bootstrap 5](https://pkgdown.r-lib.org/articles/customise.html#getting-started). :smile_cat: The small font size of the former template doesn't give me a good impression as I need to zoom! Also, creating a pkgdown website in the first place, and linking it from your Git(Hub) repository, takes very little time in general. By the way, in 2005 the author already recommended for docs to be available locally but also online for people to be able to read it without installing your thing.
+
+## "Hacktivation energy"
+
+The "hacktivation energy" is "the amount of energy a newcomer must put before she starts getting something back".
+
+Obviously, that something maintainers should strive to minimize. I like catchy phrases!
+
+## The case for sitrep
+
+The sentence
+
+> "somewhere near the beginning of the documentation, tell the user how to run some sort of diagnostic test or simple command to confirm that they've set things up correctly"
+
+reminds me of ["sitrep" functions in usethis and devtools](https://ropensci.org/blog/2021/09/30/ropensci-news-digest-september-2021/#package-development-corner).
+
+## Developer guidelines vs developer documentation
+
+> "Developer guidelines tell programmers how to get along with each other; developers documentation tells them how to get along with the code itself."
+
+## About secrecy
+
+The author writes about discussions in public vs in private several times. I like the sentence below, although I guess any project can operate on a different degree of openness based on its goals:
+
+> "Making important decision in private is like spraying contributions repellent on your project."
+
+In another place in the book, the author states that of course, every organization has secrets.
+
+## On issue trackers
+
+Compared to closing off issue trackers,
+
+> "It's better to accept that cleaning out invalid issues will always be part of the project's routine maintenance, and to try to get as many people as possible to help."
+
+## Project health
+
+Two more catchy phrases or words! One is:
+
+> "Operational health is the project's ongoing ability to incorporate new code contributions and new developers, and to be responsive to bug reports."
+
+And the other is a nicer synonym of "bus factor":
+
+> "Survivability is the project's ability to exist independently of any individual participant or sponsor."
+
+To put actual numbers on those, nowadays one can use [CHAOSS](https://chaoss.community/).
+
+## Scale
+
+I feel some ideas presented in the book, like voting systems, apply to bigger projects than what I am typically dealing with.
+
+Still, these were interesting paragraphs:
+
+> "The price of success is heavy in the open source world. As your software gets more popular, the number of people who show up looking for information increases dramatically, while the number of people able to provide information increases much more slowly."
+
+and
+
+> "one side effect of continuing to use unscalable communications models as the project grows is that the average quality of both questions and answers tends to go down, which makes it look like new users are dumber that they used to be, when in fact they're probably not. It's just that the benefit/cost ratio of using those high-population forums goes down, so naturally those with the experience to do so start to look elsewhere for answers first."
+
+## Terse, yes, but with "emoticlues"
+
+Karl Fogel says that if you write a terse comment, which is acceptable,
+
+> "But at the end, sign off with something indicating that your terseness is not to be taken as coldness (...) A strategically placed smiley face or emoticlue can often be enough to reassure an interlocutor, too."
+
+I really like the made-up word "emoticlue". :grin: Adding emojis in issue comments is something I consciously do.
+
+## Holy wars
+
+> "Each project usually has a holy war or two all its own, as well, which long-time developers will quickly become familiar with."
+
+A pint of tidyverse-vs-base-R, anyone? :beers:
+
+## Releases
+
+> "Stabilization" is the process of getting a release branch into a releasable state; that is, of deciding which changes will be in the release, which will not, and shaping the branch content accordingly."
+
+> "(...) the process of stabilizing a release is mostly about creating mechanisms for saying 'no'."
+
+## Automation
+
+> "Multi-step, deterministic operations are exactly what computers were invented for, save your humans for more interesting things."
+
+Examples of this would be [usethis](https://twitter.com/jennybryan/status/935562495816753153) and [rOpenSci automation of software-review](https://ropensci.org/blog/2022/05/31/chatops-review-system-github/).
+
+## Conclusion
+
+"Producing open-source software" was a nice read. I don't want to read more things on screen given how I spend my days :sweat_smile:, so will wait for the second edition to be in print to read it, but I am glad to have already read the first. I feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
+
