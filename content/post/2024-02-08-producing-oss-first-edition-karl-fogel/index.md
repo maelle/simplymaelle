@@ -5,7 +5,7 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: c10acd5c84d4c8ab
+rmd_hash: ce8d9d14c4a0a713
 
 ---
 
@@ -27,7 +27,7 @@ In the introduction, the author says it's hard to define failures of open-source
 
 > "There may be a moment when a final change is made to the project, but those who made it usually didn't know at the time that it was the last one."
 
-When visiting old repositories, I often have the impression to visit a less dramatic version of Pompei.
+When visiting old repositories, I regularly have the impression to visit a less dramatic version of Pompei.
 
 At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
 
@@ -49,7 +49,7 @@ Another quote I don't want to forget:
 
 > "Credit is the primary currency of the free software world."
 
-(yes, there are [different currencies of payment](https://yabellini.netlify.app/blog/2023-10-13-three-payments/), though but it is nice to underline that credit is important)
+(yes, there are [different currencies of payment](https://yabellini.netlify.app/blog/2023-10-13-three-payments/), but it is nice to underline that credit is important)
 
 ## On code review
 
