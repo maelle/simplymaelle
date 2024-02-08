@@ -5,13 +5,13 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: 2e549ea0c5a28356
+rmd_hash: f86438257b648f6f
 
 ---
 
 I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
 
-I really enjoyed it, and found myself refering to or thinking of parts of the books at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights
+I really enjoyed it, and found myself refering to or thinking of parts of the books at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
 
 ## What didn't age well
 
@@ -19,7 +19,7 @@ In 2005, Git was still in development (the book author is actually a Subversion 
 
 Now, the R project still uses Subversion and has mailing lists...
 
-Also, it was nice to think of some things GitHub has, like discussions board, in general terms.
+Beside, it was nice to think of some things GitHub has, like discussions board, in general terms.
 
 ## The Pompei projects :volcano:
 
@@ -45,11 +45,21 @@ Later in the book, Karl Fogel also writes this about participants' motivation:
 
 :heart:
 
+Another quote I don't want to forget:
+
+> "Credit is the primary currency of the free software world."
+
+(yes, there are [different currencies of payment](https://yabellini.netlify.app/blog/2023-10-13-three-payments/), though but it is nice to underline that credit is important)
+
 ## On code review
 
 Also related to motivation...
 
 > "code review also serves an indirect purpose: it confirms to people that what they do matters, because one obviously wouldn't take time to review a commit unless one cared about its effect."
+
+## "Treat Every User as a Potential Volunteer"
+
+The idea is that people you meet in the issue tracker are already more involved than most users. :wink:
 
 ## "Appearances matter"
 
@@ -67,7 +77,7 @@ Obviously, that something maintainers should strive to minimize. I like catchy p
 
 The sentence
 
-> "somewhere near the beginning of the documentation , tell the user how to run some sort of diagnostic test or simple command to confirm that they've set things up correctly"
+> "somewhere near the beginning of the documentation, tell the user how to run some sort of diagnostic test or simple command to confirm that they've set things up correctly"
 
 reminds me of ["sitrep" functions in usethis and devtools](https://ropensci.org/blog/2021/09/30/ropensci-news-digest-september-2021/#package-development-corner).
 
@@ -119,7 +129,7 @@ Karl Fogel says that if you write a terse comment, which is acceptable,
 
 > "But at the end, sign off with something indicating that your terseness is not to be taken as coldness (...) A strategically placed smiley face or emoticlue can often be enough to reassure an interlocutor, too."
 
-I really like the made-up word "emoticlue". :grin:
+I really like the made-up word "emoticlue". :grin: Adding emojis in issue comments is something I consciously do.
 
 ## Holy wars
 
@@ -129,7 +139,7 @@ A pint of tidyverse-vs-base-R, anyone? :beers:
 
 ## Releases
 
-> "Stabilization" is the process of getting a release branch into a releasable state; that is, of deciding which changes will be in the release, which will not, and shaping the branch content accordingly.
+> "Stabilization" is the process of getting a release branch into a releasable state; that is, of deciding which changes will be in the release, which will not, and shaping the branch content accordingly."
 
 > "(...) the process of stabilizing a release is mostly about creating mechanisms for saying 'no'."
 
@@ -141,5 +151,5 @@ Examples of this would be [usethis](https://twitter.com/jennybryan/status/935562
 
 ## Conclusion
 
-"Producing open-source software" was a nice read. I don't want to read more things on screen, so will wait for the second edition to be in print to read it, but I am glad to have already read the first and feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
+"Producing open-source software" was a nice read. I don't want to read more things on screen given how I spend my days :sweat_smile:, so will wait for the second edition to be in print to read it, but I am glad to have already read the first. I feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
 
