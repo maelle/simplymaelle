@@ -5,13 +5,13 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: 19ee750b4ec56673
+rmd_hash: c10acd5c84d4c8ab
 
 ---
 
 I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
 
-I really enjoyed it, and found myself refering to or thinking of parts of the books at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
+I really enjoyed it, and found myself refering to or thinking of parts of the book at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
 
 ## What didn't age well
 
