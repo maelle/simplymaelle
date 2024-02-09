@@ -5,13 +5,13 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: ce8d9d14c4a0a713
+rmd_hash: 4dad228a3041a376
 
 ---
 
-I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspect of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
+I recently re-read [Nadia Eghbal's Working in public](https://press.stripe.com/working-in-public). This time around, I noticed her mention of the book ["Producing open source software" by Karl Fogel](https://producingoss.com/). It is a book about the people aspects of open-source projects, including money, and it reads like a sort of guide. Complying with my [first-edition-curse](/2024/01/19/pro-git-scott-chacon-reading-notes/), I did not notice there was a second edition online and soonish to be in print apparently, so I bought and read a second-hand first edition.
 
-I really enjoyed it, and found myself refering to or thinking of parts of the book at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
+I really enjoyed it, and found myself referring to or thinking of parts of the book at work. Kind of impressive for a 2005 book about open-source to have aged so well in at least some chapters. Here are some of my highlights!
 
 ## What didn't age well
 
@@ -19,7 +19,7 @@ In 2005, Git was still in development (the book author is actually a Subversion 
 
 Now, the R project still uses Subversion and has mailing lists...
 
-Beside, it was nice to think of some things GitHub has, like discussions board, in general terms.
+Besides, it was nice to think of some things GitHub has, like discussions board, in general terms.
 
 ## The Pompei projects :volcano:
 
@@ -27,7 +27,7 @@ In the introduction, the author says it's hard to define failures of open-source
 
 > "There may be a moment when a final change is made to the project, but those who made it usually didn't know at the time that it was the last one."
 
-When visiting old repositories, I regularly have the impression to visit a less dramatic version of Pompei.
+When visiting old repositories, I regularly have the impression I am visiting a less dramatic version of Pompei.
 
 At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
 
@@ -71,9 +71,9 @@ To me as an R package developer, "appearances matter" means: please [switch your
 
 The "hacktivation energy" is "the amount of energy a newcomer must put before she starts getting something back".
 
-Obviously, that something maintainers should strive to minimize. I like catchy phrases!
+Obviously, that is something maintainers should strive to minimize. I like catchy phrases!
 
-## The case for sitrep
+## The case for sitrep (situation report)
 
 The sentence
 
@@ -151,5 +151,5 @@ Examples of this would be [usethis](https://twitter.com/jennybryan/status/935562
 
 ## Conclusion
 
-"Producing open-source software" was a nice read. I don't want to read more things on screen given how I spend my days :sweat_smile:, so will wait for the second edition to be in print to read it, but I am glad to have already read the first. I feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
+"Producing open-source software" was a nice read. I don't want to read more things on screen given how I spend my days :sweat_smile:, so I will wait for the second edition to be in print to read it, but I am glad to have already read the first. I feel it'd be a nice book to discuss with others. It reminded me of Tracy Teal's posit conference workshop ["It's not just code: managing an open source project"](https://github.com/posit-conf-2023/managing-os-project/) that I didn't attend, but whose existence I found cool; and of an rOpenSci community call I participated it in, ["Set Up Your Package to Foster a Community"](https://ropensci.org/blog/2021/04/28/commcall-pkg-community/).
 
