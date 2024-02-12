@@ -5,7 +5,7 @@ slug: producing-oss-first-edition-karl-fogel
 output: hugodown::hugo_document
 tags:
   - books
-rmd_hash: 4dad228a3041a376
+rmd_hash: e7dac735ab93a3ea
 
 ---
 
@@ -21,13 +21,13 @@ Now, the R project still uses Subversion and has mailing lists...
 
 Besides, it was nice to think of some things GitHub has, like discussions board, in general terms.
 
-## The Pompei projects :volcano:
+## The Pompeii projects :volcano:
 
 In the introduction, the author says it's hard to define failures of open-source projects because often the project quietly dies.
 
 > "There may be a moment when a final change is made to the project, but those who made it usually didn't know at the time that it was the last one."
 
-When visiting old repositories, I regularly have the impression I am visiting a less dramatic version of Pompei.
+When visiting old repositories, I regularly have the impression I am visiting a less dramatic version of Pompeii.
 
 At rOpenSci, we strive to [explicitly archive abandoned or retired packages](https://devdevguide.netlify.app/maintenance_evolution#archivalguidance).
 
