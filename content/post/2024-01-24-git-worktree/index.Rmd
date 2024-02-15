@@ -8,6 +8,8 @@ tags:
   - git
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://rweekly.fireside.fm/150?t=664) hosted by Eric Nantz and Mike Thomas.*
+
 Do you ever see [GitHub issue comments](https://github.com/igraph/rigraph/issues/1097) where someone posts the results of a reprex with a current package version, and then with an older one, to prove a regression?
 How would you go about preparing such a report?
 Today I learnt there is a clean way to have different versions of a codebase at once on your computer, thanks to the ever powerful Git.
