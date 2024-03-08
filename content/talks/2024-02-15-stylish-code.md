@@ -9,3 +9,5 @@ materials: https://stylish-code.netlify.app/#/
 
 Training session for the [second cohort of rOpenSci champions](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/).
 Tips for more readable code.
+
+[Summary blog post](https://ropensci.org/blog/2024/02/22/beautiful-code/) co-authored with Yanina Bellini Saibene.
