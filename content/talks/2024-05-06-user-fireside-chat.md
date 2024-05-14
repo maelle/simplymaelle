@@ -6,3 +6,5 @@ event_url: "https://events.linuxfoundation.org/user/"
 event_type: "fireside chat"
 video: https://www.youtube.com/watch?v=m17SPUd0fDc
 ---
+
+With James Black.
