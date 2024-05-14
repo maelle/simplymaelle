@@ -1,0 +1,83 @@
+---
+title: "Automate code refactoring with {xmlparsedata} and {brio}"
+date: '2024-05-06'
+slug: refactoring-xml
+output: hugodown::hugo_document
+tags:
+  - xml
+  - refactoring
+---
+
+Once again a post [praising XML](/2022/04/08/xml-xpath/). :innocent:
+These are notes from a quite particular use case: what if you want to replace the usage of a function with another one in many scripts, without manual edits and without touching lines that do not contain a call to replace?
+
+The real life example that inspired this post is the replacement of all calls to `expect_that(..., equals(...))` in igraph tests with `expect_equal()`.
+If you're a newer package developer who grew up with testthat's third edition, you probably never heard of that [cutesy old-school testing style](https://testthat.r-lib.org/reference/oldskool.html). :wink:
+
+## Why automate? Where I subjectively justify my choice
+
+As brilliantly explained by [XKCD 1205](https://xkcd.com/1205/), automation is not necessary worth the time.
+In the case that motivated this post, automation was worth it because there were many test files, and because being able to regenerate all edits meant we could recreate the changes after merging other edits to the main branch, without any conflict.
+
+## Parse the code to XML, detect problematic calls
+
+For any `path`, we detect function calls to `expect_that()`.
+The code is parsed using the `parse()` function, digested into XML with [{xmlparsedata}](https://github.com/r-lib/xmlparsedata).
+
+```{r, eval=FALSE}
+xml <- path |>
+  parse(keep.source = TRUE) |>
+  xmlparsedata::xml_parse_data(pretty = TRUE) |>
+  xml2::read_xml()
+
+deprecated <- xml2::xml_find_all(
+  xml,
+  ".//SYMBOL_FUNCTION_CALL[text()='expect_that']"
+)
+```
+
+The `deprecated` object contains all the nodes we need to amend.
+
+## Fix problematic calls in the XML representation
+
+The `treat_deprecated()` function below tries to find a call to `equals()` inside the `expect_equal()`, since we only fix the calls to `expect_that()` that contain `equals()`.
+We return early for these other cutesy expectations, with a warning so we can go look at the scripts and get an idea of what the calls are.
+They will have to be fixed with another script, or manually, depending on how many of them there are.
+
+For the calls to `expect_that()` that contain a call to `equals()`, we
+
+- replace `expect_that()` with `expect_equal()`
+- extract the text inside `equals()` to put it directly as second argument of `expect_equal()`.
+
+Thus `expect_that(a, equals(1))` becomes `expect_equals(a, 1)`.
+
+```{r, eval=FALSE}
+treat_deprecated <- function(xml, path) {
+  siblings <- xml2::xml_parent(xml) |> xml2::xml_siblings()
+  equal <- siblings[grepl("equals\\(", xml2::xml_text(siblings))]
+  if (length(equal) == 0) {
+    cli::cli_alert_warning("WARNING AT {path}.")
+    return()
+  }
+  xml2::xml_text(xml) <- "expect_equal"
+  text <- xml2::xml_contents(equal)[[3]] |> xml2::xml_text()
+  xml2::xml_remove(xml2::xml_contents(equal))
+  xml2::xml_text(equal) <- text
+}
+```
+
+## Serialize XML to character, write back
+
+## Put it all together
+
+
+## Conclusion
+
+In this post I presented a strategy that served me well when refactoring igraph's test scripts.
+
+Other possible approaches include styler's parsing of code into a table and [serialization](https://github.com/r-lib/styler) (fancy word for writing to character / a file) of that table.
+
+More similar to the approach in this post, which means it might have been wise for me to explore this codebase sooner, codegrip package uses [xmlparsedata](https://github.com/lionel-/codegrip/blob/82d164ed91ad819587796a4053b1df5b0385c677/R/ast.R#L1) and has [helpers for finding which lines a node refers to](https://github.com/lionel-/codegrip/blob/82d164ed91ad819587796a4053b1df5b0385c677/R/ast.R#L51).
+
+Do you sometimes use automatic refactoring (styler, codegrip, etc.), or automatic diagnostics (lintr, pkgcheck, etc.)?
+Have you written any customization or standalone script to help you with that?
