@@ -1,12 +1,12 @@
 ---
 title: "What I edit when refactoring a test file"
 date: '2024-05-23'
-slug: refactoring-xml
+slug: refactoring-tests
 output: hugodown::hugo_document
 tags:
   - package developments
   - refactoring
-rmd_hash: 30ac0f13f01709cd
+rmd_hash: 8fde69c43d4eddf7
 
 ---
 
