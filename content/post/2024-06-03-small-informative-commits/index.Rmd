@@ -1,0 +1,53 @@
+---
+title: "Why you need small informative Git commits"
+date: '2024-06-03'
+slug: two-phases-git-branches
+output: hugodown::hugo_document
+tags:
+  - good practice
+  - git
+---
+
+"Make small Git commits with informative messages" is a piece of advice we hear a lot when learning Git.
+That's why we might want to sometimes [rewrite history in a branch](/2023/12/07/two-phases-git-branches/).
+In this post, I'd like to underline three main (:wink:) reasons why you'll be happy you, or someone else, made small and informative Git commits in a codebase.
+
+A disclaimer: these three reasons are only valid if you do not write perfectly working and readable code all the time.
+If you do, you won't need to use your Git log for debugging and undoing purposes, so who cares about your Git commits?
+
+## A mysterious line of code
+
+Imagine you encounter a mysterious line of code in a script that either someone else or yourself wrote a while ago.
+
+```{r, eval=FALSE}
+x <- x - 1
+```
+
+As luck will have it, there is no comment explaining the line around it.
+How can you guess the intent of that line?
+
+A Git command might help you: Git blame!
+It'd better called Git explain, as blaming is a bad idea.
+Anyway, it's a tool for seeing the code with more context.
+For each line, you get to see when it was added or last modified, by whom, and when.
+
+
+Git blame is a built-in Git thing, but for me, it's first and foremost a button in the Github interface for any file.
+Use Git blame as you prefer.
+
+
+## Two bonus reasons
+
+### Easier review
+
+Small commits will be easier to review by another human.
+Ideally, it means the code that ends up in the codebase is better, so that there'll be less future need of debugging and undoing. :grin:
+
+### Better automatic changelog generation
+
+If you use a tool like the R package [fledge](https://fledge.cynkra.com/dev/) for generating your changelog or changelog draft, that uses Git commits as input data...
+you'll get a better starting changelog if your commits are good.
+
+## Conclusion
+
+In this post I showed three main reasons for making small and informative Git commits.
