@@ -31,7 +31,7 @@ As luck will have it, there is no comment explaining the line around it.
 How can you guess the intent of that line?
 
 A Git command might help you: Git blame!
-It'd better called Git explain, as blaming is a bad idea.
+It'd better be called Git explain, as blaming is a [bad idea](https://www.heltweg.org/posts/who-wrote-this-shit/).
 Anyway, it's a tool for seeing the code with more context.
 For each line, you get to see when it was added or last modified, by whom, and when.
 

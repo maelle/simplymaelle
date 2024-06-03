@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: fff563e51971c127
+rmd_hash: 3daebd54b3ba7d1d
 
 ---
 
@@ -28,7 +28,7 @@ Imagine you encounter a mysterious line of code in a script that either someone 
 
 As luck will have it, there is no comment explaining the line around it. How can you guess the intent of that line?
 
-A Git command might help you: Git blame! It'd better called Git explain, as blaming is a bad idea. Anyway, it's a tool for seeing the code with more context. For each line, you get to see when it was added or last modified, by whom, and when.
+A Git command might help you: Git blame! It'd better be called Git explain, as blaming is a [bad idea](https://www.heltweg.org/posts/who-wrote-this-shit/). Anyway, it's a tool for seeing the code with more context. For each line, you get to see when it was added or last modified, by whom, and when.
 
 {{< figure src="blame.png" width=500 alt="simplified diagram of Git blame: for each line in a script on the left we see who added it, when, with what commit message.">}}
 
