@@ -40,7 +40,7 @@ For each line, you get to see when it was added or last modified, by whom, and w
 ```
 
 For instance, I added or modified the 2 lines at the top and the the two lines in the middle, that are highlighted in yellow, a few years ago.
-The line that is interesting to me, 'x <- x - 1', was added by ropenscibot in 2017.
+The line that is interesting to me, `x <- x - 1`, was added by ropenscibot in 2017.
 
 Now, I can try and display more information about the Git commit that last modified, or added that mysterious line.
 The person who last touch the line chose our adventure...

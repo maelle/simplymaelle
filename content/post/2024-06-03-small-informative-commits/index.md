@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: 3daebd54b3ba7d1d
+rmd_hash: 4e71e77a0309bf71
 
 ---
 
@@ -32,7 +32,7 @@ A Git command might help you: Git blame! It'd better be called Git explain, as b
 
 {{< figure src="blame.png" width=500 alt="simplified diagram of Git blame: for each line in a script on the left we see who added it, when, with what commit message.">}}
 
-For instance, I added or modified the 2 lines at the top and the the two lines in the middle, that are highlighted in yellow, a few years ago. The line that is interesting to me, 'x \<- x - 1', was added by ropenscibot in 2017.
+For instance, I added or modified the 2 lines at the top and the the two lines in the middle, that are highlighted in yellow, a few years ago. The line that is interesting to me, `x <- x - 1`, was added by ropenscibot in 2017.
 
 Now, I can try and display more information about the Git commit that last modified, or added that mysterious line. The person who last touch the line chose our adventure...
 
