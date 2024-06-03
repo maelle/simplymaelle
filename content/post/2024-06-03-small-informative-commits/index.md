@@ -1,12 +1,12 @@
 ---
-title: "Why you need small informative Git commits"
+title: "Why you need small, informative Git commits"
 date: '2024-06-03'
 slug: two-phases-git-branches
 output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: 1ff62e6b41b86e3d
+rmd_hash: 1a505e95a0ddf7a4
 
 ---
 
