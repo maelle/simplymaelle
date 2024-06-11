@@ -15,7 +15,7 @@ I've entitled this post _"Hack your way to a good Git history"_ because writing 
 
 ## To branch or not to branch
 
-With the first method of re-writing history I'll present, you could get away with working on the default branch as long as you do not push.
+With the second method of re-writing history I'll present, you could get away with working on the default branch as long as you do not push.
 However, I'd really recommend creating a branch before you start working on whatever task you've assigned yourself, be it a bug fix, new feature or some refactoring.
 It feels safer, and it's a good habit to take.
 
@@ -38,7 +38,7 @@ It also means that if someone reviews your pull request, they do it without the 
 
 ## "The repeated amend":tm:: `git commit --amend`
 
-_Thanks to Jenny Bryan for describing this workflow and for [pointing me to it](https://fosstodon.org/@jennybryan/111540760887095683)._
+_Thanks to Jenny Bryan for describing this workflow and for [pointing it to me](https://fosstodon.org/@jennybryan/111540760887095683)._
 
 This second method comes from the excellent [Happy Git with R by Jenny Bryan](https://happygitwithr.com/repeated-amend).
 The idea is than when fixing a bug in your script for instance, you make a first change, create a commit with the message "fix: fix indentation bug" or so, then do more changes and _amend the commit_ with `git commit --amend` instead of creating a new one.
