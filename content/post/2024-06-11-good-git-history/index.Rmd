@@ -40,7 +40,7 @@ It also means that if someone reviews your pull request, they do it without the 
 
 _Thanks to Jenny Bryan for describing this workflow and for [pointing it to me](https://fosstodon.org/@jennybryan/111540760887095683)._
 
-This second method comes from the excellent [Happy Git with R by Jenny Bryan](https://happygitwithr.com/repeated-amend).
+This second method comes from the excellent [Happy Git and GitHub for the useR by Jenny Bryan](https://happygitwithr.com/repeated-amend).
 The idea is than when fixing a bug in your script for instance, you make a first change, create a commit with the message "fix: fix indentation bug" or so, then do more changes and _amend the commit_ with `git commit --amend` instead of creating a new one.
 
 This way, you 'build up a “good” commit gradually'.
