@@ -75,7 +75,7 @@ You can practice `git add --patch` with this exercise of the saperlipopette pack
 
 ## "Mix and match your commits": `git rebase -i`
 
-With this method, instead of throwing away the commits, you will be able to combine them into a commit (squash), change their message (rephrase), edit them (edit), change their order.
+With this method, instead of throwing away the commits, you will be able to combine them into a commit (squash), change their message (reword), edit them (edit), delete them, change their order.
 
 Say you start from
 

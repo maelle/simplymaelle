@@ -6,7 +6,7 @@ output: hugodown::hugo_document
 tags:
   - good practice
   - git
-rmd_hash: 677f69102073449a
+rmd_hash: 064686e26fd02e4f
 
 ---
 
@@ -16,7 +16,7 @@ I've entitled this post *"Hack your way to a good Git history"* because writing 
 
 ## To branch or not to branch
 
-With the first method of re-writing history I'll present, you could get away with working on the default branch as long as you do not push. However, I'd really recommend creating a branch before you start working on whatever task you've assigned yourself, be it a bug fix, new feature or some refactoring. It feels safer, and it's a good habit to take.
+With the second method of re-writing history I'll present, you could get away with working on the default branch as long as you do not push. However, I'd really recommend creating a branch before you start working on whatever task you've assigned yourself, be it a bug fix, new feature or some refactoring. It feels safer, and it's a good habit to take.
 
 On the default branch, you can't force push, whereas in your own branch, you can push regularly as your work, as a backup of sorts, then rewrite history, then force push.
 
@@ -32,9 +32,9 @@ It's really the easiest method to get a good Git history that does not include y
 
 ## "The repeated amend":tm:: `git commit --amend`
 
-*Thanks to Jenny Bryan for describing this workflow and for [pointing me to it](https://fosstodon.org/@jennybryan/111540760887095683).*
+*Thanks to Jenny Bryan for describing this workflow and for [pointing it to me](https://fosstodon.org/@jennybryan/111540760887095683).*
 
-This second method comes from the excellent [Happy Git with R by Jenny Bryan](https://happygitwithr.com/repeated-amend). The idea is than when fixing a bug in your script for instance, you make a first change, create a commit with the message "fix: fix indentation bug" or so, then do more changes and *amend the commit* with `git commit --amend` instead of creating a new one.
+This second method comes from the excellent [Happy Git and GitHub for the useR by Jenny Bryan](https://happygitwithr.com/repeated-amend). The idea is than when fixing a bug in your script for instance, you make a first change, create a commit with the message "fix: fix indentation bug" or so, then do more changes and *amend the commit* with `git commit --amend` instead of creating a new one.
 
 This way, you 'build up a "good" commit gradually'.
 
@@ -65,7 +65,7 @@ You can practice `git add --patch` with this exercise of the saperlipopette pack
 
 ## "Mix and match your commits": `git rebase -i`
 
-With this method, instead of throwing away the commits, you will be able to combine them into a commit (squash), change their message (rephrase), edit them (edit), change their order.
+With this method, instead of throwing away the commits, you will be able to combine them into a commit (squash), change their message (reword), edit them (edit), delete them, change their order.
 
 Say you start from
 
