@@ -10,6 +10,8 @@ rmd_hash: 4e71e77a0309bf71
 
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/issue-2024-w24-highlights) hosted by Eric Nantz and Mike Thomas.*
+
 "Make small Git commits with informative messages" is a piece of advice we hear a lot when learning Git. That's why we might want to sometimes [rewrite history in a branch](/2023/12/07/two-phases-git-branches/). In this post, I'd like to underline three main (:wink:) reasons why you'll be happy you, or someone else, made small and informative Git commits in a codebase.
 
 A disclaimer: these three reasons are only valid if you do not write perfectly working and readable code all the time. If you do, you won't need to use your Git log for debugging and undoing purposes, so who cares about your Git commits?
