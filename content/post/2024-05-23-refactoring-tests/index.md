@@ -10,6 +10,8 @@ rmd_hash: 8fde69c43d4eddf7
 
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/issue-2024-w22-highlights) hosted by Eric Nantz and Mike Thomas.*
+
 I'm currently refactoring test files in a package. Beside some [automatic refactoring](/2024/05/15/refactoring-xml/), I am also manually updating lines of code. Here are some tips (or pet peeves, based on how I look at it / how tired I am :grin:)
 
 ## Prequel: please read the R packages book
