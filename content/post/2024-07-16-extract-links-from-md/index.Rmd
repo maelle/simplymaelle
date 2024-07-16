@@ -19,7 +19,7 @@ tinkr can transform Markdown into XML and back.
 Under the hood, tinkr uses 
 
 - [commonmark](http://docs.ropensci.org/commonmark/) for the Markdown-to-XML conversion. CommonMark, in the form of its cmark implementation, is the C library that GitHub for instance uses to display your Markdown comments as HTML. The commonmark package is also what powers [Markdown support in roxygen2](https://roxygen2.r-lib.org/articles/rd-formatting.html).
-- [xslt](https://docs.ropensci.org/xslt/) for the XML-to-Markdown conversion. XSLT is a templating language for XSLT.
+- [xslt](https://docs.ropensci.org/xslt/) for the XML-to-Markdown conversion. XSLT is a templating language for XML.
 
 Anyway, enough said, let's go back to today's use case.
 
