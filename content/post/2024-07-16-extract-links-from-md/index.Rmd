@@ -1,0 +1,83 @@
+---
+title: "Extracting all links from my slidedeck"
+date: '2024-07-16'
+slug: extract-links-from-md
+output: hugodown::hugo_document
+tags:
+  - xml
+  - tinkr
+---
+
+Last week after my [useR! talk](/talks/2024-07-10-user-2024-rusty-code/), someone I had met at the R-Ladies dinner asked me for a list of all the links in my slides.
+I said I'd prepare it, not because I'm a nice person, but because I knew it'd be an use case where the great tinkr package would shine! :smiling_imp:
+
+## What is tinkr?
+
+[tinkr](https://docs.ropensci.org/tinkr/) is an R package I [created](https://ropensci.org/blog/2018/10/01/tinkr/), and that its current maintainer [Zhian Kamvar](https://zkamvar.netlify.app/) took much further that I'd ever would have.
+tinkr can transform Markdown into XML and back.
+
+Under the hood, tinkr uses 
+
+- [commonmark](http://docs.ropensci.org/commonmark/) for the Markdown-to-XML conversion. CommonMark, in the form of its cmark implementation, is the C library that GitHub for instance uses to display your Markdown comments as HTML. The commonmark package is also what powers [Markdown support in roxygen2](https://roxygen2.r-lib.org/articles/rd-formatting.html).
+- [xslt](https://docs.ropensci.org/xslt/) for the XML-to-Markdown conversion. XSLT is a templating language for XSLT.
+
+Anyway, enough said, let's go back to today's use case.
+
+## Extract and format links from `index.qmd`
+
+With tinkr I can use XPath, the query language for XML or HTML, to extract links from my slidedeck source.
+Then I will format them as a list.
+
+First, I create a yarn object from my slidedeck source.
+
+```{r}
+talk_yarn <- tinkr::yarn$new("/home/maelle/Documents/conferences/user2024/index.qmd")
+talk_yarn
+```
+
+Then I extract all links.
+
+```{r}
+links <- xml2::xml_find_all(
+  talk_yarn$body, 
+  xpath = ".//md:link",
+  ns = talk_yarn$ns
+)
+head(links)
+```
+
+I then throw away the links to the great website Pexels, because these are image credits rather than information useful to do R stuff.
+
+```{r}
+links <- purrr::discard(
+  links, 
+  \(x) startsWith(xml2::xml_attr(x, "destination"), "https://www.pexels")
+)
+head(links)
+```
+
+After that I can format the links and display them here using an ["asis" chunk](https://bookdown.org/yihui/rmarkdown-cookbook/results-asis.html).
+Yes, my slidedeck uses Quarto but this blog is still powered by R Markdown, [hugodown](https://hugodown.r-lib.org/) to be precise.
+
+I'm using the formatting as an opportunity to only keep distinct links: sometimes I had very similar slides in a row, with repeated information.
+
+```{r, results='asis'}
+format_link <- function(link) {
+  url <- xml2::xml_attr(link, "destination")
+  text <- xml2::xml_text(link)
+  sprintf("* [%s](%s)", text, url)
+}
+
+formatted_links <- purrr::map_chr(links, format_link)
+
+formatted_links <- unique(formatted_links)
+
+formatted_links |>
+  paste(collapse = "\n") |>
+  cat()
+```
+
+## Conclusion
+
+Using tinkr, XPath and [`sprintf()`](/2023/09/29/three-functions/), I was able to create a list of all the links shared in my useR! slidedeck.
+Some of them have no text, meaning that the URL is used as text for the link; or text that only makes sense in the context of the paragraph they were a part of; others are slightly more informative; but at least none of them is a ["click here" link](https://dap.berkeley.edu/learn/concepts/links). :sweat_smile:
