@@ -1,0 +1,135 @@
+---
+title: "Extracting names of functions defined in a script with treesitter"
+date: '2024-07-18'
+slug: extract-function-names-treesitter
+output: hugodown::hugo_document
+---
+
+Coming back from a conference, we might be excited to install and try out the cool things we have heard about.
+I, going against the stream :fish:, decided to experiment with a tool I have *not* heard about last week, as I unfortunately missed [Davis Vaughan's talk about treesitter](https://www.youtube.com/watch?v=Gm0ikRBAfwc).
+Nonetheless, I caught the idea that treesitter is a parser of code, R code in particular.
+The treesitter _R package_ uses the tree-sitter _C library_.
+There are awesome applications of treesitter among which :sparkles: code search for R on GitHub :sparkles: but I learnt to know a bit of treesitter by solving a boring use case.
+
+## My use case: I won't copy-paste these function names
+
+Have you noticed this nice error message you get if you try to use `dplyr::across()` directly?
+
+```{r, error=TRUE}
+dplyr::across()
+```
+
+Kirill Müller got the idea to offer a similar behaviour to some igraph functions that exist only for use only within the square operator.
+Therefore I had to find all functions defined _within_ this function (whose body has been simplified here):
+
+```
+`[.igraph.vs` <- function(...) {
+  # some code
+  bla <- function(...) {
+    # some code
+  }
+  blop <- function(...) {
+    # some code
+  }
+}
+```
+
+On the script outline I get on the right of my script in RStudio IDE[^positron], I can see the function names (that would be `bla()` and `blop()` in the simplified chunk above) but not copy-paste from there.
+
+I would know how to extract them with [xmlparsedata](/2024/05/15/refactoring-xml/) but I thought it might be an opportunity for me to have a look at treesitter.
+I went through different emotions as a beginner, not all of them positive :sob:, but I did get the function names in the end! :muscle:
+
+## Get the whole tree from the script
+
+Below, I dutifully followed the example on the [package homepage](https://davisvaughan.github.io/r-tree-sitter/index.html#example):
+
+- load the R language from the treesitter.r package, as far as I understand the only language available at this point for the R package.
+- load the parser for that language.
+- read in the text.
+- parse the text.
+
+A last step is getting the tree root node as node, because I will query the whole script, and you can only query _nodes_, not _trees_.
+
+```{r}
+language <- treesitter.r::language()
+parser <- treesitter::parser(language)
+text <- brio::read_lines("/home/maelle/Documents/rigraph/R/iterators.R") |>
+  paste(collapse = "\n")
+tree <- treesitter::parser_parse(parser, text)
+node <- treesitter::tree_root_node(tree)
+```
+
+## Find the node of the parent function of interest
+
+The documentation page of [`treesitter::query()`](https://davisvaughan.github.io/r-tree-sitter/reference/query.html) recommends reading the documentation of tree-sitter about the [query syntax](https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax).
+That documentation features very useful examples.
+
+Below I am looking for "binary_operator" whose left hand side is an identifier that I capture as "name", and whose right hand side is a "function_definition" I capture as "def".
+For some reason if I did not capture "def" then I got less information about the node. :shrug:
+I also use a predicate: the name of the function has to be equal to "`[.igraph.vs`".
+
+To find out I was after a "function_definition", I parsed a few lines of made-up code to study the resulting tree.
+
+```{r}
+square_bracket_thing <- '
+(
+((binary_operator
+  lhs: (identifier) @name
+  rhs: (function_definition)) @def
+  (#eq? @name "`[.igraph.vs`"))
+  
+)
+'
+square_bracket_query <- treesitter::query(language, square_bracket_thing)
+```
+
+Then I executed the query and extracted the node.
+In reality this took a bit more trial and error.
+
+```{r}
+square_bracket_thing_captures <- treesitter::query_captures(square_bracket_query, node)
+square_bracket_thing_captures
+square_fn <- square_bracket_thing_captures$node[[1]]
+```
+
+At this point I was already very proud of my tiny win but I did not have the "children functions" yet!
+
+## Find the functions defined within the parent
+
+I first considered creating a complicated nested query but I found no example of that.
+I did see someone telling StackOverflow they did a recursive query and for some reason that gave me the idea of parsing the text of the node, then look for functions in that text.
+
+The query was simpler: looking for function definitions, only capturing the names on the left hand side.
+
+```{r}
+square_tree <- treesitter::parser_parse(parser, treesitter::node_text(square_fn))
+square_node <- treesitter::tree_root_node(square_tree)
+kiddos_source <- '
+(
+(binary_operator
+  lhs: (identifier) @name
+  rhs: (function_definition))
+)
+'
+kiddos_query <- treesitter::query(language, kiddos_source)
+square_bracket_thing_captures <- treesitter::query_captures(kiddos_query, square_node)
+head(square_bracket_thing_captures)
+```
+
+After that I was able to get the _names_ of the children functions!
+I was actually only interested in those whose names start with a dot as all the other ones are deprecated anyway.
+
+```{r}
+kiddos_functions <- purrr::map_chr(square_bracket_thing_captures$node, treesitter::node_text)
+kiddos_functions[startsWith(kiddos_functions, ".")]
+```
+
+Tada! Now I can go fix the issue I was tasked with.
+
+## Conclusion
+
+In this post I report on my first encounter with the treesitter package for parsing R code.
+Copy-pasting the few function names would surely have been faster, but sometimes you've got to sit and [learn something new](https://www.pipinghotdata.com/posts/2022-11-02-regular-intentional-and-time-boxed-yak-shaving/). :relaxed:
+
+
+[^positron]: No, I have not installed Positron yet.
