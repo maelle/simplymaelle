@@ -1,0 +1,96 @@
+---
+title: "Get your codebase lint-free forever with lintr"
+date: '2024-08-28'
+slug: lintr-3-steps
+output: hugodown::hugo_document
+tags:
+  - package development
+  - lintr
+  - good practice
+rmd_hash: e22c637989caed7d
+
+---
+
+Writing good code is hard. Some aspects get easier with experience -- although I observe that I consistently forget some things. :see_no_evil: Other aspects can be tackled through code review -- although your reviewer's time will be better spent on design questions than on nitpicks. :nail_care: Static code analysis can help with code quality.
+
+In this post I will show how I set up packages to benefit from the [lintr](https://lintr.r-lib.org/) R package for static code analysis.
+
+## Step 1: Add a lintr configuration file
+
+I start by creating (and [.Rbuildignoring](https://blog.r-hub.io/2020/05/20/rbuildignore/)) a `.lintr` file at the root of my package with contents indicating I want to run [all available linters](https://lintr.r-lib.org/reference/index.html) (there are so many wonderful linters!).
+
+``` yaml
+linters: lintr::linters_with_tags(tags = NULL)
+encoding: "UTF-8"
+```
+
+Now the hard work can start...
+
+## Step 2: Run lintr, fix or skip or configure until done
+
+I then run [`lintr::lint_package()`](https://lintr.r-lib.org/reference/lint.html) and have a look at the output. It can be quite humbling. :sweat_smile:
+
+For each marker, I can...
+
+### Fix the problem
+
+For instance if a line is too long, I might split it into two, going from
+
+``` r
+config_lines <- brio::read_lines(<super-long-path>)
+```
+
+to
+
+``` r
+config_path <- <super-long-path>
+config_lines <- brio::read_lines(config_path)
+```
+
+I can also change function calls [from long to wide](https://github.com/lionel-/codegrip), create helper functions, etc.
+
+I might notice some linters come up especially often which makes me vow to try and remember about them, for instance writing explicit integers (`2L`) rathen than implicit ones (`2`).
+
+### Skip a linter for a line
+
+For some marked lines that I view as non problematic or as a false positive, I will add a [`nolint: <name-of-the-linter>` exclusion](https://lintr.r-lib.org/articles/lintr.html#excluding-only-some-linters) to the specific line.
+
+### Configure lintr
+
+I might also decide to [stop using some linters](https://lintr.r-lib.org/articles/lintr.html#configuring-linters), like the complicated indentation one, or to [exclude whole files](https://lintr.r-lib.org/articles/lintr.html#excluding-files-completely), like `tests/testthat.R`.
+
+For instance in a package the `.lintr` might end up looking like this:
+
+``` yaml
+linters: lintr::linters_with_tags(tags = NULL, indentation_linter = NULL)
+encoding: "UTF-8"
+exclusions: list(
+    # excluded from all lints:
+    "tests/testthat.R"
+    )
+```
+
+### Repeat until a clean output
+
+After a few (or more, let's be honest) cycles of running lintr and responding to part of the output, lintr has nothing left to complain about! The codebase is in a good shape. :tada:
+
+## Step 3: Set up lintr on continuous integration
+
+At this point I call [`usethis::use_github_action("lint-changed-files")`](https://usethis.r-lib.org/reference/use_github_action.html) that will download a [GitHub Actions workflow](https://github.com/r-lib/actions/blob/v2-branch/examples/lint-changed-files.yaml) for me. This workflow tells GitHub Actions to run lintr in pull requests, **only for files changed in the pull request**.
+
+Having this safeguard means that I'll never have to run step 2 ever again, as problems in new code will be flagged (and hopefully addressed) continuously. I might only have to run step 2 again because of newly released linters.
+
+An alternative approach might be to use [pre-commit](https://datawookie.dev/blog/2022/09/enforcing-style-in-an-r-project/) to run lintr before making any commit.
+
+## Conclusion
+
+In this post I explained how I set up lintr safeguards in packages where I decide to get serious about code quality:
+
+-   first creating a basic lintr configuration file,
+-   then running lintr, editing my code and lintr configuration over and over again until lintr marks nothing,
+-   adding a continuous integration workflow that will run lintr on files changed by every pull request.
+
+Thanks to lintr maintainer Michael Chirico and to all other lintr authors and contributors. :pray:
+
+How do *you* use lintr? Have you heard of [flint](https://flint.etiennebacher.com/reference/) by Etienne Bacher, that does not only flags problems but also fixes them, for a subset of lintr's linters?
+
