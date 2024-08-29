@@ -115,7 +115,7 @@ Often, changes in your theme, and work needed on your website, won't be dramatic
 If you wrote no custom layouts and use a very well maintained theme, you might never need to keep up with Hugo changes yourself.
 However, if you've written Hugo custom layouts, or strive to become a contributor to your theme, you might want to read [Hugo changelogs](https://gohugo.io/news/), follow [Hugo's source repository](https://github.com/gohugoio/hugo), or [Hugo's Twitter account](https://twitter.com/GoHugoIO), etc.
 
-Edit in May 2020. After asking on the Hugo forum how to follow Hugo more automatically for websites I (co-)maintain on GitHub, I ended up [creating a GitHub Actions workflow](https://discourse.gohugo.io/t/how-to-follow-install-hugo-updates-more-automatically/24950/4) that will look for Hugo updates once a month, and if needed open a PR amending Hugo version in the Netlify config file.
+_Edit in May 2020. After asking on the Hugo forum how to follow Hugo more automatically for websites I (co-)maintain on GitHub, I ended up [creating a GitHub Actions workflow](https://discourse.gohugo.io/t/how-to-follow-install-hugo-updates-more-automatically/24950/4) that will look for Hugo updates once a month, and if needed open a PR amending Hugo version in the Netlify config file._
 
 ## Don't live on the edge
 
@@ -123,6 +123,8 @@ If you have a workflow on a continuous integration system updating your website 
 Update Hugo with intent, after reading a bit and/or testing it doesn't break your website.
 
 ## What if I just never update Hugo or my theme?
+
+_Edit in August 2024: I think pinning Hugo and the theme at a version that works for you is a fantastic idea! You can use [hugodown](https://hugodown.r-lib.org/articles/config.html) to pin the Hugo version (and probably blogdown too)._
 
 No, it's not a good solution in my opinion.
 Never updating Hugo (neither locally nor on say Netlify) nor your theme probably means your website will still build as it used to.
