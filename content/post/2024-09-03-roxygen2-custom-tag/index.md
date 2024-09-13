@@ -6,9 +6,11 @@ output: hugodown::hugo_document
 tags:
   - package development
   - roxygen2
-rmd_hash: 8e4309485f5db2c3
+rmd_hash: e7ca9589a2b6f963
 
 ---
+
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/178) hosted by Eric Nantz and Mike Thomas.*
 
 You might know that it's possible to extend [roxygen2](https://roxygen2.r-lib.org/) to do all sorts of cool things including but not limited to:
 

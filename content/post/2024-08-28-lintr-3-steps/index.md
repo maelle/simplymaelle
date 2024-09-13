@@ -11,6 +11,8 @@ rmd_hash: e22c637989caed7d
 
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/177) hosted by Eric Nantz and Mike Thomas.*
+
 Writing good code is hard. Some aspects get easier with experience -- although I observe that I consistently forget some things. :see_no_evil: Other aspects can be tackled through code review -- although your reviewer's time will be better spent on design questions than on nitpicks. :nail_care: Static code analysis can help with code quality.
 
 In this post I will show how I set up packages to benefit from the [lintr](https://lintr.r-lib.org/) R package for static code analysis.

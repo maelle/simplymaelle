@@ -8,6 +8,8 @@ tags:
   - roxygen2
 ---
 
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/178) hosted by Eric Nantz and Mike Thomas.*
+
 You might know that it's possible to extend [roxygen2](https://roxygen2.r-lib.org/) to do all sorts of cool things including but not limited to: 
 
 - documenting your internal functions for developers only (that's [devtag by my cynkra colleague Antoine Fabri](https://github.com/moodymudskipper/devtag)), 
