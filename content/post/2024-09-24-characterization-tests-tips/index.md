@@ -1,0 +1,47 @@
+---
+title: "Cover and modify, some tips for R package development"
+date: '2024-09-24'
+slug: cover-modify-r-packages
+output: hugodown::hugo_document
+tags:
+  - package development
+  - testthat
+  - books
+rmd_hash: 8553f93067ff596e
+
+---
+
+I've recently been dealing with legacy code refactoring both in theory and in practice: while I'm continuing some work on the igraph R package, I've started reading [Working Effectively with Legacy Code by Michael Feathers](https://www.oreilly.com/library/view/working-effectively-with/0131177052/), that had been in my to-read pile for months. In this post, I'll summarize some ideas from both the book and my work.
+
+## "Cover and modify" with "characterization tests"
+
+When you start modifying your [rusty code](/talks/2024-07-10-user-2024-rusty-code/), how do you ensure you do not break existing and important behaviour inadvertently? In his book, Michael Feathers advocates for **"cover and modify"** (test, then amend) rather than **"edit and pray"** (that you're not breaking anyone's script or reverse dependency). Not necessarily brand-new ideas but nice phrases. :grin:
+
+In igraph for instance, when I have to add tests for a function that does not have any test yet, I tend to use code from examples as a starting point. I run the code in an unit test and add expectations that seem relevant to me, and to collaborators more knowledgeable about graphs. Part of this work is very mechanical and probably also very common: running the code to figure out its output, codify its output as expectation. For instance if `f()` returns a numeric of value 0.42, I'll add something like `testthat::expect_type(output, "double")` and `testthat::expect_equal(output, 0.42)`. It turns out such tests have a name in the book, which made me very happy: they are **"characterization tests"**.
+
+## How to characterize the output
+
+Three tips on how to characterize the output:
+
+-   You can use [`typeof()`](https://rdrr.io/r/base/typeof.html) and [`sloop::otype()`](https://sloop.r-lib.org/reference/otype.html) to help you find out which [testthat type/class expectation](https://testthat.r-lib.org/reference/inheritance-expectations.html) you should use. The latter is linked from a chapter in Hadley Wickham's Advanced R that in turn is linked from the testthat docs. I am mildly embarrassed about even needing the former. :joy:
+
+-   You can use [`constructive::construct()`](https://cynkra.github.io/constructive/reference/construct.html) to record an expected value in a more readable way than with [`dput()`](https://rdrr.io/r/base/dput.html) -- for use in snapshot tests or even directly in [`testthat::expect_equal()`](https://testthat.r-lib.org/reference/equality-expectations.html).
+
+-   Michael Feathers notes that characterization tests are a form of documentation, so "you have to think about what will be important to the reader". I try to order expectations logically, and... I request a review on my pull requests so there might actually be another reader involved in the short term. :innocent:
+
+## How to check coverage
+
+To know whether you've covered the code you're about to modify, you have to assess your tests.
+
+For some (historical I suppose) reason, in Michael Feathers' book code coverage tooling seems absent. I've instead read about "sensing variables" and using the debugger to step through the code.
+
+In R when using devtools we can rely on [`devtools::test_coverage_active_file()`](https://devtools.r-lib.org/reference/test.html) (including showing you an interactive report!).[^1] It's allowed me to see some branches my tests weren't hitting yet. Running it again and again and seeing more lines in green is very satisfying.
+
+The code coverage might be a part of the continuous integration workflows but in the case of igraph it only runs after all other checks (so not quickly).
+
+## Conclusion
+
+In this post I've presented some ideas around "covering" R code with tests before you "modify" it. Do you have any insight to share that I haven't... covered? :sweat_smile:
+
+[^1]: I first used a few lines that did the same thing because I had forgotten about this function. Don't do like me!
+
