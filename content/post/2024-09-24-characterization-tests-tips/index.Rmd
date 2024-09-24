@@ -47,7 +47,7 @@ Running it again and again and seeing more lines in green is very satisfying.
 
 The code coverage might be a part of the continuous integration workflows but in the case of igraph it only runs after all other checks (so not quickly).
 
-[^boo]: I first used a few lines that did the same thing because I had forgotten about this function. Don't do like me!
+[^boo]: I first used a few lines that did the same thing (but obviously not as well) because I had forgotten about this function. Don't do like me!
 
 ## Conclusion
 

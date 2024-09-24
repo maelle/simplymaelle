@@ -7,7 +7,7 @@ tags:
   - package development
   - testthat
   - books
-rmd_hash: 8553f93067ff596e
+rmd_hash: 31e031d2e778bbea
 
 ---
 
@@ -43,5 +43,5 @@ The code coverage might be a part of the continuous integration workflows but in
 
 In this post I've presented some ideas around "covering" R code with tests before you "modify" it. Do you have any insight to share that I haven't... covered? :sweat_smile:
 
-[^1]: I first used a few lines that did the same thing because I had forgotten about this function. Don't do like me!
+[^1]: I first used a few lines that did the same thing (but obviously not as well) because I had forgotten about this function. Don't do like me!
 
