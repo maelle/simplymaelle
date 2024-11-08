@@ -108,8 +108,6 @@ thanks to a [tweet by Noam Ross](https://twitter.com/noamross/status/12022693140
 -   Hopefully the code makes sense on its own. If not, fear not, the next item right here, and the other sections of this post, as well as patience, will help.
 -   Sometimes [using git blame or looking at the git history](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/tracking-changes-in-a-file) might help understand the context of some aspects of the code, if there's no code comment referring an issue. Do not actually *blame* people, though. To make your own git history more informative for such later code archaeology, use [branches](https://happygitwithr.com/git-branches.html) and [squash and merge](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 
-{{< tweet 1108031633750478849 >}}
-
 ## Build your mental model of the code
 
 That's what [Patricia Aas calls "mental machine"](https://www.allthingsgit.com/episodes/learning_a_new_codebase_with_patricia_aas.html). You might want to draw some sort of diagram by hand (or [programmatically](https://blog.r-hub.io/2019/12/12/internal-functions/#explore-internal-functions-within-a-package)). Patricia Aas remarks that such diagrams might even be contributed to the codebase as developer documentation.
