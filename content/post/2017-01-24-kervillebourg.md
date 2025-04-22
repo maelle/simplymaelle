@@ -12,7 +12,7 @@ comments: yes
 
 # Sort of introduction to this post and hopefully the next ones
 
-I usually don't have any New Year resolution. However, [recent](https://twitter.com/_inundata/status/820713820310016000) [tweets](https://twitter.com/gdequeiroz/status/821766148655968256) about productivity --  from people I actually find productive and inspiring -- made me ponder a bit on my unfinished side projects. My main 2016 side-project was submitting and defending [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/), and I've written a few R packages, so I'm overall quite happy. 
+I usually don't have any New Year resolution. However, recent tweets about productivity --  from people I actually find productive and inspiring -- made me ponder a bit on my unfinished side projects. My main 2016 side-project was submitting and defending [my PhD thesis](https://edoc.ub.uni-muenchen.de/19877/), and I've written a few R packages, so I'm overall quite happy. 
 
 But in 2016 I also started stuff without delivering. In particular, I prepared small data projects in Github repositories with a very precise README because I didn't have a blog and planned to start one after my PhD thesis. Then I created my blog (thanks [Nick](http://www.njtierney.com/jekyll/2015/11/11/how-i-built-my-site/)!) and... only re-posted [an analysis of mine](/2016/10/02/first7jobs-repost/) from another blog. My nice repositories are still lying around and they represent quite a few of my [West Side-project Story unfinished buildings](http://www.commitstrip.com/en/2014/11/25/west-side-project-story/). I've decided transforming some of my usable data projects into blog posts was a nice step towards being or at least feeling more productive.
 

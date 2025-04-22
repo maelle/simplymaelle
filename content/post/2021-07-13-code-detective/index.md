@@ -124,9 +124,7 @@ How to find good examples?
 
 ## Beyond browsing files, `browser()`
 
-Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check whether a part of the code was run, or `print(class(x))` to check an assumption about a thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated the tweet below by Sharla Gelfand:
-
-{{< tweet 1382090144229044226 >}}
+Reading code and imagining what it does only goes so long. You can edit the code and see whether, from the outside, it does what you want it to. Sometimes you might also make do with print-debugging i.e. for instance writing `print("coucou !")` to check whether a part of the code was run, or `print(class(x))` to check an assumption about a thing. Sometimes print-debugging is the only technique you might be able to use if [non-interactive debugging](https://adv-r.hadley.nz/debugging.html#print-debugging). It can also be perfect to know where a loop breaks which motivated a tweet by Sharla Gelfand.
 
 But often you will have to go experiment under the hood. For doing that efficiently you will need to learn about [`browser()`](https://rdrr.io/r/base/browser.html) and friends! Or only just [`browser()`](https://rdrr.io/r/base/browser.html) to start with!
 
