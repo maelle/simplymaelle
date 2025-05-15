@@ -4,7 +4,7 @@ date: '2025-05-13'
 event: "Salt Lake City R Users Group"
 event_url: "https://www.meetup.com/slc-rug/events/304955799"
 event_type: "meetup"
-slides: https://www.meetup.com/slc-rug/events/304955799
+slides: https://slc-rug-git.netlify.app/#/
 video: https://www.youtube.com/watch?v=IEAEvcnA9Hs
 ---
 
