@@ -42,7 +42,7 @@ You can use this method on the default branch, if you don't push before the comm
 
 This method does allow for granularity, as you can first "repeat amend" a refactoring commit, then "repeat amend" a bug fix commit, then "repeat amend" a new test commit, etc.
 
-You can practice `git commit --amend` with those exercises of the saperlipopette package: ["Oh shit, I committed and immediately realized I need to make one small change!"](https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html) and ["Oh shit, I need to change the message on my last commit!"](https://maelle.github.io/saperlipopette/reference/exo_latest_message.html).
+You can practice `git commit --amend` with those exercises of the saperlipopette package: ["Oh shit, I committed and immediately realized I need to make one small change!"](https://docs.ropensci.org/saperlipopette/reference/exo_one_small_change.html) and ["Oh shit, I need to change the message on my last commit!"](https://docs.ropensci.org/saperlipopette/reference/exo_latest_message.html).
 
 ## "Start from scratch": `git reset --soft` + `git add` (`--patch`)
 
@@ -61,7 +61,7 @@ For the first commit, you run `git add --patch R/script.R` to only pick the refa
 
 Then, you force push to your branch (not the default branch!).
 
-You can practice `git add --patch` with this exercise of the saperlipopette package: ["Hey I'd like to split these changes to the same file into several commits!"](https://maelle.github.io/saperlipopette/reference/exo_split_changes.html).
+You can practice `git add --patch` with this exercise of the saperlipopette package: ["Hey I'd like to split these changes to the same file into several commits!"](https://docs.ropensci.org/saperlipopette/reference/exo_split_changes.html).
 
 ## "Mix and match your commits": `git rebase -i`
 
@@ -127,7 +127,7 @@ to get that commit and copy-paste it to my next command. In theory I could *coun
 
 After that, you can force push to your branch.
 
-You can practice `git rebase -i` with this exercise of the saperlipopette package: ["Hey I'd like to make my commits in a branch look informative and smart!"](https://maelle.github.io/saperlipopette/reference/exo_rebase_i.html).
+You can practice `git rebase -i` with this exercise of the saperlipopette package: ["Hey I'd like to make my commits in a branch look informative and smart!"](https://docs.ropensci.org/saperlipopette/reference/exo_rebase_i.html).
 
 Beside practicing, a really important thing is to configure your Git editor. I do not remember how I did it but now my Git editor is Atom, which I find easier to deal with than Vim[^3].
 

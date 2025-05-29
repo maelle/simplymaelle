@@ -13,7 +13,7 @@ I got more confident with Git since reading [Git in practice](/2023/11/01/readin
 
 ## What is saperlipopette?
 
-The [saperlipopette](https://maelle.github.io/saperlipopette/) package creates Git messes, or playgrounds, that users need to solve. Part of the [exercises](https://maelle.github.io/saperlipopette/reference/index.html) are inspired by the wonderful website [Oh Shit, Git!?!](https://ohshitgit.com/) by Katie Sylor-Miller; others reflect commands that I've enjoyed using... or that I'd like to use one day, like git bisect, so the list is partly aspirational!
+The [saperlipopette](https://docs.ropensci.org/saperlipopette/) package creates Git messes, or playgrounds, that users need to solve. Part of the [exercises](https://docs.ropensci.org/saperlipopette/reference/index.html) are inspired by the wonderful website [Oh Shit, Git!?!](https://ohshitgit.com/) by Katie Sylor-Miller; others reflect commands that I've enjoyed using... or that I'd like to use one day, like git bisect, so the list is partly aspirational!
 
 While saperlipopette itself makes good use of the [gert](https://docs.ropensci.org/gert/) package under the hood, the users can solve the Git messes any way they like, be it with some sort of Git interface, the command line, etc. The package provides no checking of solutions. You get a new folder with a Git mess inside, some tips, and you are the one defining success at the end of one try, by looking at your Git history. Because re-creating an exercise folder only demands your running a function, you can re-create the exercise as needed.
 
@@ -28,7 +28,7 @@ This package is intended to be a companion to <https://ohshitgit.com/>, so its n
 You can install the development version of saperlipopette like so:
 
 ``` r
-pak::pak("maelle/saperlipopette")
+pak::pak("ropensci-training/saperlipopette")
 ```
 
 You'll also need
@@ -39,13 +39,13 @@ You'll also need
 
 ### Basic example
 
-Let's try the [`saperlipopette::exo_one_small_change()`](https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html) that goes with ["Oh shit, I committed and immediately realized I need to make one small change!"](https://ohshitgit.com/#change-last-commit).
+Let's try the [`saperlipopette::exo_one_small_change()`](https://docs.ropensci.org/saperlipopette/reference/exo_one_small_change.html) that goes with ["Oh shit, I committed and immediately realized I need to make one small change!"](https://ohshitgit.com/#change-last-commit).
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://maelle.github.io/saperlipopette/'>"saperlipopette"</a></span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://docs.ropensci.org/saperlipopette/'>"saperlipopette"</a></span><span class='o'>)</span></span>
 <span><span class='nv'>parent_path</span> <span class='o'>&lt;-</span> <span class='nf'>withr</span><span class='nf'>::</span><span class='nf'><a href='https://withr.r-lib.org/reference/with_tempfile.html'>local_tempdir</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='nv'>path</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html'>exo_one_small_change</a></span><span class='o'>(</span><span class='nv'>parent_path</span><span class='o'>)</span></span>
+<span><span class='nv'>path</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://docs.ropensci.org/saperlipopette/reference/exo_one_small_change.html'>exo_one_small_change</a></span><span class='o'>(</span><span class='nv'>parent_path</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Follow along in /tmp/RtmpoAeVTm/file152cb747520d9/one-small-change!</span></span>
 <span></span><span><span class='c'># what's in path</span></span>
 <span><span class='nf'>fs</span><span class='nf'>::</span><span class='nf'><a href='https://fs.r-lib.org/reference/dir_tree.html'>dir_tree</a></span><span class='o'>(</span><span class='nv'>path</span><span class='o'>)</span></span>
@@ -95,5 +95,5 @@ We've set the Git author, committer and date so that the automatic commits get t
 
 ## Feedback welcome!
 
-In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environment! I am very grateful to Jim Gardner for [useful feedback](https://github.com/maelle/saperlipopette/issues/9) and would love to [hear](https://github.com/maelle/saperlipopette/issues) from more users, if saperlipopette is of any interest to you.
+In this post I introduced the saperlipopette package whose aim is to help users practice their Git skills in a safe (because throw-away) environment! I am very grateful to Jim Gardner for [useful feedback](https://github.com/ropensci-training/saperlipopette/issues/9) and would love to [hear](https://github.com/maelle/ropensci-training/issues) from more users, if saperlipopette is of any interest to you.
 

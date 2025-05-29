@@ -27,7 +27,7 @@ One of my favorite parts of the book were the diagrams such as the one illustrat
 
 > "after you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository."
 
-The last chapter in the book, "Git internals", include a "Data recovery" section about [`git reflog`](https://maelle.github.io/saperlipopette/reference/exo_time_machine.html) and [`git fsck`](https://git-scm.com/docs/git-fsck).
+The last chapter in the book, "Git internals", include a "Data recovery" section about [`git reflog`](https://docs.ropensci.org/saperlipopette/reference/exo_time_machine.html) and [`git fsck`](https://git-scm.com/docs/git-fsck).
 
 ## One can negate patterns in `.gitignore`
 

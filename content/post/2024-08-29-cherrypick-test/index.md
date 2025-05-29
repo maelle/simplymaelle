@@ -44,5 +44,5 @@ What I've done a few times now (so clearly an expert workflow :sweat_smile:) is
 
 ## Conclusion
 
-In this post I've explained a small git workflow I enjoy for checking a test of a bug fix is a good test for it: failing without the bug fix, succeeding with the bug fix. I find this process a nice use case for cherry-pick, beside [moving a commit that was made on the wrong branch](https://maelle.github.io/saperlipopette/reference/exo_committed_to_wrong.html).
+In this post I've explained a small git workflow I enjoy for checking a test of a bug fix is a good test for it: failing without the bug fix, succeeding with the bug fix. I find this process a nice use case for cherry-pick, beside [moving a commit that was made on the wrong branch](https://docs.ropensci.org/saperlipopette/reference/exo_committed_to_wrong.html).
 

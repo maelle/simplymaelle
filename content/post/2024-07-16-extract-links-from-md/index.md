@@ -145,7 +145,7 @@ I'm using the formatting as an opportunity to only keep distinct links: sometime
 -   [Why you need small, informative Git commits](https://masalmon.eu/2024/06/03/small-commits/)
 -   [The two phases of commits in a Git branch](https://masalmon.eu/2023/12/07/two-phases-git-branches/)
 -   [Hack your way to a good Git history](https://masalmon.eu/2024/06/11/rewrite-git-history/)
--   [{saperlipopette}](https://maelle.github.io/saperlipopette/)
+-   [{saperlipopette}](https://docs.ropensci.org/saperlipopette/)
 -   [Oh shit, Git!](https://ohshitgit.com/)
 -   [No Maintenance Intended](http://unmaintained.tech/)
 -   [What Does It Mean to Maintain a Package?](https://ropensci.org/blog/2023/02/07/what-does-it-mean-to-maintain-a-package/)

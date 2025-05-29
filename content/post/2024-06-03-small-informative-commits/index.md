@@ -53,7 +53,7 @@ Oh no, that idea from 7 commits ago is bad! Do we
 
 Once again, the quality and granularity of the commits will decide for you. If the snapshot from 7 commits ago included many different unrelated changes, it will be easier to manually undo the changes yourself by going into the files and deleting or amending stuff. If the snapshot from 7 commits ago was small enough, you can use Git revert with that commit ID, that will create a new commit undoing that commit.
 
-You can try out Git revert in an [exercise of the saperlipopette package](https://maelle.github.io/saperlipopette/reference/exo_revert_file.html).
+You can try out Git revert in an [exercise of the saperlipopette package](https://docs.ropensci.org/saperlipopette/reference/exo_revert_file.html).
 
 ## All was well 3 days ago, now my thing is broken
 
@@ -110,7 +110,7 @@ Now, again, the person who made that commit chose our adventure:
 -   If we're unlucky, we get a Git commit whose message is '"Commit a bunch of files before workout :muscle:"' and whose diff shows 145 changed files with 2,624 additions and 2,209 deletions. Nooo, that's still a ton of code to read.
 -   If we're lucky, we get a Git commit whose message is '"refactor: start using YAML"' and whose diff shows 2 changed files with 3 additions and 2 deletions. Ah, YAML, what an idea! We can now search where we forgot to add quotes in a YAML file. :wink:
 
-You can practice Git bisect in an [exercise of the saperlipopette package](https://maelle.github.io/saperlipopette/reference/exo_bisect.html).
+You can practice Git bisect in an [exercise of the saperlipopette package](https://docs.ropensci.org/saperlipopette/reference/exo_bisect.html).
 
 ## Two bonus reasons
 
@@ -126,5 +126,5 @@ If you use a tool like the R package [fledge](https://fledge.cynkra.com/dev/) fo
 
 In this post I showed three main reasons for making small and informative Git commits, all related to debugging or undoing some bad changes. So, creating small, informative Git commits will help someone in the future in trying times. I hope it can inspire myself in particular to pay attention to the Git history I create. :grin:
 
-The saperlipopette package contains a few [exercises](https://maelle.github.io/saperlipopette/reference/index.html) that can help write a better Git history, including: ["Oh shit, I committed and immediately realized I need to make one small change!"](https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html), ["Hey I'd like to split these changes to the same file into several commits!"](https://maelle.github.io/saperlipopette/reference/exo_split_changes.html), ["Hey I'd like to make my commits in a branch look informative and smart!"](https://maelle.github.io/saperlipopette/reference/exo_rebase_i.html)
+The saperlipopette package contains a few [exercises](https://docs.ropensci.org/saperlipopette/reference/index.html) that can help write a better Git history, including: ["Oh shit, I committed and immediately realized I need to make one small change!"](https://docs.ropensci.org/saperlipopette/reference/exo_one_small_change.html), ["Hey I'd like to split these changes to the same file into several commits!"](https://docs.ropensci.org/saperlipopette/reference/exo_split_changes.html), ["Hey I'd like to make my commits in a branch look informative and smart!"](https://docs.ropensci.org/saperlipopette/reference/exo_rebase_i.html)
 
