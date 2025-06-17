@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: 1f573ab2dd49b700
+rmd_hash: ec46c8fbe97bdc46
 
 ---
 
@@ -58,7 +58,7 @@ Within saperlipopette itself, to create and open the exercice folder on behalf o
 
 Sometimes you want the user of some code of yours to go admire or read a web page.
 
-To open an URL in the default browser, you can use [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html). In all of the `usethis::browse_` function, [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html) is what's used under the hood. For instance:
+To open an URL in the default browser, you can use [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html). In all of the `usethis::browse_` functions, [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html) is what's used under the hood. For instance:
 
 <div class="highlight">
 

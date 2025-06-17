@@ -78,7 +78,7 @@ Within saperlipopette itself, to create and open the exercice folder on behalf o
 Sometimes you want the user of some code of yours to go admire or read a web page.
 
 To open an URL in the default browser, you can use `utils::browseURL()`.
-In all of the `usethis::browse_` function, `utils::browseURL()` is what's used under the hood.
+In all of the `usethis::browse_` functions, `utils::browseURL()` is what's used under the hood.
 For instance:
 
 ```{r, eval=FALSE}
