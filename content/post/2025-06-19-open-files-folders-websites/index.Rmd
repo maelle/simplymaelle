@@ -137,11 +137,11 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | ----------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | File                    | `utils::file.edit()`                                                                            | User of your code                        |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
+| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | R script from test file | `usethis::use_r()`                                                                              | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | `usethis::use_test()` | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
-| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | Project (folder)        | Rproj file                                                                                        | RStudio IDE user who like clicking       |
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |

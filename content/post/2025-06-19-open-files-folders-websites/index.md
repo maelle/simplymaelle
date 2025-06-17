@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: 7496ac32613294ec
+rmd_hash: ffc32e5c5a93f92d
 
 ---
 
@@ -122,11 +122,11 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | ----------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | File                    | [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html)                                                                            | User of your code                        |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
+| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | R script from test file | [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html)                                                                              | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | [`usethis::use_test()`](https://usethis.r-lib.org/reference/use_r.html) | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
-| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | Project (folder)        | Rproj file                                                                                        | RStudio IDE user who like clicking       |
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |
