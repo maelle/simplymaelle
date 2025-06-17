@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: afe5419b8905dc34
+rmd_hash: e840830d6e3ba817
 
 ---
 
@@ -116,7 +116,7 @@ All of usethis functions that try to open or browse something on behalf of the u
 
 ## Conclusion
 
-In this post I summarized some tools for opening scripts, projects, URLs for yourself or on behalf of your user.
+In this post I summarized some tools for opening scripts, projects, URLs for yourself or on behalf of your user. I'd like to add some words of conclusion beyond the summary table below, but after so much talk of opening, I have trouble **closing** this post. :grin:
 
 | Target to open          | Tool                                                                                              | Audience                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- |
