@@ -7,11 +7,11 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: 348beae1438d788e
+rmd_hash: 04ee0c2a8b91b99a
 
 ---
 
-Coming to you from France, a post about [*Mise en place*](https://en.wikipedia.org/wiki/Mise_en_place) for R projects. In a less francophone phrasing: to get to work on something you have to open that thing, be it a script or a project or a website. The easier that is, the faster you get to work. In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the user of your code.
+Coming to you from France, a post about [*Mise en place*](https://en.wikipedia.org/wiki/Mise_en_place) for R projects. In a less francophone phrasing: to get to work on something you have to open that thing, be it a script or a project or a website. The easier that is, the faster you get to work. In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the Users of your code.
 
 *Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!*
 
@@ -120,9 +120,9 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 
 | Target to open          | Tool                                                                                              | Audience                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| File                    | [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html)                                                                            | User of your code                        |
+| File                    | [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html)                                                                            | Users of your code                        |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
-| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
+| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | Users of your code                        |
 | R script from test file | [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html)                                                                              | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | [`usethis::use_test()`](https://usethis.r-lib.org/reference/use_r.html) | You                                      |
@@ -131,9 +131,9 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |
 | \-                      | [Project launcher](https://positron.posit.co/rstudio-rproj-file.html#use-an-application-launcher) | Positron users on macOS                  |
-| \-                      | [`usethis::create_project()`](https://usethis.r-lib.org/reference/create_package.html)                                                                     | User of your code that created a project |
-| URL                     | [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html)                                                                            | User of your code                        |
-| \-                      | [`.url` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
+| \-                      | [`usethis::create_project()`](https://usethis.r-lib.org/reference/create_package.html)                                                                     | Users of your code that created a project |
+| URL                     | [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html)                                                                            | Users of your code                        |
+| \-                      | [`.url` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | Users of your code                        |
 
 [^1]: Look how adventurous I was when preparing this post! Running R from a terminal!
 
