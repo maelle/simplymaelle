@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: ffc32e5c5a93f92d
+rmd_hash: 348beae1438d788e
 
 ---
 
@@ -127,7 +127,7 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | [`usethis::use_test()`](https://usethis.r-lib.org/reference/use_r.html) | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
-| Project (folder)        | Rproj file                                                                                        | RStudio IDE user who like clicking       |
+| Project (folder)        | Rproj file                                                                                        | RStudio IDE users who like clicking       |
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |
 | \-                      | [Project launcher](https://positron.posit.co/rstudio-rproj-file.html#use-an-application-launcher) | Positron users on macOS                  |
