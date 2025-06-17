@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: 04ee0c2a8b91b99a
+rmd_hash: 55d920867be2e56d
 
 ---
 
@@ -86,7 +86,7 @@ To make it easy to open an URL from a message, you can use the [URL class](https
 
 When getting that message, the user will simply have to click on the link to follow it (after trusting the domain in Positron).
 
-## Open only in interactive sessions: `is.interactive()`, `rlang::is_interactive()`
+## Open only in interactive sessions: `interactive()`, `rlang::is_interactive()`
 
 If you use [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html) or [`utils::browseURL()`](https://rdrr.io/r/utils/browseURL.html) in your code, you need to ensure the session is interactive.
 
@@ -94,7 +94,7 @@ Either
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'>if</span> <span class='o'>(</span><span class='nf'>is.interactive</span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'>if</span> <span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
 <span>  <span class='nf'><a href='https://rdrr.io/r/utils/file.edit.html'>file.edit</a></span><span class='o'>(</span><span class='s'>"config.toml"</span><span class='o'>)</span></span>
 <span><span class='o'>&#125;</span></span></code></pre>
 
@@ -110,7 +110,7 @@ Or
 
 </div>
 
-Compared to `is.interactive()`, [`rlang::is_interactive()`](https://rlang.r-lib.org/reference/is_interactive.html) also checks whether knitr or testthat are in progress, and provides an escape hatch through the `rlang_interactive` option.
+Compared to [`interactive()`](https://rdrr.io/r/base/interactive.html), [`rlang::is_interactive()`](https://rlang.r-lib.org/reference/is_interactive.html) also checks whether knitr or testthat are in progress, and provides an escape hatch through the `rlang_interactive` option.
 
 All of usethis functions that try to open or browse something on behalf of the user behave differently based on [`rlang::is_interactive()`](https://rlang.r-lib.org/reference/is_interactive.html). [`usethis::edit_file()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/edit.R#L20), [`usethis::view_url()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/helpers.R#L107).
 
