@@ -12,7 +12,7 @@ tags:
 Coming to you from France, a post about [_Mise en place_](https://en.wikipedia.org/wiki/Mise_en_place) for R projects.
 In a less francophone phrasing: to get to work on something you have to open that thing, be it a script or a project or a website.
 The easier that is, the faster you get to work.
-In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the Users of your code.
+In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the users of your code.
 
 _Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!_
 

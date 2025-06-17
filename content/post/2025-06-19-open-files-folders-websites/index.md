@@ -7,11 +7,11 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: 55d920867be2e56d
+rmd_hash: e1f96aab36f39b54
 
 ---
 
-Coming to you from France, a post about [*Mise en place*](https://en.wikipedia.org/wiki/Mise_en_place) for R projects. In a less francophone phrasing: to get to work on something you have to open that thing, be it a script or a project or a website. The easier that is, the faster you get to work. In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the Users of your code.
+Coming to you from France, a post about [*Mise en place*](https://en.wikipedia.org/wiki/Mise_en_place) for R projects. In a less francophone phrasing: to get to work on something you have to open that thing, be it a script or a project or a website. The easier that is, the faster you get to work. In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the users of your code.
 
 *Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!*
 
