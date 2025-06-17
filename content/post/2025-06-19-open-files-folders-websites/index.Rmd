@@ -17,7 +17,7 @@ In this post I'll show a roundup of R functions and related tools for opening sc
 _Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!_
 
 
-## Open any file in the editor: `utils::file.edit()`
+## Open any file in the editor: `utils::file.edit()`, {cli}
 
 If you write code that creates a file at `path` and then is supposed to open it for the user, no need for you to use, say, `rstudioapi::documentOpen(path)` that only works in [RStudio IDE](https://posit.co/products/open-source/rstudio/).
 You can use a base R function, `utils::file.edit()`!
@@ -43,12 +43,19 @@ Please tell me if you have any more information on this. :pray:
 In any case I really enjoy `file.edit()` in codebases.
 Interactively, I do not use is as often as, say, Positron's shortcut for navigating to files (Ctrl+P on my machine).
 
+Last but not least, if you want to make it easy for the user to open a file, without opening it on their behalf, in messages emitted through the [cli package](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/) you can use the [file class](https://cli.r-lib.org/reference/inline-markup.html#classes):
+
+```{r, eval=FALSE}
+cli::cli_alert_success("Hey go edit {.file config.toml} please!")
+```
+> _"If the terminal supports ANSI hyperlinks (e.g. RStudio, iTerm2, etc.), then cli creates a clickable link that opens the file in RStudio or with the default app for the file type."_
+
 [^adventurous]: Look how adventurous I was when preparing this post! Running R from a terminal!
 [^atom]: Which is... [Atom](https://en.wikipedia.org/wiki/Atom_(text_editor)), meaning I live in the past since its end-of-life occurred a few years ago. :ghost: I actually rarely use it.
 
 ## Open the script or test file of a script-test pair: `usethis::use_r()` and `usethis::use_test()`
 
-Speaking of the wonderful usethis package, when you name your test files after your scripts as you should,
+Coming back to the wonderful usethis package, when you name your test files after your scripts as you should,
 running [`usethis::use_test()`](https://r-pkgs.org/testing-basics.html#create-a-test) when focussed on an R script will open its test file, and conversely `usethis::use_r()` when focussed on a test file.
 This is still how I switch between the two even if inside Positron.
 
@@ -85,7 +92,7 @@ For instance:
 browseURL("https://masalmon.eu/post")
 ```
 
-To make it easy to open an URL from a message, you can use the [URL class](https://cli.r-lib.org/reference/inline-markup.html#classes) of the [cli package](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+To make it easy to open an URL from a message, you can use the [URL class](https://cli.r-lib.org/reference/inline-markup.html#classes) of the cli package.
 For instance:
 
 ```{r, eval=FALSE}
@@ -134,6 +141,7 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | `usethis::use_test()` | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
+| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | Project (folder)        | Rproj file                                                                                        | RStudio IDE user who like clicking       |
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |

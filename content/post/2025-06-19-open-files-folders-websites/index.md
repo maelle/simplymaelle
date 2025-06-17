@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: ec46c8fbe97bdc46
+rmd_hash: 7496ac32613294ec
 
 ---
 
@@ -15,7 +15,7 @@ Coming to you from France, a post about [*Mise en place*](https://en.wikipedia.o
 
 *Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!*
 
-## Open any file in the editor: `utils::file.edit()`
+## Open any file in the editor: `utils::file.edit()`, {cli}
 
 If you write code that creates a file at `path` and then is supposed to open it for the user, no need for you to use, say, `rstudioapi::documentOpen(path)` that only works in [RStudio IDE](https://posit.co/products/open-source/rstudio/). You can use a base R function, [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html)! It will open the path in the default editor. Without my setting up anything, in RStudio IDE that is RStudio IDE and in [Positron](https://drmowinckels.io/blog/2025/positron-debugging/) that is Positron. From an R session in the terminal[^1], that is the default editor of my system[^2].
 
@@ -36,9 +36,19 @@ According to the [commit that added this logic](https://github.com/r-lib/usethis
 
 In any case I really enjoy [`file.edit()`](https://rdrr.io/r/utils/file.edit.html) in codebases. Interactively, I do not use is as often as, say, Positron's shortcut for navigating to files (Ctrl+P on my machine).
 
+Last but not least, if you want to make it easy for the user to open a file, without opening it on their behalf, in messages emitted through the [cli package](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/) you can use the [file class](https://cli.r-lib.org/reference/inline-markup.html#classes):
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>cli</span><span class='nf'>::</span><span class='nf'><a href='https://cli.r-lib.org/reference/cli_alert.html'>cli_alert_success</a></span><span class='o'>(</span><span class='s'>"Hey go edit &#123;.file config.toml&#125; please!"</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+> *"If the terminal supports ANSI hyperlinks (e.g. RStudio, iTerm2, etc.), then cli creates a clickable link that opens the file in RStudio or with the default app for the file type."*
+
 ## Open the script or test file of a script-test pair: `usethis::use_r()` and `usethis::use_test()`
 
-Speaking of the wonderful usethis package, when you name your test files after your scripts as you should, running [`usethis::use_test()`](https://r-pkgs.org/testing-basics.html#create-a-test) when focussed on an R script will open its test file, and conversely [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) when focussed on a test file. This is still how I switch between the two even if inside Positron.
+Coming back to the wonderful usethis package, when you name your test files after your scripts as you should, running [`usethis::use_test()`](https://r-pkgs.org/testing-basics.html#create-a-test) when focussed on an R script will open its test file, and conversely [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) when focussed on a test file. This is still how I switch between the two even if inside Positron.
 
 ## Open a project: `positron`, project launcher, {usethis}
 
@@ -66,7 +76,7 @@ To open an URL in the default browser, you can use [`utils::browseURL()`](https:
 
 </div>
 
-To make it easy to open an URL from a message, you can use the [URL class](https://cli.r-lib.org/reference/inline-markup.html#classes) of the [cli package](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/). For instance:
+To make it easy to open an URL from a message, you can use the [URL class](https://cli.r-lib.org/reference/inline-markup.html#classes) of the cli package. For instance:
 
 <div class="highlight">
 
@@ -116,6 +126,7 @@ In this post I summarized some tools for opening scripts, projects, URLs for you
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
 | Test file from R script | [`usethis::use_test()`](https://usethis.r-lib.org/reference/use_r.html) | You                                      |
 | \-                      | IDE's shortcut                                                                                    | You -- get to know your IDE              |
+| \-                      | [`.file` class of cli message](https://cli.r-lib.org/reference/inline-markup.html#classes) | User of your code                        |
 | Project (folder)        | Rproj file                                                                                        | RStudio IDE user who like clicking       |
 | \-                      | List of recent projects within the IDE                                                            | You when the IDE is already launched     |
 | \-                      | `rstudio`, `positron`                                                                         | Terminal dwellers                        |
