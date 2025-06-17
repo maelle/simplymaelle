@@ -62,7 +62,7 @@ This is still how I switch between the two even if inside Positron.
 ## Open a project: `positron`, project launcher, {usethis}
 
 This is all very good when within a project, but how do you enter your IDE in the first place?
-How sad would it be to lose momentum even before launching a project?
+How sad would it be to lose momentum before even launching a project?
 
 When I used RStudio IDE I would navigate to the folder of interest then double-click on the `.Rproj` file.
 Hannah Frick inspired me, when demoing Positron to me, to think a bit harder about how much I click. :sweat_smile:

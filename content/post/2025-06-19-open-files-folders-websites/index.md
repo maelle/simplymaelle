@@ -7,7 +7,7 @@ tags:
   - good practice
   - code style
   - useful functions
-rmd_hash: e1f96aab36f39b54
+rmd_hash: afe5419b8905dc34
 
 ---
 
@@ -52,7 +52,7 @@ Coming back to the wonderful usethis package, when you name your test files afte
 
 ## Open a project: `positron`, project launcher, {usethis}
 
-This is all very good when within a project, but how do you enter your IDE in the first place? How sad would it be to lose momentum even before launching a project?
+This is all very good when within a project, but how do you enter your IDE in the first place? How sad would it be to lose momentum before even launching a project?
 
 When I used RStudio IDE I would navigate to the folder of interest then double-click on the `.Rproj` file. Hannah Frick inspired me, when demoing Positron to me, to think a bit harder about how much I click. :sweat_smile: I have adopted a more keyboard-based workflow since I switched to Positron, which I could have done with RStudio IDE.
 
