@@ -1,7 +1,7 @@
 ---
 title: "How to open files, folders, websites in R"
 date: '2025-06-25'
-slug: cover-modify-r-packages
+slug: open-files-folders-websites
 output: hugodown::hugo_document
 tags:
   - good practice
