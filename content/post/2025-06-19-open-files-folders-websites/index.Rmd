@@ -17,12 +17,12 @@ In this post I'll show a roundup of R functions and related tools for opening sc
 _Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!_
 
 
-## Open any file in the editor: `utils::file.edit()`, {cli}
+## Open any file in the editor: `utils::file.edit()` or styling with `{cli}`
 
-If you write code that creates a file at `path` and then is supposed to open it for the user, no need for you to use, say, `rstudioapi::documentOpen(path)` that only works in [RStudio IDE](https://posit.co/products/open-source/rstudio/).
+If you write code that creates a file at `path` and then is supposed to open it for the user, there is no need for you to use, say, `rstudioapi::documentOpen(path)` that only works in [RStudio IDE](https://posit.co/products/open-source/rstudio/).
 You can use a base R function, `utils::file.edit()`!
 It will open the path in the default editor.
-Without my setting up anything, in RStudio IDE that is RStudio IDE and in [Positron](https://drmowinckels.io/blog/2025/positron-debugging/) that is Positron.
+Without me setting up anything, that is the RStudio IDE when I'm already in RStudio and [Positron](https://drmowinckels.io/blog/2025/positron-debugging/) when I'm already in Positron.
 From an R session in the terminal[^adventurous], that is the default editor of my system[^atom].
 
 I was surprised to see that `usethis::edit_file()` uses an RStudio specific function when available:
@@ -40,7 +40,7 @@ According to the [commit that added this logic](https://github.com/r-lib/usethis
 Maybe it's different depending on the OS? Maybe RStudio changed in the meantime?
 Please tell me if you have any more information on this. :pray:
 
-In any case I really enjoy `file.edit()` in codebases.
+In any case, I really enjoy `file.edit()` in code bases.
 Interactively, I do not use is as often as, say, Positron's shortcut for navigating to files (Ctrl+P on my machine).
 
 Last but not least, if you want to make it easy for the user to open a file, without opening it on their behalf, in messages emitted through the [cli package](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/) you can use the [file class](https://cli.r-lib.org/reference/inline-markup.html#classes):
@@ -64,7 +64,7 @@ This is still how I switch between the two even if inside Positron.
 This is all very good when within a project, but how do you enter your IDE in the first place?
 How sad would it be to lose momentum before even launching a project?
 
-When I used RStudio IDE I would navigate to the folder of interest then double-click on the `.Rproj` file.
+When I used the RStudio IDE, I would navigate to the folder of interest, then double-click on the `.Rproj` file.
 Hannah Frick inspired me, when demoing Positron to me, to think a bit harder about how much I click. :sweat_smile:
 I have adopted a more keyboard-based workflow since I switched to Positron, which I could have done with RStudio IDE.
 
@@ -73,10 +73,11 @@ One thing in particular that Hannah showed me that looks cool is the use of a [p
 Now, I myself still use the terminal. 
 For instance if I clone a repository[^usethis], I'll then open it with the `positron` command.
 
-Another way to open projects I use a lot is, on Positron as on Rstudio, clicking to the recent projects -- when the IDE is already up and running.
-Unfortunately, I created and [currently](https://stateofther.netlify.app/post/saperlipopette/) [often](https://www.meetup.com/rbuenosaires/events/308338205/) use a [package that creates throwaway folders for practicing Git](https://docs.ropensci.org/saperlipopette/) which makes the list of recent projects utter rubbish. 🙃
+Another way to open projects that I use a lot, in Positron and RStudio, is to click on the recent projects when the IDE is already up and running.
+Unfortunately, I created and [currently](https://stateofther.netlify.app/post/saperlipopette/) [often](https://www.meetup.com/rbuenosaires/events/308338205/) use the [saperlipopette](https://docs.ropensci.org/saperlipopette/) package that creates throwaway folders for practicing Git.
+This makes the list of recent projects utter rubbish. 🙃
 
-Within saperlipopette itself, to create and open the exercice folder on behalf of the user I use `usethis::create_project()`, which handily opens it in Positron when run in Positron and RStudio when run in RStudio.
+Within saperlipopette itself, to create and open the exercise folder on behalf of the user, I use `usethis::create_project()`, which handily opens it in Positron when run in Positron and in RStudio when run in RStudio.
 
 [^usethis]: I know I could use `usethis::create_from_github()` and sometimes do but not always... Maybe the message of this post is that my workflows are a big mess.
 
@@ -124,13 +125,13 @@ if (rlang::is_interactive()) {
 
 Compared to `interactive()`, `rlang::is_interactive()` also checks whether knitr or testthat are in progress, and provides an escape hatch through the `rlang_interactive` option.
 
-All of usethis functions that try to open or browse something on behalf of the user behave differently based on `rlang::is_interactive()`.
+All of the usethis functions that try to open or browse something on behalf of the user behave differently based on `rlang::is_interactive()`.
 [`usethis::edit_file()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/edit.R#L20),
 [`usethis::view_url()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/helpers.R#L107).
 
 ## Conclusion
 
-In this post I summarized some tools for opening scripts, projects, URLs for yourself or on behalf of your user.
+In this post I summarized some tools for opening scripts, projects, and URLs  - for yourself or on behalf of your user.
 I'd like to add some words of conclusion beyond the summary table below,
 but after so much talk of opening, I have trouble **closing** this post. :grin:
 
