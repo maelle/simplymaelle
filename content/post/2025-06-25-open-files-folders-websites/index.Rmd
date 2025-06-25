@@ -1,6 +1,6 @@
 ---
 title: "How to open files, folders, websites in R"
-date: '2025-06-19'
+date: '2025-06-25'
 slug: cover-modify-r-packages
 output: hugodown::hugo_document
 tags:
@@ -14,7 +14,7 @@ In a less francophone phrasing: to get to work on something you have to open tha
 The easier that is, the faster you get to work.
 In this post I'll show a roundup of R functions and related tools for opening scripts, projects and websites for yourself or on behalf of the users of your code.
 
-_Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post!_
+_Many thanks to [Hannah Frick](https://www.frick.ws/) for providing inspiration for some items of this post, and for reviewing it!_
 
 
 ## Open any file in the editor: `utils::file.edit()` or styling with `{cli}`
@@ -72,6 +72,7 @@ One thing in particular that Hannah showed me that looks cool is the use of a [p
 
 Now, I myself still use the terminal. 
 For instance if I clone a repository[^usethis], I'll then open it with the `positron` command.
+If that command does not work for you yet on macOS or Windows, you might need to [add Positron to your PATH](https://positron.posit.co/add-to-path.html).
 
 Another way to open projects that I use a lot, in Positron and RStudio, is to click on the recent projects when the IDE is already up and running.
 Unfortunately, I created and [currently](https://stateofther.netlify.app/post/saperlipopette/) [often](https://www.meetup.com/rbuenosaires/events/308338205/) use the [saperlipopette](https://docs.ropensci.org/saperlipopette/) package that creates throwaway folders for practicing Git.
@@ -81,7 +82,7 @@ Within saperlipopette itself, to create and open the exercise folder on behalf o
 
 [^usethis]: I know I could use `usethis::create_from_github()` and sometimes do but not always... Maybe the message of this post is that my workflows are a big mess.
 
-## Open an URL in the browser: `browseURL()` and {cli}
+## Open an URL in the browser: `browseURL()` or styling with {cli}
 
 Sometimes you want the user of some code of yours to go admire or read a web page.
 
@@ -126,8 +127,9 @@ if (rlang::is_interactive()) {
 Compared to `interactive()`, `rlang::is_interactive()` also checks whether knitr or testthat are in progress, and provides an escape hatch through the `rlang_interactive` option.
 
 All of the usethis functions that try to open or browse something on behalf of the user behave differently based on `rlang::is_interactive()`.
-[`usethis::edit_file()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/edit.R#L20),
-[`usethis::view_url()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/helpers.R#L107).
+
+- [`usethis::edit_file()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/edit.R#L20),
+- [`usethis::view_url()`'s source](https://github.com/r-lib/usethis/blob/4aa55e72ccca131df2d98fcd84fff66724d6250a/R/helpers.R#L107).
 
 ## Conclusion
 
