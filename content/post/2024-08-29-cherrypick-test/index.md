@@ -30,7 +30,7 @@ What I've done a few times now (so clearly an expert workflow :sweat_smile:) is
 
 -   getting the hash of the commit that added the test.
 
--   returning to the main branch, for instance with `gert::git_checkout("main")`.
+-   returning to the main branch, for instance with `gert::git_branch_checkout("main")`.
 
 -   creating a throwaway branch, for instance with `gert::git_branch_create("deleteme")`.
 
@@ -38,7 +38,7 @@ What I've done a few times now (so clearly an expert workflow :sweat_smile:) is
 
 -   running the test. It is so validating when it does fail on the main branch! It's a good test! :tada:
 
--   returning to the main (or the bug-fix) branch, for instance with `gert::git_checkout("main")` (or `gert::git_checkout("bug-fix")`).
+-   returning to the main (or the bug-fix) branch, for instance with `gert::git_branch_checkout("main")` (or `gert::git_branch_checkout("bug-fix")`).
 
 -   deleting the throwaway branch, for instance with `gert::git_branch_delete("deleteme")`. :innocent:
 
