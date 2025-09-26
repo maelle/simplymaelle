@@ -12,3 +12,5 @@ http://laughing-murdock-60f03f.netlify.com/* https://masalmon.eu/:splat 301!
 
 # www
 http://www.masalmon.eu/* https://masalmon.eu/:splat 301!
+
+https://masalmon.eu/meetupr http://localhost:1410
