@@ -3,7 +3,7 @@ title: 'How your code might get rusty, and what you can do about it'
 date: '2024-07-10'
 event: "useR! 2024"
 event_url: "https://events.linuxfoundation.org/user/program/schedule/"
-event_type: "conference talk"
+event_type: "keynote talk"
 slides: https://user-maelle.netlify.app/
 video: https://www.youtube.com/watch?v=ldko1TPC1aA
 ---
