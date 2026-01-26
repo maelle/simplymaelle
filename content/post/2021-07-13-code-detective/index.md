@@ -69,8 +69,6 @@ To learn more about reprex and adopt it, I'd recommend watching [the RStudio web
 
 Also in the case of a bug, maybe you don't need to read this post further if your problem is in the bingo below. Often, you'll only notice "obvious" mistakes after making the problem smaller (or after taking a break!).
 
-{{< tweet 1354508785365078016 >}}
-
 In case of amending the features of a package, it'll be important to clearly defined the scope of what you're after. Easier for your work as a code detective, but also for many other reasons, see [Sarah Drasner's post *How to Scope Down PRs*](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/) and Yihui Xie's post [*"Bite-sized" Pull Requests*](https://yihui.org/en/2018/02/bite-sized-pull-requests/).
 
 ## Pull an end / Follow the trails

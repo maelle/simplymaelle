@@ -5,6 +5,7 @@ slug: saperlipopette-package-practice-git
 output: hugodown::hugo_document
 tags:
   - git
+  - teaching
 rmd_hash: af198d0646b140f4
 
 ---
