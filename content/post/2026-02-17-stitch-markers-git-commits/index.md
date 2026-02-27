@@ -9,6 +9,8 @@ slug: stitch-markers-git-commits
 
 In which I share a crochet analogy for Git commits…
 
+*This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/222) hosted by Eric Nantz and Mike Thomas.*
+
 ## Don’t forget your stitch markers!
 
 I am happily continuing my [crochet learning journey](/2026/01/26/amigurumi/). 
