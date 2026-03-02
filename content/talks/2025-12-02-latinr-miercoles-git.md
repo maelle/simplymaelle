@@ -5,6 +5,7 @@ event: "LatinR 2025"
 event_url: "https://latinr.org/cronograma/tutoriales/"
 event_type: "tutorial"
 slides: https://miercoles-git-mejor.netlify.app/#/
+video: "https://www.youtube.com/watch?v=8uFdEgZDGoY&list=PL9-E3cL2KgKkeZQcHn_Gs4FfuI4COzPHq&index=2"
 ---
 
 > Taller práctico para aprender a resolver 7 errores comunes en Git y ganar confianza desde R
