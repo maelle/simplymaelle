@@ -10,6 +10,8 @@ rmd_hash: e7ca9589a2b6f963
 
 ---
 
+**This post contains mistakes! No need for a roclet for custom tags! Use the [`packages` load option](https://roxygen2.r-lib.org/reference/load_options.html). Refer to the [roxygen2 vignette](https://roxygen2.r-lib.org/dev/articles/extending.html).**
+
 *This post was featured on the [R Weekly highlights podcast](https://serve.podhome.fm/episodepage/r-weekly-highlights/178) hosted by Eric Nantz and Mike Thomas.*
 
 You might know that it's possible to extend [roxygen2](https://roxygen2.r-lib.org/) to do all sorts of cool things including but not limited to:
