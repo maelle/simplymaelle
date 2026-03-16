@@ -5,7 +5,7 @@ event: "useR!"
 event_url: "https://user2017.brussels/"
 event_type: "lightning talk"
 slides: "https://static.sched.com/hosted_files/user2017/47/ecology_statistics_550.pdf"
-video: "https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Room-201-Lightning-Talks"
+video: "https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/room-201-lightning-talks"
 links: 
   - name: package
     url: "https://docs.ropensci.org/rtimicropem/"
