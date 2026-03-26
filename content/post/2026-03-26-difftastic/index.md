@@ -23,7 +23,7 @@ as [documented in the manual](https://difftastic.wilfred.me.uk/installation.html
 
 ## difftastic on two files
 
-You can run difftastic on two files, a bit like you would use the waldo R package on two objects.
+You can run difftastic on two files, a bit like you would use the [waldo](https://waldo.r-lib.org/) R package on two objects.
 
 Let's compare:
 
@@ -85,7 +85,7 @@ gert::git_config_set("diff.external", "difft --display inline")
 
 Then `git diff` will by default use difftastic.
 Most interestingly for me, `git show --ext-diff` will use difftastic.
-I never use `git diff` but I do look at more or less recent commits a lot.
+I never use `git diff` directly but I do look at more or less recent commits a lot.
 
 Say I am interested in the [commit](https://github.com/maelle/roxygen2/commit/7a1dd39866699a2b0a034bb15244c07698a1e2e7) that removed roxygen2's dependency on stringi, I'll run:
 
@@ -110,4 +110,4 @@ Now, what's [missing](https://github.com/Wilfred/difftastic#does-difftastic-inte
 - Positron including the GitLens extension;
 - GitHub Pull Request Files tab.
 
-In any case, I'll continue learning about tools based on treesitter, some of which like Air and Jarl I can already use directly from my IDE. :smile_cat:
+In any case, I'll continue learning about tools based on treesitter, some of which like [Air](https://posit-dev.github.io/air/) and [Jarl](https://jarl.etiennebacher.com/) I can already use directly from my IDE. :smile_cat:
