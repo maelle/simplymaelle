@@ -12,7 +12,7 @@ With tools built upon treesitter you can [search](https://emilhvitfeldt.com/post
 Exciting stuff, running locally and deterministically on your machine.
 
 Speaking of "etc.", [Etienne Bacher](https://www.etiennebacher.com/) helpfully suggested I also look at treesitter-based tooling for _other languages_ to see what's still missing in our ecosystem.
-This is how I stumbled upon difftastic, "a structural diff tool that understands syntax". :sparkles:
+This is how I stumbled upon difftastic by Wilfred Hughes, "a structural diff tool that understands syntax". :sparkles:
 This means that difftastic doesn't only compare line or "words" but actual syntax by looking at lines around the lines that changed (by default, 3),
 Even better, it understands R out of the box[^box].
 
