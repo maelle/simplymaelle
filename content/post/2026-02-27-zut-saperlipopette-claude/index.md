@@ -174,5 +174,4 @@ Say I need to teach [“Painlessly Improve Your Git History”](https://masalmon
 I could also improve the code of the CLI based on user’s feedback and on, say, feedback from Claude Code using the [posit-dev/critical-code-reviewer skill](https://github.com/posit-dev/skills/blob/97b0d388f24ccb500fd06ddd01116e427c5aa65f/posit-dev/critical-code-reviewer/SKILL.md?plain=1#L2) (thanks to [Mo](https://drmowinckels.io/) for telling me about it!).
 The documentation could also use some work, compared to saperlipopette, but as a companion to workshops it might be ok.
 
-The saperlipopette package itself has been submitted to [rOpenSci software peer-review](github.com/ropensci/software-review/issues/754) so I expect it to change for the better. 
-When I need to port over those changes, depending on what they are I might resort to Claude Code again.
+The saperlipopette package itself has been submitted to [rOpenSci software peer-review](github.com/ropensci/software-review/issues/754) so I expect it to change for the better. When I need to port over those changes, depending on what they are I might resort to Claude Code again.

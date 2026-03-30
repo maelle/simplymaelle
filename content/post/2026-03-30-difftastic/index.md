@@ -1,6 +1,6 @@
 ---
 title: "Better Git diff with difftastic"
-date: '2026-03-26'
+date: '2026-03-30'
 tags:
   - git
 slug: difftastic
@@ -14,7 +14,11 @@ Exciting stuff, running locally and deterministically on your machine.
 Speaking of "etc.", [Etienne Bacher](https://www.etiennebacher.com/) helpfully suggested I also look at treesitter-based tooling for _other languages_ to see what's still missing in our ecosystem.
 This is how I stumbled upon difftastic, "a structural diff tool that understands syntax". :sparkles:
 This means that difftastic doesn't only compare line or "words" but actual syntax by looking at lines around the lines that changed (by default, 3),
-Even better, R understanding is built-in so that's one worry less.
+Even better, it understands R out of the box[^box].
+
+[^box]: It's not every day we R developers look at the [homepage](https://difftastic.wilfred.me.uk/) of a tool and see the R logo among the logos of other languages!
+
+_Many thanks to Etienne Bacher not only for making me discover difftastic but also for useful feedback on this post!_
 
 ## Installing difftastic
 
@@ -98,9 +102,79 @@ and get:
 
 This isn't spectacular because this is a small diff, but I enjoy the highlighting of the parentheses of the removed nested call, and of the logical.
 
-Even for the vignette chunk that is treated as text rather than R, the result looks slightly better than the display on GitHub or within Positron:
+## Cool features of difftastic
 
-{{< figure src="vignette.png" alt="diff where the nested square brackets are nicely highlighted" >}}
+Building on two examples of the [difftastic homepage](https://difftastic.wilfred.me.uk/)...
+
+### Ignoring formatting changes
+
+Since formatters can so helpfully apply your formatting preferences,
+reviewing formatting changes in a patch that's about something else entirely is useless and annoying.
+Imagine having a function definition that fits on a single line, then adding one argument to it.
+
+Going from
+
+```r
+f <- function(myarg1 = foo, myarg2 = bar) {}
+```
+
+
+to
+
+```r
+f <- function(
+  myarg1 = foo,
+  myarg2 = bar,
+  myarg3 = baz
+) {}
+```
+
+Because the definition is now longer than 80 characters, your formatter might switch the definition to be on multiple lines.
+But the actually interesting change is the addition of one argument.
+
+Native Git diff[^git] would show:
+
+{{< figure src="args.png" alt="diff where all lines are highlighted because the function was reformatted, not only complemented with one argument" >}}
+
+[^git]: To get the diff that Git would show me I ran `git diff --no-index old-args.R new-args.R --no-ext-diff`, cool trick I didn't know about! Very glad I didn't have to create a fake Git repo just for this. (`--no-ext-diff` because my diff in this repo would use difftastic by default!)
+
+Git with difftastic would show:
+
+{{< figure src="args-better.png" alt="diff where only the comma after `bar` and the line with the new argument are highlighted" >}}
+
+### Matching delimiters in wrappers
+
+The Git diff can look a bit ugly when you simply move code from one function to the other.
+
+Say we go from
+
+```r
+f <- function() {
+  1 + 1
+}
+
+```
+
+to 
+
+```r
+f <- function() {
+  g()
+}
+
+g <- function() {
+  1 + 1
+}
+
+```
+
+Git diff would show:
+
+{{< figure src="wrappers-bad.png" alt="uncool diff that shows lines modified in both the wrapper and the function without matching delimiters" >}}
+
+Whereas Git with difftastic would show:
+
+{{< figure src="wrappers-good.png" alt="cool diff that shows `g` as a new function by highlighting its name and the left arrow, whereas the entire definiton of `f` is marked as changed." >}}
 
 ## Will I use difftastic?
 
