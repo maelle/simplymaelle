@@ -91,7 +91,7 @@ Then `git diff` will by default use difftastic.
 Most interestingly for me, `git show --ext-diff` will use difftastic.
 I never use `git diff` directly but I do look at more or less recent commits a lot.
 
-Say I am interested in the [commit](https://github.com/maelle/roxygen2/commit/7a1dd39866699a2b0a034bb15244c07698a1e2e7) that removed roxygen2's dependency on stringi, I'll run:
+Say I am interested in the [commit](https://github.com/r-lib/roxygen2/commit/7a1dd39866699a2b0a034bb15244c07698a1e2e7) that removed roxygen2's dependency on stringi, I'll run:
 
 ```sh
 git show 7a1dd39866699a2b0a034bb15244c07698a1e2e7 --ext-diff
