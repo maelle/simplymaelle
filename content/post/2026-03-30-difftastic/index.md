@@ -142,6 +142,8 @@ Git with difftastic would show:
 
 {{< figure src="args-better.png" alt="diff where only the comma after `bar` and the line with the new argument are highlighted" >}}
 
+The matching of delimiters is why I found the difftastic's display of the roxygen2 commit more pleasing.
+
 ### Matching delimiters in wrappers
 
 The Git diff can look a bit ugly when you simply move code from one function to the other.
