@@ -25,7 +25,7 @@ What Git calls a "working tree" I call "my files" (my _precious_ files).
 But knowing what a "working tree" is makes it easier to get used to a "worktree", which is a working tree with some metadata.
 
 You can init/clone your Git repository once and then from there sprout as many working trees as you need.
-Only the main one has a full-fledged `.git` folder, the others have a `.git` _file_ with a line like "gitdir: /path-to-the-main-worktree/.git/worktrees/current-worktree" in it.[^inside]
+Only the main one has a fully-fledged `.git` folder, the others have a `.git` _file_ with a line like "gitdir: /path-to-the-main-worktree/.git/worktrees/current-worktree" in it.[^inside]
 But from any worktrees you can run any Git commands.
 You can for instance:
 - have a worktree where you fix a bug and another worktree where you write docs.
