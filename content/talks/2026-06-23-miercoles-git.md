@@ -1,6 +1,6 @@
 ---
 title: "¡Miercolés, Git!"
-date: '2026-07-07'
+date: '2026-06-23'
 event: "rOpenSci champions training"
 event_url: "https://ropensci.org/es/champions/"
 event_type: "workshop"
