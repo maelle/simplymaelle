@@ -2,7 +2,7 @@
 title: "Desarrollo de paquetes para principiantes"
 date: '2025-09-30'
 event: "rOpenSci champions training"
-event_url: "https://ropensci.org/champions/"
+event_url: "https://ropensci.org/es/champions/"
 event_type: "tutorial"
 slides: https://desarrollo-paquetes-basico-2025.netlify.app/
 ---

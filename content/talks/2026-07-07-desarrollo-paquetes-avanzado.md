@@ -2,8 +2,8 @@
 title: "Desarrollo de paquetes avanzado"
 date: '2026-07-07'
 event: "rOpenSci champions training"
-event_url: "https://ropensci.org/champions/"
-event_type: "tutorial"
+event_url: "https://ropensci.org/es/champions/"
+event_type: "workshop"
 slides: https://desarrollo-paquetes-avanzado-2026.netlify.app/
 ---
 
