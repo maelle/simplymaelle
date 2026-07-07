@@ -9,4 +9,4 @@ slides: https://desarrollo-paquetes-avanzado-2025.netlify.app/
 
 Taller para quiénes ya han desarrollado, o contribuido a, paquetes R. Mejor venís con un paquete tuyo para trabajar en ello.
 
-Esta sesion de capacitación del Programa de Campeon(a|e)s de rOpenSci pertenece al track técnico de formación en programación.
+Esta sesion de capacitación del [Programa de Campeon(a|e)s de rOpenSci](https://ropensci.org/es/champions) pertenece al track técnico de formación en programación.
