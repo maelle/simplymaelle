@@ -24,7 +24,7 @@ The following two sentences even got their little frame:
 
 ## Arrange Act Assert
 
-What an useful phrase!
+What  useful phrase!
 
 You know how in a test you can have something like:
 
