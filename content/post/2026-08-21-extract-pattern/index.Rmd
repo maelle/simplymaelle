@@ -1,0 +1,81 @@
+---
+title: "Learning how to extract string patterns"
+date: '2026-08-21'
+slug: extracting-string-patterns
+output: hugodown::hugo_document
+tags:
+  - useful functions
+---
+
+This week I took time to re-read The Programmer's Brain by Felienne Hermans.
+Among the many gems one idea that stuck with me is that not learning how to do something and looking it up every time will make you less efficient.
+Therefore I starting feeling bad about one particular thing I never get done on my own: extracting parts of a string, even in simple cases.
+
+## Avoidance tactics
+
+For instance, how do you extract names from the following templated sentences?
+
+```{r}
+sentences <- c(
+  "My name is Moomin.",
+  "My name is Little My.",
+  "My name is Snork Maiden."
+)
+```
+
+I would use either one of these two tactics:
+
+1. Removing the final period, and the first words.
+
+```{r}
+sub("My name is ", "", sub(".$", "", sentences))
+```
+
+2. Looking up the regex syntax online (maybe even dutifully reading the [stringr cheatsheet](https://rstudio.github.io/cheatsheets/html/strings.html#look-arounds)) or via a LLM. This could get me code calling stringr:
+
+```{r}
+stringr::str_extract(sentences, "My name is (.*).", group = 1)
+# Look arounds
+stringr::str_extract(sentences, pattern = '(?<=My name is ).+(?=\\.)')
+```
+
+Or some base R code:
+
+```{r}
+regmatches(
+  sentences,
+  regexpr("(?<=My name is ).+(?=\\.)", sentences, perl = TRUE)
+)
+```
+
+## My problems
+
+Really I had two problems preventing me from being really autonomous:
+
+- Not knowing enough regex.
+- Not knowing where to put the regex, for whatever reason I felt I had to choose between adding a dependency on stringr or using the complicated two-step regexpr/regmatches syntax.
+
+## Solutions
+
+To solve the first problem (lack of regex knowledge), I need to be more intentional about remembering the look-arounds syntax for instance, or what a group is.
+
+What solved my second problem (thinking I had to choose between a dependency or code distateful to me) was a very simple tip by my [rOpenSci colleague Jeroen Ooms](https://jeroen.github.io/):
+using `sub()`!
+The code below replaces the sentences with the names (capture groups) in them.
+
+```{r}
+sub("My name is (.*).", "\\1", sentences)
+```
+
+This is code he seems to use [quite often](https://github.com/search?q=%2Fsub.*%5C%5C1%2F+user%3Ajeroen+path%3A*.R&type=code&ref=advsearch)[^github].
+
+What was especially great about this tip, beside its timing when I was reading the book, is that it made me "get" groups more easily. 
+The group is what's between parentheses, it's not more complicated than that (at least I don't need to know more right now).
+
+[^github]: Learning how to add [regex to code search on GitHub](https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax#using-regular-expressions) was well worth the small effort.
+
+## Conclusion
+
+I will try to keep mindful of not being too lazy to learn some things when I can actually learn them.
+And now I know that I can use something else than stringr or the not so easy base R syntax with `regmatches()`: a simple call to `sub()`!
+Watch me win seconds every time I have to extract parts of a string. :grin:
