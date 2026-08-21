@@ -1,11 +1,11 @@
 ---
-title: "Learning how to extract string patterns"
+title: "Learning how to extract parts of a string"
 date: '2026-08-21'
 slug: extracting-string-patterns
 output: hugodown::hugo_document
 tags:
   - useful functions
-rmd_hash: a692a40cd589b1cf
+rmd_hash: 1aaee5d3afcac06a
 
 ---
 
